@@ -156,11 +156,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
+    <Content Include="App\Controllers\Docs\lineChart.js" />
     <Content Include="App\Directives\DocsMapper\controller.js" />
     <Content Include="App\Directives\DocsMapper\view.html" />
     <Content Include="App\Directives\DocsMapper\docsMapper.js" />
+    <Content Include="App\Services\docsService.js" />
     <Content Include="App\Views\docs.html" />
     <Content Include="App\Controllers\docs.js" />
+    <Content Include="App\Views\Docs\lineChart.html" />
     <Content Include="App\Views\home.html" />
     <Content Include="App\Controllers\home.js" />
     <Content Include="Content\bootstrap.css" />
