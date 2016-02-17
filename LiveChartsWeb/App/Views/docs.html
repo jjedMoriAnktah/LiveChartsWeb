@@ -2,17 +2,42 @@
     <div class="col-sm-3">
         <div class="row">
             <div class="col-sm-12">
-                <docs></docs>
+                <div class="list-group">
+                    <a href="#" class="list-group-item" ng-repeat="section in sections"
+                       ng-href="#/documentation/{{section.route}}">
+                        <i class="fa"></i>
+                        <span style="margin-left: 5px;">{{section.name}}</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
     <div class="col-sm-9">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="panel panel-default card-shadow">
-                    <div class="panel-body">
-                        <h3>Documentation</h3>
-                        <p>Welcome to Live Charts documentation click on any link to your left to navigate trough related documentation.</p>
+            <div class="col-xs-12">
+                <div ng-show="properties == null">
+                    <h3 class="doc-title">Documentation</h3>
+                    <p>
+                        Welcome to Live Charts documentation click on any link to your left to navigate
+                        trough related documentation. If something is wrong or misspelled you can edit
+                        this web site on
+                        <a href="https://github.com/beto-rodriguez/LiveChartsWeb/blob/master/LiveChartsWeb/App/Services/docsService.js" target="_blank">
+                            <i class="fa fa-lg fa-github"></i> Github
+                        </a>
+                    </p>
+                </div>
+                <div ng-show="properties != null">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="doc-title">{{current.name}}</h3>
+                            <p>{{current.text}}</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default" ng-repeat="prop in properties">
+                        <div class="panel-body">
+                            <h4 style="margin-top: 0;">{{prop.name}}</h4>
+                            <p>{{prop.text}}</p>
+                        </div>
                     </div>
                 </div>
             </div>

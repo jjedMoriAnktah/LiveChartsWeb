@@ -30,6 +30,11 @@ textarea {
     box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
 }
 
-.no-top-margin {
+.doc-title{
     margin-top: 0;
+    color: rgb(13, 71, 160)
+}
+
+.doc-properties-wrapper {
+    margin-top: 10px;
 }

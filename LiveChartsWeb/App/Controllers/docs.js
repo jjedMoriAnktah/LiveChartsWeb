@@ -1,7 +1,9 @@
 ﻿'use strict';
 
 app.controller('docsController', [
-    '$scope', function ($scope) {
-        $scope.name = "documentation";
+    '$scope', '$routeParams', 'docsService', function ($scope, $routeParams, docs) {
+        $scope.sections = docs;
+        $scope.current = docs[$routeParams.section];
+        $scope.properties = $scope.current.getProps();
     }
 ]);

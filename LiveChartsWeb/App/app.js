@@ -11,14 +11,9 @@ var app = angular.module("liveChartsApp", [
             controller: 'homeController'
         });
 
-        $routeProvider.when('/documentation', {
+        $routeProvider.when('/documentation/:section', {
             templateUrl: '/App/Views/docs.html',
             controller: 'docsController'
-        });
-
-        $routeProvider.when('/documentation/linechart', {
-            templateUrl: '/App/Views/Docs/lineChart.html',
-            controller: 'docsLineChartController'
         });
 
         $routeProvider.otherwise('/home', {
