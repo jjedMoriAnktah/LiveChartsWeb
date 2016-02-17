@@ -7,17 +7,17 @@ var app = angular.module("liveChartsApp", [
     function ($routeProvider) {
         
         $routeProvider.when('/home', {
-            templateUrl: '/App/Home/home.html',
+            templateUrl: '/App/Views/home.html',
             controller: 'homeController'
         });
 
         $routeProvider.when('/documentation', {
-            templateUrl: '/App/Docs/docs.html',
+            templateUrl: '/App/Views/docs.html',
             controller: 'docsController'
         });
 
-        $routeProvider.otherwise('/', {
-            templateUrl: '/App/Home/Home.html',
+        $routeProvider.otherwise('/home', {
+            templateUrl: '/App/Views/home.html',
             controller: 'homeController'
         });
     }

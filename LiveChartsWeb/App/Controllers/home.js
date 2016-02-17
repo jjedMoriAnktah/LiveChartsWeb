@@ -2,6 +2,6 @@
 
 app.controller('homeController', [
     '$scope', function($scope) {
-        $scope.name = "home";
+        $scope.name = "I'm under construction";
     }
 ]);

@@ -156,13 +156,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
-    <Content Include="App\Docs\docs.html" />
-    <Content Include="App\Docs\docs.js" />
-    <Content Include="App\Home\home.html" />
-    <Content Include="App\Home\home.js" />
+    <Content Include="App\Directives\DocsMapper\controller.js" />
+    <Content Include="App\Directives\DocsMapper\view.html" />
+    <Content Include="App\Directives\DocsMapper\docsMapper.js" />
+    <Content Include="App\Views\docs.html" />
+    <Content Include="App\Controllers\docs.js" />
+    <Content Include="App\Views\home.html" />
+    <Content Include="App\Controllers\home.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\paper-theme.css" />
+    <Content Include="Content\font-awesome.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\site.css" />
@@ -208,6 +213,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\version.json" />
   </ItemGroup>

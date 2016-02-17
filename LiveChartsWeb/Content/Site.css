@@ -1,9 +1,9 @@
 ﻿
 
 body {
-    padding-top: 90px;
+    padding-top: 110px;
     padding-bottom: 20px;
-    background: whitesmoke;
+    background: #eeeded;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -24,4 +24,8 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.card-shadow {
+    box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
 }
