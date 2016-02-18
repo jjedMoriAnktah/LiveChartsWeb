@@ -2,11 +2,13 @@
     <div class="col-sm-3">
         <div class="row">
             <div class="col-sm-12">
-                <div class="list-group">
-                    <a href="#" class="list-group-item" ng-repeat="section in sections"
-                       ng-href="#/documentation/{{section.route}}">
+                <div class="list-group card-shadow">
+                    <a href="#" class="list-group-item" 
+                       ng-repeat="section in sections"
+                       ng-href="#/documentation/{{section.route}}"
+                       ng-class="{active: section.route==current.route}">
                         <i class="fa fa-lg" ng-class="section.icon"></i>
-                        <span style="margin-left: 5px;">{{section.name}}</span>
+                        <span style="margin-left: 5px;">{{section.name}}</span> {{section.route == current.route}}
                     </a>
                 </div>
             </div>
