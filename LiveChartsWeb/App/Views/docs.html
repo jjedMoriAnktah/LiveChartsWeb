@@ -8,7 +8,7 @@
                        ng-href="#/documentation/{{section.route}}"
                        ng-class="{active: section.route==current.route}">
                         <i class="fa fa-lg" ng-class="section.icon"></i>
-                        <span style="margin-left: 5px;">{{section.name}}</span> {{section.route == current.route}}
+                        <span style="margin-left: 5px;">{{section.name}}</span>
                     </a>
                 </div>
             </div>
@@ -38,9 +38,19 @@
                                 </a>
                             </h3>
                             <p>{{current.text}}</p>
+                            <div class="row" style="margin-bottom: 10px;">
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search" ng-model="criteria" />
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="panel panel-default" ng-repeat="prop in properties">
+                    <div class="panel panel-default card-shadow" ng-repeat="prop in properties | filter: criteria">
                         <div class="panel-body">
                             <h4 style="margin-top: 0;">{{prop.name}}</h4>
                             <p>

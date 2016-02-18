@@ -23,11 +23,7 @@ body {
 input,
 select,
 textarea {
-    max-width: 280px;
-}
-
-.card-shadow {
-    box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+    /*max-width: 280px;*/
 }
 
 .doc-title{
@@ -37,4 +33,78 @@ textarea {
 
 .doc-properties-wrapper {
     margin-top: 10px;
+}
+
+.card-shadow {
+    -webkit-box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    -webkit-box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+    -ms-box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    -ms-box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+    box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+}
+
+/*
+  We're using CSS transitions for when
+  the enter and move events are triggered
+  for the element that has the .repeated-item
+  class
+*/
+.card-shadow.ng-enter, .card-shadow.ng-move {
+    -webkit-transition:0.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+    -ms-transition:0.5s linear all;
+    transition:0.5s linear all;
+    -ms-opacity:0;
+    opacity:0;
+}
+
+/*
+ The ng-enter-active and ng-move-active
+ are where the transition destination properties
+ are set so that the animation knows what to
+ animate.
+*/
+.card-shadow.ng-enter.ng-enter-active,
+.card-shadow.ng-move.ng-move-active {
+    -ms-opacity:1;
+    opacity:1;
+}
+
+/*
+  We're using CSS keyframe animations for when
+  the leave event is triggered for the element
+  that has the .repeated-item class
+*/
+.card-shadow.ng-leave {
+    -webkit-animation:0.5s my_animation;
+  -moz-animation:0.5s my_animation;
+  -o-animation:0.5s my_animation;
+    -ms-animation:0.5s my_animation;
+    animation:0.5s my_animation;
+}
+
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+/*
+  Unfortunately each browser vendor requires
+  its own definition of keyframe animation code...
+*/
+@-webkit-keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-moz-keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-o-keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
 }
