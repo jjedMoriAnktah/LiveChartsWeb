@@ -35,6 +35,18 @@ textarea {
     margin-top: 10px;
 }
 
+a.active i.text-muted {
+    color: white;
+}
+
+.label-primary a {
+    color: white;
+}
+
+.docs-label {
+    font-size: 12px;
+}
+
 .card-shadow {
     -webkit-box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
     -webkit-box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);

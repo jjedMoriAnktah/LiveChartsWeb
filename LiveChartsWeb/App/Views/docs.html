@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="list-group card-shadow">
-                    <a href="#" class="list-group-item" 
+                    <a href="#" class="list-group-item"
                        ng-repeat="section in sections"
                        ng-href="#/documentation/{{section.route}}"
                        ng-class="{active: section.route==current.route}">
-                        <i class="fa fa-lg" ng-class="section.icon"></i>
+                        <i class="fa text-muted" ng-class="section.icon"></i>
                         <span style="margin-left: 5px;">{{section.name}}</span>
                     </a>
                 </div>
@@ -37,11 +37,11 @@
                                     <i class="fa fa-lg fa-github"></i> Go to source code
                                 </a>
                             </h3>
-                            <p>{{current.text}}</p>
+                            <p ng-bind-html="current.text"></p>
                             <div class="row" style="margin-bottom: 10px;">
                                 <div class="col-md-7">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search" ng-model="criteria" />
+                                        <input type="text" class="form-control" placeholder="Search" ng-model="criteria"/>
                                         <span class="input-group-addon">
                                             <i class="fa fa-search"></i>
                                         </span>
@@ -52,15 +52,28 @@
                     </div>
                     <div class="panel panel-default card-shadow" ng-repeat="prop in properties | filter: criteria">
                         <div class="panel-body">
-                            <h4 style="margin-top: 0;">{{prop.name}}</h4>
+                            <h4 style="margin-top: 0;" ng-bind-html="prop.name"></h4>
+                            <p ng-bind-html="prop.text"></p>
                             <p>
-                                {{prop.text}}
-                                type <a ng-href="{{prop.type.ref}}"><span class="label label-primary" style="font-size: 12px;">{{prop.type.name}}</span></a>
-                                default value <span style="font-size: 13px;" class="label label-primary">{{prop.defualt}}</span>
-                                it is also
-                                <span class="label label-primary" ng-repeat="descriptor in prop.behavesAs"
-                                      style="font-size: 12px;">
-                                    {{descriptor}}
+                                <span ng-show="prop.type">
+                                    Type <a ng-href="{{prop.type.ref}}"><span class="label label-primary docs-label">{{prop.type.name}}</span></a>
+                                    Default <span class="label label-primary docs-label">{{prop.def}}</span>
+                                </span>
+                                <span ng-show="prop.returns">
+                                    Returns <a ng-href="{{prop.returns.ref}}"><span class="label label-primary docs-label">{{prop.returns.name}}</span></a>
+                                    Params: <span ng-repeat="param in prop.params">
+                                                {{$index+1}}. <span ng-bind-html="param.text"></span>, 
+                                                Type 
+                                                <a ng-href="{{param.type.ref}}">
+                                                    <span class="label label-primary docs-label">{{param.type.name}}</span>
+                                                </a>
+                                            </span>
+                                </span>
+                                <span ng-show="prop.behavesAs.length > 0">
+                                    Also is
+                                    <span class="label label-primary docs-label" ng-repeat="descriptor in prop.behavesAs">
+                                        {{descriptor}}
+                                    </span>
                                 </span>
                             </p>
 
