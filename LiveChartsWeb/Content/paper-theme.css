@@ -1536,7 +1536,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: SourceCodePro,Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 code {
   padding: 2px 4px;
@@ -7487,7 +7487,7 @@ input[type="checkbox"]:disabled:checked:after,
   opacity: 1;
 }
 .list-group-item {
-  padding: 15px;
+  padding: 5px 15px;
 }
 .list-group-item-text {
   color: #bbbbbb;

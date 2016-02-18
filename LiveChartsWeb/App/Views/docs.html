@@ -5,7 +5,7 @@
                 <div class="list-group">
                     <a href="#" class="list-group-item" ng-repeat="section in sections"
                        ng-href="#/documentation/{{section.route}}">
-                        <i class="fa"></i>
+                        <i class="fa fa-lg" ng-class="section.icon"></i>
                         <span style="margin-left: 5px;">{{section.name}}</span>
                     </a>
                 </div>
@@ -29,14 +29,30 @@
                 <div ng-show="properties != null">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h3 class="doc-title">{{current.name}}</h3>
+                            <h3 class="doc-title">
+                                {{current.name}}
+                                <a class="btn btn-default pull-right" ng-href="{{current.source}}">
+                                    <i class="fa fa-lg fa-github"></i> Go to source code
+                                </a>
+                            </h3>
                             <p>{{current.text}}</p>
                         </div>
                     </div>
                     <div class="panel panel-default" ng-repeat="prop in properties">
                         <div class="panel-body">
                             <h4 style="margin-top: 0;">{{prop.name}}</h4>
-                            <p>{{prop.text}}</p>
+                            <p>
+                                {{prop.text}}
+                                type <a ng-href="{{prop.type.ref}}"><span class="label label-primary" style="font-size: 12px;">{{prop.type.name}}</span></a>
+                                default value <span style="font-size: 13px;" class="label label-primary">{{prop.defualt}}</span>
+                                it is also
+                                <span class="label label-primary" ng-repeat="descriptor in prop.behavesAs"
+                                      style="font-size: 12px;">
+                                    {{descriptor}}
+                                </span>
+                            </p>
+
+                            <pre class="prettyprint linenums" code="prop.example" style="margin: 0"></pre>
                         </div>
                     </div>
                 </div>
