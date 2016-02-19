@@ -157,7 +157,9 @@
   <ItemGroup>
     <Content Include="App\app.js" />
     <Content Include="App\dirrectives.js" />
+    <Content Include="App\Services\componentsService.js" />
     <Content Include="App\Services\docsService.js" />
+    <Content Include="App\Services\typesService.js" />
     <Content Include="App\Views\docs.html" />
     <Content Include="App\Controllers\docs.js" />
     <Content Include="App\Views\home.html" />
