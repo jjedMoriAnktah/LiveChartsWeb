@@ -21,9 +21,15 @@ app.factory('docsService', [function () {
         fontStyle: { name: 'FontStyle', ref: 'https://msdn.microsoft.com/en-us/library/system.windows.controls.textblock.fontstyle(v=vs.110).aspx' },
         fontStretch: { name: 'FontStretch', ref: 'https://msdn.microsoft.com/en-us/library/system.windows.fontstretch(v=vs.110).aspx' },
         brush: { name: 'Brush', ref: 'https://msdn.microsoft.com/en-us/library/system.windows.media.brush(v=vs.110).aspx' },
+        point: { name: 'Point', ref: 'https://msdn.microsoft.com/en-us/library/system.windows.point(v=vs.110).aspx' },
+        object: { name: 'object', ref: 'https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx' },
+        voidType: { name: 'void', ref: 'https://msdn.microsoft.com/en-us/library/yah0tteb.aspx'},
         chart: { name: 'Chart', ref: '#/documentation/chart' },
-        iSeriesConfiguration: { name: 'ISeriesConfiguration', ref: '#/documentation/iseriesconfiguration'},
+        iSeriesConfiguration: { name: 'ISeriesConfiguration', ref: '#/documentation/iseriesconfiguration' },
+        iChartSeries: { name: 'IChartSeries', ref: '#/documentation/ichartseries' },
         seriesConfiguration: {name: 'SeriesConfiguration<T>', ref: '#/documentation/seriesconfiguration' },
+        iChartValues: { name: 'IChartValues', ref: '#/documentation/ichartvalues' },
+        ChartPoint: { name: 'ChartPoint', ref: '#/documentation/chartpoint' },
         axis: { name: 'Axis', ref: '#/documentation/axis' },
         separator: { name: 'Separator', ref: "#/documentation/separator" },
         zoomingOptions: { name: 'ZoomingOptions', ref: '#/documentation/zoomingoptions' },
@@ -47,18 +53,39 @@ app.factory('docsService', [function () {
             { name: 'Hoverable', type: types.bool, text: 'Gets or sets if charts displays tooltip when mouse is over a data point.', tags: '', behavesAs:['Dependency Property'], def: 'true', example: 'Chart.Hoverable = false;'},
             { name: 'PointHoverColor', type: types.color, text: 'Gets or sets data point color when mouse is over it.', tags: '', behavesAs: ['Dependency Property'], def: 'varies', example: 'Chart.PointHoverColor = Color.FromRgb(55,55,55);' },
             { name: 'DisableAnimations', type: types.bool, text: 'Gets or sets if chart series are animated.', tags: 'animation', behavesAs: ['Dependency Property'], def: 'false', example: 'Chart.DisableAnimations = false;' },
-            { name: 'Series', type: types.seriesCollection, text: 'Gets or sets chart series collection to plot, default series collection is ready to store double values and scale them on Y axis, if you need more information about how to configure a SeriesCollection class please see <a href="#/documentation/seriesconfiguration?search=configuration">SeriesCollection.Configuration</a> property or built in examples.', tags: '', behavesAs: ['Dependency Property'], def: 'new SeriesCollection(new SeriesConfiguration<double>().Y(val => val))', example: 'var config = new SeriesConfiguration()\n\t\t\t.X(model => model.XProperty)\n\t\t\t.Y(model => model.DesiredProperty);\n Chart.Series = new SeriesCollection(config);' },
-            { name: 'Chart', type: types.chart, text: 'Gets chart that own this series', tags: '', behavesAs: [], example: 'var chart = mySeries.Chart;' },
-            { name: 'Setup(<i class="text-muted">configuration</i>)', returns: types.series, text: 'Setup a configuration for this collection, notice this method returns the current instance to support fleunt syntax.', tags: '', behavesAs: [], params: [{ type: types.seriesConfiguration, text: 'configuration to apply' }], example: 'var config = new SeriesConfiguration<double>().X(val => val);\nmySeriesCollection.Setup(config)' }
+            { name: 'Series', type: types.seriesCollection, text: 'Gets or sets chart series collection to plot, default series collection is ready to store double values and scale them on Y axis, if you need more information about how to configure a SeriesCollection class please see <a href="#/documentation/seriesconfiguration?search=configuration">SeriesCollection.Configuration</a> property or built in examples.', tags: '', behavesAs: ['Dependency Property'], def: 'new SeriesCollection(new SeriesConfiguration<double>().Y(val => val))', example: 'var config = new SeriesConfiguration()\n\t\t\t.X(model => model.XProperty)\n\t\t\t.Y(model => model.DesiredProperty);\n Chart.Series = new SeriesCollection(config);' }
         ],
         iLine: [
         ],
         iBar: [
         ],
+        iChartValues: [
+            { name: 'Points', type: modify(types.chartPoint, 'IEnumerable<{{name}}>'), text: 'Gets series points to draw.', tags: '', behavesAs: [], def: 'Enumerable.Empty<ChartPoint>', example: 'var seriesPoints = lineSeries.Values.Points.ToArray();' },
+            { name: 'MaxChartPoint', type: types.point, text: 'Gets max X and Y values', tags: '', behavesAs: [], def: 'new Point(0,0)', example: 'var max = lineSeries.Values.MaxChartPoint;\n//max.X will store max value in X axis and max.Y max value in Y axis' },
+            { name: 'MinChartPoint', type: types.point, text: 'Gets minX and Y values', tags: '', behavesAs: [], def: 'new Point(0,0)', example: 'var min = lineSeries.Values.MinChartPoint;\n//min.X will store min value in X axis and min.Y min value in Y axis' },
+            { name: 'Series', type: types.iChartSeries, text: 'Gets or sets series that owns the values', tags: '', behavesAs: [], def: 'internal setter', example: 'var owner = lineSeries.Values.Series;\n//will return lineSeries instance.' },
+            { name: 'GetLimits()', returns: types.voidType, text: 'Forces values to calculate max and min values, and index data.', tags: '', behavesAs: [], def: 'true', example: 'var requires = lineSeries.Values.RequiresEvaluation;' }
+        ],
+        iChartSeries: [
+            { name: 'Values', type: types.iChartValues, text: 'Gets or sets series values to plot.', tags: '', behavesAs: [], def: 'varies', example: 'var vals = lineSeries.Values.ToArray();\nvar lineSeries = new LineSeries { Values = new ChartValues(); }\n//ChartValues class implements IChartValues' },
+            { name: 'Collection', type: types.seriesCollection, text: 'Gets SeriesCollection that owns this series', tags: '', behavesAs: [], def: 'internal setter', example: 'var owner = lineSeries.Collection;' },
+            { name: 'Configuration', type: types.iSeriesConfiguration, text: 'Gets or sets series configuration. If this property is not null then SeriesCollection.Configuration will be ignored.', tags: '', behavesAs: [], def: 'internal setter', example: 'LineSeries.Configuration = new SeriesConfiguration();' }
+        ],
         series: [
-        {
-            
-        }],
+            { name: 'Title', type: types.string, text: 'Gets or sets series title.', tags: '', behavesAs: ['Dependency Property'], def: 'nulll', example: 'lineSeries.Title = "John sales;"' },
+            { name: 'Stroke', type: types.brush, text: 'Gets or sets series stroke, if this property is null then a SolidColorBrush will be assigned according to series position in collection and Chart.Colors property', tags: '', behavesAs: ['Dependency Property'], def: 'null (auto)', example: 'lineSeries.Stroke = Brushes.Red;' },
+            { name: 'Fill', type: types.brush, text: 'Gets or sets series fill color, if this property is null then a SolidColorBrush will be assigned according to series position in collection and Chart.Colors property, also Fill property has a default opacity according to chart type.', tags: '', behavesAs: ['Dependency Property'], def: 'null (auto)', example: 'lineSeries.Stroke = Brushes.Red;' },
+            { name: 'DataLabels', type: types.bool, text: 'Gets or sets if series should include a label over each data point.', tags: '', behavesAs: ['Dependency Property'], def: 'false', example: 'lineSeries.DataLabels = true;' },
+            { name: 'FontFamily', type: types.fontFamily, text: 'Gets or sets DataLabels font family', tags: 'labels', behavesAs: ['Dependency Property'], def: 'Calibri', example: 'Axis.FontFamily = new FontFamily("Arial");' },
+            { name: 'FontSize', type: types.dbl, text: 'Gets or sets DataLabels font size.', tags: 'label', behavesAs: ['Dependency Property'], def: '11.0', example: 'Axis.FontSize = 16;' },
+            { name: 'FontWeight', type: types.bool, text: 'Gets or sets DataLabels font weight.', tags: 'label', behavesAs: ['dependency Property'], def: 'FontWeights.Normal', example: 'Axis.FontWeight = FontWeights.Bold;' },
+            { name: 'Gets or sets labels font style', type: types.fontStyle, text: 'Gets or sets DataLabels font style.', tags: 'labels', behavesAs: ['Dependency Property'], def: 'FontStyles.Normal', example: 'Axis.FontStyle = FontStyles.Italic;' },
+            { name: 'FontStrech', type: types.bool, text: 'Gets or sets DataLabels font stretch', tags: 'label', behavesAs: ['Dependency Property'], def: 'FontStretches.Normal', example: 'Axis.FontStretch = FontStretches.ExtraExpanded;' },
+            { name: 'Foreground', type: types.bool, text: 'Gets or sets DataLabels foreground.', tags: 'label', behavesAs: ['Dependency Property'], def: 'Color.FromRgb(150, 150, 150)', example: 'Axis.Foreground = Color.FromRgb(55, 55, 55);' },
+            { name: 'Chart', type: types.chart, text: 'Gets chart that own the series.', tags: '', behavesAs: [], def: 'internal setter', example: 'var ownerChart = lineSeries.Chart;' },
+            { name: 'GetColorByIndex(<i class="text-muted">index</i>)', returns: types.series, text: 'Returns a Color according to an index and Chart.Colors property.', tags: '', behavesAs: [], params: [{ type: types.integer, text: 'index to lookup.' }] },
+            { name: 'Setup(<i class="text-muted">configuration</i>)', returns: types.series, text: 'Setup a configuration for this collection, notice this method returns the current instance to support fleunt syntax. if Series.Cofiguration is not null then SeriesCollection.Configuration will be ignored.', tags: '', behavesAs: [], params: [{ type: types.seriesConfiguration, text: 'configuration to apply' }], example: 'var config = new SeriesConfiguration<double>().X(val => val);\nmySeriesCollection.Setup(config)' }
+        ],
         seriesCollection: [
             { name: 'Chart', type: types.chart, text: 'Gets owner chart.', tags: '', behavesAs: [], def: 'internal setter', example: 'var chart = mySeriesCollection.Chart;' },
             { name: 'Configuration', type: types.iSeriesConfiguration, text: 'Gets or sets chart Series configuration, ', tags: '', behavesAs: [], def: 'internal setter', example: 'var chart = mySeriesCollection.Chart;' },
@@ -68,13 +95,19 @@ app.factory('docsService', [function () {
             { name: 'Chart', type: types.chart, text: 'Gets owner chart, even you can set this property it will be overriden when live charts is plotting.', tags: '', behavesAs: [], def: 'internal setter', example: 'var chart = configuration.Chart;\n//where configuration implements ISeriesConfiguration.' }
         ],
         seriesConfiguration: [
-            { name: 'Chart', type: types.chart, text: 'Gets owner chart, even you can set this property it will be overriden when live charts is plotting.', tags: '', behavesAs: [], def: 'internal setter', example: 'var chart = configuration.Chart;' },
             { name: 'DataOptimization', type: null, text: 'this property is under construction and might change, docs will be updated when this is ready (wait for high performance release).', tags: 'high performance', example: '//nothing to see here :(' },
             { name: 'XValueMapper', type: { name: 'Func<T, int, double>', ref: 'https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx' }, text: 'Gets or sets the current function that pulls out X value from T', tags: '', def: '(model, index) => index;', example: 'XValueMapper = (model, index) => model.ToPlotProperty;' },
             { name: 'YValueMapper', type: { name: 'Func<T, int, double>', ref: 'https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx' }, text: 'Gets or sets the current function that pulls out Y value from T', tags: '', def: '(model, index) => index;', example: 'YValueMapper = (model, index) => model.ToPlotProperty;' },
             { name: 'X(<i class="text-muted">predicate</i>)', returns: types.seriesConfiguration, text: 'Sets XValueMapper property, notice this property returns current SeriesConfiguration to support fluent syntax.', tags: '', behavesAs: [], params: [{ type: { name: 'Func<>', ref: 'https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx' }, text: 'predicate, function that pulls out plot target property, this method has 2 overloads, first: (model, index) => <i>predicate</i>, second: model => <i>predicate</i>' }], example: 'var config = new SeriesConfiguration()\n\t\t\t.X(model => model.XProperty)\n\t\t\t.Y(model => model.DesiredProperty);\n Chart.Series = new SeriesCollection(config);' },
             { name: 'Y(<i class="text-muted">predicate</i>)', returns: types.seriesConfiguration, text: 'Sets YValueMapper, notice this property returns current SeriesConfiguration to support fluent syntax.', tags: '', behavesAs: [], params: [{ type: { name: 'Func<>', ref: 'https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx' }, text: 'predicate, function that pulls out plot target property, this method has 2 overloads, first: (model, index) => <i>predicate</i>, second: model => <i>predicate</i>' }], example: 'var config = new SeriesConfiguration()\n\t\t\t.X(model => model.XProperty)\n\t\t\t.Y(model => model.DesiredProperty);\n Chart.Series = new SeriesCollection(config);' },
-            { name: 'HasHighPerformanceMethod(<i class="text-muted">method</i>)', type: null, text: 'This property is under construction and might change, docs will be updated when this is ready (wait for high performance release).', tags: 'high performance', example: '//nothing to see here :(' }
+            { name: 'HasHighPerformanceMethod(<i class="text-muted">method</i>)', type: null, text: 'This property is under construction and might change, docs will be updated when this is ready (wait for high performance release).', tags: 'high performance', behavesAs: [], def: 'null', example: '//nothing to see here :(' }
+        ],
+        chartPoint: [
+            { name: 'X', type: types.dbl, text: 'Gets or sets X value.', tags: '', behavesAs: [], def: '0', example: 'var x = ChartPoint.X;' },
+            { name: 'Y', type: types.dbl, text: 'Gets or sets Y value.', tags: '', behavesAs: [], def: '0', example: 'var y = ChartPoint.Y;' },
+            { name: 'Instance', type: types.object, text: 'Gets or sets instance where point pulled X and Y values', tags: '', behavesAs: [], def: 'see ChartValues class', example: 'var instance = ChartPoint.Instance;' },
+            { name: 'Key', type: types.integer, text: 'Gets or sets ChartPoint index value, LiveCharts indexes all values to improve perfomance.', tags: '', behavesAs: [], def: 'see ChartValues class', example: 'var pointIndex = ChartPoint.Key;' },
+            { name: 'IsMocked', type: types.bool, text:'Gets or sets if a point is fake.', tags: '', behavesAs: [], def: "false", example: 'var isFake = ChartPoint.IsMocked;'}
         ],
         axis: [
             { name: 'Labels', type: modify(types.string, "IList<{{name}}>"), text: 'Gets or sets axis labels, labels property stores the array to map for each index and value, for example if axis value is 0 then label will be labels[0], when value 1 then labels[1], value 2 then labels[2], ..., value n labels[n], use this property instead of a formatter when there is no conversion between value and label for example names, if you are ploting sales vs salesman name.', tags: 'label formatter', behavesAs: ['Dependency Property'], def: 'null', example: 'Axis.Labels = new[] {"John", "Mark", "Susan"};' },
@@ -123,7 +156,7 @@ app.factory('docsService', [function () {
             getProps: function () { return null; }
         },
         linechart: {
-            name: 'Line Chart',
+            name: 'LineChart Class',
             text: 'Line charts are useful when you need to identify data trends or variation, between one or multiple series.',
             route: 'linechart',
             icon: 'fa-line-chart',
@@ -131,7 +164,7 @@ app.factory('docsService', [function () {
             getProps: function () { return buildProperties(['chart']); }
         },
         barchart: {
-            name: 'Bar Chart',
+            name: 'BarChart Class',
             text: 'You normally use a bar chart when you need to highlight the variation between each data point, they normally require a small number of points.',
             route: 'barchart',
             icon: 'fa-bar-chart',
@@ -139,7 +172,7 @@ app.factory('docsService', [function () {
             getProps: function () { return buildProperties(['chart']); }
         },
         seriescollection: {
-            name: 'Series Collection',
+            name: 'SeriesCollection Class',
             text: 'Series collection is one of the most important components of this library, a series collection contains all the series to plot in a chart, what makes this class so important is two things, first, it notifies the UI when you add or remove a series so chart is able refresh its content automatically, and second, it contains a configuration to plot any type you need, for example you can create a configuration for a custom model, and then map X and Y so LiveCharts knows how to plot your model, SeriesCollection inherits from <span class="label label-primary docs-label"><a href="https://msdn.microsoft.com/en-us/library/ms668604(v=vs.110).aspx">ObservableCollection</a>&lt;<a href="#/documentation/series">Series</a>&gt;</span>',
             route: 'seriescollection',
             icon: 'fa-table',
@@ -147,15 +180,23 @@ app.factory('docsService', [function () {
             getProps: function () { return buildProperties(['seriesCollection']); }
         },
         seriesconfiguration: {
-            name: 'SeriesConfiguration<T>',
+            name: 'SeriesConfiguration<T> Class',
             text: 'Defines how LiveCharts should plot a model, where T is your model.',
             route: 'seriesconfiguration',
             icon: 'fa-cog',
             source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/CoreComponents/SeriesConfiguration.cs',
-            getProps: function () { return buildProperties(['seriesConfiguration']); }
+            getProps: function () { return buildProperties(['iSeriesConfiguration', 'seriesConfiguration']); }
+        },
+        chartpoint: {
+            name: 'SeriesConfiguration<T> Class',
+            text: 'Defines a point processed by a series.',
+            route: 'chartpoint',
+            icon: 'fa-dot-circle-o',
+            source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/CoreComponents/ChartPoint.cs',
+            getProps: function () { return buildProperties(['chartPoint']); }
         },
         chart: {
-            name: 'Chart',
+            name: 'Chart Class',
             text: 'Defines a chart, this is the core component of LiveCharts, all charts inherits from this class.',
             route: 'chart',
             icon: 'fa-area-chart',
@@ -163,47 +204,47 @@ app.factory('docsService', [function () {
             getProps: function () { return buildProperties(['chart']); }
         },
         series: {
-            name: 'Series',
-            text: 'Defines a series, a really important component, all series inherits from this class. This class inherits from <a class="label label-primary" href="https://msdn.microsoft.com/en-us/library/system.windows.frameworkelement(v=vs.110).aspx">FrameworkElement</a> and implements <a class="label label-default" href="https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Interfaces/IChartSeries.cs">IChartSeries</a>',
+            name: 'Series Class',
+            text: 'Defines a series, a really important component, all series inherits from this class. This class inherits from <a class="label label-primary" href="https://msdn.microsoft.com/en-us/library/system.windows.frameworkelement(v=vs.110).aspx">FrameworkElement</a> and implements <a class="label label-primary" href="https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Interfaces/IChartSeries.cs">IChartSeries</a>',
             route: 'series',
             icon: 'fa-link',
             source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/CoreComponents/Chart.cs',
-            getProps: function () { return buildProperties(['series']); }
+            getProps: function () { return buildProperties(['iChartSeries', 'series']); }
         },
         axis: {
-            name: 'Axis',
-            text: 'Defines a chart axis, inherits from <a href="https://msdn.microsoft.com/en-us/library/system.windows.frameworkelement(v=vs.110).aspx"><span class="label label-primary">FrameworkElement</span></a>',
+            name: 'Axis Class',
+            text: 'Defines a chart axis, inherits from <a href="https://msdn.microsoft.com/en-us/library/system.windows.frameworkelement(v=vs.110).aspx"><span class="label label-primary">FrameworkElement</span></a>.',
             route: 'axis',
             icon: 'fa-arrows',
             source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/CoreComponents/Axis.cs',
             getProps: function () { return buildProperties(['axis']); }
         },
         separator: {
-            name: 'Separator',
+            name: 'Separator Class',
             text: 'Defines the behavior of the parallel lines to an axis',
             route: 'separator',
             icon: 'fa-align-justify',
             source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/CoreComponents/Separator.cs',
             getProps: function () { return buildProperties(['separator']); }
         },
-        zoomingoptions: {
-            name: 'Zooming Options',
-            text: 'Defines how line zooms, options are None, X, Y and XY this property is underconstruction and might change in future versions (depends on high performance release).',
-            route: 'zoomingoptions',
-            icon: 'fa-search-plus',
-            source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/ZoomingOptions.cs',
-            getProps: function () { return buildProperties(['zoomingOptions']); }
-        },
         chartlegend: {
-            name: 'Chart Legend',
+            name: 'ChartLegend Class',
             text: 'A chart legend is class that inherits from WPF UserControl, it has some extended properties necesaries to display the control, those properties are only useful by LiveCharts, if you are here maybe you are interested in building a custom legend, it is possible, you must create a control that inherits from ChartLegend, style it as you need and finally set that control to your chart, Chart.Legend = new myLegend();, this is not included in any example, and will be built on a future release.',
             route: 'chartlegend',
             icon: 'fa-list-ol',
             source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Legend/ChartLEgend.xaml.cs',
             getProps: function () { return buildProperties(['chartLegend']); }
         },
+        zoomingoptions: {
+            name: 'ZoomingOptions Enum',
+            text: 'Defines how line zooms, options are None, X, Y and XY this property is underconstruction and might change in future versions (depends on high performance release).',
+            route: 'zoomingoptions',
+            icon: 'fa-search-plus',
+            source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/ZoomingOptions.cs',
+            getProps: function () { return buildProperties(['zoomingOptions']); }
+        },
         legendlocation: {
-            name: 'Legend Location',
+            name: 'LegendLocation Enum',
             text: 'Indicates where a legend is located, options are None, Top, Bottom, Left, Right.',
             route: 'legendlocation',
             icon: 'fa-list-ol',
@@ -211,12 +252,28 @@ app.factory('docsService', [function () {
             getProps: function () { return buildProperties(['chartLegend']); }
         },
         iseriesconfiguration: {
-            name: 'ISeriesConfiguration (interface)',
+            name: 'ISeriesConfiguration Interface',
             text: 'Defines a series configuration.',
             route: 'iseriesconfiguration',
             icon: 'fa-cog',
             source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Interfaces/ISeriesConfiguration.cs',
             getProps: function () { return buildProperties(['iSeriesConfiguration']); }
+        },
+        ichartvalues: {
+            name: 'IChartValues Interface',
+            text: 'Defines series values to plot, this interface implements <a class="label label-primary" href="https://msdn.microsoft.com/en-us/library/system.collections.ilist(v=vs.110).aspx">IList</a> <a class="label label-primary" href="">INotifyPropertyChanged</a> <a class="label label-primary" href="">INotifyCollectionChanged</a>.',
+            route: 'ichartvalues',
+            icon: 'fa-superscript',
+            source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Interfaces/IChartValues.cs',
+            getProps: function () { return buildProperties(['iChartValues']); }
+        },
+        ichartseries: {
+            name: 'IChartSeries interface',
+            text: 'Defines ChartSeries',
+            route: 'ichartseries',
+            icon: 'fa-link',
+            source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Interfaces/IChartSeries.cs',
+            getProps: function () { return buildProperties(['iChartSeries']); }
         }
     };
 
