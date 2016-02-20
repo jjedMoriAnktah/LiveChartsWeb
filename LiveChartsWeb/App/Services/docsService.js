@@ -26,7 +26,7 @@ app.factory('docsService', ['componentsService', function (components) {
             route: 'linechart',
             icon: 'fa-line-chart',
             source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Charts/LineChart.cs',
-            getProps: function () { return buildProperties(['iLine ,chart']); }
+            getProps: function () { return buildProperties(['iLine' ,'chart']); }
         },
         barchart: {
             name: 'BarChart Class',

@@ -10,10 +10,9 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'/>
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../Content/bootstrap.css"/>
-    <link href="~/Content/paper-theme.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../Content/site.css"/>
-    <link href="~/Content/font-awesome.css" rel="stylesheet"/>
     <link href="~/Content/prettify.css" rel="stylesheet" />
 
     <style type="text/css">
@@ -26,19 +25,21 @@
 
 <body class="container" ng-cloak>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="templateController">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#/Home" style="padding-top: 8px">
-                    <img alt="Controli" src="~/livechartslogo.png" />
+                    <img alt="Controli" src="~/Content/Images/Logos/lclogo30.png"/>
                 </a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" ng-click="toggleMenu()">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar text-primary"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav">
+            <div>
+                <ul class="nav navbar-nav" id="menu" ng-click="hideMenu()" ng-class="{ 'is-closed': !isVisible }">
                     <li><a href="#/home">Home</a></li>
                     <li><a href="#/documentation/welcome">Documentation</a></li>
                 </ul>
@@ -50,10 +51,8 @@
 
     </div>
 
-<script src="~/Scripts/jquery-1.9.1.js"></script>
 <script src="~/Scripts/prettify.js"></script>
 <script src="~/Scripts/bootstrap.js"></script>
-<script src="~/Scripts/respond.js"></script>
 <script src="../../Scripts/angular.js"></script>
 <script src="~/Scripts/angular-route.js"></script>
 <script src="~/Scripts/angular-sanitize.js"></script>
@@ -64,7 +63,8 @@
 <script src="~/App/Services/typesService.js"></script>
 <script src="~/App/Services/componentsService.js"></script>
 <script src="~/App/Services/docsService.js"></script>
-<script src="~/App/dirrectives.js"></script>
+<script src="~/App/directives.js"></script>
+<script src="~/App/Controllers/template.js"></script>
 <script src="~/App/Controllers/home.js"></script>
 <script src="~/App/Controllers/docs.js"></script>
 

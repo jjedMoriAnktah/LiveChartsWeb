@@ -1,8 +1,6 @@
-﻿
-
-body {
-    padding-top: 110px;
-    padding-bottom: 20px;
+﻿body {
+    padding-top: 80px;
+    padding-bottom: 100px;
     background: #eeeded;
 }
 
@@ -24,6 +22,15 @@ input,
 select,
 textarea {
     /*max-width: 280px;*/
+}
+
+.navbar {
+    -webkit-box-shadow: 0 1px 3px #000000, 0 1px 2px #000000;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -ms-box-shadow: 0 1px 3px #000000, 0 1px 2px #000000;
+    -ms-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px #000000, 0 1px 2px #000000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .doc-title{
@@ -119,4 +126,14 @@ a.active i.text-muted {
 @-o-keyframes my_animation {
   from { opacity:1; }
   to { opacity:0; }
+}
+
+/*Menu hidden just for xs devices*/
+#menu.is-closed {
+    display: none;
+}
+@media (min-width: 760px) {
+  #menu.is-closed {
+      display: block;
+  }
 }

@@ -156,7 +156,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
-    <Content Include="App\dirrectives.js" />
+    <Content Include="App\Controllers\template.js" />
+    <Content Include="App\directives.js" />
     <Content Include="App\Services\componentsService.js" />
     <Content Include="App\Services\docsService.js" />
     <Content Include="App\Services\typesService.js" />
@@ -165,15 +166,16 @@
     <Content Include="App\Views\home.html" />
     <Content Include="App\Controllers\home.js" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\Images\Logos\lcicon.png" />
+    <Content Include="Content\Images\Logos\lclogo.png" />
+    <Content Include="Content\Images\Logos\lclogo30.png" />
     <Content Include="Content\prettify.css" />
-    <Content Include="Content\paper-theme.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\site.css" />
-    <Content Include="livechartslogo.png" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -198,7 +200,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\prettify.js" />
-    <Content Include="Scripts\respond.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
