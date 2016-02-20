@@ -38,7 +38,7 @@ app.factory('components065', [
                         example: 'Chart.RandomizeStartingColor = true;'
                     }, {
                         name: 'AxisY',
-                        type: this.axis,
+                        type: types.axis,
                         text: 'Gets or sets vertical axis',
                         tags: '',
                         behavesAs: ['Dependency Property'],
@@ -46,7 +46,7 @@ app.factory('components065', [
                         example: 'Chart.AxisY = new Axis();'
                     }, {
                         name: 'AxisX',
-                        type: this.axis,
+                        type: types.axis,
                         text: 'Gets or sets horizontal axis',
                         tags: '',
                         behavesAs: ['Dependency Property'],
@@ -54,7 +54,7 @@ app.factory('components065', [
                         example: 'Chart.AxisX = new Axis();'
                     }, {
                         name: 'Zoom',
-                        type: this.zoomingOptions,
+                        type: types.zoomingOptions,
                         text: 'Gets or sets chart zoom behavior',
                         tags: '',
                         behavesAs: ['Dependency Property'],
@@ -62,7 +62,7 @@ app.factory('components065', [
                         example: 'Chart.Zoom = ZoomingOptions.X;'
                     }, {
                         name: 'Legend',
-                        type: this.chartLegend,
+                        type: types.chartLegend,
                         text: 'Gets or sets legend location, a legend is a small control that displays series titles and its colors.',
                         tags: '',
                         behavesAs: ['Dependency Property'],
@@ -70,7 +70,7 @@ app.factory('components065', [
                         example: 'Chart.Legend = new myCustomLegend();'
                     }, {
                         name: 'LegendLocation',
-                        type: this.legendLocation,
+                        type: types.legendLocation,
                         text: 'Gets or sets where legend is located',
                         tags: '',
                         behavesAs: ['Dependency Property'],
@@ -110,7 +110,7 @@ app.factory('components065', [
                         example: 'Chart.DisableAnimations = false;'
                     }, {
                         name: 'Series',
-                        type: this.seriesCollection,
+                        type: types.seriesCollection,
                         text: 'Gets or sets chart series collection to plot, default series collection is ready to store double values and scale them on Y axis, if you need more information about how to configure a SeriesCollection class please see <a href="#/documentation/seriesconfiguration?search=configuration">SeriesCollection.Configuration</a> property or built in examples.',
                         tags: '',
                         behavesAs: ['Dependency Property'],
@@ -162,7 +162,7 @@ app.factory('components065', [
                         text: 'Scales a graph value to screen pixels according to an axis.',
                         tags: '',
                         behavesAs: [],
-                        params: [{ type: types.dbl, text: 'value: value to scale' }, { type: this.axisTags, text: 'axis: value will be scale according to this axis range and dimension.' }],
+                        params: [{ type: types.dbl, text: 'value: value to scale' }, { type: types.axisTags, text: 'axis: value will be scale according to this axis range and dimension.' }],
                         example: 'var pointToScale = new Point(10, 50);\nvar leftInPixels = Chart.ToPlotArea(pointToScale.X, AxisTags.X);\nvar topInPixels = Chart.ToPlotArea(pointToScale.Y, AxisTags.Y);\n//or easier, use the second overload\nPoint scaledPoint = Chart.ToDrawMargin(pointToScale);'
                     }, {
                         name: 'FromDrawMargin(<i class="text-muted">value</i>, <i class="text-muted">axis</i>)',
@@ -170,7 +170,7 @@ app.factory('components065', [
                         text: 'Scales from screen pixels graph value according to an axis.',
                         tags: '',
                         behavesAs: [],
-                        params: [{ type: types.dbl, text: 'value: value to scale' }, { type: this.axisTags, text: 'axis: value will be scale according to this axis range and dimension.' }],
+                        params: [{ type: types.dbl, text: 'value: value to scale' }, { type: types.axisTags, text: 'axis: value will be scale according to this axis range and dimension.' }],
                         example: 'var pointToScale = new Point(10, 50);\nvar xVal = Chart.FromDrawMargin(pointToScale.X, AxisTags.X);\nvar yVal = Chart.FromDrawMargin(pointToScale.Y, AxisTags.Y);\n//or easier, use the second overload\nPoint scaledPoint = Chart.FromDrawMargin(pointToScale);'
                     }
                 ],

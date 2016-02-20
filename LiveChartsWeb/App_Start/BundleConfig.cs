@@ -13,6 +13,7 @@ namespace LiveChartsWeb
                 "~/Content/bootstrap.css",
                 "~/Content/site.css",
                 "~/Content/prettify.css"));
+
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                       "~/Scripts/prettify.js",
                       //"~/Scripts/bootstrap.js", //not used yet
@@ -24,13 +25,14 @@ namespace LiveChartsWeb
 
                       "~/App/app.js",
 
-                      "~/App/Services/docversionmap.js",
+                      //docs mapper
+                      "~/App/Docs/docMapper.js",
 
                       //065 docs
                       "~/App/Docs/065/types.js",
                       "~/App/Docs/065/components.js",
-                      "~/App/Docs/065/docs.js",
-
+                      "~/App/Docs/065/docsService.js",
+                      
                       "~/App/directives.js",
 
                       "~/App/Controllers/template.js",

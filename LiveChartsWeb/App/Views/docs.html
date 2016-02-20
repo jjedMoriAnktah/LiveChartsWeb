@@ -5,7 +5,7 @@
                 <div class="list-group card-shadow">
                     <a href="#" class="list-group-item"
                        ng-repeat="section in sections"
-                       ng-href="#/documentation/{{section.route}}#title"
+                       ng-href="#/documentation/{{version}}/{{section.route}}#title"
                        ng-class="{active: section.route==current.route}">
                         <i class="fa text-muted" ng-class="section.icon"></i>
                         <span style="margin-left: 5px;">{{section.name}}</span>

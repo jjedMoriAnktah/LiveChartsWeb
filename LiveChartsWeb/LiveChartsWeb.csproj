@@ -159,9 +159,9 @@
     <Content Include="App\Controllers\template.js" />
     <Content Include="App\directives.js" />
     <Content Include="App\Docs\065\components.js" />
-    <Content Include="App\Docs\065\docs.js" />
+    <Content Include="App\Docs\065\docsService.js" />
     <Content Include="App\Docs\065\types.js" />
-    <Content Include="App\Docs\docs.js" />
+    <Content Include="App\Docs\docMapper.js" />
     <Content Include="App\Views\docchanged.html" />
     <Content Include="App\Views\docs.html" />
     <Content Include="App\Controllers\docs.js" />
