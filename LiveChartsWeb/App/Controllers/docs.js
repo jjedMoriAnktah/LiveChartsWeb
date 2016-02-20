@@ -3,8 +3,13 @@
 app.controller('docsController', [
     '$scope', '$routeParams', '$location', '$anchorScroll', 'docsService',
     function ($scope, $routeParams, $location, $anchorScroll, docs) {
-        $scope.sections = docs;
+        $scope.sections = docs($routeParams.version);
         $scope.current = docs[$routeParams.section];
+
+        if (!$scope.current) {
+            $location.path('/docnotfound');
+        }
+
         $scope.properties = $scope.current.getProps();
 
         var search = $location.search().search;

@@ -11,9 +11,13 @@ var app = angular.module("liveChartsApp", [
             controller: 'homeController'
         });
 
-        $routeProvider.when('/documentation/:section', {
+        $routeProvider.when('/documentation/:version?/:section', {
             templateUrl: '/App/Views/docs.html',
             controller: 'docsController'
+        });
+
+        $routeProvider.when('/docnotfound', {
+            templateUrl: '/App/Views/docchanged.html'
         });
 
         $routeProvider.otherwise('/home', {

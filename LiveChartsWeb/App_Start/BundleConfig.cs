@@ -24,9 +24,12 @@ namespace LiveChartsWeb
 
                       "~/App/app.js",
 
-                      "~/App/Services/typesService.js",
-                      "~/App/Services/componentsService.js",
-                      "~/App/Services/docsService.js",
+                      "~/App/Services/docversionmap.js",
+
+                      //065 docs
+                      "~/App/Docs/065/types.js",
+                      "~/App/Docs/065/components.js",
+                      "~/App/Docs/065/docs.js",
 
                       "~/App/directives.js",
 
