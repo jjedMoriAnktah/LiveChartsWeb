@@ -130,10 +130,21 @@ a.active i.text-muted {
 
 /*Menu hidden just for xs devices*/
 #menu.is-closed {
-    display: none;
-}
-@media (min-width: 760px) {
-  #menu.is-closed {
-      display: block;
-  }
+    max-height: 50px;
+    -webkit-transition: max-height .3s ease-out;
+    -moz-transition: max-height .3s ease-out;
+    -ms-transition: max-height .3s ease-out;
+    -o-transition: max-height .3s ease-out;
+    transition: max-height .3s ease-out;
+ }
+
+#menu {
+    /*50px + 50px per element*/
+    max-height: 150px;
+    -webkit-transition: max-height .3s ease-out;
+    -moz-transition: max-height .3s ease-out;
+    -ms-transition: max-height .3s ease-out;
+    -o-transition: max-height .3s ease-out;
+    transition: max-height .3s ease-out;
+    overflow: hidden;
 }

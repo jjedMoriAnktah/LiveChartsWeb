@@ -10,11 +10,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
 
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'/>
-    <link href="~/Content/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../Content/bootstrap.css"/>
-    <link rel="stylesheet" href="../../Content/site.css"/>
-    <link href="~/Content/prettify.css" rel="stylesheet" />
-
+    @Styles.Render("~/Content/css")
     <style type="text/css">
         [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
             display: none !important;
@@ -26,7 +22,7 @@
 <body class="container" ng-cloak>
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="templateController">
-        <div class="container">
+        <div id="menu" class="container" ng-class="{ 'is-closed': !isVisible }">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#/Home" style="padding-top: 8px">
                     <img alt="Controli" src="~/Content/Images/Logos/lclogo30.png"/>
@@ -39,7 +35,7 @@
                 </button>
             </div>
             <div>
-                <ul class="nav navbar-nav" id="menu" ng-click="hideMenu()" ng-class="{ 'is-closed': !isVisible }">
+                <ul class="nav navbar-nav" ng-click="hideMenu()">
                     <li><a href="#/home">Home</a></li>
                     <li><a href="#/documentation/welcome">Documentation</a></li>
                 </ul>
@@ -51,22 +47,7 @@
 
     </div>
 
-<script src="~/Scripts/prettify.js"></script>
-<script src="~/Scripts/bootstrap.js"></script>
-<script src="../../Scripts/angular.js"></script>
-<script src="~/Scripts/angular-route.js"></script>
-<script src="~/Scripts/angular-sanitize.js"></script>
-<script src="../../Scripts/angular-animate.js"></script>
-<script src="../../Scripts/angular-aria.js"></script>
-
-<script src="~/App/app.js"></script>
-<script src="~/App/Services/typesService.js"></script>
-<script src="~/App/Services/componentsService.js"></script>
-<script src="~/App/Services/docsService.js"></script>
-<script src="~/App/directives.js"></script>
-<script src="~/App/Controllers/template.js"></script>
-<script src="~/App/Controllers/home.js"></script>
-<script src="~/App/Controllers/docs.js"></script>
+    @Scripts.Render("~/bundles/app")
 
 </body>
 </html>

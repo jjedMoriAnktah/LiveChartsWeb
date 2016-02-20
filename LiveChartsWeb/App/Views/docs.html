@@ -1,11 +1,11 @@
 ﻿<div class="row">
-    <div class="col-sm-3">
+    <div class="col-md-3">
         <div class="row">
             <div class="col-sm-12">
                 <div class="list-group card-shadow">
                     <a href="#" class="list-group-item"
                        ng-repeat="section in sections"
-                       ng-href="#/documentation/{{section.route}}"
+                       ng-href="#/documentation/{{section.route}}#title"
                        ng-class="{active: section.route==current.route}">
                         <i class="fa text-muted" ng-class="section.icon"></i>
                         <span style="margin-left: 5px;">{{section.name}}</span>
@@ -14,11 +14,11 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-9">
+    <div class="col-md-9">
         <div class="row">
             <div class="col-xs-12">
                 <div ng-show="properties == null">
-                    <h3 class="doc-title">Documentation</h3>
+                    <h2 class="doc-title">Documentation</h2>
                     <p>
                         Welcome to Live Charts documentation click on any link to your left to navigate
                         trough related documentation. If something is wrong or misspelled you can edit
@@ -31,7 +31,7 @@
                 <div ng-show="properties != null">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h2 class="doc-title">
+                            <h2 id="title" class="doc-title">
                                 {{current.name}}
                                 <a class="btn btn-default pull-right card-shadow" ng-href="{{current.source}}">
                                     <i class="fa fa-lg fa-github"></i> Go to source code
