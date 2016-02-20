@@ -4,6 +4,34 @@
     background: #eeeded;
 }
 
+.form-control {
+    box-shadow: none;
+    border-width: medium medium 1px;
+    border-style: none none solid;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+    background: transparent;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    border-width: medium medium 3px;
+    -webkit-box-shadow: inset 0 0 0 transparent, 0 0 0 transparent;
+    -ms-box-shadow: inset 0 0 0 transparent, 0 0 0 transparent;
+    box-shadow: inset 0 0 0 transparent, 0 0 0 transparent;
+}
+
+.input-group-addon {
+    border-width: medium medium 1px;
+    border-style: none none solid;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
