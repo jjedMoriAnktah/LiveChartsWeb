@@ -167,6 +167,7 @@
     <Content Include="App\Docs\docMapper.js" />
     <Content Include="App\Examples\examplesMapper.js" />
     <Content Include="App\Examples\Images\browseNuget.png" />
+    <Content Include="App\Examples\Images\generalStyling.png" />
     <Content Include="App\Examples\Images\nuget.png" />
     <Content Include="App\Examples\Images\toolbox.png" />
     <Content Include="App\Examples\v1\styling.html" />
