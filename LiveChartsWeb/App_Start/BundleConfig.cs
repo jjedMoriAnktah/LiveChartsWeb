@@ -15,29 +15,36 @@ namespace LiveChartsWeb
                 "~/Content/prettify.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                      "~/Scripts/prettify.js",
-                      //"~/Scripts/bootstrap.js", //not used yet
-                      "~/Scripts/angular.js",
-                      "~/Scripts/angular-route.js",
-                      "~/Scripts/angular-sanitize.js",
-                      "~/Scripts/angular-animate.js",
-                      "~/Scripts/angular.aria.js",
+                "~/Scripts/prettify.js",
+                //"~/Scripts/bootstrap.js", //not used yet
+                "~/Scripts/angular.js",
+                "~/Scripts/angular-route.js",
+                "~/Scripts/angular-sanitize.js",
+                "~/Scripts/angular-animate.js",
+                "~/Scripts/angular.aria.js",
 
-                      "~/App/app.js",
+                "~/App/app.js",
 
-                      //docs mapper
-                      "~/App/Docs/docMapper.js",
+                //versioning mappers
+                "~/App/Docs/docMapper.js",
+                "~/App/Examples/examplesMapper.js",
 
-                      //065 docs
-                      "~/App/Docs/065/types.js",
-                      "~/App/Docs/065/components.js",
-                      "~/App/Docs/065/docsService.js",
-                      
-                      "~/App/directives.js",
+                //065 docs
+                "~/App/Docs/065/types.js",
+                "~/App/Docs/065/components.js",
+                "~/App/Docs/065/docsService.js",
 
-                      "~/App/Controllers/template.js",
-                      "~/App/Controllers/home.js",
-                      "~/App/Controllers/docs.js"));
+                //v1 examples
+                "~/App/Examples/v1/v1.js",
+
+                //directives
+                "~/App/directives.js",
+
+                //controllers
+                "~/App/Controllers/template.js",
+                "~/App/Controllers/home.js",
+                "~/App/Controllers/docs.js",
+                "~/App/Controllers/examples.js"));
 
             //BundleTable.EnableOptimizations = true;
         }

@@ -38,6 +38,17 @@
                 <ul class="nav navbar-nav" ng-click="hideMenu()">
                     <li><a href="#/home">Home</a></li>
                     <li><a href="#/documentation/introduction">Documentation</a></li>
+                    <li><a href="#/examples/install">Examples</a></li>
+                    <li>
+                        <a>
+                            <iframe src="https://ghbtns.com/github-btn.html?user=beto-rodriguez&repo=Live-Charts&type=star&count=true"
+                                    frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+                            <iframe src="https://ghbtns.com/github-btn.html?user=beto-rodriguez&repo=Live-Charts&type=watch&count=true&v=2"
+                                    frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+                            <iframe src="https://ghbtns.com/github-btn.html?user=beto-rodriguez&repo=Live-Charts&type=fork&count=true"
+                                    frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -48,6 +59,11 @@
     </div>
 
     @Scripts.Render("~/bundles/app")
-
+<script>
+    ((window.gitter = {}).chat = {}).options = {
+        room: 'beto-rodriguez/Live-Charts'
+    };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 </body>
 </html>

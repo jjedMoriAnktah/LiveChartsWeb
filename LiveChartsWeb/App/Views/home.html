@@ -1,1 +1,69 @@
-﻿<h2>{{name}}</h2>
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default card-shadow">
+            <div class="panel-body">
+                <p style="font-size: 16px;">
+                    Have you ever tired to buid a <b>modern .net application</b>?, if so maybe you
+                    have used one of these awesome frameworks: <a href="http://reactiveui.net/"><b>ReactiveUi</b></a>,
+                    <a href="http://mahapps.com/"><b>mahapps.metro</b></a> or <a href="http://materialdesigninxaml.net/"><b>Material Design In XAML Toolkit</b></a>
+                    everything seems fine, but then you need data visualization and you notice there are no modern and free charting controls for .net, how could this be possible?
+                    LiveCharts is much more than beauty, responsive and animated charts, they are also totally automatic, you just add/remove values or series and chart refreshes.
+                    you really dont need to worry about anything, have you ever used a generic list? like <code>List&lt;double&gt; myList = new List&lt;double&gt;();</code>
+                    if so then you are ready to use LiveCharts, this project is Mvvm orientated and licenced under MIT licence, right now tested only in WPF and WindowsForms.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <a class="btn btn-lg btn-default card-shadow home-main-btn" href="#/documentation/introduction">
+            Documentation
+        </a>
+        <a class="btn btn-lg btn-default card-shadow home-main-btn" href="https://github.com/beto-rodriguez/Live-Charts/tree/master/WPFExamples">
+            Samples
+        </a>
+        <a class="btn btn-lg btn-default card-shadow home-main-btn" href="https://github.com/beto-rodriguez/Live-Charts">
+            Github Repo
+        </a>
+    </div>
+</div>
+
+<div class="row" style="margin: 10px 0">
+    <div class="col-md-6">
+        <img class="banner card-shadow" src="../../Content/Images/Samples/linemove.gif"/>
+        <img class="banner card-shadow" src="../../Content/Images/Samples/linedynamic.gif" />
+        <img class="banner card-shadow" src="../../Content/Images/Samples/barsmove.gif"/>
+        <img class="banner card-shadow" src="../../Content/Images/Samples/bars.gif"/>
+        <img class="banner card-shadow" src="../../Content/Images/Samples/pie.gif"/>
+        <img class="banner card-shadow" src="../../Content/Images/Samples/stackeddance.gif"/>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default" style="margin: 10px 0;">
+            <div class="panel-body">
+                <h3 style="margin-top: 0">Basic example</h3>
+                <p>This is the logic you use in every chart, there are just some litle properties or rules that change from each type of chart.</p>
+                <pre class="prettyprint linenums" code="basicExample" style="margin: 0"></pre>
+            </div>
+        </div>
+        <div class="panel panel-default" style="margin: 10px 0;">
+            <div class="panel-body">
+                <h3 style="margin-top: 0">Mvvm and real time example</h3>
+                <p>Notice how LiveCharts is ready to do any task you need, the result of this code is the first image up here, notice the DateTime and degrees° labels.</p>
+                <pre class="prettyprint linenums" code="liveDataExample" style="margin: 0"></pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Install package from NuGet</h4>
+                <span class="label label-primary" style="font-size: 16px;">Install-Package LiveCharts</span>
+                <h4>Add namespace to your <i>XAML</i> if using <i>WPF</i></h4>
+                <span class="label label-primary" style="font-size: 16px;">xmlns:lvc="clr-namespace:LiveCharts;assembly=LiveCharts"</span> <br /><br />
+                Or WinForms and codebehind <br /><br />
+                <span class="label label-primary" style="font-size: 16px;">using LiveCharts;</span><br />
+                <h4>That's it, you are ready</h4>
+            </div>
+        </div>
+    </div>
+</div>

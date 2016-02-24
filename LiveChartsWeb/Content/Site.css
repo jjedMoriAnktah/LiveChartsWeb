@@ -32,24 +32,51 @@
     border-left-style: none;
 }
 
-/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
 .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    /*max-width: 280px;*/
+.banner {
+    margin: 10px auto;
+    max-width: 100%;
+}
+
+.home-main-btn {
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 160px;
+}
+
+.gitter-chat-embed {
+    z-index: 1050 !important;
+    border: none;
+    -webkit-box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    -webkit-box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+    -ms-box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    -ms-box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+    box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+}
+
+.gitter-open-chat-button {
+    font-weight: bold;
+    background: #2196F3;
+    -webkit-box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    -webkit-box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+    -ms-box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    -ms-box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+    box-shadow: 0 10px 20px #8d8d8d, 0 6px 6px #666666;
+    box-shadow: 0 10px 20px rgba(141, 141, 141, 0.19), 0 6px 6px rgba(102, 102, 102, 0.23);
+}
+
+.gitter-open-chat-button:hover {
+    background: #1E88E5;
 }
 
 .navbar {
@@ -78,7 +105,7 @@ a.active i.text-muted {
     color: white;
 }
 
-.docs-label {
+.label {
     font-size: 12px;
 }
 
@@ -168,11 +195,19 @@ a.active i.text-muted {
 
 #menu {
     /*50px + 50px per element*/
-    max-height: 150px;
+    max-height: 200px;
     -webkit-transition: max-height .3s ease-out;
     -moz-transition: max-height .3s ease-out;
     -ms-transition: max-height .3s ease-out;
     -o-transition: max-height .3s ease-out;
     transition: max-height .3s ease-out;
     overflow: hidden;
+}
+
+#article-view img {
+    max-width: 100%;
+    margin: 15px auto;
+}
+#article-view h3 {
+    margin-top: 0;
 }
