@@ -16,7 +16,6 @@ namespace LiveChartsWeb
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                 "~/Scripts/prettify.js",
-                //"~/Scripts/bootstrap.js", //not used yet
                 "~/Scripts/angular.js",
                 "~/Scripts/angular-route.js",
                 "~/Scripts/angular-sanitize.js",

@@ -1,4 +1,4 @@
-﻿<h3 id="title"> Installation</h3>
+﻿<h3 class="doc-title"> Installation</h3>
 
 <p>
     <i>Note:</i> images included in this article use Visual Studio 2015, but it is really similar for another visual studio version.
@@ -20,12 +20,10 @@
     <img src="/App/Examples/Images/browseNuget.png" />
 </div>
 
-<p>Don't forget to add name space <code>using LiveCharts;</code></p>
+<p>Add namespace to your XAML</p>
 
-<p>Or XAML namespace if using wpf <code>xmlns:lvc="clr-namespace:LiveCharts;assembly=LiveCharts"</code></p>
+<pre class="prettyprint">xmlns:lvc="clr-namespace:LiveCharts;assembly=LiveCharts"</pre>
 
-<p>If you are using WinForms you should see LiveCharts controls in your Toolbox</p>
+<p>And to code behind if necessary</p>
 
-<div class="text-center">
-    <img src="/App/Examples/Images/toolbox.png" />
-</div>
+<pre class="prettyprint">using LiveCharts;</pre>

@@ -1,0 +1,30 @@
+﻿<h3 class="doc-title">Styling</h3>
+
+<p>
+    A chart from LiveCharts inherits from WPF User Control, this means that you can style a chart
+    practically as you normally would with any other control, like setting a Background, a Font or
+    Horizontal alignment, in this article we are only going to focus on changing the unique properties
+    from this library. Next image shows the chart we are building.
+</p>
+
+
+<div class="text-center">
+    <img src="/App/Examples/Images/generalStyling.png" />
+</div>
+
+<h4>Background</h4>
+
+<p>
+    This property is inherited from WPF <a href="https://msdn.microsoft.com/en-us/library/system.windows.controls.usercontrol(v=vs.110).aspx">UserControl</a>,
+</p>
+
+<div>
+    <button type="button" class="btn btn-primary" ng-class="{ 'btn-primary': target == 'cb'}">Code Behind</button>
+    <button type="button" class="btn btn-default" ng-class="{ active: target == 'wpf' }">WPF</button>
+</div>
+<div class="panel card-shadow">
+    <div class="panel-body">
+        <pre class="prettyprint" ng-class="{ hide: target != 'cb' }">lineChart1.Background = new SolidColorBrush(Color.FromRgb(55, 55, 55));</pre>
+        <pre class="prettyprint" ng-class="{ hide: target != 'wpf' }">&lt;lvc:LineChart Background="#555555"&gt;&lt;/lvc:LineChart&gt;</pre>
+    </div>
+</div>

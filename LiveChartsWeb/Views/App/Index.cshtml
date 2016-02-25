@@ -16,7 +16,6 @@
             display: none !important;
         }
     </style>
-
 </head>
 
 <body class="container" ng-cloak>
@@ -38,7 +37,7 @@
                 <ul class="nav navbar-nav" ng-click="hideMenu()">
                     <li><a href="#/home">Home</a></li>
                     <li><a href="#/documentation/introduction">Documentation</a></li>
-                    <li><a href="#/examples/install">Examples</a></li>
+                    <li><a href="#/examples/intro?path=intro">Examples</a></li>
                     <li>
                         <a>
                             <iframe src="https://ghbtns.com/github-btn.html?user=beto-rodriguez&repo=Live-Charts&type=star&count=true"
@@ -58,12 +57,14 @@
 
     </div>
 
-    @Scripts.Render("~/bundles/app")
+@Scripts.Render("~/bundles/app")
+
 <script>
     ((window.gitter = {}).chat = {}).options = {
         room: 'beto-rodriguez/Live-Charts'
     };
 </script>
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
 </body>
 </html>

@@ -13,7 +13,7 @@ app.controller('docsController', [
         $scope.current = content[$routeParams.section];
 
         if (!$scope.current) {
-            $location.path('/docnotfound');
+            $location.path('/docnotfound').replace();
         }
 
         $scope.properties = $scope.current.getProps();

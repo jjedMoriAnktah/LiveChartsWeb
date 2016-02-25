@@ -1,0 +1,73 @@
+﻿<h3 class="doc-title"> Installation</h3>
+
+<p>
+    <i>Note:</i> images included in this article use Visual Studio 2015, but it is really similar for another visual studio version.
+</p>
+
+<p>
+    Install package from NuGet, go to Solution Explorer, right click on references, then Manage NuGet Packages…
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/nuget.png" />
+</div>
+
+<p>
+    Browse for LiveCharts, select the package and click on install.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/browseNuget.png" />
+</div>
+
+<p>
+    Now we need to add some extra references, Go to Solution Explorer -> right click on Add Reference
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/references.png"/>
+</div>
+
+<p>
+    A dialog like next image will appear, go to Assemblies -> Framework and then search for the next components
+</p>
+
+<ul class="list-group">
+    <li class="list-group-item">PresentationFramework</li>
+    <li class="list-group-item">PresentationCore</li>
+    <li class="list-group-item">WindowsBase</li>
+    <li class="list-group-item">System.Xaml</li>
+</ul>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/addReferences.png"/>
+</div>
+
+<p>In the Windows Forms Designer, open your form. In the Properties window, click Events, 
+    and then double-click the Load event to create an event handler.
+    The Code Editor opens to the newly generated event handler.
+    Replace the code in the Load event with the next block, the Load event handler creates an instance of 
+    LineChart and adds it to the ElementHost control's collection of child controls.
+    The ElementHost control is added to the form's collection of child controls.
+</p>
+
+<pre class="prettyprint">// Create the ElementHost control for hosting a LineChart
+ElementHost hst = new ElementHost();
+host.Dock = DockStyle.Fill;
+
+// Create a new LineChart.
+var uc = new LiveCharts.LineChart();
+
+// Assign the Chart to the ElementHost control's Child property.
+host.Child = uc;
+
+// Add the ElementHost control to the form's
+// collection of child controls.
+this.Controls.Add(host);
+</pre>
+
+<p>
+    you may also want to LiveCharts name space.
+</p>
+
+<pre class="prettyprint">using LiveCharts;</pre>
