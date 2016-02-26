@@ -1,0 +1,33 @@
+﻿<h3 class="doc-title">Chart Legend</h3>
+
+<p>
+    A legend contains a list of the series appearing in the chart, you can place it at Left, Bottom, Top or Right.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/legend.png"/>
+</div>
+
+<p>
+    All you need to place a legend is set the <a href="#/documentation/chart?search=legendlocation">LegendLocation</a>
+    property to a certain position
+</p>
+
+<pre class="prettyprint">
+&lt;PieChart LegendLocation="Right"&gt;&lt;/lvc:PieChart&gt;
+</pre>
+
+<p>
+    You can also create your own legends control, All you need to do is create a new user control that inherits from
+    LiveCharts.ChartLegend, you can also see <a href="https://github.com/beto-rodriguez/Live-Charts/tree/master/LiveChartsCore/Legend">included chart legend</a> 
+    to help you build your own.
+</p>
+
+
+<p>
+    After your legend is ready you need to set it to your chart:
+</p>
+
+<pre class="prettyprint">
+myChart.ChartLegend = new myLegendControl();
+</pre>

@@ -10,13 +10,13 @@
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/Images/storkeAndFill.png"/>
+    <img src="/App/Examples/Images/storkeAndFill.png" />
 </div>
 
 <p>
     The default colors collection is based on material design colors, but if you need to secify your own set, then
     when your app starts you need to change the
-    <a href="#/documentation/chart?search=colors">Chart.Colors</a> property, this 
+    <a href="#/documentation/chart?search=colors">Chart.Colors</a> property, this
     will be enough to initialize all your charts with this colors set.
 </p>
 
@@ -36,28 +36,38 @@ Chart.Colors = new List&lt;Color&gt;
 </p>
 
 <pre class="prettyprint">
-&lt;lvc:BarChart&gt;
-    &lt;lvc:BarChart.Series&gt;
-        &lt;lvc:BarSeries Title="Maria" Values="1, -4, -4, 6, -5.5, 6, 6, -7"
-                    Stroke="#FFB300" Fill="#AAFFB300" StrokeThickness="4" /&gt;
-        &lt;lvc:BarSeries Title="John" Values="-3.0, 3.5, -4.3, 6.8, 6.5 ,-7, -5.5, -6"
-                    Stroke="#FFA000" StrokeThickness="4"&gt;
-            &lt;lvc:BarSeries.Fill&gt;
-                &lt;LinearGradientBrush&gt;
-                    &lt;GradientStop Color="#FFB30000" Offset="0" /&gt;
-                    &lt;GradientStop Color="#FF8F00" Offset="1" /&gt;
-                &lt;/LinearGradientBrush&gt;
-            &lt;/lvc:BarSeries.Fill&gt;
-        &lt;/lvc:BarSeries&gt;
-        &lt;lvc:BarSeries Title="Erick" Values="-4.0, 4.2, -5.0, 7.0, -5.0, 5.5, -4.4, -7.3"
-                    Stroke="#FF8F00"
-                    StrokeThickness="4"&gt;
-        &lt;lvc:BarSeries.Fill&gt;
-            &lt;ImageBrush ImageSource="../../imagefill.jpg"&gt;&lt;/ImageBrush&gt;
-            &lt;/lvc:BarSeries.Fill&gt;
-        &lt;/lvc:BarSeries&gt;
-    &lt;/lvc:BarChart.Series&gt;  
-&lt;/lvc:BarChart&gt;
+//Solid Color
+barChart1.Series.Add(new BarSeries
+{
+    Title = "A Series",
+    Values = new ChartValues&lt;double&gt; {3, 5, 8, 12, 8, 3},
+    Stroke = new SolidColorBrush(Color.FromRgb(254,178,0)),
+    StrokeThickness = 4
+});
+
+//Linear Gradient
+barChart1.Series.Add(new BarSeries
+{
+    Title = "A Series",
+    Values = new ChartValues&lt;double&gt; {4, 2, 10, 11, 9, 4},
+    Stroke = new SolidColorBrush(Color.FromRgb(254, 159, 0)),
+    StrokeThickness = 4,
+    Fill = new LinearGradientBrush(
+                    Color.FromArgb(00, 254, 178, 0),
+                    Color.FromRgb(254, 178, 0),
+                    new System.Windows.Point(0.5, 0),
+                    new System.Windows.Point(0.5, 1))
+});
+
+//An Image
+barChart1.Series.Add(new BarSeries
+{
+    Title = "A Series",
+    Values = new ChartValues&lt;double&gt; {4, 2, 10, 11, 9, 4},
+    Stroke = new SolidColorBrush(Color.FromRgb(254, 159, 0)),
+    StrokeThickness = 4,
+    Fill = new ImageBrush(new BitmapImage(new Uri(@"/Images/foo.png", UriKind.Relative)))
+});
 </pre>
 
 <p>
@@ -65,5 +75,5 @@ Chart.Colors = new List&lt;Color&gt;
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/Images/fills.png"/>
+    <img src="/App/Examples/Images/fills.png" />
 </div>

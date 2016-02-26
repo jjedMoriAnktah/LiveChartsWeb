@@ -27,7 +27,15 @@ app.factory('examplesV1Service', [
                                 }, {
                                     name: 'Series Colors',
                                     file: 'series-colors-wpf',
-                                    path: 'WPF-Appearance-series'
+                                    path: 'WPF-Appearance-Series'
+                                }, {
+                                    name: 'Chart Legend',
+                                    file: 'legend-wpf',
+                                    path: 'WPF-Appearance-Legend'
+                                }, {
+                                    name: 'Tooltips',
+                                    file: 'tooltips-wpf',
+                                    path: 'WPF-Appearance-Tooltip'
                                 }
                             ]
                         }
@@ -52,7 +60,21 @@ app.factory('examplesV1Service', [
                                     name: 'Axes',
                                     file: 'axis-wf',
                                     path: 'WF-Appearance-Axes'
-                                }
+                                }, {
+                                    name: 'Series Colors',
+                                    file: 'series-colors-wf',
+                                    path: 'WF-Appearance-series'
+                                },
+                                {
+                                    name: 'Chart Legend',
+                                    file: 'legend-wf',
+                                    path: 'WF-Appearance-Legend'
+                                },
+                                //{
+                                //    name: 'Tooltips',
+                                //    file: 'tooltips-wpf',
+                                //    path: 'WF-Appearance-Tooltip'
+                                //}
                             ]
                         }
                     ]
