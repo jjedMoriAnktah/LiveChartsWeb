@@ -217,17 +217,9 @@ app.factory('components065', [
                         def: '0',
                         example: 'pieChart.InnerRadius = 20px;'
                     }, {
-                        name: 'SlicePadding',
-                        type: types.dbl,
-                        text: 'Gets or sets padding between slices.',
-                        tags: '',
-                        behavesAs: ['Dependency Property'],
-                        def: '0',
-                        example: 'pieChart.SlicePadding = 20px;'
-                    }, {
                         name: 'PieRotation',
                         type: types.dbl,
-                        text: 'Gets or sets angle in degrees that indicates pie rotation, form 0 to 360, default is 0',
+                        text: 'Gets or sets angle in degrees that indicates pie rotation, default is 0',
                         tags: '',
                         behavesAs: [],
                         def: '0',
@@ -340,6 +332,14 @@ app.factory('components065', [
                         behavesAs: ['Dependency Property'],
                         def: 'null (auto)',
                         example: 'lineSeries.Stroke = Brushes.Red;'
+                    }, {
+                        name: 'StrokeThickness',
+                        type: types.dbl,
+                        text: 'Gets or sets series stroke thickness',
+                        tags: '',
+                        behavesAs: ['Dependency Property'],
+                        def: '2.5',
+                        example: 'lineSeries.StrokeThickness = 4.28;'
                     }, {
                         name: 'Fill',
                         type: types.brush,
@@ -698,7 +698,7 @@ app.factory('components065', [
                         def: 'varies',
                         example: 'Separator.Color = Color.FromRgb(55,55,55);'
                     }, {
-                        name: 'Thickness',
+                        name: 'StrokeThickness',
                         type: types.integer,
                         text: 'Gets or sets separator line thickness',
                         tags: '',

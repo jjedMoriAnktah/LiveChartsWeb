@@ -1,0 +1,31 @@
+﻿<h3 class="doc-title">Series Colors</h3>
+
+<p>
+    If you don't specify a color for a series, then there is a default colors collection in the static
+    <a href="http://localhost:3823/#/documentation/0.6.5/chart?search=colors">Chart.Colors</a> property
+    that stores the default colors for all charts series, when a chart uses all colors in this collection, then
+    colors will repeat.
+    All series have a Stroke and Fill properties, the fill property by default has certain transparency according
+    to series type.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/seriescolors.png"/>
+</div>
+
+<p>
+    The default colors collection is based on material design colors, but if you need to secify your own set, then
+    when your app starts you need to change the
+    <a href="http://localhost:3823/#/documentation/0.6.5/chart?search=colors">Chart.Colors</a> property, this 
+    will be enough to initialize all your charts with this colors set.
+</p>
+
+<pre class="prettyprint">
+Chart.Colors = new List&lt;Color&gt;
+{
+    Colors.Red,
+    Colors.Green,
+    Colors.Blue
+};
+</pre>
+

@@ -17,9 +17,17 @@ app.factory('examplesV1Service', [
                             path: 'WPF-Appearance',
                             articles: [
                                 {
-                                    name: 'Properties',
-                                    file: 'appearance-wpf',
-                                    path: 'WPF-Appearance-Properties'
+                                    name: 'General',
+                                    file: 'general',
+                                    path: 'WPF-Appearance-General'
+                                }, {
+                                    name: 'Axes',
+                                    file: 'axis-wpf',
+                                    path: 'WPF-Appearance-Axes'
+                                }, {
+                                    name: 'Series Colors',
+                                    file: 'series-colors-wpf',
+                                    path: 'WPF-Appearance-series'
                                 }
                             ]
                         }
@@ -32,6 +40,20 @@ app.factory('examplesV1Service', [
                             name: 'Install',
                             path: 'WF-Install',
                             file: 'install-wf'
+                        }, {
+                            name: 'Appearance',
+                            path: 'WF-Appearance',
+                            articles: [
+                                {
+                                    name: 'General',
+                                    file: 'general',
+                                    path: 'WF-Appearance-General'
+                                }, {
+                                    name: 'Axes',
+                                    file: 'axis-wf',
+                                    path: 'WF-Appearance-Axes'
+                                }
+                            ]
                         }
                     ]
                 }
