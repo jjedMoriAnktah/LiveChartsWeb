@@ -1,40 +1,42 @@
-﻿<div class="row">
-    <div class="col-md-3">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="list-group list-group-root no-select card-shadow">
-                    <a class="list-group-item" ng-href="#/examples/{{version}}/intro?path=intro"
-                       ng-class="{ active: path == 'intro' }">
-                        Introuction
-                    </a>
-                    <div ng-repeat="section in sections">
-                        <a class="list-group-item" toggle toggle-id="item-{{$index}}">
-                            <i class="fa fa-angle-down"></i> {{section.name}}
+﻿<div class="container app-view">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="list-group list-group-root no-select card-shadow">
+                        <a class="list-group-item" ng-href="#/examples/{{version}}/intro?path=intro"
+                           ng-class="{ active: path == 'intro' }">
+                            Introuction
                         </a>
-                        <div id="item-{{$index}}" class="list-group"
-                             ng-class="{ collapse: !isInPath(section) }">
-                            <div ng-repeat="section in section.articles">
-                                <a class="list-group-item"
-                                   ng-show="section.file"
-                                   ng-href="#/examples/{{version}}/{{section.file}}?path={{section.path}}"
-                                   ng-class="{ active: path == section.path }">
-                                    <span class="menu-level-1">
-                                        {{section.name}}
-                                    </span>
-                                </a>
-                                <a class="list-group-item" toggle
-                                   toggle-id="item-{{$parent.$index}}-{{$index}}"
-                                   ng-show="section.articles.length > 0">
-                                    <i class="fa fa-angle-down menu-level-1"></i> {{section.name}}
-                                </a>
-                                <div id="item-{{$parent.$index}}-{{$index}}" class="list-group"
-                                     ng-class="{ collapse: !isInPath(section) }">
-                                    <div ng-repeat="section in section.articles">
-                                        <a class="list-group-item"
-                                           ng-href="#/examples/{{version}}/{{section.file}}?path={{section.path}}"
-                                           ng-class="{ active: path == section.path }">
-                                            <span class="menu-level-2">{{section.name}}</span>
-                                        </a>
+                        <div ng-repeat="section in sections">
+                            <a class="list-group-item" toggle toggle-id="item-{{$index}}">
+                                <i class="fa fa-angle-down"></i> {{section.name}}
+                            </a>
+                            <div id="item-{{$index}}" class="list-group"
+                                 ng-class="{ collapse: !isInPath(section) }">
+                                <div ng-repeat="section in section.articles">
+                                    <a class="list-group-item"
+                                       ng-show="section.file"
+                                       ng-href="#/examples/{{version}}/{{section.file}}?path={{section.path}}"
+                                       ng-class="{ active: path == section.path }">
+                                        <span class="menu-level-1">
+                                            {{section.name}}
+                                        </span>
+                                    </a>
+                                    <a class="list-group-item" toggle
+                                       toggle-id="item-{{$parent.$index}}-{{$index}}"
+                                       ng-show="section.articles.length > 0">
+                                        <i class="fa fa-angle-down menu-level-1"></i> {{section.name}}
+                                    </a>
+                                    <div id="item-{{$parent.$index}}-{{$index}}" class="list-group"
+                                         ng-class="{ collapse: !isInPath(section) }">
+                                        <div ng-repeat="section in section.articles">
+                                            <a class="list-group-item"
+                                               ng-href="#/examples/{{version}}/{{section.file}}?path={{section.path}}"
+                                               ng-class="{ active: path == section.path }">
+                                                <span class="menu-level-2">{{section.name}}</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -43,14 +45,14 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-9">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="panel panel-default card-shadow">
-                    <div class="panel-body">
-                        <div id="article-view" dynamic="article">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel panel-default card-shadow">
+                        <div class="panel-body">
+                            <div id="article-view" dynamic="article">
 
+                            </div>
                         </div>
                     </div>
                 </div>

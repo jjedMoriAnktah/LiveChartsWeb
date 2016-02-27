@@ -1,7 +1,11 @@
 ﻿body {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 100px;
     background: #eeeded;
+}
+
+.app-view {
+    margin-top: 15px;
 }
 
 .form-control {
@@ -41,9 +45,18 @@
     white-space: normal;
 }
 
-.banner {
+.home-banner {
+    background: rgb(96, 125, 138);
+    color: white;
+}
+
+.home-chart {
     margin: 10px auto;
-    max-width: 100%;
+    width: 100%;
+}
+
+.home-chart-wrapper {
+    min-height: 200px;
 }
 
 .home-main-btn {

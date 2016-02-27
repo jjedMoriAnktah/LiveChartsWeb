@@ -3238,7 +3238,7 @@ var $$AnimationProvider = ['$animateProvider', function($animateProvider) {
  *
  * ngAnimateSwap is a animation-oriented directive that allows for the container to
  * be removed and entered in whenever the associated expression changes. A
- * common usecase for this directive is a rotating banner component which
+ * common usecase for this directive is a rotating home-chart component which
  * contains one image being present at a time. When the active image changes
  * then the old image will perform a `leave` animation and the new element
  * will be inserted via an `enter` animation.
@@ -3795,12 +3795,12 @@ var ngAnimateSwapDirective = ['$animate', '$rootScope', function($animate, $root
  * </div>
  *
  * <!-- home.html -->
- * <a href="#/banner-page">
- *   <img src="./banner.jpg" class="banner" ng-animate-ref="banner">
+ * <a href="#/home-chart-page">
+ *   <img src="./home-chart.jpg" class="home-chart" ng-animate-ref="home-chart">
  * </a>
  *
- * <!-- banner-page.html -->
- * <img src="./banner.jpg" class="banner" ng-animate-ref="banner">
+ * <!-- home-chart-page.html -->
+ * <img src="./home-chart.jpg" class="home-chart" ng-animate-ref="home-chart">
  * ```
  *
  * Now, when the view changes (once the link is clicked), ngAnimate will examine the
@@ -3814,12 +3814,12 @@ var ngAnimateSwapDirective = ['$animate', '$rootScope', function($animate, $root
  * to animate to the position of the second image element in the next view. For the animation to
  * work a special CSS class called `ng-anchor` will be added to the transported element.
  *
- * We can now attach a transition onto the `.banner.ng-anchor` CSS class and then
+ * We can now attach a transition onto the `.home-chart.ng-anchor` CSS class and then
  * ngAnimate will handle the entire transition for us as well as the addition and removal of
  * any changes of CSS classes between the elements:
  *
  * ```css
- * .banner.ng-anchor {
+ * .home-chart.ng-anchor {
  *   /&#42; this animation will last for 1 second since there are
  *          two phases to the animation (an `in` and an `out` phase) &#42;/
  *   transition:0.5s linear all;
@@ -3859,7 +3859,7 @@ var ngAnimateSwapDirective = ['$animate', '$rootScope', function($animate, $root
  * in phases directly via `ng-anchor-out` and `ng-anchor-in`.
  *
  * ```css
- * .banner.ng-anchor-out {
+ * .home-chart.ng-anchor-out {
  *   transition: 0.5s linear all;
  *
  *   /&#42; the scale will be applied during the out animation,
@@ -3867,7 +3867,7 @@ var ngAnimateSwapDirective = ['$animate', '$rootScope', function($animate, $root
  *   transform: scale(1.2);
  * }
  *
- * .banner.ng-anchor-in {
+ * .home-chart.ng-anchor-in {
  *   transition: 1s linear all;
  * }
  * ```

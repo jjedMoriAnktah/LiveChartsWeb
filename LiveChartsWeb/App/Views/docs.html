@@ -1,104 +1,88 @@
-﻿
-<div class="row">
-    <div class="col-md-3">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="list-group card-shadow">
-                    <a href="#" class="list-group-item"
-                       ng-repeat="section in sections"
-                       ng-href="#/documentation/{{version}}/{{section.route}}#title"
-                       ng-class="{active: section.route==current.route}">
-                        <i class="fa text-muted" ng-class="section.icon"></i>
-                        <span style="margin-left: 5px;">{{section.name}}</span>
-                    </a>
+﻿<div class="container app-view">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="list-group card-shadow">
+                        <a href="#" class="list-group-item"
+                           ng-repeat="section in sections"
+                           ng-href="#/documentation/{{version}}/{{section.route}}#title"
+                           ng-class="{active: section.route==current.route}">
+                            <i class="fa text-muted" ng-class="section.icon"></i>
+                            <span style="margin-left: 5px;">{{section.name}}</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-9">
-        <div class="row">
-            <div class="col-xs-12">
-                <div ng-show="properties == null">
-                    <h2 class="doc-title">Live Charts Docs</h2>
-                    <p>
-                        Welcome to Live Charts documentation click on any link to your left to navigate
-                        trough related documentation. If you find a bug in this web site, something is wrong or
-                        misspelled, you can report the issue on
-                        <a href="https://github.com/beto-rodriguez/LiveChartsWeb" target="_blank">
-                            <i class="fa fa-lg fa-github"></i> Github
-                        </a>
-                    </p>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div ng-show="properties == null">
+                        <h2 class="doc-title">Live Charts Docs</h2>
+                        <p>
+                            Welcome to Live Charts documentation click on any link to your left to navigate
+                            trough related documentation. If you find a bug in this web site, something is wrong or
+                            misspelled, you can report the issue on
+                            <a href="https://github.com/beto-rodriguez/LiveChartsWeb" target="_blank">
+                                <i class="fa fa-lg fa-github"></i> Github
+                            </a>
+                        </p>
 
-                    <h3>How does LiveCharts works?</h3>
-
-                    <p>
-                        Livechars core components are <span class="label label-default">Chart</span>, <span class="label label-default">SeriesCollection</span>, <span class="label label-default">Series</span> and <span class="label label-default">IChartValues</span>,
-                        all charts inherit from chart and have a <span class="label label-default">Series</span> property of type <span class="label label-default">SeriesCollection</span>, this means that practically
-                        everything that works for a line chart, will work for bar charts, or any other chart type. <span class="label label-default">SeriesCollection</span> class tracks when
-                        you add/remove a series from a chart then notifies the chart and the chart updates the UI, a <span class="label label-default">SeriesCollection</span> stores a
-                        collection of <span class="label label-default">Series</span> class, each <span class="label label-default">Series</span> has a <span class="label label-default">Values</span> property that implements <span class="label label-default">IChartValues</span>,
-                        this interface exposes the necessary methods to track <span class="label label-default">Values</span> property changes, so when you add/remove a value to series property,
-                        <span class="label label-default">IChartValues</span> will notify the chart so it can update the UI again.
-                        maybe you are asking yourself, what will happen if I add 1,000 point in 100 ms, would that slow down my application?
-                        <b>No</b>, LiveCharts implements a concept that we call DataSteps, a DataStep is a time interval that LiveCharts listens for data changes,
-                        when this interval ends then LiveCharts fires the update. This results in performance stable and totally automatic charts.
-                    </p>
-
-                    <h3>Navigate through docs</h3>
-
-                    <p>Every card you see is a property or a method, they have a short description and a simple example, click on any type to see more information, click on Go to source code to go deeper.</p>
-                    <img src="../../Content/Images/Docs/docs sample.png" style="opacity: .4" />
-                </div>
-                <div ng-show="properties != null">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <h2 id="title" class="doc-title">
-                                {{current.name}}
-                                <a class="btn btn-default pull-right card-shadow" ng-href="{{current.source}}">
-                                    <i class="fa fa-lg fa-github"></i> Go to source code
-                                </a>
-                            </h2>
-                            <p ng-bind-html="current.text"></p>
-                            <div class="row" style="margin-bottom: 10px;">
-                                <div class="col-md-7">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search" ng-model="criteria"/>
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-search"></i>
-                                        </span>
+                        <p>Every card you see is a property or a method, they have a short description and a simple example, click on any type to see more information, click on Go to source code to go deeper.</p>
+                        <img src="../../Content/Images/Docs/docs sample.png" style="opacity: .4" />
+                    </div>
+                    <div ng-show="properties != null">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2 id="title" class="doc-title">
+                                    {{current.name}}
+                                    <a class="btn btn-default pull-right card-shadow" ng-href="{{current.source}}">
+                                        <i class="fa fa-lg fa-github"></i> Go to source code
+                                    </a>
+                                </h2>
+                                <p ng-bind-html="current.text"></p>
+                                <div class="row" style="margin-bottom: 10px;">
+                                    <div class="col-md-7">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search" ng-model="criteria" />
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-search"></i>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="panel panel-default card-shadow" ng-repeat="prop in properties | filter: criteria">
-                        <div class="panel-body">
-                            <h4 style="margin-top: 0;" ng-bind-html="prop.name"></h4>
-                            <p ng-bind-html="prop.text"></p>
-                            <p>
-                                <span ng-show="prop.type">
-                                    Type <a ng-href="{{prop.type.ref}}"><span class="label label-primary ">{{prop.type.name}}</span></a>
-                                    Default <span class="label label-primary">{{prop.def}}</span>
-                                </span>
-                                <span ng-show="prop.returns">
-                                    Returns <a ng-href="{{prop.returns.ref}}"><span class="label label-primary ">{{prop.returns.name}}</span></a>
-                                    Params: <span ng-repeat="param in prop.params">
-                                                {{$index+1}}. <span ng-bind-html="param.text"></span>, 
-                                                Type 
-                                                <a ng-href="{{param.type.ref}}">
-                                                    <span class="label label-primary ">{{param.type.name}}</span>
-                                                </a>
-                                            </span>
-                                </span>
-                                <span ng-show="prop.behavesAs.length > 0">
-                                    Also is
-                                    <span class="label label-primary " ng-repeat="descriptor in prop.behavesAs">
-                                        {{descriptor}}
+                        <div class="panel panel-default card-shadow" ng-repeat="prop in properties | filter: criteria">
+                            <div class="panel-body">
+                                <h4 style="margin-top: 0;" ng-bind-html="prop.name"></h4>
+                                <p ng-bind-html="prop.text"></p>
+                                <p>
+                                    <span ng-show="prop.type">
+                                        Type <a ng-href="{{prop.type.ref}}"><span class="label label-primary ">{{prop.type.name}}</span></a>
+                                        Default <span class="label label-primary">{{prop.def}}</span>
                                     </span>
-                                </span>
-                            </p>
+                                    <span ng-show="prop.returns">
+                                        Returns <a ng-href="{{prop.returns.ref}}"><span class="label label-primary ">{{prop.returns.name}}</span></a>
+                                        Params: <span ng-repeat="param in prop.params">
+                                            {{$index+1}}. <span ng-bind-html="param.text"></span>,
+                                            Type
+                                            <a ng-href="{{param.type.ref}}">
+                                                <span class="label label-primary ">{{param.type.name}}</span>
+                                            </a>
+                                        </span>
+                                    </span>
+                                    <span ng-show="prop.behavesAs.length > 0">
+                                        Also is
+                                        <span class="label label-primary " ng-repeat="descriptor in prop.behavesAs">
+                                            {{descriptor}}
+                                        </span>
+                                    </span>
+                                </p>
 
-                            <pre class="prettyprint linenums" code="prop.example" style="margin: 0"></pre>
+                                <pre class="prettyprint linenums" code="prop.example" style="margin: 0"></pre>
+                            </div>
                         </div>
                     </div>
                 </div>

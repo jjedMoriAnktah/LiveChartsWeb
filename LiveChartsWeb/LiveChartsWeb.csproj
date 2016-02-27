@@ -201,9 +201,10 @@
     <Content Include="App\Controllers\home.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\Images\Docs\docs sample.png" />
-    <Content Include="Content\Images\Logos\lcicon.png" />
-    <Content Include="Content\Images\Logos\lclogo.png" />
-    <Content Include="Content\Images\Logos\lclogo30.png" />
+    <Content Include="Content\Images\Logos\lcred.png" />
+    <Content Include="Content\Images\Logos\lcwhite.png" />
+    <Content Include="Content\Images\Logos\LiveChartsLogo.png" />
+    <Content Include="Content\Images\Logos\LiveChartsLogo30.png" />
     <Content Include="Content\Images\Samples\bars.gif" />
     <Content Include="Content\Images\Samples\barsmove.gif" />
     <Content Include="Content\Images\Samples\linedynamic.gif" />
@@ -255,6 +256,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Project_Readme.html" />
+    <None Include="Properties\PublishProfiles\lvcharts.net - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\lvcharts.pubxml" />
   </ItemGroup>
   <PropertyGroup>

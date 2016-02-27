@@ -23,9 +23,9 @@
 <pre class="prettyprint">
 Chart.Colors = new List&lt;Color&gt;
 {
-    Colors.Red,
-    Colors.Green,
-    Colors.Blue
+  Colors.Red,
+  Colors.Green,
+  Colors.Blue
 };
 </pre>
 
@@ -39,32 +39,32 @@ Chart.Colors = new List&lt;Color&gt;
 //Solid Color
 barChart1.Series.Add(new BarSeries
 {
-    Title = "A Series",
-    Values = new ChartValues&lt;double&gt; {3, 5, 8, 12, 8, 3},
-    Stroke = new SolidColorBrush(Color.FromRgb(254,178,0)),
-    StrokeThickness = 4
+  Title = "A Series",
+  Values = new ChartValues&lt;double&gt; {3, 5, 8, 12, 8, 3},
+  Stroke = new SolidColorBrush(Color.FromRgb(254,178,0)),
+  StrokeThickness = 4
 });
 
 //Linear Gradient
 barChart1.Series.Add(new BarSeries
 {
-    Title = "A Series",
-    Values = new ChartValues&lt;double&gt; {4, 2, 10, 11, 9, 4},
-    Stroke = new SolidColorBrush(Color.FromRgb(254, 159, 0)),
-    StrokeThickness = 4,
-    Fill = new LinearGradientBrush(
-                    Color.FromArgb(00, 254, 178, 0),
-                    Color.FromRgb(254, 178, 0),
-                    new System.Windows.Point(0.5, 0),
-                    new System.Windows.Point(0.5, 1))
+  Title = "A Series",
+  Values = new ChartValues&lt;double&gt; {4, 2, 10, 11, 9, 4},
+  Stroke = new SolidColorBrush(Color.FromRgb(254, 159, 0)),
+  StrokeThickness = 4,
+  Fill = new LinearGradientBrush(
+               Color.FromArgb(00, 254, 178, 0),
+               Color.FromRgb(254, 178, 0),
+               new System.Windows.Point(0.5, 0),
+                 new System.Windows.Point(0.5, 1))
 });
 
 //An Image
 barChart1.Series.Add(new BarSeries
 {
-    Title = "A Series",
-    Values = new ChartValues&lt;double&gt; {4, 2, 10, 11, 9, 4},
-    Stroke = new SolidColorBrush(Color.FromRgb(254, 159, 0)),
+  Title = "A Series",
+  Values = new ChartValues&lt;double&gt; {4, 2, 10, 11, 9, 4},
+  Stroke = new SolidColorBrush(Color.FromRgb(254, 159, 0)),
     StrokeThickness = 4,
     Fill = new ImageBrush(new BitmapImage(new Uri(@"/Images/foo.png", UriKind.Relative)))
 });

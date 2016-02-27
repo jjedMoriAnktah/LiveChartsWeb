@@ -28,16 +28,16 @@ app.factory('examplesV1Service', [
                                     name: 'Series Colors',
                                     file: 'series-colors-wpf',
                                     path: 'WPF-Appearance-Series'
-                                }, {
-                                    name: 'Chart Legend',
-                                    file: 'legend-wpf',
-                                    path: 'WPF-Appearance-Legend'
-                                }, {
-                                    name: 'Tooltips',
-                                    file: 'tooltips-wpf',
-                                    path: 'WPF-Appearance-Tooltip'
                                 }
                             ]
+                        }, {
+                            name: 'Chart Legend',
+                            file: 'legend-wpf',
+                            path: 'WPF-Appearance-Legend'
+                        }, {
+                            name: 'Tooltips',
+                            file: 'tooltips-wpf',
+                            path: 'WPF-Appearance-Tooltip'
                         }, {
                             name: 'Labels',
                             path: 'WPF-Labels',
@@ -68,18 +68,12 @@ app.factory('examplesV1Service', [
                                     name: 'Series Colors',
                                     file: 'series-colors-wf',
                                     path: 'WF-Appearance-series'
-                                },
-                                {
-                                    name: 'Chart Legend',
-                                    file: 'legend-wf',
-                                    path: 'WF-Appearance-Legend'
-                                },
-                                //{
-                                //    name: 'Tooltips',
-                                //    file: 'tooltips-wpf',
-                                //    path: 'WF-Appearance-Tooltip'
-                                //}
+                                }
                             ]
+                        }, {
+                            name: 'Chart Legend',
+                            file: 'legend-wf',
+                            path: 'WF-Appearance-Legend'
                         }, {
                             name: 'Labels',
                             path: 'WF-Labels',
