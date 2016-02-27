@@ -38,6 +38,10 @@ app.factory('examplesV1Service', [
                                     path: 'WPF-Appearance-Tooltip'
                                 }
                             ]
+                        }, {
+                            name: 'Labels',
+                            path: 'WPF-Labels',
+                            file: 'labels-wpf'
                         }
                     ]
                 }, {
@@ -76,6 +80,10 @@ app.factory('examplesV1Service', [
                                 //    path: 'WF-Appearance-Tooltip'
                                 //}
                             ]
+                        }, {
+                            name: 'Labels',
+                            path: 'WF-Labels',
+                            file: 'labels-wf'
                         }
                     ]
                 }

@@ -171,7 +171,9 @@
     <Content Include="App\Examples\Images\browseNuget.png" />
     <Content Include="App\Examples\Images\fills.png" />
     <Content Include="App\Examples\Images\generalStyling.png" />
+    <Content Include="App\Examples\Images\labels.png" />
     <Content Include="App\Examples\Images\legend.png" />
+    <Content Include="App\Examples\Images\mappedlabels.png" />
     <Content Include="App\Examples\Images\nuget.png" />
     <Content Include="App\Examples\Images\references.png" />
     <Content Include="App\Examples\Images\storkeAndFill.png" />
@@ -181,6 +183,8 @@
     <Content Include="App\Examples\v1\install-wf.html" />
     <Content Include="App\Examples\v1\intro.html" />
     <Content Include="App\Examples\v1\general.html" />
+    <Content Include="App\Examples\v1\labels-wf.html" />
+    <Content Include="App\Examples\v1\labels-wpf.html" />
     <Content Include="App\Examples\v1\legend-wf.html" />
     <Content Include="App\Examples\v1\legend-wpf.html" />
     <Content Include="App\Examples\v1\series-colors-wf.html" />
