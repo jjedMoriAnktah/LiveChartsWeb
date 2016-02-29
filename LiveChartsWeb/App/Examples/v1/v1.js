@@ -13,35 +13,35 @@ app.factory('examplesV1Service', [
                             path: 'WPF-Install',
                             file: 'install-wpf'
                         }, {
-                            name: 'Appearance',
-                            path: 'WPF-Appearance',
+                            name: 'Components',
+                            path: 'WPF-Components',
                             articles: [
                                 {
-                                    name: 'General',
-                                    file: 'general',
-                                    path: 'WPF-Appearance-General'
-                                }, {
                                     name: 'Axes',
                                     file: 'axis-wpf',
-                                    path: 'WPF-Appearance-Axes'
+                                    path: 'WPF-Components-Axes'
                                 }, {
                                     name: 'Series Colors',
                                     file: 'series-colors-wpf',
-                                    path: 'WPF-Appearance-Series'
+                                    path: 'WPF-Components-Series'
+                                }, {
+                                    name: 'Chart Legend',
+                                    file: 'legend-wpf',
+                                    path: 'WPF-Components-Legend'
+                                }, {
+                                    name: 'Tooltips',
+                                    file: 'tooltips-wpf',
+                                    path: 'WPF-Components-Tooltip'
+                                }, {
+                                    name: 'Labels',
+                                    path: 'labels-wpf',
+                                    file: 'WPF-Components-wpf'
                                 }
                             ]
                         }, {
-                            name: 'Chart Legend',
-                            file: 'legend-wpf',
-                            path: 'WPF-Appearance-Legend'
-                        }, {
-                            name: 'Tooltips',
-                            file: 'tooltips-wpf',
-                            path: 'WPF-Appearance-Tooltip'
-                        }, {
-                            name: 'Labels',
-                            path: 'WPF-Labels',
-                            file: 'labels-wpf'
+                            name: 'In line syntax',
+                            path: 'WPF-InLine',
+                            file: 'fast-wpf'
                         }
                     ]
                 }, {
@@ -54,30 +54,25 @@ app.factory('examplesV1Service', [
                             file: 'install-wf'
                         }, {
                             name: 'Appearance',
-                            path: 'WF-Appearance',
-                            articles: [
-                                {
-                                    name: 'General',
-                                    file: 'general',
-                                    path: 'WF-Appearance-General'
-                                }, {
+                            path: 'WF-Components',
+                            articles: [ {
                                     name: 'Axes',
                                     file: 'axis-wf',
-                                    path: 'WF-Appearance-Axes'
+                                    path: 'WF-Component-Axes'
                                 }, {
                                     name: 'Series Colors',
                                     file: 'series-colors-wf',
-                                    path: 'WF-Appearance-series'
+                                    path: 'WF-Component-series'
+                                }, {
+                                    name: 'Chart Legend',
+                                    file: 'legend-wf',
+                                    path: 'WF-Component-Legend'
+                                }, {
+                                    name: 'Labels',
+                                    path: 'WF-Component-Labels',
+                                    file: 'labels-wf'
                                 }
                             ]
-                        }, {
-                            name: 'Chart Legend',
-                            file: 'legend-wf',
-                            path: 'WF-Appearance-Legend'
-                        }, {
-                            name: 'Labels',
-                            path: 'WF-Labels',
-                            file: 'labels-wf'
                         }
                     ]
                 }
