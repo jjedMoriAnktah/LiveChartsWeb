@@ -181,6 +181,7 @@
     <Content Include="App\Examples\Images\toolbox.png" />
     <Content Include="App\Examples\v1\axis-wf.html" />
     <Content Include="App\Examples\v1\axis-wpf.html" />
+    <Content Include="App\Examples\v1\basicline-wpf.html" />
     <Content Include="App\Examples\v1\fast-wpf.html" />
     <Content Include="App\Examples\v1\install-wf.html" />
     <Content Include="App\Examples\v1\intro.html" />
@@ -191,6 +192,7 @@
     <Content Include="App\Examples\v1\legend-wpf.html" />
     <Content Include="App\Examples\v1\series-colors-wf.html" />
     <Content Include="App\Examples\v1\series-colors-wpf.html" />
+    <Content Include="App\Examples\Images\tooltip.gif" />
     <Content Include="App\Examples\v1\tooltips-wpf.html" />
     <Content Include="App\Examples\v1\v1.js" />
     <Content Include="App\Examples\v1\install-wpf.html" />
@@ -235,16 +237,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\prettify.js" />
-    <Content Include="Web.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />

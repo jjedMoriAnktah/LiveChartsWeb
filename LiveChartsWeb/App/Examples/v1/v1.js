@@ -34,14 +34,23 @@ app.factory('examplesV1Service', [
                                     path: 'WPF-Components-Tooltip'
                                 }, {
                                     name: 'Labels',
-                                    path: 'labels-wpf',
-                                    file: 'WPF-Components-wpf'
+                                    path: 'WPF-Components-Labels',
+                                    file: 'labels-wpf'
                                 }
                             ]
                         }, {
                             name: 'In line syntax',
                             path: 'WPF-InLine',
                             file: 'fast-wpf'
+                        }, {
+                            name: 'Line Chart',
+                            path: 'WPF-LineChart',
+                            articles: [
+                            {
+                                name: 'Basic',
+                                path: 'WPF-LineChart-Basic',
+                                file: 'basicline-wpf'
+                            }]
                         }
                     ]
                 }, {
