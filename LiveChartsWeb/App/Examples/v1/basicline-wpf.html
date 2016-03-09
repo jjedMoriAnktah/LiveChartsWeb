@@ -1,6 +1,15 @@
 ﻿<h3 class="doc-title">Basic Line</h3>
 
 <p>
+    In this example we are building a basic chart with the default configuration, this chart is able to update 
+    automatically when data or chart size changes.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/basicline.gif"/>
+</div>
+
+<p>
     Create a new Window, replace Window1.cs with he next code
 </p>
 
@@ -32,8 +41,7 @@ namespace LiveChartsTest
                 Values = new ChartValues&lt;double&gt; { 5, 6, 9, 10, 11, 9 }
             };
 
-            //add our series to our SeriesCollection
-
+            //add series to SeriesCollection
             Series.Add(charlesSeries);
             Series.Add(jamesSeries);
 
@@ -56,10 +64,28 @@ namespace LiveChartsTest
     &lt;lvc:Axis Title="Sold Items" /&gt;
   &lt;/lvc:LineChart.AxisY&gt;
   &lt;lvc:LineChart.AxisX&gt;
-    &lt;lvc:Axis Title="Month" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}"
-              Labels="Jan, Feb , Mar, Apr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic" 
-              IsEnabled="False" /&gt;
+    &lt;lvc:Axis Title="Month"
+              Labels="Jan, Feb , Mar, Apr, May, Jun" /&gt;
   &lt;/lvc:LineChart.AxisX&gt;
 &lt;/lvc:LineChart&gt;
 </pre>
 
+<p>
+    That’s it now you can add more series, or more values to a series and chart will automatically update:
+</p>
+
+<pre class="prettyprint">
+//Add Points
+Series[0].Values.Add(10);
+//Remove Points
+Series[0].Values.RemoveAt(0);
+
+//Add or remove series too
+var mariaSeries = new LineSeries { Values = new ChartValues&lt;double&gt; {1,4,2} };
+Series.Add(mariaSeries);
+Series.RemoveAt(0);
+</pre>
+
+<p>
+    Clone and see running example <a href="https://github.com/beto-rodriguez/Live-Charts/tree/master/WPFExamples/Line%20Examples/Basic">here</a>
+</p>

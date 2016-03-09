@@ -168,6 +168,7 @@
     <Content Include="App\Examples\examplesMapper.js" />
     <Content Include="App\Examples\Images\addReferences.png" />
     <Content Include="App\Examples\Images\axis styling.png" />
+    <Content Include="App\Examples\Images\basicline.gif" />
     <Content Include="App\Examples\Images\browseNuget.png" />
     <Content Include="App\Examples\Images\fills.png" />
     <Content Include="App\Examples\Images\generalStyling.png" />
@@ -183,6 +184,7 @@
     <Content Include="App\Examples\v1\axis-wpf.html" />
     <Content Include="App\Examples\v1\basicline-wpf.html" />
     <Content Include="App\Examples\v1\fast-wpf.html" />
+    <Content Include="App\Examples\v1\inlineline.html" />
     <Content Include="App\Examples\v1\install-wf.html" />
     <Content Include="App\Examples\v1\intro.html" />
     <Content Include="App\Examples\v1\general.html" />

@@ -50,6 +50,17 @@ app.factory('examplesV1Service', [
                                 name: 'Basic',
                                 path: 'WPF-LineChart-Basic',
                                 file: 'basicline-wpf'
+                            }, {
+                                name: 'InLine syntax',
+                                path: 'inlineline.html',
+                                file: 'inlineline.html'
+                            }]
+                        }, {
+                            name: 'Bar Chart',
+                            path: 'WPF-BarChart',
+                            articles: [{
+                                name: 'Bar Chart',
+                                path: 'WPF-BarChart-Basic',
                             }]
                         }
                     ]
