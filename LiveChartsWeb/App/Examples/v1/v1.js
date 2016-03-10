@@ -39,10 +39,6 @@ app.factory('examplesV1Service', [
                                 }
                             ]
                         }, {
-                            name: 'In line syntax',
-                            path: 'WPF-InLine',
-                            file: 'fast-wpf'
-                        }, {
                             name: 'Line Chart',
                             path: 'WPF-LineChart',
                             articles: [
@@ -52,15 +48,46 @@ app.factory('examplesV1Service', [
                                 file: 'basicline-wpf'
                             }, {
                                 name: 'InLine syntax',
-                                path: 'inlineline.html',
-                                file: 'inlineline.html'
+                                path: 'WPF-LineChart-InLine',
+                                file: 'inlineline-wpf'
                             }]
                         }, {
                             name: 'Bar Chart',
                             path: 'WPF-BarChart',
                             articles: [{
-                                name: 'Bar Chart',
+                                name: 'Basic',
                                 path: 'WPF-BarChart-Basic',
+                                file: 'basicbar-wpf'
+                            }, {
+                                name: 'InLine Syntax',
+                                path: 'WPF-BarChart-InLine',
+                                file: 'inlinebar-wpf'
+                            }]
+                        }, {
+                            name: 'StackedBar Chart',
+                            path: 'WPF-StackedBarChart',
+                            articles: [
+                            {
+                                name: 'Basic',
+                                path: 'WPF-StackedBarChart-Basic',
+                                file: 'basicstackedbar-wpf'
+                            }, {
+                                name: 'InLine Syntax',
+                                path: 'WPF-StackedBarChart-InLine',
+                                file: 'inlinestackedbar-wpf'
+                            }]
+                        }, {
+                            name: 'Pie Chart',
+                            path: 'WPF-PieChart',
+                            articles: [
+                            {
+                                name: 'Basic',
+                                path: 'WPF-PieChart-Basic',
+                                file: 'basicpie-wpf'
+                            }, {
+                                name: 'InLine Syntax',
+                                path: 'WPF-PieChart-InLine',
+                                file: 'inlinepie-wpf'
                             }]
                         }
                     ]

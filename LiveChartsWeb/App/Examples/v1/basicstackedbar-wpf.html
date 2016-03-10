@@ -1,12 +1,12 @@
-﻿<h3 class="doc-title">Basic Line</h3>
+﻿<h3 class="doc-title">Basic Stacked Bar</h3>
 
 <p>
-    In this example we are building a basic chart with the default configuration, this chart is able to update 
+    In this example we are building a basic chart with the default configuration, this chart is able to update
     automatically when data or chart size changes.
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/Images/basicline.gif"/>
+    <img src="/App/Examples/Images/basicstackedbar.gif" />
 </div>
 
 <p>
@@ -16,39 +16,45 @@
 <pre class="prettyprint">
 using System.Windows;
 using LiveCharts;
-
 namespace LiveChartsTest
 {
   public partial class Window1
   {
+   
     public Window1()
     {
       InitializeComponent();
-
       //we create a new SeriesCollection
       Series = new SeriesCollection();
 
-      //create some LineSeries
-      var charlesSeries = new LineSeries
+      //create some series
+      var charlesSeries = new StackedBarSeries
       {
         Title = "Charles",
-        Values = new ChartValues&lt;double&gt; {10, 5, 7, 5, 7, 8}
+        Values = new ChartValues&lt;double&gt; {10, 5, 7}
       };
-      var jamesSeries = new LineSeries
+      var jamesSeries = new StackedBarSeries
       {
         Title = "James",
-        Values = new ChartValues&lt;double&gt; { 5, 6, 9, 10, 11, 9 }
+        Values = new ChartValues&lt;double&gt; { 5, 6, 9}
+      };
+      //StackedBarChart also supports LineSeries
+      var lineSeries = new LineSeries
+      {
+        Title = "Average",
+        Values = new ChartValues&lt;double&gt; { 7.5, 5.5, 8 }
       };
 
       //add series to SeriesCollection
       Series.Add(charlesSeries);
       Series.Add(jamesSeries);
+      Series.Add(lineSeries);
 
       //that's it, LiveCharts is ready and listening for your data changes.
       DataContext = this;
-   }
+    }
 
-   public SeriesCollection Series { get; set; }
+    public SeriesCollection Series { get; set; }
 
   }
 }
@@ -59,15 +65,15 @@ namespace LiveChartsTest
 </p>
 
 <pre class="prettyprint">
-&lt;lvc:LineChart LegendLocation="Right" Series="{Binding Series}" &gt;
-  &lt;lvc:LineChart.AxisY&gt;
+&lt;lvc:StackedBarChart LegendLocation="Right" Series="{Binding Series}" &gt;
+  &lt;lvc:StackedBarChart.AxisY&gt;
     &lt;lvc:Axis Title="Sold Items" /&gt;
-  &lt;/lvc:LineChart.AxisY&gt;
-  &lt;lvc:LineChart.AxisX&gt;
+  &lt;/lvc:StackedBarChart.AxisY&gt;
+  &lt;lvc:StackedBarChart.AxisX&gt;
     &lt;lvc:Axis Title="Month"
               Labels="Jan, Feb , Mar, Apr, May, Jun" /&gt;
-  &lt;/lvc:LineChart.AxisX&gt;
-&lt;/lvc:LineChart&gt;
+  &lt;/lvc:StackedBarChart.AxisX&gt;
+&lt;/lvc:StackedBarChart&gt;
 </pre>
 
 <p>
@@ -81,7 +87,7 @@ Series[0].Values.Add(10);
 Series[0].Values.RemoveAt(0);
 
 //Add or remove series too
-var mariaSeries = new LineSeries { Values = new ChartValues&lt;double&gt; {1,4,2} };
+var mariaSeries = new StackedBarSeries { Values = new ChartValues&lt;double&gt; {1,4,2} };
 Series.Add(mariaSeries);
 Series.RemoveAt(0);
 </pre>
