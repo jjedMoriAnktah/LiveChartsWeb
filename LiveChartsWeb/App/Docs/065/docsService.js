@@ -55,6 +55,38 @@ app.factory('docs065', ['components065', function (componentsService) {
                 source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Charts/PieChart.cs',
                 getProps: function() { return buildProperties(['pieChart', 'chart']); }
             },
+            lineseries: {
+                name: 'LineSeries',
+                text: 'A Line series is supported for LineChart, BarChart and StackedBarChart',
+                route: 'lineseries',
+                icon: 'fa-line-chart',
+                source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Series/LineSeries.cs',
+                getProps: function () { return buildProperties['lineSeries', 'series']}
+            },
+            barseries: {
+                name: 'BarSeries',
+                text: '',
+                route: 'barseries',
+                icon: 'fa-bar-chart',
+                source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Series/BarSeries.cs',
+                getProps: function () { return buildProperties['series']}
+            },
+            stackedbarseries: {
+                name: 'BarSeries',
+                text: '',
+                route: 'stackedbarseries',
+                icon: 'fa-bar-chart',
+                source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Series/StackedBarSeries.cs',
+                getProps: function () { return buildProperties['series'] }
+            },
+            pieseries: {
+                name: 'PieSeries',
+                text: '',
+                route: 'pieseries',
+                icon: 'fa-pie-chart',
+                source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Series/PieSeries.cs',
+                getProps: function () { return buildProperties['series'] }
+            },
             seriescollection: {
                 name: 'SeriesCollection Class',
                 text: 'Series collection is one of the most important components of this library, a series collection contains all the series to plot in a chart, what makes this class so important is two things, first, it notifies the UI when you add or remove a series so chart is able refresh its content automatically, and second, it contains a configuration to plot any type you need, for example you can create a configuration for a custom model, and then map X and Y so LiveCharts knows how to plot your model, SeriesCollection inherits from <span class="label label-primary docs-label"><a href="https://msdn.microsoft.com/en-us/library/ms668604(v=vs.110).aspx">ObservableCollection</a>&lt;<a href="#/documentation/series">Series</a>&gt;</span>',

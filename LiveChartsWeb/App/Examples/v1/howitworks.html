@@ -1,0 +1,77 @@
+﻿<h3 class="doc-title">How it Works</h3>
+
+<p>
+    Live Charts core components are SeriesCollection class and IChartValues interface, both of them
+    implements INotifyCollectionChanged interface, so they are able to notify the chart when you add/remove
+    a series or a value from each series.
+</p>
+
+<p>
+    Any chart by default is ready to plot double values and scale them in the Y axis, but there is really easy
+    to invert a chart to scale on X or plot any type you need instead of only double values, see examples section.
+</p>
+
+<h4>Is Live Charts performance safe?</h4>
+
+<p>
+    Yes, we use a concept that we call DataStep, a DS (DataStep) is a short interval
+    when a chart listens for changes, when this interval finishes then the chart is updated, so you can update a large
+    amount of points and the chart will only update once (when DS ticks).
+</p>
+
+<h4>Tracking Changes</h4>
+
+<p>
+    LiveCharts tracks your chart changes in two different ways, primitives and complex. both methods could show
+    a different animation.
+</p>
+
+<p>
+    When you plot primitive types, normally double values, the only way we can track the animation is by the position of the
+    point in the array, primitive tracking is ok if you don't need to change first and mid points, or if you don't care about
+    animations.
+</p>
+
+<p>
+    This short example will examplin the issue, lets create a LineChart with some values as follows:
+</p>
+
+<pre class="prettyprint">
+var values = new ChartValues&lt;double&gt;{ 2, 5 };
+</pre>
+
+<p>
+    In the next image, every time we click "+" we add a new random value at the end of the array, when we click "-"
+    we remove the firstr item.
+</p>
+
+<p>
+    When we click "+" the animation runs correclty because LiveCharts is able to detect that there is a new position in the chart,
+    before addind the point we had 0, 1 positions and after we add it we have 0, 1, 2.
+</p>
+
+<p>
+    Sadly when we remove the first point, before removing we had 0, 1, 2 positions and after we have 0, 1 so for LiveCharts
+    We removed the last point and moved the value of the zero position.
+</p>
+
+<p>
+    The next animation shows the issue.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/indexedissue.gif"/>
+</div>
+
+<p>
+    On the other hand, complex tracking will always display the desired animation since it tracks by instance id, not
+    only the poition in the array
+</p>
+
+<pre class="prettyprint">
+var values = new ChartValues&lt;MyClass&gt;{ new MyClass(), new MyClass() };
+</pre>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/bars.gif"/>
+</div>

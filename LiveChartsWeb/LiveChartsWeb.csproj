@@ -168,6 +168,7 @@
     <Content Include="App\Examples\examplesMapper.js" />
     <Content Include="App\Examples\Images\addReferences.png" />
     <Content Include="App\Examples\Images\axis styling.png" />
+    <Content Include="App\Examples\Images\bars.gif" />
     <Content Include="App\Examples\Images\basicbar.gif" />
     <Content Include="App\Examples\Images\basicline.gif" />
     <Content Include="App\Examples\Images\basicpie.gif" />
@@ -177,7 +178,9 @@
     <Content Include="App\Examples\Images\fills.png" />
     <Content Include="App\Examples\Images\generalStyling.png" />
     <Content Include="App\Examples\Images\genericline.gif" />
+    <Content Include="App\Examples\Images\indexedissue.gif" />
     <Content Include="App\Examples\Images\inlinegif.gif" />
+    <Content Include="App\Examples\v1\howitworks.html" />
     <Content Include="App\Examples\v1\inverted-wpf.html" />
     <Content Include="App\Examples\Images\inverted.png" />
     <Content Include="App\Examples\Images\iocpbar.gif" />

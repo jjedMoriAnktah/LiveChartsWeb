@@ -8,6 +8,10 @@
                            ng-class="{ active: path == 'intro' }">
                             Introuction
                         </a>
+                        <a class="list-group-item" ng-href="#/examples/{{version}}/howitworks?path=howitworks"
+                           ng-class="{ active: path == 'howitworks' }">
+                            How It Works
+                        </a>
                         <div ng-repeat="section in sections">
                             <a class="list-group-item" toggle toggle-id="item-{{$index}}">
                                 <i class="fa fa-caret-down"></i> {{section.name}}

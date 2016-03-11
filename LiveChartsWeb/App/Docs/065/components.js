@@ -429,6 +429,25 @@ app.factory('components065', [
                         example: 'var config = new SeriesConfiguration<double>().X(val => val);\nmySeriesCollection.Setup(config)'
                     }
                 ],
+                lineSeries: [
+                    {
+                        name: 'LineSmoothness',
+                        type: modify(types.dbl, "{{name}}?"),
+                        text: 'Gets or sets this series line smoothness this property overrides LineChart LineSmoothness property',
+                        tags: '',
+                        behavesAs: [''],
+                        def: 'null',
+                        example: 'lineSeries.LineSmoothness = 0;'
+                    }, {
+                        name: 'PointRadius',
+                        type: modify(types.dbl, "{{name}}?"),
+                        text: 'Gets or sets every point radius in the series',
+                        tags: '',
+                        behavesAs: [''],
+                        def: '4',
+                        example: 'lineSeries.PointRadius = 2;'
+                    }
+                ],
                 seriesCollection: [
                     {
                         name: 'Chart',
