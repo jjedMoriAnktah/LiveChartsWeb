@@ -247,10 +247,10 @@ a.active i.text-muted {
 }
 
 .menu-level-1 {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .menu-level-2 {
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .list-group.list-group-root {

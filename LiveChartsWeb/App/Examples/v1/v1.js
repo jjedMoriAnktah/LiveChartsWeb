@@ -46,6 +46,10 @@ app.factory('examplesV1Service', [
                                 name: 'Basic',
                                 path: 'WPF-LineChart-Basic',
                                 file: 'basicline-wpf'
+                            },{
+                                name: 'LineSmoothness',
+                                path: 'WPF-LineChart-LineSmoothness',
+                                file: 'linesmothness-wpf'
                             }, {
                                 name: 'InLine syntax',
                                 path: 'WPF-LineChart-InLine',
@@ -89,6 +93,14 @@ app.factory('examplesV1Service', [
                                 path: 'WPF-PieChart-InLine',
                                 file: 'inlinepie-wpf'
                             }]
+                        }, {
+                            name: 'Generic Chart',
+                            path: 'WPF-Generic',
+                            file: 'genericline-wpf'
+                        }, {
+                            name: 'Clickable points',
+                            path: 'WPF-Clickable',
+                            file: 'clickable-wpf'
                         }
                     ]
                 }, {

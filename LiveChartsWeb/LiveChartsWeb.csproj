@@ -175,12 +175,14 @@
     <Content Include="App\Examples\Images\browseNuget.png" />
     <Content Include="App\Examples\Images\fills.png" />
     <Content Include="App\Examples\Images\generalStyling.png" />
+    <Content Include="App\Examples\Images\genericline.gif" />
     <Content Include="App\Examples\Images\inlinegif.gif" />
     <Content Include="App\Examples\Images\labels.png" />
     <Content Include="App\Examples\Images\legend.png" />
     <Content Include="App\Examples\Images\mappedlabels.png" />
     <Content Include="App\Examples\Images\nuget.png" />
     <Content Include="App\Examples\Images\references.png" />
+    <Content Include="App\Examples\Images\smootheness.png" />
     <Content Include="App\Examples\Images\storkeAndFill.png" />
     <Content Include="App\Examples\Images\toolbox.png" />
     <Content Include="App\Examples\v1\axis-wf.html" />
@@ -189,6 +191,7 @@
     <Content Include="App\Examples\v1\basicstackedbar-wpf.html" />
     <Content Include="App\Examples\v1\basicbar-wpf.html" />
     <Content Include="App\Examples\v1\basicline-wpf.html" />
+    <Content Include="App\Examples\v1\clickable-wpf.html" />
     <Content Include="App\Examples\v1\fast-wpf.html" />
     <Content Include="App\Examples\v1\inlinepie-wpf.html" />
     <Content Include="App\Examples\v1\inlinestackedbar-wpf.html" />
@@ -201,6 +204,8 @@
     <Content Include="App\Examples\v1\labels-wpf.html" />
     <Content Include="App\Examples\v1\legend-wf.html" />
     <Content Include="App\Examples\v1\legend-wpf.html" />
+    <Content Include="App\Examples\v1\genericline-wpf.html" />
+    <Content Include="App\Examples\v1\linesmothness-wpf.html" />
     <Content Include="App\Examples\v1\series-colors-wf.html" />
     <Content Include="App\Examples\v1\series-colors-wpf.html" />
     <Content Include="App\Examples\Images\tooltip.gif" />

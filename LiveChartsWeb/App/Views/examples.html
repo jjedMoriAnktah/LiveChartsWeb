@@ -10,7 +10,7 @@
                         </a>
                         <div ng-repeat="section in sections">
                             <a class="list-group-item" toggle toggle-id="item-{{$index}}">
-                                <i class="fa fa-angle-down"></i> {{section.name}}
+                                <i class="fa fa-caret-down"></i> {{section.name}}
                             </a>
                             <div id="item-{{$index}}" class="list-group"
                                  ng-class="{ collapse: !isInPath(section) }">
@@ -26,7 +26,7 @@
                                     <a class="list-group-item" toggle
                                        toggle-id="item-{{$parent.$index}}-{{$index}}"
                                        ng-show="section.articles.length > 0">
-                                        <i class="fa fa-angle-down menu-level-1"></i> {{section.name}}
+                                        <i class="fa fa-caret-down menu-level-1"></i> {{section.name}}
                                     </a>
                                     <div id="item-{{$parent.$index}}-{{$index}}" class="list-group"
                                          ng-class="{ collapse: !isInPath(section) }">

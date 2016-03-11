@@ -1,0 +1,39 @@
+﻿<h3 class="doc-title">Clickable Chart Points</h3>
+
+<p>
+    You can use the DataClick event to fire any action.
+</p>
+
+<p>
+    <b>XAML</b>
+</p>
+
+<pre class="prettyprint">
+&lt;lvc:LineChart DataClick="Chart_OnDataClick" /&gt;
+&lt;lvc:BarChart DataClick="Chart_OnDataClick" /&gt;
+&lt;lvc:StackedBarChart DataClick="Chart_OnDataClick" /&gt;
+&lt;lvc:PieChart DataClick="Chart_OnDataClick" /&gt;
+</pre>
+
+<p>
+    <b>Code Behind</b>
+</p>
+
+<pre class="prettyprint">
+private void Chart_OnDataClick(ChartPoint point)
+{
+  //DataClick event will be called when a user clicks on a data point.
+           
+  //point.Instance is normally double if you did not change default configuration
+  //in this case we configured our series to use MonthSalesData class.
+  var salesData = point.Instance as MonthSalesData;
+  if (salesData == null) return;
+  MessageBox.Show("You clicked on: (" + point.X + ", " + point.Y + "), " +
+                         "sold items:" + salesData.SoldItems + ", " +
+                         "best sellers: " + salesData.BestSellers.Aggregate((x, y) => x + ", " + y));
+}
+</pre>
+
+<p>
+    Clone and see running example <a href="https://github.com/beto-rodriguez/Live-Charts/tree/master/WPFExamples/Line%20Examples/Basic">here</a>
+</p>

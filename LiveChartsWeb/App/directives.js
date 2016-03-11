@@ -37,8 +37,8 @@ app.directive('prettyprint', function() {
             link: function(scope, element, attrs) {
                 element.bind('click', function() {
                     var i = angular.element(element[0].querySelector('.fa'));
-                    i.toggleClass('fa-angle-down');
-                    i.toggleClass('fa-angle-right');
+                    i.toggleClass('fa-caret-down');
+                    i.toggleClass('fa-caret-right');
                     angular.element(document.getElementById(scope.toggleId)).toggleClass('collapse');
                 });
             }

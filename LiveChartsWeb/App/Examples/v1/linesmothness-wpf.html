@@ -1,0 +1,29 @@
+﻿<h3 class="doc-title">LineSmoothness Property</h3>
+
+<p>
+    The LineSmoothness property allows you to control the style of your line, This property
+    goes from 0 to 1.
+</p>
+
+<p>
+    Concider this chart as an example
+</p>
+
+<pre class="prettyprint">
+&lt;lvc:LineChart LineSmoothness="0"&gt;
+  &lt;lvc:LineChart.Series&gt;
+    &lt;lvc:LineSeries Values="1, 5, 8" /&gt;
+    &lt;lvc:LineSeries Values="3, 6, 2" /&gt;
+  &lt;/lvc:LineChart.Series&gt;
+&lt;/lvc:LineChart&gt;
+</pre>
+
+<p>
+    The image to the right has a LineSmoothness of 0, the one at left is 1, you can use any mid value
+    according to your needs, default is 0.8.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/smootheness.png"/>
+</div>
+
