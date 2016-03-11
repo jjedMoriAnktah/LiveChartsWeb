@@ -173,10 +173,14 @@
     <Content Include="App\Examples\Images\basicpie.gif" />
     <Content Include="App\Examples\Images\basicstackedbar.gif" />
     <Content Include="App\Examples\Images\browseNuget.png" />
+    <Content Include="App\Examples\Images\dynamicline.gif" />
     <Content Include="App\Examples\Images\fills.png" />
     <Content Include="App\Examples\Images\generalStyling.png" />
     <Content Include="App\Examples\Images\genericline.gif" />
     <Content Include="App\Examples\Images\inlinegif.gif" />
+    <Content Include="App\Examples\v1\inverted-wpf.html" />
+    <Content Include="App\Examples\Images\inverted.png" />
+    <Content Include="App\Examples\Images\iocpbar.gif" />
     <Content Include="App\Examples\Images\labels.png" />
     <Content Include="App\Examples\Images\legend.png" />
     <Content Include="App\Examples\Images\mappedlabels.png" />
@@ -192,7 +196,10 @@
     <Content Include="App\Examples\v1\basicbar-wpf.html" />
     <Content Include="App\Examples\v1\basicline-wpf.html" />
     <Content Include="App\Examples\v1\clickable-wpf.html" />
+    <Content Include="App\Examples\v1\dynamic-wpf.html" />
     <Content Include="App\Examples\v1\fast-wpf.html" />
+    <Content Include="App\Examples\v1\filter-wpf.html" />
+    <Content Include="App\Examples\Images\filter.gif" />
     <Content Include="App\Examples\v1\inlinepie-wpf.html" />
     <Content Include="App\Examples\v1\inlinestackedbar-wpf.html" />
     <Content Include="App\Examples\v1\inlinebar-wpf.html" />
@@ -200,6 +207,7 @@
     <Content Include="App\Examples\v1\install-wf.html" />
     <Content Include="App\Examples\v1\intro.html" />
     <Content Include="App\Examples\v1\general.html" />
+    <Content Include="App\Examples\v1\iocp-wpf.html" />
     <Content Include="App\Examples\v1\labels-wf.html" />
     <Content Include="App\Examples\v1\labels-wpf.html" />
     <Content Include="App\Examples\v1\legend-wf.html" />

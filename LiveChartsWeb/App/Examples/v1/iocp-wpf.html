@@ -1,0 +1,131 @@
+﻿<h3 class="doc-title">IObservableChartPoint</h3>
+
+<p>
+    By default Live Charts listents any time you add/remove series or add/removes values of any series,
+    but if you need to update the chart everytme a point changes then you need to implement
+    IObservableChartPoint interface. It is really easy and follows MVVM pattern.
+</p>
+
+<p>
+    Even this example is built with a BarChart it works the same with all charts.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/iocpbar.gif"/>
+</div>
+
+<p>
+    Lets get started, first of all we need to define our view model, create
+    a new class called StoreViewModel as folows:
+</p>
+
+<pre class="prettyprint">
+public class StoreViewModel : IObservableChartPoint
+{
+  private double _income;
+
+  public double Income
+  {
+    get { return _income; }
+    set
+    {
+      //every time we set Income property
+      //we call the PointChanged event, which notifies
+      //the chart to update.
+      _income = value;
+      if (PointChanged != null) PointChanged.Invoke(this);
+     }
+  }
+  
+  public event Action&lt;object&gt; PointChanged;
+}
+</pre>
+
+<p>
+    Add a new window to your project and replace Window1.cs with the next code:
+</p>
+
+<pre class="prettyprint">
+using System;
+using System.Windows;
+using LiveCharts;
+namespace ChartsTest.BarExamples.UsingObservableChartPoint
+{
+
+  public partial class PointPropertyChangedBar
+  {
+    public PointPropertyChangedBar()
+    {
+   
+    InitializeComponent();
+    
+    //create a config for StoreViewModel
+    var config = new SeriesConfiguration&lt;StoreViewModel&gt;()
+                  .Y(y => y.Income); //use Income property as Y
+                                     //do not configure X
+                                     //this will pull a zero based index as X
+
+    //create a SeriesCollection with this config
+    StoresCollection = new SeriesCollection(config);
+    
+    //add some Series with ChartValues&lt;StoreViewModel&gt;
+    StoresCollection.Add(new BarSeries
+    {
+      Title = "Apple Store",
+      Values = new ChartValues&lt;StoreViewModel&gt;
+      {
+        new StoreViewModel {Income = 15},
+        new StoreViewModel {Income = 18}
+      },
+      DataLabels = true
+    });
+    
+    StoresCollection.Add(new BarSeries
+    {
+      Title = "Google Play",
+      Values = new ChartValues&lt;StoreViewModel&gt;
+      {
+        new StoreViewModel {Income = 5},
+        new StoreViewModel {Income = 7}
+      },
+      DataLabels = true
+    });
+    
+    DataContext = this;
+  }
+  
+  public SeriesCollection StoresCollection { get; set; }
+  
+  }
+}
+</pre>
+
+<p>
+    Now Add the chart to your window <i>XAML</i>
+</p>
+
+<pre class="prettyprint">
+&lt;lvc:BarChart Series="{Binding StoresCollection}"&gt;
+  &lt;lvc:BarChart.AxisY&gt;
+    &lt;lvc:Axis Title="Sold Apps"&gt;&lt;/lvc:Axis&gt;
+  &lt;/lvc:BarChart.AxisY&gt;
+  &lt;lvc:BarChart.AxisX&gt;
+    &lt;lvc:Axis Name="SecondaryAxis" Title="Month" Labels="January, February"&gt;&lt;/lvc:Axis&gt;
+  &lt;/lvc:BarChart.AxisX&gt;
+&lt;/lvc:BarChart&gt;
+</pre>
+
+<p>
+    And that's all, every time you change any StoreViewModel Income property, your class will notify the chart
+    to update in the next DataStep, this means, you should not have any perfomance issues even if you modify
+    a large amount of points in a short period of time.
+</p>
+
+<p>
+    Try changing any point and you will notice how chart updates automatically.
+</p>
+
+<pre class="prettyprint">
+var storevm = StoresCollection[0].Values[0] as StoreViewModel;
+storevm.Income = 28;
+</pre>

@@ -94,6 +94,14 @@ app.factory('examplesV1Service', [
                                 file: 'inlinepie-wpf'
                             }]
                         }, {
+                            name: 'Dynamic Chart',
+                            path: 'WPF-Dynamic',
+                            file: 'dynamic-wpf'
+                        }, {
+                            name: 'Filtered chart',
+                            path: 'WPF-Filter',
+                            file: 'filter-wpf'
+                        }, {
                             name: 'Generic Chart',
                             path: 'WPF-Generic',
                             file: 'genericline-wpf'
@@ -101,6 +109,14 @@ app.factory('examplesV1Service', [
                             name: 'Clickable points',
                             path: 'WPF-Clickable',
                             file: 'clickable-wpf'
+                        }, {
+                            name: 'Observable Points',
+                            path: 'WPF-Observable',
+                            file: 'iocp-wpf'
+                        }, {
+                            name: 'Inverted Charts',
+                            path: 'WPF-Inverted',
+                            file: 'inverted-wpf'
                         }
                     ]
                 }, {

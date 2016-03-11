@@ -1,0 +1,74 @@
+﻿<h3 class="doc-title">Inverted Charts</h3>
+
+<p>
+    You can easly invert any chart type, this example is for a BarChart but it should be work with any type.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/inverted.png"/>
+</div>
+
+<p>
+    Add a new Windo to your solution and replace Window1.cs with the following code:
+</p>
+
+<pre class="prettyprint">
+using System.Windows;
+using System.Windows.Media;
+using LiveCharts;
+namespace ChartsTest.BarExamples.RotatedBar
+{
+
+  public partial class RotatedBar
+  {
+    public RotatedBar()
+    {
+      InitializeComponent();
+
+      var config = new SeriesConfiguration&lt;double&gt;()
+                      .X(value => value); //scale on X
+                                          //do not configure Y so it uses default config, a zero based index
+      SeriesCollection =
+        new SeriesCollection(config)
+        {
+          new BarSeries
+          {
+            Title = "inverted series",
+            Values = new double[] {10, 15, 18, 20, 15, 13}.AsChartValues(),
+            DataLabels = true
+          },
+          new BarSeries
+          {
+            Title = "inverted series 2",
+            Values = new double[] {4, 8, 19, 19, 16, 12}.AsChartValues(),
+            DataLabels = true
+          },
+          new LineSeries
+          {
+            Title = "inverted line series",
+            Values = new double[] {10, 15, 18, 20, 15, 13}.AsChartValues(),
+            Fill = Brushes.Transparent
+          }
+        };
+       
+      DataContext = this;
+    }
+      
+    public SeriesCollection SeriesCollection { get; set; }
+    
+  }
+}
+</pre>
+
+<p>
+    Add the chart to your window <i>XAML</i>, notice it is really important to set
+    the <b>Invert</b> property to true.
+</p>
+
+<pre class="prettyprint">
+&lt;lvc:BarChart Invert="True" Series="{Binding SeriesCollection}" LegendLocation="Top"&gt;
+  &lt;lvc:BarChart.AxisY&gt;
+    &lt;lvc:Axis Labels="Day 1, Day 2, Day 3, day 4, day5, day6, day 7"&gt;&lt;/lvc:Axis&gt;
+  &lt;/lvc:BarChart.AxisY&gt;
+&lt;/lvc:BarChart&gt;
+</pre>
