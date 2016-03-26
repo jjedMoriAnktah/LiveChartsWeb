@@ -117,6 +117,10 @@ app.factory('examplesV1Service', [
                             name: 'Inverted Charts',
                             path: 'WPF-Inverted',
                             file: 'inverted-wpf'
+                        }, {
+                            name: 'Multiple Axes',
+                            path: 'WPF-MultipleAxes',
+                            file: 'multipleAxes-wpf'
                         }
                     ]
                 }, {

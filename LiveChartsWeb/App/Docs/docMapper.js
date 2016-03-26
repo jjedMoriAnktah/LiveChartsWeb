@@ -1,14 +1,14 @@
 ﻿'use strict';
 
 app.factory('docsService', [
-    'docs065', function (docs065) {
+    'docsBeta', function (docsBeta) {
         return function(version) {
-            var latest = { version: '0.6.5', content: docs065 };
+            var latest = { version: 'beta', content: docsBeta };
 
             var mapper = {
-                '0.6.5': { version: '0.6.5', content: docs065 }
+                'beta': { version: 'beta', content: docsBeta }
                 //here add future versions...
-                //0.7: { version: '0.7.0', content: docs065 }
+                //0.7: { version: '1.0', content: beta }
             };
             
             var docsRequested = mapper[version];

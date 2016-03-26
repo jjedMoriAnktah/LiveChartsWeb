@@ -161,9 +161,9 @@
     <Content Include="App\Controllers\examples.js" />
     <Content Include="App\Controllers\template.js" />
     <Content Include="App\directives.js" />
-    <Content Include="App\Docs\065\components.js" />
-    <Content Include="App\Docs\065\docsService.js" />
-    <Content Include="App\Docs\065\types.js" />
+    <Content Include="App\Docs\beta\components.js" />
+    <Content Include="App\Docs\beta\docsService.js" />
+    <Content Include="App\Docs\beta\types.js" />
     <Content Include="App\Docs\docMapper.js" />
     <Content Include="App\Examples\examplesMapper.js" />
     <Content Include="App\Examples\Images\addReferences.png" />
@@ -180,6 +180,7 @@
     <Content Include="App\Examples\Images\genericline.gif" />
     <Content Include="App\Examples\Images\indexedissue.gif" />
     <Content Include="App\Examples\Images\inlinegif.gif" />
+    <Content Include="App\Examples\Images\multiaxes.png" />
     <Content Include="App\Examples\v1\howitworks.html" />
     <Content Include="App\Examples\v1\inverted-wpf.html" />
     <Content Include="App\Examples\Images\inverted.png" />
@@ -217,6 +218,7 @@
     <Content Include="App\Examples\v1\legend-wpf.html" />
     <Content Include="App\Examples\v1\genericline-wpf.html" />
     <Content Include="App\Examples\v1\linesmothness-wpf.html" />
+    <Content Include="App\Examples\v1\multipleAxes-wpf.html" />
     <Content Include="App\Examples\v1\series-colors-wf.html" />
     <Content Include="App\Examples\v1\series-colors-wpf.html" />
     <Content Include="App\Examples\Images\tooltip.gif" />

@@ -29,9 +29,9 @@ namespace LiveChartsWeb
                 "~/App/Examples/examplesMapper.js",
 
                 //065 docs
-                "~/App/Docs/065/types.js",
-                "~/App/Docs/065/components.js",
-                "~/App/Docs/065/docsService.js",
+                "~/App/Docs/beta/types.js",
+                "~/App/Docs/beta/components.js",
+                "~/App/Docs/beta/docsService.js",
 
                 //v1 examples
                 "~/App/Examples/v1/v1.js",

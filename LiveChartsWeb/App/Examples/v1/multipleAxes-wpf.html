@@ -1,0 +1,63 @@
+﻿<h3 class="doc-title">Multiple Axes Chart</h3>
+
+<p>
+    There are some cases when you need to compare the trend between multiple series but they have a different
+    scale or different measure unit then you can create another axis and style it according to it's series.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/Images/multiaxes.png"/>
+</div>
+
+<p>
+    Notice how each color set of series has a really big numeric diference but they scale according to a
+    different axis.
+</p>
+
+<pre class="prettyprint">
+&lt;lvc:LineChart&gt;
+  &lt;lvc:LineChart.Series&gt;
+
+    &lt;!--using default axis--&gt;
+    &lt;lvc:LineSeries Title="A" Values="300, 600, 200" Stroke="Violet" Fill="Transparent" /&gt;
+
+    &lt;!--using ComplementaryAxes[0]--&gt;
+    &lt;lvc:LineSeries Title="B" Values="0, 0, 0" Stroke="Chocolate" 
+                 Fill="Transparent" FromComplementaryY="0" /&gt;
+    &lt;lvc:LineSeries Title="C" Values="10, 10, 10" Stroke="Chocolate" 
+                 Fill="Transparent" FromComplementaryY="0" /&gt;
+
+    &lt;!--using ComplementaryAxes[1]--&gt;
+    &lt;lvc:LineSeries Title="D" Values="20000, 20000, 20000" Stroke="Navy" 
+                 Fill="Transparent" FromComplementaryY="1" /&gt;
+  &lt;/lvc:LineChart.Series&gt;
+  &lt;lvc:LineChart.AxisY&gt;
+    &lt;lvc:Axis Foreground="Violet" Title="Violet Axis"&gt;
+      &lt;lvc:Axis.ComplementaryAxes&gt;
+        &lt;lvc:Axis Title="Chocolate Axis" Foreground="Chocolate" /&gt;
+        &lt;lvc:Axis Title="Navy Axis" Foreground="Navy" /&gt;
+      &lt;/lvc:Axis.ComplementaryAxes&gt;
+    &lt;/lvc:Axis&gt;
+  &lt;/lvc:LineChart.AxisY&gt;
+&lt;/lvc:LineChart&gt;
+</pre>
+
+<p>
+    Notice that we created a custom Axis and set the tile property to Violet Axis then added 2 extra axis:
+    Chocolate Axis and Navy Axis.
+</p>
+
+<p>
+    To plot series "B" and "C" in chocolate axis we used the FromComplementaryY property which means that
+    the Y values in this both series will scale in the first axis in ComplementaryAxes property (ComplementaryAxes[0]),
+    the same way "D" series uses ComplementaryAxes[1] in this case the Navy Axis.
+</p>
+
+<p>
+    Finally "A" series uses the default chart Axis, the Violet Axis.
+</p>
+
+<p>
+    Notice all series scales the same on X, if you need a different scale on X you must use the FromComplementaryX
+    prperty.
+</p>

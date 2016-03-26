@@ -1,4 +1,4 @@
-﻿app.factory('types065', [
+﻿app.factory('typesBeta', [
     function() {
         return function() {
             return {

@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-app.factory('docs065', ['components065', function (componentsService) {
+app.factory('docsBeta', ['componentsBeta', function (componentsService) {
     return function () {
 
         var components = componentsService();
@@ -61,7 +61,7 @@ app.factory('docs065', ['components065', function (componentsService) {
                 route: 'lineseries',
                 icon: 'fa-line-chart',
                 source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Series/LineSeries.cs',
-                getProps: function () { return buildProperties['lineSeries', 'series']}
+                getProps: function () { return buildProperties(['lineSeries', 'series']); }
             },
             barseries: {
                 name: 'BarSeries',
@@ -69,7 +69,7 @@ app.factory('docs065', ['components065', function (componentsService) {
                 route: 'barseries',
                 icon: 'fa-bar-chart',
                 source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Series/BarSeries.cs',
-                getProps: function () { return buildProperties['series']}
+                getProps: function () { return buildProperties(['series']); }
             },
             stackedbarseries: {
                 name: 'BarSeries',
@@ -77,7 +77,7 @@ app.factory('docs065', ['components065', function (componentsService) {
                 route: 'stackedbarseries',
                 icon: 'fa-bar-chart',
                 source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Series/StackedBarSeries.cs',
-                getProps: function () { return buildProperties['series'] }
+                getProps: function () { return buildProperties(['series']); }
             },
             pieseries: {
                 name: 'PieSeries',
@@ -85,7 +85,7 @@ app.factory('docs065', ['components065', function (componentsService) {
                 route: 'pieseries',
                 icon: 'fa-pie-chart',
                 source: 'https://github.com/beto-rodriguez/Live-Charts/blob/master/LiveChartsCore/Series/PieSeries.cs',
-                getProps: function () { return buildProperties['series'] }
+                getProps: function () { return buildProperties(['series']); }
             },
             seriescollection: {
                 name: 'SeriesCollection Class',

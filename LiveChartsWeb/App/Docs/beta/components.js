@@ -1,7 +1,7 @@
 ﻿'use strict';
 
-app.factory('components065', [
-    'types065', function(typesService) {
+app.factory('componentsBeta', [
+    'typesBeta', function(typesService) {
         return function() {
             var types = typesService(); //lazy loading.
             var modify = function(type, pattern) {
