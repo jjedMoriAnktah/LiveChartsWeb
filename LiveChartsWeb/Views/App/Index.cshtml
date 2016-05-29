@@ -9,8 +9,16 @@
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'/>
-    @Styles.Render("~/Content/css")
+    <script src="https://use.typekit.net/tkh3uwr.js"></script>
+    <script>
+        try {
+            Typekit.load({ async: true });
+        } catch (e) {
+        }
+    </script>
+
+    @Styles.Render("~/AppContent/css")
+
     <style type="text/css">
         [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
             display: none !important;
@@ -23,7 +31,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="templateController">
         <div id="menu" class="container" ng-class="{ 'is-closed': !isVisible }">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#/home" style="padding-top: 8px">
+                <a class="navbar-brand" href="../Banner/Index" style="padding-top: 8px">
                     <img alt="Controli" src="~/Content/Images/Logos/LiveChartsLogo30.png"/>
                 </a>
                 <button type="button" class="navbar-toggle collapsed" ng-click="toggleMenu()">
@@ -36,17 +44,7 @@
             <div>
                 <ul class="nav navbar-nav" ng-click="hideMenu()">
                     <li><a href="#/documentation/introduction">Documentation</a></li>
-                    <li><a href="#/examples/intro?path=intro">Examples</a></li>
-                    @*<li>
-                        <a>
-                            <iframe src="https://ghbtns.com/github-btn.html?user=beto-rodriguez&repo=Live-Charts&type=star&count=true"
-                                    frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
-                            <iframe src="https://ghbtns.com/github-btn.html?user=beto-rodriguez&repo=Live-Charts&type=watch&count=true&v=2"
-                                    frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
-                            <iframe src="https://ghbtns.com/github-btn.html?user=beto-rodriguez&repo=Live-Charts&type=fork&count=true"
-                                    frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
-                        </a>
-                    </li>*@
+                    <li><a href="#/examples/intro?path=intro">Get Started</a></li>
                 </ul>
             </div>
         </div>
@@ -54,6 +52,30 @@
 
     <div ng-view class="view">
 
+    </div>
+
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-sm-offset-5 col-sm-2">
+                <a href="https://github.com/beto-rodriguez/Live-Charts">
+                    <img style="max-width: 100%;" src="~/Content/Images/GitHub-Logo.png" />
+                </a>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 25px;">
+            <div class="col-xs-12 text-center">
+                <p class="text-muted">
+                    Live Charts is an open source project maintained by <a href="https://github.com/beto-rodriguez">Beto Rodríguez</a> and the github community, get involved and contrubute!
+                </p>
+                <p class="text-muted">
+                    Icons made by
+                    <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> and
+                    <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+                    from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
+                    is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a><br />
+                </p>
+            </div>
+        </div>
     </div>
 
 @Scripts.Render("~/bundles/app")

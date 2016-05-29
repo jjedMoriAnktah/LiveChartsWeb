@@ -1,0 +1,167 @@
+﻿<h3 class="doc-title">The Cartesian Chart</h3>
+
+<p>
+    The <i>Cartesian Chart</i> class allows you to plot any series that uses a
+    <i>cartesian coordinate system</i>, every point is a pair of values (<i>X</i>, <i>Y</i>),
+    then how is LiveCharts able to plot <i>ChartValues&lt;double&gt;</i> if I only passed a value?
+    simple, in simple terms <i>Y</i> will be the value you passed, and <i>X</i> the index of the value in
+    the array, if you want to learn more about how LiveCharts works, you can read
+    <a href="#/examples/v1/wpf/Types and Configuration">this</a>.
+</p>
+
+<p>
+    The Cartesian chart supports many series, you can combine any of these series in a cartesian chart:
+</p>
+
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Line Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/lineSeries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Vertical Line Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/verticallineseries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Column Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/columnseries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Row Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/rowseries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Stacked Area Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/stackedareaseries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Vertical Stacked Area Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/verticalstackedareaseries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Stacked Column Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/stackedcolumnseries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Srtacked Row Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/stackedrowsseries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Ohcl Series (Financial)</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/ohclseries.jpg"/>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+        <div>Bubbles Series</div>
+        <img src="/App/Examples/v1/The Cartesian Chart/Images/buubleseries.jpg"/>
+    </div>
+</div>
+
+<p>
+    Here is an example using every of these series, notice some series use a specialized
+    point, LiveCharts already knows how to plot many types, if you need to define your own,
+    please take a read <a href="#/examples/v1/wpf/Types and Configuration">here</a>, it is
+    pretty easy.
+</p>
+
+<pre class="prettyprint">using LiveCharts;
+using LiveCharts.Defaults; //Contains the already defined types.
+
+// ...
+
+LiveCharts.SeriesCollection series = new LiveCharts.SeriesCollecion 
+{
+  new LineSeries
+  {
+    //The ObservableValue class notifies the chart to update when value changes
+    Values = new ChartValues&lt;LiveCharts.Defaults.ObservableValue&gt;
+    {
+        new LiveCharts.Defaults.ObservableValue(4),
+        new LiveCharts.Defaults.ObservableValue(4),
+        // ...
+    }
+  },
+  new VerticalLineSeries
+  {
+    //if you need to specify both, X and Y then use a point instead
+    //otherwise the another coordinate will be a zero-based index
+    Values = new ChartValues&lt;ObservablePoint&gt;
+    {
+        new ObservablePoint(3, 6),
+        new ObservablePoint(6, 2),
+        // ...
+    }
+  },
+  new ColumnSeries
+  {
+    Values = new ChartValues&lt;ObservableValue&gt;
+    {
+      new ObservableValue(4),
+      new ObservableValue(2),
+      // ...
+    }
+  },
+  new RowSeries
+  {
+    Values = new ChartValues&lt;decimal&gt;
+    {
+      7,
+      4,
+      // ...
+    }
+  },
+  new StackedAreaSeries
+  {
+    Values = new ChartValues&lt;double&gt;
+    {
+      5,
+      3,
+      // ...
+    }
+  },
+  new VerticalStackedAreaSeries
+  {
+    Values = new ChartValues&lt;float&gt;
+    {
+      5,
+      3,
+      // ...
+    }
+  },
+  new StackedColumnSeries
+  {
+    Values = new ChartValues&lt;ObservableValue&gt;
+    {
+      new ObservableValue(5),
+      new ObservableValue(8),
+      // ...
+    }
+  },
+  new StackedRowSeries
+  {
+    Values = new ChartValues&lt;ObservableValue&gt;
+    {
+      new ObservableValue(5),
+      new ObservableValue(8),
+      // ...
+    }
+  },
+  new OhlcSeries
+  {
+    Values = new ChartValues&lt;OhlcPoint&gt;
+    {
+      new OhlcPoint(32, 35, 30, 32),
+      new OhlcPoint(33, 38, 31, 37),
+      // ..
+    }
+  },
+  new BubbleSeries
+  {
+    Values = new ChartValues&lt;BubblePoint&gt;
+    {
+      new BubblePoint(5, 5, 20),
+      new BubblePoint(3, 4, 80), 
+      // ...
+    }
+  }
+}
+</pre>

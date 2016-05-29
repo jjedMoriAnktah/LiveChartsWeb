@@ -1,59 +1,58 @@
 ﻿<div class="container app-view">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 hidden-xs hidden-sm">
+            <a href="javascript:;" ng-click="start = !start">
+                <img src="../../Content/Images/burger-menu.png" style="margin-top: 6px;"/>
+            </a>
+            <span style="margin-top: 7px;" class="pull-right text-muted">Select a platform</span>
+        </div>
+        <div class="col-md-9" style="margin-bottom: 15px;">
+            <div class="btn-group btn-group-lg" role="group">
+                <a class="btn btn-default borderless"
+                   ng-class="{selected: platform === 'wpf'}"
+                   ng-href="#/examples/{{version}}/wpf/{{currentSection}}">
+                    Wpf
+                </a>
+                <a class="btn btn-default borderless"
+                   ng-class="{selected: platform === 'wf'}"
+                   ng-href="#/examples/{{version}}/wf/{{currentSection}}">
+                    WinForms
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="width-changing" ng-class="start ? 'col-md-12' : 'col-md-3'">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="list-group list-group-root no-select card-shadow">
-                        <a class="list-group-item" ng-href="#/examples/{{version}}/intro?path=intro"
-                           ng-class="{ active: path == 'intro' }">
-                            Introuction
-                        </a>
-                        <a class="list-group-item" ng-href="#/examples/{{version}}/howitworks?path=howitworks"
-                           ng-class="{ active: path == 'howitworks' }">
-                            How It Works
-                        </a>
-                        <div ng-repeat="section in sections">
-                            <a class="list-group-item" toggle toggle-id="item-{{$index}}">
-                                <i class="fa fa-caret-down"></i> {{section.name}}
-                            </a>
-                            <div id="item-{{$index}}" class="list-group"
-                                 ng-class="{ collapse: !isInPath(section) }">
-                                <div ng-repeat="section in section.articles">
-                                    <a class="list-group-item"
-                                       ng-show="section.file"
-                                       ng-href="#/examples/{{version}}/{{section.file}}?path={{section.path}}"
-                                       ng-class="{ active: path == section.path }">
-                                        <span class="menu-level-1">
-                                            {{section.name}}
-                                        </span>
-                                    </a>
-                                    <a class="list-group-item" toggle
-                                       toggle-id="item-{{$parent.$index}}-{{$index}}"
-                                       ng-show="section.articles.length > 0">
-                                        <i class="fa fa-caret-down menu-level-1"></i> {{section.name}}
-                                    </a>
-                                    <div id="item-{{$parent.$index}}-{{$index}}" class="list-group"
-                                         ng-class="{ collapse: !isInPath(section) }">
-                                        <div ng-repeat="section in section.articles">
-                                            <a class="list-group-item"
-                                               ng-href="#/examples/{{version}}/{{section.file}}?path={{section.path}}"
-                                               ng-class="{ active: path == section.path }">
-                                                <span class="menu-level-2">{{section.name}}</span>
-                                            </a>
-                                        </div>
-                                    </div>
+                <div ng-repeat="section in sections"
+                     ng-class="start ? 'col-lg-3 col-md-4 col-sm-6' : 'col-xs-12'">
+                    <a class="section" ng-href="#/examples/{{version}}/{{platform}}/{{section.name}}"
+                       ng-click="hideMenu()"
+                       ng-class="{ 'selected': currentSection === section.name }">
+                        <div class="panel panel-default only-bot-border" ng-class="{'together': !start}">
+                            <div class="row">
+                                <div class="col-xs-12 text-center menu-element" ng-class="{ 'menu-element-big': start }">
+                                    <span class="helper"></span>
+                                    <img ng-show="start" style="vertical-align: middle;"
+                                         ng-src="{{getImageUrl(section)}}" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 text-center">
+                                    <span>{{section.name}}</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
+        <hr class="visible-xs visible-sm"/>
+        <div class="col-md-9" ng-hide="start">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="panel panel-default card-shadow">
-                        <div class="panel-body">
+                        <div class="panel-body" style="min-height: 600px;">
                             <div id="article-view" dynamic="article">
 
                             </div>

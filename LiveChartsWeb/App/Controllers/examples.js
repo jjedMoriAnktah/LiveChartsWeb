@@ -6,27 +6,39 @@ app.controller('examplesController', [
 
         var examples = examplesService($routeParams.version);
 
-        var content = examples.content();
-
         $scope.version = examples.version;
-        $scope.sections = content;
+        $scope.platform = $routeParams.platform;
+        $scope.sections = examples.content();
+        $scope.currentSection = $routeParams.article;
 
-        $http.get('/App/Examples/' + examples.version + '/' + $routeParams.article + '.html').
-            success(function(data) {
-                $scope.article = data;
-            }).error(function() {
-                $location.path('/articlenotfound').replace();
-            });
+        $scope.start = $routeParams.article === "start";
+
+        // /App/Examples/:version/:article-:platform.html
+        if (!$scope.start)
+            $http.get('/App/Examples/' + examples.version + '/' +
+                    $routeParams.article + '/' + $routeParams.platform + '.html').
+                success(function(data) {
+                    $scope.article = data;
+                }).error(function() {
+                    $location.path('/articlenotfound').replace();
+                });
 
         $anchorScroll.yOffset = 60;
         $anchorScroll();
 
         $scope.path = $location.search().path;
 
+        $scope.hideMenu = function() {
+            $scope.start = false;
+        };
 
-        $scope.isInPath = function(article) {
-            return $scope.path.indexOf(article.path) > -1;
+        $scope.getImageUrl = function(section) {
+            if (section.fileName) return '/App/Examples/v1/MenuImages/' + section.fileName;
+            return '/App/Examples/v1/MenuImages/' + section.name + '.jpg';
         }
 
+        $scope.isInPath = function(article) {
+            return false; //$scope.path.indexOf(article.path) > -1;
+        };
     }
 ]);

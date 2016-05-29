@@ -1,0 +1,75 @@
+﻿<h3 class="doc-title">Fully Responsive Charts</h3>
+
+<p>
+    All the charts by default update when your data changes, in this example we are also using the
+    <i>ObservableValue</i> class which implements <i>IObservableChartPoint</i>, this enables the
+    value to notify the chart to update everytime a value changes, there are already many defined
+    types implementing <i>IObservableChartPoint</i> you will find them in another examples, you can also
+    define your own types, <a href="#/examples/v1/wpf/Types Configuration">here</a> you can find more information about it.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Fully Responsive/Images/fullyresponsive.gif"/>
+</div>
+
+<p> 
+    Find the full example <a href="">here</a>
+</p>
+
+<pre class="prettyprint">using System;
+using System.Windows.Forms;
+using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
+namespace Winforms.Cartesian.FullyResponsive
+{
+    public partial class FullyResponsive : Form
+    {
+        public FullyResponsive()
+        {
+            InitializeComponent();
+            Values = new ChartValues&lt;ObservableValue&gt;
+            {
+                new ObservableValue(3),
+                new ObservableValue(6),
+                new ObservableValue(7),
+                new ObservableValue(4),
+                new ObservableValue(2)
+            };
+        }
+        public ChartValues&lt;ObservableValue&gt; Values { get; set; }
+        private void FullyResponsive_Load(object sender, EventArgs e)
+        {
+            cartesianChart1.Series.Add(new LineSeries
+            {
+                Values = Values,
+                StrokeThickness = 4,
+                PointDiameter = 0,
+                DataLabels = true
+            });
+        }
+        private void AddButtonOnClick(object sender, EventArgs e)
+        {
+            var r = new Random();
+            Values.Add(new ObservableValue(r.Next(-20, 20)));
+        }
+        private void InsertButtonOnClick(object sender, EventArgs e)
+        {
+            var r = new Random();
+            if (Values.Count > 3)
+                Values.Insert(2, new ObservableValue(r.Next(-20, 20)));
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Values.RemoveAt(0);
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var r = new Random();
+            foreach (var observable in Values)
+            {
+                observable.Value = r.Next(-20, 20);
+            }
+        }
+    }
+}</pre>

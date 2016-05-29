@@ -1,0 +1,76 @@
+﻿<h3 class="doc-title"> Installation</h3>
+
+<p>
+    <i>Note:</i> images included in this article use Visual Studio 2015, but it is really similar for another visual studio version.
+</p>
+
+<p>
+    Install package from NuGet, go to Solution Explorer, right click on references, then Manage NuGet Packages…
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/install/Images/managenuget.png" />
+</div>
+
+<p>
+    Browse for LiveCharts.WinForms, select the package and click on install
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/install/Images/browseNuget.png" />
+</div>
+
+<p>
+    Add namespaces to you code if necessary, notice the WinForms version uses wpf advanced rendering system,
+    so you are actually running the wpf package with a wrapper to create a Windows Forms user control class,
+    therefore you need 3 namespaces
+</p>
+
+<pre class="prettyprint">using LiveCharts; //Core of the library
+using LiveCharts.Wpf; //The wpf controls
+using LiveCharts.WinForms //the winforms wrappers</pre>
+
+<p>
+    Now you can add the charts to your toolbox as any WinForms control, After the package was installed correcly,
+    go to <i>Build</i> menu, then <i>Rebuild Solution</i>, this will create the LiveCharts.WinForms.dll file in
+    your project directory.
+</p>
+
+<p>
+    In the designer, open your toolbox, right click on it, then <i>Choose Items</i>
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/install/Images/toolboxchooseitems.png"/>
+</div>
+
+<p>
+    At <i>.Net Framework Components</i> click on browse
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/install/Images/browsecomponents.png"/>
+</div>
+
+<p>
+    Browse for <i>LiveCharts.WinForms.dll</i> file, select it and then click <i>Open</i>,
+    the file is normally located at <i>ProjectLocation/bin/Debug</i>
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/install/Images/winformsdll.png"/>
+</div>
+
+<p>
+    In the <i>Choose Toolbox Items</i> dialog click ok to add the LiveCharts controls to your project.
+</p>
+
+<p>
+    That's all, now you should see at least 3 new controls in your toolbox, <i>CartesianChart</i>,
+    <i>PieChart</i> and <i>Gauge</i>, drag them to any form as any other control.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/install/Images/toolboxinstalled.png" />
+</div>
+

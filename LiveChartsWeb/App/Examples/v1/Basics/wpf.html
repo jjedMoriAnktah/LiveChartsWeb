@@ -1,0 +1,73 @@
+﻿<h3 class="doc-title">Basics</h3>
+
+<p>
+    First of all LiveCharts is designed to be easy for the user, everything is updated and animated
+    automatically, it also handles the performance, feel free to change 1 million points in 1 second,
+    the library will not update 1 million times, it will only do it when it concider it is necessary,
+    when you add/remove series, or add/remove values the chart will update by itself, you really dont need
+    to worry about anything but your bussiness, let LiveCharts handle the charting, also implementing
+    <i>IObservableChartPoint</i> will also update the chart when a property changes, there are many
+    classes already defined and ready to use that implement <i>IObservableChartPoint</i>
+</p>
+
+<p>
+    The next image will guide you to get more familiar with LiveCharts elements.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Basics/Images/components.png"/>
+</div>
+
+<p>
+    All the series have a <i>Stroke</i> and <i>Fill</i> properties.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Basics/Images/strokeandfill.png" />
+</div>
+
+<p>
+    By default if you don't set the Fill or Stroke properties, LiveCharts will use a predifined color, according
+    to the series positions in the <i>Chart.SeriesCollection</i> property, you can easly define your own colors set,
+    this colors will repeat if necessary.
+</p>
+
+<pre class="prettyprint">LiveCharts.Wpf.Charts.Chart.Chart.Colors = new List&lt;System.Windows.Media.Color&gt;
+{
+  System.Windows.Media.Colors.Red,
+  System.Windows.Media.Colors.Blue,
+  System.Windows.Media.Colors.Green
+};</pre>
+
+<p>
+    Or you can simply set a Fill and Stroke only for a specific series
+</p>
+
+<pre class="prettyprint">&lt;lvc:LineSeries Stroke="Red" Fill="Blue /"&gt;</pre>
+
+<pre class="prettyprint">mySeries.Stroke = System.Windows.Media.Brushes.Red;
+mySeries.Fill = System.Windows.Media.Brushes.Blue;</pre>
+
+<p>
+    Also setting the <i>Series.Visibility</i> (will define the drawn shape visibility), 
+    <i>Panel.ZIndex</i> (drawn shape z-index property), <i>Series.StrokeDashArray</i> (dashed strokes) properties
+    will be binded to the drawn shape,  for example:
+</p>
+
+<pre class="prettyprint">&lt;lvc:LineSeries Visibility="Hidden" StrokeDashArray="2" Panel.Zindex="3" / &gt;</pre>
+
+<p>
+    Or from code behind
+</p>
+
+<pre class="prettyprint">mySeries.Visibility = System.Windows.Visibility.Hidden;
+mySeries.StrokeDashArray = new System.Windows.Media.DoubleCollection {2};
+System.Windows.Controls.Panel.SetZIndex(mySeries, 3);</pre>
+
+<p>
+    If necessary you can also define your own Tooltips o Legends controls, create a new <i>UserControl</i> that
+    inherits from <i>DefaultTooltip</i> or <i>DefaultLegend</i>, and do what ever you want with it. Then set
+    the <i>Chart.DataTooltip</i> or <i>Chart.ChartLegend</i> properties to a new instance of your control.
+</p>
+
+<pre class="prettyprint">myChart.DataTooltip = new MyCustomTooltop();</pre>

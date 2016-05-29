@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -166,33 +167,47 @@
     <Content Include="App\Docs\beta\types.js" />
     <Content Include="App\Docs\docMapper.js" />
     <Content Include="App\Examples\examplesMapper.js" />
-    <Content Include="App\Examples\Images\addReferences.png" />
-    <Content Include="App\Examples\Images\axis styling.png" />
-    <Content Include="App\Examples\Images\bars.gif" />
-    <Content Include="App\Examples\Images\basicbar.gif" />
-    <Content Include="App\Examples\Images\basicline.gif" />
-    <Content Include="App\Examples\Images\basicpie.gif" />
-    <Content Include="App\Examples\Images\basicstackedbar.gif" />
-    <Content Include="App\Examples\Images\browseNuget.png" />
-    <Content Include="App\Examples\Images\dynamicline.gif" />
-    <Content Include="App\Examples\Images\fills.png" />
-    <Content Include="App\Examples\Images\generalStyling.png" />
-    <Content Include="App\Examples\Images\genericline.gif" />
-    <Content Include="App\Examples\Images\indexedissue.gif" />
-    <Content Include="App\Examples\Images\inlinegif.gif" />
-    <Content Include="App\Examples\Images\multiaxes.png" />
+    <Content Include="App\Examples\v1\Basics\Images\components.png" />
+    <Content Include="App\Examples\v1\Basics\Images\strokeandfill.png" />
+    <Content Include="App\Examples\v1\Basics\wf.html" />
+    <Content Include="App\Examples\v1\Customizing Line Series\Images\custom-line.jpg" />
+    <Content Include="App\Examples\v1\Customizing Line Series\wpf.html" />
+    <Content Include="App\Examples\v1\Fully Responsive\Images\fullyresponsive.gif" />
+    <Content Include="App\Examples\v1\Fully Responsive\wf.html" />
+    <Content Include="App\Examples\v1\Fully Responsive\wpf.html" />
+    <Content Include="App\Examples\v1\Labels\Images\labels.png" />
+    <Content Include="App\Examples\v1\Labels\wf.html" />
+    <Content Include="App\Examples\v1\Labels\wpf.html" />
+    <Content Include="App\Examples\v1\MenuImages\basics.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\customizing line series.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\fully responsive.gif" />
+    <Content Include="App\Examples\v1\MenuImages\the cartesian chart.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\types and configuration.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\labels.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\install.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\buubleseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\columnseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\lineSeries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\ohclseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\rowseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\stackedareaseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\stackedcolumnseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\stackedrowsseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\verticalstackedareaseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\Images\verticallineseries.jpg" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\wf.html" />
+    <Content Include="App\Examples\v1\The Cartesian Chart\wpf.html" />
+    <Content Include="App\Examples\v1\Types and Configuration\wf.html" />
+    <Content Include="App\Examples\v1\Types and Configuration\wpf.html" />
+    <Content Include="App\Examples\v1\Install\Images\browsecomponents.png" />
+    <Content Include="App\Examples\v1\Install\Images\browseNuget.png" />
+    <Content Include="App\Examples\v1\Install\Images\managenuget.png" />
+    <Content Include="App\Examples\v1\Install\Images\toolboxchooseitems.png" />
+    <Content Include="App\Examples\v1\Install\Images\toolboxinstalled.png" />
+    <Content Include="App\Examples\v1\Install\Images\winformsdll.png" />
+    <Content Include="App\Examples\v1\Basics\wpf.html" />
     <Content Include="App\Examples\v1\howitworks.html" />
     <Content Include="App\Examples\v1\inverted-wpf.html" />
-    <Content Include="App\Examples\Images\inverted.png" />
-    <Content Include="App\Examples\Images\iocpbar.gif" />
-    <Content Include="App\Examples\Images\labels.png" />
-    <Content Include="App\Examples\Images\legend.png" />
-    <Content Include="App\Examples\Images\mappedlabels.png" />
-    <Content Include="App\Examples\Images\nuget.png" />
-    <Content Include="App\Examples\Images\references.png" />
-    <Content Include="App\Examples\Images\smootheness.png" />
-    <Content Include="App\Examples\Images\storkeAndFill.png" />
-    <Content Include="App\Examples\Images\toolbox.png" />
     <Content Include="App\Examples\v1\axis-wf.html" />
     <Content Include="App\Examples\v1\axis-wpf.html" />
     <Content Include="App\Examples\v1\basicpie-wpf.html" />
@@ -203,12 +218,11 @@
     <Content Include="App\Examples\v1\dynamic-wpf.html" />
     <Content Include="App\Examples\v1\fast-wpf.html" />
     <Content Include="App\Examples\v1\filter-wpf.html" />
-    <Content Include="App\Examples\Images\filter.gif" />
     <Content Include="App\Examples\v1\inlinepie-wpf.html" />
     <Content Include="App\Examples\v1\inlinestackedbar-wpf.html" />
     <Content Include="App\Examples\v1\inlinebar-wpf.html" />
     <Content Include="App\Examples\v1\inlineline-wpf.html" />
-    <Content Include="App\Examples\v1\install-wf.html" />
+    <Content Include="App\Examples\v1\Install\wf.html" />
     <Content Include="App\Examples\v1\intro.html" />
     <Content Include="App\Examples\v1\general.html" />
     <Content Include="App\Examples\v1\iocp-wpf.html" />
@@ -221,23 +235,32 @@
     <Content Include="App\Examples\v1\multipleAxes-wpf.html" />
     <Content Include="App\Examples\v1\series-colors-wf.html" />
     <Content Include="App\Examples\v1\series-colors-wpf.html" />
-    <Content Include="App\Examples\Images\tooltip.gif" />
     <Content Include="App\Examples\v1\tooltips-wpf.html" />
     <Content Include="App\Examples\v1\v1.js" />
-    <Content Include="App\Examples\v1\install-wpf.html" />
+    <Content Include="App\Examples\v1\Install\wpf.html" />
     <Content Include="App\Views\articlechanged.html" />
     <Content Include="App\Views\docchanged.html" />
     <Content Include="App\Views\docs.html" />
     <Content Include="App\Controllers\docs.js" />
     <Content Include="App\Views\examples.html" />
-    <Content Include="App\Views\home.html" />
     <Content Include="App\Controllers\home.js" />
+    <Content Include="Content\banner.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\Images\380.gif" />
+    <Content Include="Content\Images\burger-menu.png" />
     <Content Include="Content\Images\Docs\docs sample.png" />
+    <Content Include="Content\Images\generics.gif" />
+    <Content Include="Content\Images\gauge.gif" />
+    <Content Include="Content\Images\GitHub-Logo.png" />
+    <Content Include="Content\Images\LiveChartsLogo.png" />
+    <Content Include="Content\Images\LiveChartsLogo30.png" />
     <Content Include="Content\Images\Logos\lcred.png" />
     <Content Include="Content\Images\Logos\lcwhite.png" />
     <Content Include="Content\Images\Logos\LiveChartsLogo.png" />
     <Content Include="Content\Images\Logos\LiveChartsLogo30.png" />
+    <Content Include="Content\Images\lvlogolight.png" />
+    <Content Include="Content\Images\modern.png" />
+    <Content Include="Content\Images\responsive.gif" />
     <Content Include="Content\Images\Samples\bars.gif" />
     <Content Include="Content\Images\Samples\barsmove.gif" />
     <Content Include="Content\Images\Samples\linedynamic.gif" />
@@ -245,13 +268,16 @@
     <Content Include="Content\Images\Samples\pie.gif" />
     <Content Include="Content\Images\Samples\stackeddance.gif" />
     <Content Include="Content\Images\Samples\Styling\generalStyling.png" />
+    <Content Include="Content\Images\wbmax.jpg" />
+    <Content Include="Content\Images\yeswecode.jpg" />
+    <Content Include="Content\Images\zooming and panning.gif" />
     <Content Include="Content\prettify.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\site.css" />
+    <Content Include="Content\app.css" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -266,7 +292,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\prettify.js" />
-    <None Include="Web.config" />
+    <None Include="Properties\PublishProfiles\lvcharts.net - Web Deploy.pubxml" />
+    <Content Include="Scripts\skrollr.js" />
+    <Content Include="Views\Banner\Index.cshtml" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -289,8 +320,6 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Project_Readme.html" />
-    <None Include="Properties\PublishProfiles\lvcharts.net - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\lvcharts.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

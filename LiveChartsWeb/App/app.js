@@ -6,11 +6,6 @@ var app = angular.module("liveChartsApp", [
     '$routeProvider',
     function($routeProvider) {
 
-        $routeProvider.when('/home', {
-            templateUrl: '/App/Views/home.html',
-            controller: 'homeController'
-        });
-
         //Documentation
         $routeProvider.when('/documentation/:version?/:section', {
             templateUrl: '/App/Views/docs.html',
@@ -21,7 +16,7 @@ var app = angular.module("liveChartsApp", [
         });
 
         //Examples
-        $routeProvider.when('/examples/:version?/:article', {
+        $routeProvider.when('/examples/:version?/:platform/:article', {
             templateUrl: '/App/Views/examples.html',
             controller: 'examplesController'
         });
@@ -30,7 +25,7 @@ var app = angular.module("liveChartsApp", [
         });
 
         //Otherwise
-        $routeProvider.otherwise('/home', {
+        $routeProvider.otherwise('/examples/wpf/start', {
             templateUrl: '/App/Views/home.html',
             controller: 'homeController'
         });

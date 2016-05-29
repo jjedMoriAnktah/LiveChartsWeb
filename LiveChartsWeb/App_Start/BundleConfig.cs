@@ -8,11 +8,19 @@ namespace LiveChartsWeb
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/BannerContent/css").Include(
                 "~/Content/font-awesome.css",
                 "~/Content/bootstrap.css",
-                "~/Content/site.css",
+                "~/Content/banner.css"));
+
+            bundles.Add(new StyleBundle("~/AppContent/css").Include(
+                "~/Content/font-awesome.css",
+                "~/Content/bootstrap.css",
+                "~/Content/app.css",
                 "~/Content/prettify.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/banner").Include(
+                "~/Scripts/skrollr.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                 "~/Scripts/prettify.js",

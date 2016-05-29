@@ -20,9 +20,18 @@ app.directive('prettyprint', function() {
             restrict: 'A',
             replace: true,
             link: function(scope, ele, attrs) {
-                scope.$watch(attrs.dynamic, function(html) {
+                scope.$watch(attrs.dynamic, function (html) {
+
+                    ele.removeClass('ng-enter');
+
                     ele.html(html);
+
+                    //lets do it manually...
+                    ele.addClass('ng-enter');
+                    setTimeout(function() { ele.removeClass('ng-enter'); }, 1000);
+
                     $compile(ele.contents())(scope);
+
                 });
             }
         };

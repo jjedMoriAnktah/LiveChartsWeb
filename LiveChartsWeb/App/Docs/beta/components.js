@@ -349,6 +349,20 @@ app.factory('componentsBeta', [
                         def: 'null (auto)',
                         example: 'lineSeries.Stroke = Brushes.Red;'
                     }, {
+                        name: 'FromComplementaryY',
+                        type: modify(types.integer, '{{int}}?'),
+                        text: 'Gets or sets  if this series scales Y in a complementary axis.',
+                        tags: 'axis axes',
+                        def: 'null',
+                        example : 'Series.FromComplementaryY = 1;'
+                    }, {
+                        name: 'FromComplementaryX',
+                        type: modify(types.integer, '{{int}}?'),
+                        text: 'Gets or sets  if this series scales X in a complementary axis.',
+                        tags: 'axis axes',
+                        def: 'null',
+                        example: 'Series.FromComplementaryX = 1;'
+                    }, {
                         name: 'DataLabels',
                         type: types.bool,
                         text: 'Gets or sets if series should include a label over each data point.',
@@ -593,6 +607,13 @@ app.factory('componentsBeta', [
                         behavesAs: ['Dependency Property'],
                         def: 'null',
                         example: 'Axis.LabelFormatter = val => val.ToString("C"); //as currency\nLabelFormatter = val => val + "°"; //as degrees\nLabelFormatter = val => val + " items sold"; //or any other custom format'
+                    }, {
+                        name: 'ComplementaryAxes',
+                        type: modify(types.axis, 'List<{{name}}>'),
+                        text: 'Gets or sets a list containing the complementary axis.',
+                        tags: 'axis axes',
+                        def: 'new List<Axis>',
+                        example: 'Axis.ComplementaryAxis = new List<Axis>();'
                     }, {
                         name: 'Color',
                         type: types.color,

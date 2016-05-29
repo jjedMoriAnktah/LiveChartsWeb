@@ -1,0 +1,123 @@
+﻿<h3 class="doc-title">Fully Responsive Charts</h3>
+
+<p>
+    All the charts by default update when your data changes, in this example we are also using the
+    <i>ObservableValue</i> class which implements <i>IObservableChartPoint</i>, this enables the
+    value to notify the chart to update everytime a value changes, there are already many defined
+    types implementing <i>IObservableChartPoint</i> you will find them in another examples, you can also
+    define your own types, <a href="#/examples/v1/wpf/Types Configuration">here</a> you can find more information about it.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Fully Responsive/Images/fullyresponsive.gif" />
+</div>
+
+<p> 
+    Find the full example <a href="">here</a>
+</p>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Linq;
+using System.Windows;
+using System.Windows.Media;
+using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
+namespace Wpf.CartesianChart
+{
+    public partial class FullyResponsive
+    {
+        public FullyResponsive()
+        {
+            InitializeComponent();
+            MyValues = new ChartValues&lt;ObservableValue&gt;
+            {
+                new ObservableValue(5),
+                new ObservableValue(7),
+                new ObservableValue(8),
+                new ObservableValue(3)
+            };
+            var lineSeries = new LineSeries
+            {
+                Values = MyValues,
+                StrokeThickness = 4,
+                Fill = Brushes.Transparent,
+                PointDiameter = 0
+            };
+            SeriesCollection = new SeriesCollection {lineSeries};
+            DataContext = this;
+        }
+        public ChartValues&lt;ObservableValue&gt; MyValues { get; set; }
+        public SeriesCollection SeriesCollection { get; set; }
+        private void AddPointOnClick(object sender, RoutedEventArgs e)
+        {
+            var r = new Random();
+            MyValues.Add(new ObservableValue(r.Next(-20, 20)));
+        }
+        private void InsertPointOnClick(object sender, RoutedEventArgs e)
+        {
+            var r = new Random();
+            if (MyValues.Count > 3)
+                MyValues.Insert(2, new ObservableValue(r.Next(-20, 20)));
+        }
+        private void RemovePointOnClick(object sender, RoutedEventArgs e)
+        {
+            MyValues.RemoveAt(0);
+        }
+        private void AddSeriesOnClick(object sender, RoutedEventArgs e)
+        {
+            //Yes it also listens for series changes
+            var r = new Random();
+            var c = SeriesCollection[0].Values.Count;
+            var val = new ChartValues&lt;ObservableValue&gt;();
+            for (int i = 0; i < c; i++)
+            {
+                val.Add(new ObservableValue(r.Next(-20, 20)));
+            }
+            SeriesCollection.Add(new LineSeries
+            {
+                Values = val,
+                StrokeThickness = 4,
+                Fill = Brushes.Transparent,
+                PointDiameter = 0
+            });
+        }
+        private void RemoveSeriesOnClick(object sender, RoutedEventArgs e)
+        {
+            var s = SeriesCollection.Where(x => x.Values != MyValues).ToList();
+            if (s.Count > 0) SeriesCollection.RemoveAt(1);
+        }
+        private void MoveAllOnClick(object sender, RoutedEventArgs e)
+        {
+            var r = new Random();
+            foreach (var observable in MyValues)
+            {
+                observable.Value = r.Next(-20, 20);
+            }
+        }
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;Grid&gt;
+&lt;Grid.RowDefinitions&gt;
+  &lt;RowDefinition Height="Auto"&gt;&lt;/RowDefinition&gt;
+  &lt;RowDefinition Height="Auto"&gt;&lt;/RowDefinition&gt;
+  &lt;RowDefinition Height="*"&gt;&lt;/RowDefinition&gt;
+&lt;/Grid.RowDefinitions&gt;
+&lt;TextBlock TextWrapping="Wrap"&gt;Fully Responsive&lt;/TextBlock&gt;
+&lt;StackPanel Grid.Row="1" Orientation="Horizontal"&gt;
+  &lt;TextBlock VerticalAlignment="Center" Margin="0 0 10 0"&gt;Points&lt;/TextBlock&gt;
+  &lt;Button Click="AddPointOnClick"&gt;+&lt;/Button&gt;
+  &lt;Button Click="InsertPointOnClick"&gt;/&lt;/Button&gt;
+  &lt;Button Click="RemovePointOnClick"&gt;-&lt;/Button&gt;
+  &lt;Button Click="MoveAllOnClick"&gt;MoveAll&lt;/Button&gt;
+  &lt;TextBlock Margin="0 0 10 0" VerticalAlignment="Center"&gt;Series&lt;/TextBlock&gt;
+  &lt;Button Click="AddSeriesOnClick"&gt;+&lt;/Button&gt;
+  &lt;Button Click="RemoveSeriesOnClick"&gt;-&lt;/Button&gt;
+&lt;/StackPanel&gt;
+&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" LegendLocation="Right"&gt;&lt;/lvc:CartesianChart&gt;
+&lt;/Grid&gt;</pre>
