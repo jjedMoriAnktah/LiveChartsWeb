@@ -14,13 +14,10 @@ app.factory('examplesV1Service', [
                 new article('Basics'),
                 new article('Types and Configuration'),
                 new article('Labels'),
+                new article('Customizing Series'),
                 new article('Fully Responsive', 'fully responsive.gif'),
                 new article('The Cartesian Chart'),
-                new article('Customizing Line Series'),
-                new article('Basics'),
-                new article('Basics'),
-                new article('Basics'),
-                new article('Basics')
+                new article('Inverted Series')
             ];
         };
 

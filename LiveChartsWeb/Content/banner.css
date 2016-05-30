@@ -5,6 +5,7 @@
 }
 
 #banner {
+    background-color: rgb(35, 46, 50);
     height: 100vh;
     background-image: url('../Content/Images/wbmax.jpg');
     -webkit-background-size: cover;

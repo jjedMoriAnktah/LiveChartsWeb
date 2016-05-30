@@ -1,0 +1,202 @@
+﻿<h3 class="doc-title">Customizing Series</h3>
+
+<h4>Strokes and Fills</h4>
+
+<p>
+    All the series have a <b>Stroke</b> and <b>Fill</b> properties this properties handle the color, both properties
+    type is <i>System.Windows.Media.Brush</i> you can use complex fills or stokes,
+    <a href="https://msdn.microsoft.com/en-us/library/aa970904(v=vs.100).aspx">here</a> is a good article about it
+</p>
+
+<pre class="prettyprint">mySeries.Fill = Brushes.Red;
+mySeries.Stroke = Brushes.Blue;</pre>
+
+<h4>Strokes <small class="text-muted"><i>Dashes and thickness</i></small></h4>
+
+<p>
+    Use the <b>Series.StrokeThickness</b> property as you need, to draw dashed strokes you can use the
+    <b>Series.StrokeDashArray</b> property, you can find more information about dashed arrays
+    <a href="http://searchwindevelopment.techtarget.com/tip/Understanding-line-stroke-patterns">here</a>
+</p>
+
+<pre class="prettyprint">&lt;lvc:LineSeries StrokeDashArray="2" /&gt;</pre>
+<pre class="prettyprint">mySeries.StrokeDashArray = new DoubleCollection {2};</pre>
+
+<h4>ZIndex <small class="text-muted"><i>overlapping order</i></small><i></i></h4>
+
+<p>
+    Every shape drawn by any series class is binded to the <i>Panel.ZIndex</i> property, so you can easily
+    control which series is over or under in the z index, here is a short example
+</p>
+
+<pre class="prettyprint">&lt;lvc:LineSeries Panel.ZIndex="0" /&gt;
+&lt;lvc:LineSeries Panel.ZIndex="1" /&gt;
+&lt;lvc:LineSeries Panel.ZIndex="2" /&gt;
+</pre>
+<pre class="prettyprint">System.Windows.Controls.Panel.SetZIndex(mySeries, 0);
+System.Windows.Controls.Panel.SetZIndex(mySeries, 1);
+System.Windows.Controls.Panel.SetZIndex(mySeries, 2);</pre>
+
+<h4>Visibility</h4>
+
+<p>
+    All drawn shapes are also binded to the <i>Series.Visibility</i> property so you can easily control
+    your series visibility at run time.
+</p>
+
+<p>
+    Notice any stacked series (including pie series) will not only change drawn shape visibility property,
+    it will also removed the series from the stacked values, and the chart will be updated as if that series
+    would not exists.
+</p>
+
+<h4>Specialized properties</h4>
+
+<p>
+    There are some properties that do only exist at certain series
+</p>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>
+                    Line Series
+                </td>
+                <td>
+                    <b><i>Point Diameter:</i></b> Gets or sets every point diameter in the series,
+                    <b><i>Point Foreground:</i></b> Gets or sets every point fill brush in the series,
+                    <b><i>LineSmothness:</i></b> Gets or sets the drawn line smothness, default is 0.8 and the value goes from 0 to 1.
+                </td>
+            </tr>
+        <tr>
+            <td>
+                Column and Row Series
+            </td>
+            <td>
+                <b><i>MaxColumnWidth, or MaxRowHeight:</i></b> Increase these properties to have bigger bars when possible.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Pie Series
+            </td>
+            <td>
+                <b><i>PushOut:</i></b> Gets or sets the pie slice PushOut propety, use it to highlight a specific series.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Any Stacked Series
+            </td>
+            <td>
+                <b><i>Stack Mode:</i></b> Gets or sets the series stacked mode: Values or percentage.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Obcl Series
+            </td>
+            <td>
+                <b><i>MaxColunWidth:</i></b> Increase this property have bigger bars when the space allows it,
+                <b><i>IncreaseBrush:</i></b> Gets or sets the brush of the point when Close > Open,
+                <b><i>Decrease:</i></b> Gets or sets the brush of the point when Close < Open
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bubble Series
+            </td>
+            <td>
+                <b><i>MaxBubbleDiameter:</i></b> Gets or sets the maximum bubble diameter size,
+                <b><i>MinBubbleDiameter:</i></b> Gets or sets the minimum bubble diameter size
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    Here is an exmaple:
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Customizing Series/Images/custom-line.jpg"/>
+</div>
+
+<h4>Code behind</h4>
+
+<pre class="prettyprint">using LiveCharts;
+namespace Wpf.CartesianChart.Customized
+{
+    public partial class CustomizedExample 
+    {
+        public CustomizedExample()
+        {
+            InitializeComponent();
+            Values1 = new ChartValues&lt;double&gt;
+            {
+                3,
+                4,
+                6,
+                3,
+                2,
+                6
+            };
+            Values2 = new ChartValues&lt;double&gt;
+            {
+                5,
+                3,
+                5,
+                7,
+                3,
+                9
+            };
+            DataContext = this;
+        }
+        public ChartValues&lt;double&gt; Values1 { get; set; }
+        public ChartValues&lt;double&gt; Values2 { get; set; }
+    }
+}
+</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">    &lt;Grid&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height="Auto"&gt;&lt;/RowDefinition&gt;
+            &lt;RowDefinition Height="Auto"&gt;&lt;/RowDefinition&gt;
+            &lt;RowDefinition Height="*"&gt;&lt;/RowDefinition&gt;
+        &lt;/Grid.RowDefinitions&gt;
+        &lt;lvc:CartesianChart Grid.Row="2" Background="#222E31"&gt;
+            &lt;lvc:CartesianChart.Series&gt;
+                &lt;lvc:LineSeries Values="{Binding Values1}" StrokeThickness="4" StrokeDashArray="2" 
+                                Stroke="#6BBA45" Fill="Transparent" LineSmoothness="0" PointDiameter="0" /&gt;
+                &lt;lvc:LineSeries Values="{Binding Values2}" StrokeThickness="2" 
+                                Stroke="#1C8FC5" Fill="Transparent" LineSmoothness="1" 
+                                PointDiameter="15" PointForeround="#222E31"/&gt;
+            &lt;/lvc:CartesianChart.Series&gt;
+            &lt;lvc:CartesianChart.AxisX&gt;
+                &lt;lvc:Axis IsMerged="True"&gt;
+                    &lt;lvc:Axis.Separator&gt;
+                        &lt;lvc:Separator StrokeThickness="1" StrokeDashArray="2"&gt;
+                            &lt;lvc:Separator.Stroke&gt;
+                                &lt;SolidColorBrush Color="#404F56" /&gt;
+                            &lt;/lvc:Separator.Stroke&gt;
+                        &lt;/lvc:Separator&gt;
+                    &lt;/lvc:Axis.Separator&gt;
+                &lt;/lvc:Axis&gt;
+            &lt;/lvc:CartesianChart.AxisX&gt;
+            &lt;lvc:CartesianChart.AxisY&gt;
+                &lt;lvc:Axis IsMerged="True"&gt;
+                    &lt;lvc:Axis.Separator&gt;
+                        &lt;lvc:Separator StrokeThickness="1.5" StrokeDashArray="4"&gt;
+                            &lt;lvc:Separator.Stroke&gt;
+                                &lt;SolidColorBrush Color="#404F56" /&gt;
+                            &lt;/lvc:Separator.Stroke&gt;
+                        &lt;/lvc:Separator&gt;
+                    &lt;/lvc:Axis.Separator&gt;
+                &lt;/lvc:Axis&gt;
+            &lt;/lvc:CartesianChart.AxisY&gt;
+        &lt;/lvc:CartesianChart&gt;
+    &lt;/Grid&gt;</pre>
