@@ -182,7 +182,7 @@ app.factory('componentsBeta', [
                         tags: '',
                         behavesAs: [],
                         def: '0.8',
-                        example: 'lineChart.LineSmothness = 0.4;'
+                        example: 'lineChart.LineSmoothness = 0.4;'
                     }
                 ],
                 iBar: [
