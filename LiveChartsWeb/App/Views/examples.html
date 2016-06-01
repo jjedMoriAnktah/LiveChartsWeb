@@ -1,5 +1,14 @@
 ﻿<div class="container app-view" style="min-height: 700px;">
     <div class="row">
+        <div class="col-xs-12">
+            <div class="bg-primary" style="padding: 20px; margin-bottom: 15px;">
+                <b>Note</b> Some examples are not running in latest Nuget package, 0.7.0 version was huge and some
+                features are not working correctly, 0.7.1 will be ready soon, every example added here is already running 
+                in 0.7.1, you can find 0.7.1 only at github repo.
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-3 hidden-xs hidden-sm">
             <a href="javascript:;" ng-click="start = !start">
                 <img src="../../Content/Images/burger-menu.png" style="margin-top: 6px;"/>
@@ -34,7 +43,7 @@
                                 <div class="col-xs-12 text-center menu-element" ng-class="{ 'menu-element-big': start }">
                                     <span class="helper"></span>
                                     <img ng-show="start" style="vertical-align: middle;"
-                                         ng-src="{{getImageUrl(section)}}" />
+                                         ng-src="{{getImageUrl(section)}}"/>
                                 </div>
                             </div>
                             <div class="row">

@@ -1,0 +1,54 @@
+﻿<h3 class="doc-title">Logarithm and Custom Scales</h3>
+
+<p>
+    LiveCharts mappers makes this really easy, you can find another more at the
+    <a href="#/examples/v1/wpf/Date%20Time">DateTime example</a>, all you need to do is configure the scale,
+    as you normally <a href="#/examples/v1/wpf/Types%20and%20Configuration">configure</a> any other chart.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Log and Custom Scales/Images/log-chart.jpg" />
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Windows.Forms;
+using LiveCharts;
+using LiveCharts.Configurations;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
+namespace Winforms.Cartesian.LogarithmScale
+{
+    public partial class LogarithmSacale : Form
+    {
+        public LogarithmSacale()
+        {
+            InitializeComponent();
+            cartesianChart1.Series = new SeriesCollection(Mappers.Xy&lt;ObservablePoint&gt;()
+                .X(point =&gt; Math.Log10(point.X))
+                .Y(point =&gt; point.Y))
+            {
+                new LineSeries
+                {
+                    Values = new ChartValues&lt;ObservablePoint&gt;
+                    {
+                        new ObservablePoint(1, 5),
+                        new ObservablePoint(10, 6),
+                        new ObservablePoint(100, 4),
+                        new ObservablePoint(1000, 2),
+                        new ObservablePoint(10000, 8),
+                        new ObservablePoint(100000, 2),
+                        new ObservablePoint(1000000, 9),
+                        new ObservablePoint(10000000, 8)
+                    }
+                }
+            };
+            cartesianChart1.AxisX.Add(new Axis
+            {
+                LabelFormatter = value => Math.Pow(10, value).ToString("N")
+            });
+        }
+    }
+}
+</pre>

@@ -15,9 +15,13 @@ app.factory('examplesV1Service', [
                 new article('Types and Configuration'),
                 new article('Labels'),
                 new article('Customizing Series'),
-                new article('Fully Responsive', 'fully responsive.gif'),
                 new article('The Cartesian Chart'),
-                new article('Inverted Series')
+                new article('Basic Cartesian', 'fully responsive.gif'),
+                new article('Inverted Series'),
+                new article('Sections'),
+                new article('Date Time'),
+                new article('Zooming and panning', 'zooming and panning.gif'),
+                new article('Log and Custom Scales')
             ];
         };
 

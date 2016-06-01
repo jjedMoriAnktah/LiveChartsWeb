@@ -1,0 +1,143 @@
+﻿<h3 class="doc-title">Date Time</h3>
+
+<p>
+    To handle datetime in LiveCharts you must create a custom scale for your charts, it is not hard but please
+    before reading this article identify if this is necessary, if you need just simple labels as 
+    "January, February, March", and all of them are separated by a regular interval then maybe just using
+    <a href="#/examples/v1/wpf/Labels">Axis.Labels</a> is enough, understanding how LiveCharts 
+    <a href="#/examples/v1/wpf/Types%20and%20Configuration">works</a> is also helpful.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Date Time/Images/datetime.jpg"/>
+</div>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding Series}"&gt;
+  &lt;lvc:CartesianChart.AxisX&gt;
+    &lt;lvc:Axis LabelFormatter="{Binding Formatter}"&gt;&lt;/lvc:Axis&gt;
+  &lt;/lvc:CartesianChart.AxisX&gt;
+&lt;/lvc:CartesianChart&gt;
+</pre>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Windows.Controls;
+using System.Windows.Media;
+using LiveCharts;
+using LiveCharts.Configurations;
+using LiveCharts.Wpf;
+using Wpf.CartesianChart.Using_DateTime.Manual;
+namespace Wpf.CartesianChart.Using_DateTime
+{
+
+    public class DateModel
+    {
+        public DateTime DateTime { get; set; }
+        public double Value { get; set; }
+    }
+
+    public partial class ManualDate : UserControl
+    {
+        public ManualDate()
+        {
+            InitializeComponent();
+
+            var dateConfig = Mappers.Xy&lt;DateModel&gt;()
+                .X(dateModel => dateModel.DateTime.Ticks)
+                .Y(dateModel => dateModel.Value);
+
+            //Notice you can also configure this type globally, so you don't need to configure every
+            //SeriesCollection instance using the type.
+            //more info at http://lvcharts.net/App/Index#/examples/v1/wpf/Types%20and%20Configuration
+
+            Series = new SeriesCollection(dateConfig)
+            {
+                new LineSeries
+                {
+                    Values = new ChartValues&lt;DateModel&gt;
+                    {
+                        new DateModel
+                        {
+                            DateTime = DateTime.Now,
+                            Value = 5
+                        },
+                        new DateModel
+                        {
+                            DateTime = DateTime.Now.AddHours(2),
+                            Value = 9
+                        }
+                    },
+                    Fill = Brushes.Transparent
+                }
+            };
+
+            Formatter = value => new DateTime((long) (value)).ToString("t");
+            DataContext = this;
+        }
+
+        public Func&lt;double, string&gt; Formatter { get; set; }
+        public SeriesCollection Series { get; set; }
+
+    }
+}</pre>
+
+<h4>The Bars Problem</h4>
+
+<p>
+    now it is really simple, just one problem with this method, when you need any bar series, the bar's width is
+    unitary (1), noticed we are using DateTime.Ticks as X, so the width of the war will be 1 tick so 1 millisecond, 
+    and 1 millisecond would be practically invisible with our current scale (ticks).
+</p>
+
+<p>
+    So how do we configure our chart to use a different scale, so bars are visible?, the soltion is to use a different
+    scale, instead of plotting milliseconds, we could plot hours easily.
+</p>
+
+<pre class="prettyprint">var dayConfig = Mappers.Xy&lt;DateModel&gt;()
+  .X(dateModel => dateModel.DateTime.Ticks/TimeSpan.FromHours(1).Ticks)
+  .Y(dateModel => dateModel.Value);
+//and the formatter
+Formatter = value => new DateTime((long) (value*TimeSpan.FromHours(1).Ticks)).ToString("t");
+</pre>
+
+<p>
+    The next set of examples show how to configure your chart's scale in many time intervals
+</p>
+
+<pre class="prettyprint">
+//Every 15 minutes
+var dayConfig = Mappers.Xy&lt;DateModel&gt;()
+  .X(dateModel => dateModel.DateTime.Ticks/TimeSpan.FromMinutes(15).Ticks)
+  .Y(dateModel => dateModel.Value);
+//and the formatter
+Formatter = value => new DateTime((long) (value*TimeSpan.FromMinutes(15).Ticks)).ToString("t");
+
+//Days
+var dayConfig = Mappers.Xy&lt;DateModel&gt;()
+  .X(dateModel => dateModel.DateTime.Ticks/TimeSpan.FromDays(1).Ticks)
+  .Y(dateModel => dateModel.Value);
+//and the formatter
+Formatter = value => new DateTime((long) (value*TimeSpan.FromDays(1).Ticks)).ToString("d");
+
+//Months
+var dayConfig = Mappers.Xy&lt;DateModel&gt;()
+  .X(dateModel => dateModel.DateTime.Ticks/TimeSpan.FromDays(1).Ticks*30.44) //30.44 is the average days in a solar year
+  .Y(dateModel => dateModel.Value);
+//and the formatter
+Formatter = value => new DateTime((long) (value*TimeSpan.FromDays(1).Ticks)).ToString("M");
+
+//Years
+var dayConfig = Mappers.Xy&lt;DateModel&gt;()
+  .X(dateModel => dateModel.DateTime.Ticks/TimeSpan.FromDays(1).Ticks*365.2425) //365.2425 is the days in a solar year
+  .Y(dateModel => dateModel.Value);
+//and the formatter
+Formatter = value => new DateTime((long) (value*TimeSpan.FromDays(1).Ticks*365.2425)).ToString("yyyy");</pre>
+
+<p>
+    <b>Note:</b> because not all the months and years have the same number of days, the width of every bar could vary
+    for months: +-(1/30.44) and for years: +-(1/365.2425), a small and depreciable visual error.
+</p>
