@@ -19,9 +19,11 @@ app.factory('examplesV1Service', [
                 new article('Basic Cartesian', 'fully responsive.gif'),
                 new article('Inverted Series'),
                 new article('Sections'),
+                new article('Irregular Intervals'),
                 new article('Date Time'),
                 new article('Zooming and panning', 'zooming and panning.gif'),
-                new article('Log and Custom Scales')
+                new article('Log and Custom Scales'),
+                new article('Multiple Axes')
             ];
         };
 

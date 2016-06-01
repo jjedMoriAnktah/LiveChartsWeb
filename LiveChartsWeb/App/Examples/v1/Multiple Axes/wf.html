@@ -1,0 +1,59 @@
+﻿<h4 class="doc-title">Multiple axes</h4>
+
+<p>
+    You can add as many axes as you need, every axes scales independently with its
+    own series, to add a series to an axis you must specify it using the
+    <i>Series.ScalesXAt</i> or <i>Series.ScalesYAt</i> the default value of both
+    properties is zero.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Multiple Axes/Images/multiax.jpg" />
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System.Windows.Forms;
+using LiveCharts;
+using LiveCharts.Wpf;
+namespace Winforms.Cartesian.MultiAxes
+{
+    public partial class MultipleAxesExample : Form
+    {
+        public MultipleAxesExample()
+        {
+            InitializeComponent();
+            cartesianChart1.Series.Add(new LineSeries
+            {
+                Values = new ChartValues&lt;double> {1, 5, 3, 5, 3},
+                ScalesYAt = 0
+            });
+            cartesianChart1.Series.Add(new LineSeries
+            {
+                Values = new ChartValues&lt;double> { 20, 30, 70, 20, 10 },
+                ScalesYAt = 1
+            });
+            cartesianChart1.Series.Add(new LineSeries
+            {
+                Values = new ChartValues&lt;double> { 600, 300, 200, 600, 800 },
+                ScalesYAt = 2
+            });
+            //now we add the 3 axes
+            cartesianChart1.AxisY.Add(new Axis
+            {
+                Foreground = System.Windows.Media.Brushes.DodgerBlue,
+                Title = "Blue Axis"
+            });
+            cartesianChart1.AxisY.Add(new Axis
+            {
+                Foreground = System.Windows.Media.Brushes.IndianRed,
+                Title = "Red Axis"
+            });
+            cartesianChart1.AxisY.Add(new Axis
+            {
+                Foreground = System.Windows.Media.Brushes.DarkOliveGreen,
+                Title = "Green Axis"
+            });
+        }
+    }
+}</pre>

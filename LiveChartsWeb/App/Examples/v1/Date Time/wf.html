@@ -73,10 +73,11 @@ namespace Winforms.Cartesian.DateTime
 <h4>The Bars Problem</h4>
 
 <p>
-    For now everything is simple, just one problem with this method, when you need any bar series, the bar's width is
-    unitary (1), noticed we are using DateTime.Ticks as X, so the width of the war will be 1 tick and 1 tick is 1 millisecond,
-    notice our points are separated by 2 hours, the bar series is beeing drawn but with a width of 1 millisecond,
-    so how do we solve this?
+    For now everything is simple, just one problem with this method, when you need any bar series, the bar's
+    width is unitary (1), notice we are using DateTime.Ticks as X, so the width of the bar is 1 tick
+    and 1 tick is 1 millisecond, notice our points are separated by 2 hours, the bar series is beeing drawn
+    but with a width of 1 millisecond, 1 millisecond is invisible in an interval of 2 hours,
+    so how do we make our bars visible?
 </p>
 
 <p>
