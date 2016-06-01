@@ -1,1 +1,93 @@
-﻿
+﻿<h3 class="doc-title">Sections</h3>
+
+<p>
+    The cartesian chart supports sections, use a section to highlight or label values ranges
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Sections/Images/sections-bg.jpg" />
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
+namespace Wpf.CartesianChart.Sections
+{
+    public partial class SectionsExample : UserControl
+    {
+        public SectionsExample()
+        {
+            InitializeComponent();
+            SeriesCollection = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Values = new ChartValues&lt;ObservableValue>
+                    {
+                        new ObservableValue(3),
+                        new ObservableValue(5),
+                        new ObservableValue(2),
+                        new ObservableValue(7),
+                        new ObservableValue(7),
+                        new ObservableValue(4)
+                    },
+                    PointDiameter = 0,
+                    StrokeThickness = 4,
+                    Fill = Brushes.Transparent
+                },
+                new LineSeries
+                {
+                    Values = new ChartValues&lt;ObservableValue>
+                    {
+                        new ObservableValue(3),
+                        new ObservableValue(4),
+                        new ObservableValue(6),
+                        new ObservableValue(8),
+                        new ObservableValue(7),
+                        new ObservableValue(5)
+                    },
+                    PointDiameter = 0,
+                    StrokeThickness = 4,
+                    Fill = Brushes.Transparent
+                }
+            };
+            DataContext = this;
+        }
+        public SeriesCollection SeriesCollection { get; set; }
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">
+        &lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" >
+            &lt;lvc:CartesianChart.AxisY>
+                &lt;lvc:Axis>
+                    &lt;lvc:Axis.Sections>
+                        &lt;lvvc:AxisSection FromValue="8.5" ToValue="8.5" StrokeThickness="3" Stroke="#F9D648">
+                            &lt;vlc:AxisSection.Fill>
+                                &lt;SolidColorBrush Color="#A3A3FF" Opacity=".4">&lt;/SolidColorBrush>
+                            &lt;/vlc:AxisSection.Fill>
+                        &lt;/lvc:AxisSection>
+                        &lt;lvvc:AxisSection FromValue="4" ToValue="8" Label="Good">
+                            &lt;vlc:AxisSection.Fill>
+                                &lt;SolidColorBrush Color="#CDCDCD" Opacity=".4">&lt;/SolidColorBrush>
+                            &lt;/vlc:AxisSection.Fill>
+                        &lt;/lvc:AxisSection>
+                        &lt;lvc:AxisSection FromValue="0" ToValue="4" Label="Bad">
+                            &lt;lvc:AxisSection.Fill>
+                                &lt;SolidColorBrush Color="#FF8585" Opacity=".4">&lt;/SolidColorBrush>
+                            &lt;/lvc:AxisSection.Fill>
+                        &lt;/lc:AxisSection>
+                    &lt;/lvc:Axis.Sections>
+                &lt;/lc:Axis>
+            &lt;/lvc:CartesianChart.AxisY>
+        &lt;/lc:CartesianChart>
+</pre>

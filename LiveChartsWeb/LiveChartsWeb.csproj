@@ -200,6 +200,7 @@
     <Content Include="App\Examples\v1\MenuImages\labels.jpg" />
     <Content Include="App\Examples\v1\MenuImages\install.jpg" />
     <Content Include="App\Examples\v1\MenuImages\zooming and panning.gif" />
+    <Content Include="App\Examples\v1\Sections\Images\sections-bg.jpg" />
     <Content Include="App\Examples\v1\Sections\wf.html" />
     <Content Include="App\Examples\v1\Sections\wpf.html" />
     <Content Include="App\Examples\v1\The Cartesian Chart\Images\buubleseries.jpg" />
@@ -300,7 +301,6 @@
     <Content Include="Views\App\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App\Examples\v1\Sections\Images\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
