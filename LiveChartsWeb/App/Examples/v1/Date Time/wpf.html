@@ -66,7 +66,7 @@ namespace Wpf.CartesianChart.Using_DateTime
                         },
                         new DateModel
                         {
-                            DateTime = DateTime.Now.AddHours(2),
+                            DateTime = DateTime.Now.AddHours(1),
                             Value = 9
                         }
                     },
@@ -87,14 +87,14 @@ namespace Wpf.CartesianChart.Using_DateTime
 <h4>The Bars Problem</h4>
 
 <p>
-    now it is really simple, just one problem with this method, when you need any bar series, the bar's width is
-    unitary (1), noticed we are using DateTime.Ticks as X, so the width of the war will be 1 tick so 1 millisecond, 
-    and 1 millisecond would be practically invisible with our current scale (ticks).
+    For now everything is simple, just one problem with this method, when you need any bar series, the bar's width is
+    unitary (1), noticed we are using DateTime.Ticks as X, so the width of the war will be 1 tick and 1 tick is 1 millisecond,
+    notice our points are separated by 2 hours, the bar series is beeing drawn but with a width of 1 millisecond,
+    so how do we solve this?
 </p>
 
 <p>
-    So how do we configure our chart to use a different scale, so bars are visible?, the soltion is to use a different
-    scale, instead of plotting milliseconds, we could plot hours easily.
+    We need to change the unit of the chart, in this case we are going to use hours
 </p>
 
 <pre class="prettyprint">var dayConfig = Mappers.Xy&lt;DateModel&gt;()
@@ -103,6 +103,10 @@ namespace Wpf.CartesianChart.Using_DateTime
 //and the formatter
 Formatter = value => new DateTime((long) (value*TimeSpan.FromHours(1).Ticks)).ToString("t");
 </pre>
+
+<p>
+    Now instead the unit of the chart is one hour, and the bars width will be 1 hour.
+</p>
 
 <p>
     The next set of examples show how to configure your chart's scale in many time intervals
