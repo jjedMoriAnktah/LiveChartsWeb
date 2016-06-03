@@ -1,0 +1,62 @@
+﻿<h3 class="doc-title">Doughnut chart</h3>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Doughnut Chart/Images/doughnut.jpg" />
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Linq;
+using System.Windows;
+using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
+using LiveCharts.WinForms;
+
+namespace Wpf.PieChart
+{
+    public class PieExample : Form
+    {
+        public PieExample()
+        {
+            InitializeComponent();
+
+            piechart1.Series = new SeriesCollection
+            {
+                new PieSeries
+                {
+                    Title = "Chrome",
+                    Values = new ChartValues&lt;double> { 8 },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Mozilla",
+                    Values = new ChartValues&lt;double> { 6 },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Opera",
+                    Values = new ChartValues&lt;double> { 10 },
+                    DataLabels = true
+                },
+                new PieSeries
+                {
+                    Title = "Explorer",
+                    Values = new ChartValues&lt;double> { 4 },
+                    DataLabels = true
+                }
+            };
+
+            //adding values or series will update and animate the chart automatically
+            //SeriesCollection.Add(new PieSeries());
+            //SeriesCollection[0].Values.Add(5);
+
+            piechart1.InnerRadius = 50;
+            piechart1.LegendLocation = LegendLocation.Right;
+        }
+        
+    }
+}</pre>

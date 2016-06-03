@@ -16,6 +16,7 @@
 <pre class="prettyprint">using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.Wpf;
+
 namespace Winforms.Cartesian.MultiAxes
 {
     public partial class MultipleAxesExample : Form
@@ -23,6 +24,7 @@ namespace Winforms.Cartesian.MultiAxes
         public MultipleAxesExample()
         {
             InitializeComponent();
+
             cartesianChart1.Series.Add(new LineSeries
             {
                 Values = new ChartValues&lt;double> {1, 5, 3, 5, 3},
@@ -38,6 +40,7 @@ namespace Winforms.Cartesian.MultiAxes
                 Values = new ChartValues&lt;double> { 600, 300, 200, 600, 800 },
                 ScalesYAt = 2
             });
+
             //now we add the 3 axes
             cartesianChart1.AxisY.Add(new Axis
             {

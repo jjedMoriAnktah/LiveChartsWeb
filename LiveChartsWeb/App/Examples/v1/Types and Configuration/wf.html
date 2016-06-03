@@ -4,66 +4,77 @@
     LiveCharts can plot any type, even user-defined types, without losing the beauty of a strontly typed language,
     the concept is simple, you pass collection of generic values, then LiveCharts needs a function to pull X and Y (if it is a cartesian chart),
     you don´t really need to define each type to plot it,
-    the library already knows how to plot, <i>double, int, decimal, short, float, long</i> and also
+    the library already knows how to plot, <i class="text-muted">double, int, decimal, short, float, long</i> and also
     some classes specially designed:
 </p>
 
 <div class="table-responsive">
     <table class="table table-striped">
         <tbody>
-            <tr>
-                <td>
-                    <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/ObservableValue.cs">
-                        ObservableValue
-                    </a>
-                </td>
-                <td>
-                    Only contains 1 property, the <i>Value</i> property, this class notifies the chart to update automatically every time the <i>Value</i> property changes
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/ObservablePoint.cs">
-                        ObservablePoint
-                    </a>
-                </td>
-                <td>
-                    2 properties, the <i>X</i> and <i>Y</i>, the class notifies the chart to update when a property changes, normally used in a cartesian chart when you need to specify both, X and Y values.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/BubblePoint.cs">
-                        BubblePoint
-                    </a>
-                </td>
-                <td>
-                    3 properties, the <i>X</i>, <i>Y</i> and <i>Weight</i>, the class notifies the chart to update when a property changes, it is normally used for bubble series
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/OHCLPoint.cs">
-                        OHCLPoint
-                    </a>
-                </td>
-                <td>
-                    <i>Open, High, Low, Close</i> properties, the class notifies the chart to update when a property changes, normally used for financial series (OhclSeries)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/PolarPoint.cs">
-                        PolarPoint
-                    </a>
-                </td>
-                <td>
-                    2 properties, the <i>Radius</i> and <i>Angle</i>, the class notifies the chart to update when a property changes, normally used in polar charts.
-                </td>
-            </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/ObservableValue.cs">
+                    ObservableValue
+                </a>
+            </td>
+            <td>
+                Only contains 1 property, the <i>Value</i> property, this class notifies the chart to update automatically every time the <i>Value</i> property changes
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/ObservablePoint.cs">
+                    ObservablePoint
+                </a>
+            </td>
+            <td>
+                2 properties, the <i>X</i> and <i>Y</i>, the class notifies the chart to update when a property changes, normally used in a cartesian chart when you need to specify both, X and Y values.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/BubblePoint.cs">
+                    BubblePoint
+                </a>
+            </td>
+            <td>
+                3 properties, the <i>X</i>, <i>Y</i> and <i>Weight</i>, the class notifies the chart to update when a property changes, it is normally used for bubble series
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/OHCLPoint.cs">
+                    OHCLPoint
+                </a>
+            </td>
+            <td>
+                <i>Open, High, Low, Close</i> properties, the class notifies the chart to update when a property changes, normally used for financial series (OhclSeries)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/PolarPoint.cs">
+                    PolarPoint
+                </a>
+            </td>
+            <td>
+                2 properties, the <i>Radius</i> and <i>Angle</i>, the class notifies the chart to update when a property changes, normally used in polar charts.
+            </td>
+        </tr>
         </tbody>
     </table>
 </div>
+
+<pre class="prettyprint">var doubleValues = new ChartValues&lt;double> { 1, 2 ,3 };
+var intValues = new ChartValues&lt;int> { 1, 2 ,3 };
+//the observable value class is really helpful, it notifies the chart to update
+//every time the ObservableValue.Value property changes
+var observableValues = new ChartValues&lt;LiveCharts.Defaults.ObservableValue> 
+{ 
+    new LiveCharts.Defaults.ObservableValue(1), //initializes Value property as 1
+    new LiveCharts.Defaults.ObservableValue(2),
+    new LiveCharts.Defaults.ObservableValue(3)
+};</pre>
 
 <p>
     Notice the chart <b>always</b> uses X and Y coordinates (if cartesian chart), but then

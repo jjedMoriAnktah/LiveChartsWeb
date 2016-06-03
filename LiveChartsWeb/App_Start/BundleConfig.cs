@@ -16,8 +16,8 @@ namespace LiveChartsWeb
             bundles.Add(new StyleBundle("~/AppContent/css").Include(
                 "~/Content/font-awesome.css",
                 "~/Content/bootstrap.css",
-                "~/Content/app.css",
-                "~/Content/prettify.css"));
+                "~/Content/prettify.css",
+                "~/Content/app.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/banner").Include(
                 "~/Scripts/skrollr.js"));

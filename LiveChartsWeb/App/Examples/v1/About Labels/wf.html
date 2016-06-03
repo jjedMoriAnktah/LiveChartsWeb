@@ -3,8 +3,62 @@
 A Label is any string representation of any value in the chart, they are normally placed over the axis length and in tooltips.
 
 <div class="text-center">
-    <img src="/App/Examples/v1/Labels/Images/labels.png" />
+    <img src="/App/Examples/v1/About Labels/Images/labels.png" />
 </div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Windows.Forms;
+using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
+
+namespace Winforms.Cartesian.Labels
+{
+    public partial class Labels : Form
+    {
+        public Labels()
+        {
+            InitializeComponent();
+
+            cartesianChart1.Series.Add(new ColumnSeries
+            {
+                Values = new ChartValues&gt;double> { 4, 2, 8, 2, 3, 0, 1 },
+                DataLabels = true,
+                LabelPoint = point => point.Y + "K"
+            });
+
+            cartesianChart1.AxisX.Add(new Axis
+            {
+                Labels = new[]
+                {
+                    "Shea Ferriera",
+                    "Maurita Powel",
+                    "Scottie Brogdon",
+                    "Teresa Kerman",
+                    "Nell Venuti",
+                    "Anibal Brothers",
+                    "Anderson Dillman"
+                },
+                Separator = new Separator // force the separator step to 1, so it alwasy display all labels
+                {
+                    Step = 1,
+                    IsEnabled = false //disable it to make it invisible.
+                },
+                //ToDo Add the rotate tranform...
+                //LabelsRotateTransform = new System.Windows.Media.RotateTransform(13)
+            });
+
+            cartesianChart1.AxisY.Add(new Axis
+            {
+                LabelFormatter = value => value + ".00K items",
+                Separator = new Separator()
+            });
+        }
+    }
+}
+</pre>
 
 <p>
     There are 2 types of labels in LiveCharts, Formatted and Mapped labels.
@@ -70,16 +124,7 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
 
 <pre class="prettyprint">new ColumnSeries
 {
-   Values = new LiveCharts.ChartValues&lt;LiveCharts.Defaults.ObservableValue&gt;
-   {
-      new LiveCharts.Defaults.ObservableValue(4),
-      new LiveCharts.Defaults.ObservableValue(2),
-      new LiveCharts.Defaults.ObservableValue(8),
-      new LiveCharts.Defaults.ObservableValue(2),
-      new LiveCharts.Defaults.ObservableValue(3),
-      new LiveCharts.Defaults.ObservableValue(0),
-      new LiveCharts.Defaults.ObservableValue(1),
-   },
+   Values = new ChartValues&gt;double> { 4, 2, 8, 2, 3, 0, 1 },
    DataLabels = true,
    LabelPoint = point => point.Y + "K"
 }</pre>

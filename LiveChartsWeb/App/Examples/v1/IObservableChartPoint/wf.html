@@ -1,13 +1,46 @@
-﻿<h3 class="doc-title">Fully Responsive Charts</h3>
+﻿<h3 class="doc-title">IObservableChartPoint</h3>
 
 <p>
-    All the charts by default update when your data changes, in this example we are also using the
-    <i>ObservableValue</i> class which implements <i>IObservableChartPoint</i>, this enables the
-    value to notify the chart to update everytime a value changes, there are already many defined
-    types implementing <i>IObservableChartPoint</i> you will find them in another examples, you can also
-    define your own types, <a href="#/examples/v1/wf/Types Configuration">here</a> you can find more information about it.
+    All the charts by default update and animate when you add/remove series or values, but what happens when you
+    need to update the chart every time a value changes? in this case you must implement the
+    <i class="text-muted">IObservableChartPoint</i>, this enables a value to notify the chart
+    to update everytime it changes.
 </p>
 
+<p>
+    It is easy to implement and follows the MVVM pattern.
+</p>
+
+<pre class="prettyprint">public class ObservableValue : IObservableChartPoint
+{
+    private double _value;        
+    public event Action PointChanged;
+    public double Value
+    {
+       get { return _value; }
+       set
+       {
+            _value = value;
+            OnPointChanged();
+        }
+    }
+    protected void OnPointChanged()
+    {
+        if (PointChanged != null) PointChanged.Invoke();
+    }
+}</pre>
+
+<p>
+    The previous code shows the important parts in the already configured
+    <i class="text-muted">ObservableValue</i> class, this class is able to notify the chart to
+    update everytime the <i class="text-muted">Value</i> property changes.
+</p>
+
+<p>
+    Notice it is not necessary to configure <i class="text-muted">ObservableValue</i> class, since
+    it is already loaded in the library, if you are using a custom type you must also let LiveCharts
+    know <a href="#/examples/v1/wpf/Types%20and%20Configuration">how to plot your type</a>
+</p>
 <div class="text-center">
     <img src="/App/Examples/v1/Basic Cartesian/Images/fullyresponsive.gif"/>
 </div>
@@ -21,13 +54,16 @@ using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.Defaults;
 using LiveCharts.Wpf;
+
 namespace Winforms.Cartesian.FullyResponsive
 {
     public partial class FullyResponsive : Form
     {
         public FullyResponsive()
         {
+
             InitializeComponent();
+
             Values = new ChartValues&lt;ObservableValue&gt;
             {
                 new ObservableValue(3),
@@ -36,10 +72,7 @@ namespace Winforms.Cartesian.FullyResponsive
                 new ObservableValue(4),
                 new ObservableValue(2)
             };
-        }
-        public ChartValues&lt;ObservableValue&gt; Values { get; set; }
-        private void FullyResponsive_Load(object sender, EventArgs e)
-        {
+
             cartesianChart1.Series.Add(new LineSeries
             {
                 Values = Values,
@@ -48,21 +81,31 @@ namespace Winforms.Cartesian.FullyResponsive
                 DataLabels = true
             });
         }
+
+        public ChartValues&lt;ObservableValue&gt; Values { get; set; }
+
+        //Adding points
         private void AddButtonOnClick(object sender, EventArgs e)
         {
             var r = new Random();
             Values.Add(new ObservableValue(r.Next(-20, 20)));
         }
+
+        //Inserting Middle Points
         private void InsertButtonOnClick(object sender, EventArgs e)
         {
             var r = new Random();
             if (Values.Count > 3)
                 Values.Insert(2, new ObservableValue(r.Next(-20, 20)));
         }
+
+        //Removing Poiints
         private void button3_Click(object sender, EventArgs e)
         {
             Values.RemoveAt(0);
         }
+
+        //When any value changes
         private void button4_Click(object sender, EventArgs e)
         {
             var r = new Random();

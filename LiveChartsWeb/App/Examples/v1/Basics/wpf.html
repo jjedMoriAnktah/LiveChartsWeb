@@ -1,17 +1,47 @@
 ﻿<h3 class="doc-title">Basics</h3>
 
 <p>
-    First of all LiveCharts is designed to be easy for the user, everything is updated and animated
-    automatically, it also handles the performance, feel free to change 1 million points in 1 second,
-    the library will not update 1 million times, it will only do it when it concider it is necessary,
-    when you add/remove series, or add/remove values the chart will update by itself, you really dont need
-    to worry about anything but your bussiness, let LiveCharts handle the charting, also implementing
-    <i>IObservableChartPoint</i> will also update the chart when a property changes, there are many
-    classes already defined and ready to use that implement <i>IObservableChartPoint</i>
+    LiveCharts is designed to be easy for the user, everything is updated and animated
+    automatically, it also handles performance, feel free to change 1 million points in 1 second,
+    the library will only update when it considers it is necessary,
+    when you add/remove series, or add/remove values the chart will update by itself, you really don’t need
+    to worry about anything but your business, let LiveCharts handle the charting.
 </p>
 
+<h4>Starting Example</h4>
+
 <p>
-    The next image will guide you to get more familiar with LiveCharts elements.
+    There are many types ready to plot already defined, you can learn more in the
+    <a href="#/examples/v1/wpf/Types%20and%20Configuration">Types and Configuration section</a>, in 
+    this brief example we are plotting double values.
+</p>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">SeriesCollection = new SeriesCollection
+{
+    new LineSeries
+    {
+        Values = new ChartValues&lt;double> { 3, 5, 7, 4 }
+    },
+    new BarSeries                
+    {
+        Values = new ChartValues&lt;decimal> { 5, 6, 2, 7 }
+    }
+};</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" /></pre>
+
+<p>
+    Simple isn't it? that is all you need, now every time you add/remove a series to the SeriesCollection instance or add/remove a value at every series, the chart will update and animate automatically.
+</p>
+
+<h4>Components</h4>
+
+<p>
+    The next image will guide you to get more familiar with LiveCharts components.
 </p>
 
 <div class="text-center">
@@ -27,8 +57,8 @@
 </div>
 
 <p>
-    By default if you don't set the Fill or Stroke properties, LiveCharts will use a predifined color, according
-    to the series positions in the <i>Chart.SeriesCollection</i> property, you can easly define your own colors set,
+    By default, if you don't set the Fill or Stroke properties, LiveCharts will use a predefined color, according
+    to the series positions in the <i>Chart.SeriesCollection</i> property, you can easily define your own colors set,
     this colors will repeat if necessary.
 </p>
 
@@ -51,7 +81,7 @@ mySeries.Fill = System.Windows.Media.Brushes.Blue;</pre>
 <p>
     Also setting the <i>Series.Visibility</i> (will define the drawn shape visibility), 
     <i>Panel.ZIndex</i> (drawn shape z-index property), <i>Series.StrokeDashArray</i> (dashed strokes) properties
-    will be binded to the drawn shape,  for example:
+    will be binded to the drawn shape, for example:
 </p>
 
 <pre class="prettyprint">&lt;lvc:LineSeries Visibility="Hidden" StrokeDashArray="2" Panel.Zindex="3" / &gt;</pre>
@@ -71,3 +101,11 @@ System.Windows.Controls.Panel.SetZIndex(mySeries, 3);</pre>
 </p>
 
 <pre class="prettyprint">myChart.DataTooltip = new MyCustomTooltop();</pre>
+
+<h4>Legends</h4>
+
+<p>
+    You can place a legend at Bottom, Top, Right or left, just set the <i>Chart.LegendPosition</i> property at the desired location.
+</p>
+
+<pre class="prettyprint">myChart.LegendLocation = LegendLocation.Right;</pre>

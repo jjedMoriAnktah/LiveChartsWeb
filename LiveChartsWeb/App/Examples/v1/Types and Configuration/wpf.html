@@ -4,7 +4,7 @@
     LiveCharts can plot any type, even user-defined types, without losing the beauty of a strontly typed language,
     the concept is simple, you pass collection of generic values, then LiveCharts needs a function to pull X and Y (if it is a cartesian chart),
     you don´t really need to define each type to plot it,
-    the library already knows how to plot, <i>double, int, decimal, short, float, long</i> and also
+    the library already knows how to plot, <i class="text-muted">double, int, decimal, short, float, long</i> and also
     some classes specially designed:
 </p>
 
@@ -64,6 +64,17 @@
         </tbody>
     </table>
 </div>
+
+<pre class="prettyprint">var doubleValues = new ChartValues&lt;double> { 1, 2 ,3 };
+var intValues = new ChartValues&lt;int> { 1, 2 ,3 };
+//the observable value class is really helpful, it notifies the chart to update
+//every time the ObservableValue.Value property changes
+var observableValues = new ChartValues&lt;LiveCharts.Defaults.ObservableValue> 
+{ 
+    new LiveCharts.Defaults.ObservableValue(1), //initializes Value property as 1
+    new LiveCharts.Defaults.ObservableValue(2),
+    new LiveCharts.Defaults.ObservableValue(3)
+};</pre>
 
 <p>
     Notice the chart <b>always</b> uses X and Y coordinates (if cartesian chart), but then

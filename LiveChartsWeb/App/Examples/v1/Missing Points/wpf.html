@@ -1,0 +1,57 @@
+﻿<h3 class="doc-title">Line with missing points</h3>
+
+<p>
+    Use <i>double.NaN</i> when you don't know a value in a line series, that point will be undefined and
+    will be ignored when the series is drawn.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Missing Points/Images/interrupted.jpg" />
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System.Windows.Controls;
+using LiveCharts;
+using LiveCharts.Wpf;
+
+namespace Wpf.CartesianChart.Missing_Line_Points
+{
+    public partial class MissingPointsExample : UserControl
+    {
+        public MissingPointsExample()
+        {
+            InitializeComponent();
+
+            Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Values = new ChartValues&lt;double>
+                    {
+                        4,
+                        5,
+                        7,
+                        8,
+                        double.NaN,
+                        5,
+                        2,
+                        8,
+                        double.NaN,
+                        6,
+                        2
+                    }
+                }
+            };
+
+            DataContext = this;
+        }
+
+        public SeriesCollection Series { get; set; }
+
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding Series}">&lt;/lvc:CartesianChart></pre>

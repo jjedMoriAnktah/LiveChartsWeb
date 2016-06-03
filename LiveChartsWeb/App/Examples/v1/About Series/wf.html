@@ -90,7 +90,7 @@ System.Windows.Controls.Panel.SetZIndex(mySeries, 2);</pre>
         </tr>
         <tr>
             <td>
-                Obcl Series
+                Ohcl Series
             </td>
             <td>
                 <b><i>MaxColunWidth:</i></b> Increase this property have bigger bars when the space allows it,
@@ -116,7 +116,7 @@ System.Windows.Controls.Panel.SetZIndex(mySeries, 2);</pre>
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/v1/Customizing Series/Images/custom-line.jpg"/>
+    <img src="/App/Examples/v1/About Series/Images/custom-line.jpg"/>
 </div>
 
 
@@ -125,6 +125,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.Wpf;
+
 namespace Winforms.Cartesian.Customized_Series
 {
     public partial class CustomizedSeries : Form
@@ -132,12 +133,10 @@ namespace Winforms.Cartesian.Customized_Series
         public CustomizedSeries()
         {
             InitializeComponent();
-        }
-        private void CustomizedLineSeries_Load(object sender, EventArgs e)
-        {
+
             cartesianChart1.Series.Add(new LineSeries
             {
-                Values = new ChartValues<double> { 3, 4, 6, 3, 2, 6 },
+                Values = new ChartValues&lt;double> { 3, 4, 6, 3, 2, 6 },
                 StrokeThickness = 4,
                 StrokeDashArray = new System.Windows.Media.DoubleCollection(20),
                 Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(107, 185, 69)),
@@ -147,7 +146,7 @@ namespace Winforms.Cartesian.Customized_Series
             });
             cartesianChart1.Series.Add(new LineSeries
             {
-                Values = new ChartValues<double> { 5, 3, 5, 7, 3, 9 },
+                Values = new ChartValues&lt;double> { 5, 3, 5, 7, 3, 9 },
                 StrokeThickness = 2,
                 Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(28, 142, 196)),
                 Fill = System.Windows.Media.Brushes.Transparent,
@@ -156,7 +155,9 @@ namespace Winforms.Cartesian.Customized_Series
                 PointForeround =
                     new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(34, 46, 49))
             });
-            //cartesianChart1.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(34, 46, 49));
+
+            cartesianChart1.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(34, 46, 49));
+
             cartesianChart1.AxisX.Add(new Axis
             {
                 IsMerged = true,
@@ -177,8 +178,7 @@ namespace Winforms.Cartesian.Customized_Series
                     Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(64, 79, 86))
                 }
             });
-            // cartesianChart1.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(34, 46, 49));
+
         }
     }
-}
-</pre>
+}</pre>

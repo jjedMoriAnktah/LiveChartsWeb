@@ -1,8 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 100px;
-    background: #eeeded;
     overflow-y: scroll;
+    background-color: rgb(248, 248, 248);
 }
 
 .app-view {
@@ -140,8 +140,8 @@ a.active i.text-muted {
 */
 .card-shadow.ng-enter, .card-shadow.ng-move {
     -webkit-transition:0.5s linear all;
-  -moz-transition:0.5s linear all;
-  -o-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
     -ms-transition:0.5s linear all;
     transition:0.5s linear all;
     -ms-opacity:0;
@@ -393,4 +393,8 @@ a.active i.text-muted {
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.prettyprint {
+    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
 }

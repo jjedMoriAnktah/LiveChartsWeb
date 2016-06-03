@@ -3,8 +3,76 @@
 A Label is any string representation of any value in the chart, they are normally placed over the axis length and in tooltips.
 
 <div class="text-center">
-    <img src="/App/Examples/v1/Labels/Images/labels.png"/>
+    <img src="/App/Examples/v1/About Labels/Images/labels.png"/>
 </div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using LiveCharts;
+using LiveCharts.Wpf;
+
+namespace Wpf.CartesianChart.Labels
+{
+    public partial class LabelsExample : UserControl
+    {
+        public LabelsExample()
+        {
+            InitializeComponent();
+
+            SeriesCollection = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Values = new ChartValues&gt;double> { 4, 2, 8, 2, 3, 0, 1 },
+                    DataLabels = true,
+                    LabelPoint = point => point.X + "K ," + point.Y
+                }
+            };
+
+            RotateTransform = new RotateTransform(13);
+            Labels = new[]
+            {
+                "Shea Ferriera",
+                "Maurita Powel",
+                "Scottie Brogdon",
+                "Teresa Kerman",
+                "Nell Venuti",
+                "Anibal Brothers",
+                "Anderson Dillman"
+            };
+            Formatter = value => value + ".00K items";
+
+            DataContext = this;
+        }
+
+        public SeriesCollection SeriesCollection { get; set; }
+        public RotateTransform RotateTransform { get; set; }
+        public string[] Labels { get; set; }
+        public Func&gt;double, string> Formatter { get; set; }
+
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" >
+  &lt;lvc:CartesianChart.AxisX>
+    &lt;lvc:Axis LabelsRotateTransform="{Binding RotateTransform}" Labels="{Binding Labels}">
+      &lt;lvc:Axis.Separator >
+        &lt;lvc:Separator IsEnabled="False" Step="1">&gt;/lvc:Separator>
+      &lt;/lvc:Axis.Separator>
+    &lt;/lvc:Axis>
+  &lt;/lvc:CartesianChart.AxisX>
+  &lt;lvc:CartesianChart.AxisY>
+    &lt;lvc:Axis Title="Sold Items" LabelFormatter="{Binding Formatter}">&gt;/lvc:Axis>
+  &lt;/lvc:CartesianChart.AxisY>
+&lt;/lvc:CartesianChart>
+</pre>
 
 <p>
     There are 2 types of labels in LiveCharts, Formatted and Mapped labels.
@@ -62,16 +130,7 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
 
 <pre class="prettyprint">new ColumnSeries
 {
-   Values = new LiveCharts.ChartValues&lt;LiveCharts.Defaults.ObservableValue&gt;
-   {
-      new LiveCharts.Defaults.ObservableValue(4),
-      new LiveCharts.Defaults.ObservableValue(2),
-      new LiveCharts.Defaults.ObservableValue(8),
-      new LiveCharts.Defaults.ObservableValue(2),
-      new LiveCharts.Defaults.ObservableValue(3),
-      new LiveCharts.Defaults.ObservableValue(0),
-      new LiveCharts.Defaults.ObservableValue(1),
-   },
+   Values = new ChartValues&gt;double> { 4, 2, 8, 2, 3, 0, 1 },
    DataLabels = true,
    LabelPoint = point => point.Y + "K"
 }</pre>

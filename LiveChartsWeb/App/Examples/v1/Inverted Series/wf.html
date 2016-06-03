@@ -23,6 +23,7 @@
 using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.Wpf;
+
 namespace Winforms.Cartesian.Inverted_Series
 {
     public partial class InvertedSeries : Form
@@ -30,6 +31,7 @@ namespace Winforms.Cartesian.Inverted_Series
         public InvertedSeries()
         {
             InitializeComponent();
+
             cartesianChart1.Series.Add(new VerticalLineSeries
             {
                 Values = new ChartValues&lt;double&gt; { 3, 5, 2, 6, 2, 7, 1 }
@@ -38,6 +40,7 @@ namespace Winforms.Cartesian.Inverted_Series
             {
                 Values = new ChartValues&lt;double&gt; {6, 2, 6, 3, 2, 7, 2}
             });
+
             cartesianChart1.AxisY.Add(new Axis
             {
                 Separator = new Separator { Step = 1}
@@ -46,6 +49,7 @@ namespace Winforms.Cartesian.Inverted_Series
             {
                 MinValue = 0
             });
+
             cartesianChart1.DataTooltip.SelectionMode = TooltipSelectionMode.SharedYValues;
         }
     }

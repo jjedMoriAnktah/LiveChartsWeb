@@ -16,6 +16,7 @@ using System.Windows.Media;
 using LiveCharts;
 using LiveCharts.Defaults;
 using LiveCharts.Wpf;
+
 namespace Winforms.Cartesian.Sections
 {
     public partial class SectionsExample : Form
@@ -23,6 +24,7 @@ namespace Winforms.Cartesian.Sections
         public SectionsExample()
         {
             InitializeComponent();
+
             cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
@@ -56,6 +58,7 @@ namespace Winforms.Cartesian.Sections
                     Fill = Brushes.Transparent
                 }
             };
+
             cartesianChart1.AxisY.Add(new Axis
             {
                 Sections = new List&lt;IAxisSectionView>
@@ -90,6 +93,7 @@ namespace Winforms.Cartesian.Sections
                     }
                 }
             });
+
         }
     }
 }</pre>

@@ -83,14 +83,13 @@ namespace Wpf.CartesianChart
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">
-&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" Zoom="X" &gt;
-    &lt;lvc:CartesianChart.AxisX&gt;
-        &lt;lvc:Axis LabelFormatter="{Binding XFormatter}" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}"/&gt;
-    &lt;/lvc:CartesianChart.AxisX&gt;
-    &lt;lvc:CartesianChart.AxisY&gt;
-        &lt;lvc:Axis LabelFormatter="{Binding YFormatter}"/&gt;
-    &lt;/lvc:CartesianChart.AxisY&gt;
+<pre class="prettyprint">&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" Zoom="X" &gt;
+  &lt;lvc:CartesianChart.AxisX&gt;
+    &lt;lvc:Axis LabelFormatter="{Binding XFormatter}" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}"/&gt;
+  &lt;/lvc:CartesianChart.AxisX&gt;
+  &lt;lvc:CartesianChart.AxisY&gt;
+    &lt;lvc:Axis LabelFormatter="{Binding YFormatter}"/&gt;
+  &lt;/lvc:CartesianChart.AxisY&gt;
 &lt;/lvc:CartesianChart&gt;</pre>
 
 

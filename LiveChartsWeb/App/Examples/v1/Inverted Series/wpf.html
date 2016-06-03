@@ -21,6 +21,7 @@
 
 <pre class="prettyprint">using System.Windows.Controls;
 using LiveCharts;
+
 namespace Wpf.CartesianChart.Inverted_Series
 {
     public partial class InvertedExample : UserControl
@@ -28,33 +29,37 @@ namespace Wpf.CartesianChart.Inverted_Series
         public InvertedExample()
         {
             InitializeComponent();
+
             Values1 = new ChartValues&lt;double&gt; {3, 5, 2, 6, 2, 7, 1};
             Values2 = new ChartValues&lt;double&gt; {6, 2, 6, 3, 2, 7, 2};
+
             DataContext = this;
         }
+
         public ChartValues&lt;double&gt; Values1 { get; set; }
         public ChartValues&lt;double&gt; Values2 { get; set; }
+
     }
 }</pre>
 
 <h4>XAML</h4>
 
 <pre class="prettyprint">&lt;lvc:CartesianChart&gt;
-            &lt;lvc:CartesianChart.Series&gt;
-                &lt;lvc:RowSeries Values="{Binding Values2}" Panel.ZIndex="1"&gt;&lt;/lvc:RowSeries&gt;
-                &lt;lvc:VerticalLineSeries Values="{Binding Values1}" Panel.ZIndex="0"&gt;&lt;/lvc:VerticalLineSeries&gt;
-            &lt;/lvc:CartesianChart.Series&gt;
-            &lt;lvc:CartesianChart.AxisY&gt;
-                &lt;lvc:Axis&gt;
-                    &lt;lvc:Axis.Separator&gt;
-                        &lt;lvc:Separator Step="1"&gt;&lt;/lvc:Separator&gt;
-                    &lt;/lvc:Axis.Separator&gt;
-                &lt;/lvc:Axis&gt;
-            &lt;/lvc:CartesianChart.AxisY&gt;
-            &lt;lvc:CartesianChart.AxisX&gt;
-                    &lt;lvc:Axis MinValue="0"&gt;&lt;/lvc:Axis&gt;
-            &lt;/lvc:CartesianChart.AxisX&gt;
-            &lt;lvc:CartesianChart.DataTooltip&gt;
-                &lt;lvc:DefaultTooltip SelectionMode="SharedYValues"&gt;&lt;/lvc:DefaultTooltip&gt;
-            &lt;/lvc:CartesianChart.DataTooltip&gt;
-        &lt;/lvc:CartesianChart&gt;</pre>
+  &lt;lvc:CartesianChart.Series&gt;
+    &lt;lvc:RowSeries Values="{Binding Values2}" Panel.ZIndex="1"&gt;&lt;/lvc:RowSeries&gt;
+    &lt;lvc:VerticalLineSeries Values="{Binding Values1}" Panel.ZIndex="0"&gt;&lt;/lvc:VerticalLineSeries&gt;
+  &lt;/lvc:CartesianChart.Series&gt;
+  &lt;lvc:CartesianChart.AxisY&gt;
+    &lt;lvc:Axis&gt;
+      &lt;lvc:Axis.Separator&gt;
+        &lt;lvc:Separator Step="1"&gt;&lt;/lvc:Separator&gt;
+      &lt;/lvc:Axis.Separator&gt;
+    &lt;/lvc:Axis&gt;
+  &lt;/lvc:CartesianChart.AxisY&gt;
+  &lt;lvc:CartesianChart.AxisX&gt;
+    &lt;lvc:Axis MinValue="0"&gt;&lt;/lvc:Axis&gt;
+  &lt;/lvc:CartesianChart.AxisX&gt;
+  &lt;lvc:CartesianChart.DataTooltip&gt;
+    &lt;lvc:DefaultTooltip SelectionMode="SharedYValues"&gt;&lt;/lvc:DefaultTooltip&gt;
+  &lt;/lvc:CartesianChart.DataTooltip&gt;
+&lt;/lvc:CartesianChart&gt;</pre>

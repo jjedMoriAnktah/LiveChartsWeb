@@ -1,0 +1,66 @@
+﻿<h4 class="doc-title">Basic Row Chart</h4>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Basic Row/Images/basic row.jpg"/>
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Windows.Controls;
+using LiveCharts;
+using LiveCharts.Wpf;
+
+namespace Wpf.CartesianChart.Basic_Bars
+{
+    public partial class BasicRowExample : UserControl
+    {
+        public BasicRowExample()
+        {
+            InitializeComponent();
+
+            SeriesCollection = new SeriesCollection
+            {
+                new RowSeries
+                {
+                    Title = "2015",
+                    Values = new ChartValues&lt;double> { 10, 50, 39, 50 }
+                }
+            };
+
+            //adding series will update and animate the chart automatically
+            SeriesCollection.Add(new RowSeries
+            {
+                Title = "2016",
+                Values = new ChartValues&lt;double> { 11, 56, 42}
+            });
+
+            //also adding values updates and animates the chart automatically
+            SeriesCollection[1].Values.Add(48d);
+
+            Labels = new[] {"Maria", "Susan", "Charles", "Frida"};
+            Formatter = value => value.ToString("N");
+
+            DataContext = this;
+        }
+
+        public SeriesCollection SeriesCollection { get; set; }
+        public string[] Labels { get; set; }
+        public Func&lt;double, string> Formatter { get; set; }
+
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Bottom">
+  &lt;lvc:CartesianChart.AxisX>
+    &lt;lvc:Axis Title="Salesman" LabelFormatter="{Binding Formatter}">&lt;/lvc:Axis>
+  &lt;/lvc:CartesianChart.AxisX>
+  &lt;lvc:CartesianChart.AxisY>
+    &lt;lvc:Axis Title="Sold Apps" Labels="{Binding Labels}">&lt;/lvc:Axis>
+  &lt;/lvc:CartesianChart.AxisY>
+  &lt;lvc:CartesianChart.DataTooltip>
+    &lt;lvc:DefaultTooltip SelectionMode="SharedYValues">&lt;/lvc:DefaultTooltip>
+  &lt;/lvc:CartesianChart.DataTooltip>
+&lt;/lvc:CartesianChart></pre>

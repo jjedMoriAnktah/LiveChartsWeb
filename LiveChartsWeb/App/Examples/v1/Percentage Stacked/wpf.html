@@ -1,0 +1,76 @@
+﻿<h3 class="doc-title">Percentage Stacked Row</h3>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Percentage Stacked/Images/stackedrow.jpg"/>
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.Windows.Controls;
+using LiveCharts;
+using LiveCharts.Wpf;
+
+namespace Wpf.CartesianChart.Basic_Stacked_Bar
+{
+    public partial class BasicStackedRowPercentageExample : UserControl
+    {
+        public BasicStackedRowPercentageExample()
+        {
+            InitializeComponent();
+
+            SeriesCollection = new SeriesCollection
+            {
+                new StackedRowSeries
+                {
+                    Values = new ChartValues&lt;double> {4, 5, 6, 8},
+                    StackMode = StackMode.Percentage, 
+                    DataLabels = true,
+                    LabelPoint = p => p.X.ToString()
+                },
+                new StackedRowSeries
+                {
+                    Values = new ChartValues&lt;double> {2, 5, 6, 7},
+                    StackMode = StackMode.Percentage,
+                    DataLabels = true,
+                    LabelPoint = p => p.X.ToString()
+                }
+            };
+
+            //adding series updates and animates the chart
+            SeriesCollection.Add(new StackedRowSeries
+            {
+                Values = new ChartValues&lt;double> { 6, 2, 7 },
+                StackMode = StackMode.Percentage,
+                DataLabels = true,
+                LabelPoint = p => p.X.ToString()
+            });
+            //adding values also updates and animates
+            SeriesCollection[2].Values.Add(4d);
+
+            Labels = new[] { "Chrome", "Mozilla", "Opera", "IE" };
+            Formatter = val => val.ToString("P");
+
+            DataContext = this;
+        }
+
+        public SeriesCollection SeriesCollection { get; set; }
+        public string[] Labels { get; set; }
+        public Func&lt;double, string> Formatter { get; set; }
+
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Top">
+  &lt;lvc:CartesianChart.AxisY>
+    &lt;lvc:Axis Title="Browser" Labels="{Binding Labels}" />
+  &lt;/lvc:CartesianChart.AxisY>
+  &lt;lvc:CartesianChart.AxisX>
+    &lt;lvc:Axis LabelFormatter="{Binding Formatter}" />
+  &lt;/lvc:CartesianChart.AxisX>
+  &lt;lvc:CartesianChart.DataTooltip>
+    &lt;lvc:DefaultTooltip SelectionMode="SharedYValues">&lt;/lvc:DefaultTooltip>
+  &lt;/lvc:CartesianChart.DataTooltip>
+&lt;/lvc:CartesianChart></pre>

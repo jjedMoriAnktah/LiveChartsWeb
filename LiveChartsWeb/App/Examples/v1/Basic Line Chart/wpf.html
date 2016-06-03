@@ -1,0 +1,67 @@
+﻿<h3 class="doc-title">Basic Line Chart</h3>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Basic Line Chart/Images/basicline.jpg"/>
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint linenums">using System;
+using System.Windows.Controls;
+using LiveCharts;
+using LiveCharts.Wpf;
+
+namespace Wpf.CartesianChart.BasicLine
+{
+    public partial class BasicLineExample : UserControl
+    {
+        public BasicLineExample()
+        {
+            InitializeComponent();
+
+            SeriesCollection = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Series 1",
+                    Values = new ChartValues&lt;double> { 4, 6, 5, 2 ,7 }
+                },
+                new LineSeries
+                {
+                    Title = "Series 2",
+                    Values = new ChartValues&lt;double> { 6, 7, 3, 4 ,6 }
+                }
+            };
+
+            Labels = new[] {"Jan", "Feb", "Mar", "Apr", "May"};
+            YFormatter = value => value.ToString("C");
+
+            //modifing the series collection will animate and update the chart
+            SeriesCollection.Add(new LineSeries
+            {
+                Values = new ChartValues&lt;double> {5, 3, 2, 4},
+                LineSmoothness = 0 //rect lines, 1 really smooth lines
+            });
+
+            //modifing any series values will also animate and update the chart
+            SeriesCollection[2].Values.Add(5d);
+
+            DataContext = this;
+        }
+
+        public SeriesCollection SeriesCollection { get; set; }
+        public string[] Labels { get; set; }
+        public Func&lt;double, string> YFormatter { get; set; }
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" >
+  &lt;lvc:CartesianChart.AxisY>
+    &lt;lvc:Axis Title="Sales" LabelFormatter="{Binding YFormatter}">&lt;/lvc:Axis>
+  &lt;/lvc:CartesianChart.AxisY>
+  &lt;lvc:CartesianChart.AxisX>
+    &lt;lvc:Axis Title="Month" Labels="{Binding Labels}">&lt;/lvc:Axis>
+  &lt;/lvc:CartesianChart.AxisX>
+&lt;/lvc:CartesianChart></pre>

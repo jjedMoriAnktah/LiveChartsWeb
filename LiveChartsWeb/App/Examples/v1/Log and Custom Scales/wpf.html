@@ -13,10 +13,10 @@
 <h4>XAML</h4>
 
 <pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}"&gt;
-            &lt;lvc:CartesianChart.AxisX&gt;
-                &lt;lvc:Axis LabelFormatter="{Binding Formatter}" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}" /&gt;
-            &lt;/lvc:CartesianChart.AxisX&gt;
-        &lt;/lvc:CartesianChart&gt;</pre>
+  &lt;lvc:CartesianChart.AxisX&gt;
+    &lt;lvc:Axis LabelFormatter="{Binding Formatter}" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}" /&gt;
+  &lt;/lvc:CartesianChart.AxisX&gt;
+&lt;/lvc:CartesianChart&gt;</pre>
 
 <h4>Code Behind</h4>
 
@@ -26,6 +26,7 @@ using LiveCharts;
 using LiveCharts.Configurations;
 using LiveCharts.Defaults;
 using LiveCharts.Wpf;
+
 namespace Wpf.CartesianChart.LogarithmScale
 {
     public partial class LogarithmScaleExample : UserControl
