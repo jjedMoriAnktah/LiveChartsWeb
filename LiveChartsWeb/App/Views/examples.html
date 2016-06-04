@@ -1,16 +1,14 @@
-﻿<div class="container app-view" style="min-height: 700px;">
+﻿<div class="container-fluid bg-primary" style="padding: 25px 0;">
     <div class="row">
-        <div class="col-xs-12">
-            <div class="bg-primary" style="padding: 20px; margin-bottom: 15px;">
-                <b>Note</b> Many examples only work in 0.7.1.5 if you are using any older version please update, 0.7.x design should not change too much from 1.0 version.
-            </div>
+        <div class="col-xs-12 text-center">
+            <b>Note</b> Many examples only work in 0.7.1.5 if you are using any older version please update, 0.7.x design should not change too much from 1.0 version.
         </div>
     </div>
+</div>
+
+<div class="container app-view" style="min-height: 700px;">
     <div class="row">
         <div class="col-md-3 hidden-xs hidden-sm">
-            <a href="javascript:;" ng-click="start = !start">
-                <img src="../../Content/Images/burger-menu.png" style="margin-top: 6px;"/>
-            </a>
             <span style="margin-top: 7px;" class="pull-right text-muted">Select a platform</span>
         </div>
         <div class="col-md-9" style="margin-bottom: 15px;">
@@ -31,30 +29,47 @@
     <div class="row">
         <div class="width-changing" ng-class="start ? 'col-md-12' : 'col-md-3'">
             <div class="row">
-                <div ng-repeat="section in sections"
-                     ng-class="start ? 'col-lg-3 col-md-4 col-sm-6' : 'col-xs-12'">
-                    <a class="section" ng-href="/App/examples/{{version}}/{{platform}}/{{section.name}}"
-                       ng-click="hideMenu()"
-                       ng-class="{ 'selected': currentSection === section.name }">
-                        <div class="panel panel-default only-bot-border" ng-class="{'together': !start}">
-                            <div class="row">
-                                <div class="col-xs-12 text-center menu-element" ng-class="{ 'menu-element-big': start }">
-                                    <span class="helper"></span>
-                                    <img ng-show="start" style="vertical-align: middle;"
-                                         ng-src="{{getImageUrl(section)}}"/>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 text-center">
-                                    <span>{{section.name}}</span>
-                                </div>
+                <div class="col-xs-12">
+                    <div class="row" style="margin-bottom: 5px;">
+                        <div ng-class="start ? 'col-md-5 col-sm-6' : 'col-xs-12'">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-addon" style="background-color: transparent !important">
+                                    <a href="javascript:;" ng-click="start = !start">
+                                        <img src="../../Content/Images/burger-menu.png" />
+                                    </a>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Search" ng-model="criteria"/>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <div class="row">
+                        <div ng-repeat="section in sections | filter: criteria"
+                             ng-class="start ? 'col-lg-3 col-md-4 col-sm-6' : 'col-xs-12'">
+                            <a class="section" ng-href="/App/examples/{{version}}/{{platform}}/{{section.name}}"
+                               ng-click="hideMenu()"
+                               ng-class="{ 'selected': currentSection === section.name }">
+                                <div class="panel panel-default only-bot-border card-shadow" ng-class="{'together': !start}">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center menu-element" ng-class="{ 'menu-element-big': start }">
+                                            <span class="helper"></span>
+                                            <img ng-show="start" style="vertical-align: middle;"
+                                                 ng-src="{{getImageUrl(section)}}"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center">
+                                            <span>{{section.name}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <hr class="visible-xs visible-sm"/>
+
         <div class="col-md-9" ng-hide="start">
             <div class="row">
                 <div class="col-xs-12">
@@ -67,6 +82,20 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container-fluid bg-primary" style="padding: 60px 0;">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            Found a typo error? want to improve docs?
+            Fork the repo, 
+            <a style="color: white" href="https://github.com/beto-rodriguez/LiveChartsWeb/tree/master/LiveChartsWeb/App/Examples/v1">
+                <b>edit the html files</b>
+            </a>,
+            and do a pull request
         </div>
     </div>
 </div>

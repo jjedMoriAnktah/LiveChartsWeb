@@ -3,52 +3,53 @@
 app.factory('examplesV1Service', [
     function () {
 
-        var article = function(name, fileName) {
+        var article = function(name, tags, fileName) {
             this.name = name;
+            this.tags = tags;
             this.fileName = fileName;
-        }
+        };
 
         return function () {
 
             return [
                 //getting started
-                new article('Install'),
-                new article('Basics'),
-                new article('Types and Configuration'),
-                new article('About Series'),
-                new article('About Axes'),
-                new article('About Labels'),
+                new article('Install', 'install installation start'),
+                new article('Basics', 'about basic start'),
+                new article('Types and Configuration', 'generic type config'),
+                new article('About Series', 'series style custom'),
+                new article('About Axes', 'axes style custom axis'),
+                new article('About Labels', 'labels style custom'),
 
                 //Cartesian
-                new article('The Cartesian Chart'),
-                new article('Inverted Series'),
-                new article('Sections'),
+                new article('The Cartesian Chart', 'chart bar line stacked bubble ohcl financial scatter'),
+                new article('Inverted Series', 'invert rotate'),
+                new article('Sections', 'cursor section range'),
 
                 //Lines
-                new article('Basic Line Chart'),
-                new article('Irregular Intervals'),
-                new article('Missing Points'),
-                new article('Zooming and panning', 'zooming and panning.gif'),
-                new article('Multiple Axes'),
+                new article('Basic Line Chart', 'line basic chart'),
+                new article('Irregular Intervals', 'irregular line'),
+                new article('Missing Points', 'missing nan line'),
+                new article('Zooming and panning', 'line', 'zooming and panning.gif'),
+                new article('Multiple Axes', 'axis'),
 
                 //Stacked Areas
-                new article('Stacked Area'),
-                new article('Stacked Area Percentage'),
+                new article('Stacked Area', 'stacked'),
+                new article('Stacked Area Percentage', 'stacked'),
 
                 //Bars
-                new article('Basic Column'),
-                new article('Basic Stacked'),
-                new article('Basic Row'),
-                new article('Negative Stacked'),
-                new article('Percentage Stacked'),
+                new article('Basic Column', 'basic chart bar'),
+                new article('Basic Stacked', 'basic chart bar stacked column'),
+                new article('Basic Row', 'basic chart bar stacked row'),
+                new article('Negative Stacked', 'basic chart bar stacked row'),
+                new article('Percentage Stacked', 'basic chart bar stacked row'),
 
                 //Pies
-                new article('Pie Chart'),
-                new article('Doughnut Chart'),
+                new article('Pie Chart', 'pie chart doughnut stacked'),
+                new article('Doughnut Chart', 'pie chart doughnut stacked'),
 
                 //Gauges
-                new article('180 Gauge'),
-                new article('360 Gauge'),
+                new article('180 Gauge', 'gauges'),
+                new article('360 Gauge', 'gauges'),
 
                 ////Financial
                 //new article('OHCL Series'),
@@ -58,9 +59,9 @@ app.factory('examplesV1Service', [
                 //new article('Bubble Series'),
 
                 //Advanced
-                new article('Log and Custom Scales'),
-                new article('Date Time'),
-                new article('IObservableChartPoint', 'fully responsive.gif')
+                new article('Log and Custom Scales', 'scale custom logarithm log'),
+                new article('Date Time', 'date time datetime'),
+                new article('IObservableChartPoint', 'observable update', 'fully responsive.gif')
             ];
         };
 
