@@ -28,55 +28,55 @@
 
 <body ng-cloak>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="templateController">
-        <div id="menu" class="container" ng-class="{ 'is-closed': !isVisible }">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="../Banner/Index" style="padding-top: 8px">
-                    <img alt="Controli" src="~/Content/Images/Logos/LiveChartsLogo30.png"/>
-                </a>
-                <button type="button" class="navbar-toggle collapsed" ng-click="toggleMenu()">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div>
-                <ul class="nav navbar-nav" ng-click="hideMenu()">
-                    <li><a href="#/documentation/introduction">Documentation</a></li>
-                    <li><a href="#/examples/intro?path=intro">Get Started</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="templateController">
+    <div id="menu" class="container" ng-class="{ 'is-closed': !isVisible }">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../Banner/Index" style="padding-top: 8px">
+                <img alt="Controli" src="~/Content/Images/Logos/LiveChartsLogo30.png"/>
+            </a>
+            <button type="button" class="navbar-toggle collapsed" ng-click="toggleMenu()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-    </nav>
-
-    <div ng-view class="view">
-
-    </div>
-
-    <div class="container-fluid">
-        <div class="row" style="margin-top: 100px;">
-            <div class="col-sm-offset-5 col-sm-2">
-                <a href="https://github.com/beto-rodriguez/Live-Charts">
-                    <img style="max-width: 100%;" src="~/Content/Images/GitHub-Logo.png" />
-                </a>
-            </div>
-        </div>
-        <div class="row" style="margin-top: 25px;">
-            <div class="col-xs-12 text-center">
-                <p class="text-muted">
-                    Live Charts is an open source project maintained by <a href="https://github.com/beto-rodriguez">Beto Rodríguez</a> and the github community, get involved and contrubute!
-                </p>
-                <p class="text-muted">
-                    Icons made by
-                    <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> and
-                    <a href="http://www.freepik.com" title="Freepik">Freepik</a>
-                    from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
-                    is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a><br />
-                </p>
-            </div>
+        <div>
+            <ul class="nav navbar-nav" ng-click="hideMenu()">
+                <li><a href="#/documentation/introduction">Documentation</a></li>
+                <li><a href="#/examples/intro?path=intro">Get Started</a></li>
+            </ul>
         </div>
     </div>
+</nav>
+
+<div ng-view class="view">
+
+</div>
+
+<div class="container-fluid">
+    <div class="row" style="margin-top: 100px;">
+        <div class="col-sm-offset-5 col-sm-2">
+            <a href="https://github.com/beto-rodriguez/Live-Charts">
+                <img style="max-width: 150px; -ms-opacity: .65; opacity: .65;" src="~/Content/Images/GitHub-Logo.png"/>
+            </a>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-xs-12 text-center">
+            <p class="text-muted">
+                Live Charts is an open source project maintained by <a href="https://github.com/beto-rodriguez">Beto Rodríguez</a> and the github community, get involved and contribute
+            </p>
+            <p class="text-muted">
+                Icons made by
+                <a href="http://www.flaticon.com/authors/madebyoliver" title="Madebyoliver">Madebyoliver</a> and
+                <a href="http://www.freepik.com" title="Freepik">Freepik</a>
+                from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>
+                is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a><br/>
+            </p>
+        </div>
+    </div>
+</div>
 
 @Scripts.Render("~/bundles/app")
 
