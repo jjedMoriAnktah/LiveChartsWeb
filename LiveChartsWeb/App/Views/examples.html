@@ -17,12 +17,12 @@
             <div class="btn-group btn-group-lg" role="group">
                 <a class="btn btn-default borderless"
                    ng-class="{selected: platform === 'wpf'}"
-                   ng-href="#/examples/{{version}}/wpf/{{currentSection}}">
+                   ng-href="/App/examples/{{version}}/wpf/{{currentSection}}">
                     Wpf
                 </a>
                 <a class="btn btn-default borderless"
                    ng-class="{selected: platform === 'wf'}"
-                   ng-href="#/examples/{{version}}/wf/{{currentSection}}">
+                   ng-href="/App/examples/{{version}}/wf/{{currentSection}}">
                     WinForms
                 </a>
             </div>
@@ -33,7 +33,7 @@
             <div class="row">
                 <div ng-repeat="section in sections"
                      ng-class="start ? 'col-lg-3 col-md-4 col-sm-6' : 'col-xs-12'">
-                    <a class="section" ng-href="#/examples/{{version}}/{{platform}}/{{section.name}}"
+                    <a class="section" ng-href="/App/examples/{{version}}/{{platform}}/{{section.name}}"
                        ng-click="hideMenu()"
                        ng-class="{ 'selected': currentSection === section.name }">
                         <div class="panel panel-default only-bot-border" ng-class="{'together': !start}">
@@ -58,7 +58,7 @@
         <div class="col-md-9" ng-hide="start">
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="panel panel-default card-shadow">
+                    <div class="panel card-shadow">
                         <div class="panel-body" style="min-height: 600px;">
                             <div id="article-view" dynamic="article">
 

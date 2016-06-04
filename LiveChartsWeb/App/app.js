@@ -3,8 +3,10 @@
 var app = angular.module("liveChartsApp", [
     'ngRoute', 'ngSanitize', 'ngAnimate'
 ]).config([
-    '$routeProvider',
-    function($routeProvider) {
+    '$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
+
+        $locationProvider.html5Mode(true);
 
         //Documentation
         $routeProvider.when('/documentation/:version?/:section', {

@@ -1,12 +1,15 @@
 ﻿<div class="container app-view">
-    <div class="row">
+
+    <h2>This section is under contruction, see the get started section, then you can find a big set of examples</h2>
+
+    <!--<div class="row">
         <div class="col-md-3">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="list-group card-shadow">
                         <a href="#" class="list-group-item"
                            ng-repeat="section in sections"
-                           ng-href="#/documentation/{{version}}/{{section.route}}#title"
+                           ng-href="/App/documentation/{{version}}/{{section.route}}#title"
                            ng-class="{active: section.route==current.route}">
                             <i class="fa text-muted" ng-class="section.icon"></i>
                             <span style="margin-left: 5px;">{{section.name}}</span>
@@ -30,7 +33,7 @@
                         </p>
 
                         <p>Every card you see is a property or a method, they have a short description and a simple example, click on any type to see more information, click on Go to source code to go deeper.</p>
-                        <img src="../../Content/Images/Docs/docs sample.png" style="opacity: .4" />
+                        <img src="../../Content/Images/Docs/docs sample.png" style="opacity: .4"/>
                     </div>
                     <div ng-show="properties != null">
                         <div class="row">
@@ -45,7 +48,7 @@
                                 <div class="row" style="margin-bottom: 10px;">
                                     <div class="col-md-7">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search" ng-model="criteria" />
+                                            <input type="text" class="form-control" placeholder="Search" ng-model="criteria"/>
                                             <span class="input-group-addon">
                                                 <i class="fa fa-search"></i>
                                             </span>
@@ -54,7 +57,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default card-shadow" ng-repeat="prop in properties | filter: criteria">
+                        <div class="panel card-shadow" ng-repeat="prop in properties | filter: criteria">
                             <div class="panel-body">
                                 <h4 style="margin-top: 0;" ng-bind-html="prop.name"></h4>
                                 <p ng-bind-html="prop.text"></p>
@@ -88,5 +91,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>
