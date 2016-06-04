@@ -1,0 +1,36 @@
+﻿<h3 class="doc-title">180° Gauge</h3>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Gauges/Images/gauge.jpg"/>
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows;
+
+namespace Wpf.Gauges
+{
+    public partial class Gauge180 : UserControl
+    {
+        public Gauge180()
+        {
+            InitializeComponent();
+
+            Value = 65;
+            Formatter = x => x + " Km/Hr";
+
+            DataContext = this;
+        }
+
+        public double Value { get; set; }
+        public Func&lt;double, string> Formatter { get; set; } 
+
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;lvc:Gauge From="0" To="100" Value="{Binding Value}" LabelFormatter="{Binding Formatter}" /></pre>

@@ -46,6 +46,17 @@ app.factory('examplesV1Service', [
                 new article('Pie Chart'),
                 new article('Doughnut Chart'),
 
+                //Gauges
+                new article('180 Gauge'),
+                new article('360 Gauge'),
+
+                ////Financial
+                //new article('OHCL Series'),
+
+                ////Scatter
+                //new article('Scatter Series'),
+                //new article('Bubble Series'),
+
                 //Advanced
                 new article('Log and Custom Scales'),
                 new article('Date Time'),

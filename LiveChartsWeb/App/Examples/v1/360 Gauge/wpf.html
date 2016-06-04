@@ -1,0 +1,27 @@
+﻿<h3 class="doc-title">Gauge 360 Mode</h3>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/360 Gauge/Images/gaugefull.jpg"/>
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System.Windows.Forms;
+
+namespace Winforms.Gauge._180
+{
+    public partial class Gauge180Example : Form
+    {
+        public Gauge180Example()
+        {
+            InitializeComponent();
+
+            gauge1.Uses360Mode = true;
+            gauge1.From = 0;
+            gauge1.To = 1;
+            gauge1.Value = .86;
+            gauge1.LabelFormatter = value => value.ToString("P");
+
+        }
+    }
+}</pre>
