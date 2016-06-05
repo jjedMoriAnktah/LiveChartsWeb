@@ -51,12 +51,12 @@ app.factory('examplesV1Service', [
                 new article('180 Gauge', 'gauges'),
                 new article('360 Gauge', 'gauges'),
 
-                ////Financial
-                //new article('OHCL Series'),
+                //Financial
+                new article('OHCL Series', 'financial candle stick chart open high low close'),
 
                 ////Scatter
-                //new article('Scatter Series'),
-                //new article('Bubble Series'),
+                //new article('Scatter Chart'),
+                new article('Bubble Chart'),
 
                 //Advanced
                 new article('Log and Custom Scales', 'scale custom logarithm log'),

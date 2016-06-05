@@ -182,6 +182,32 @@ var observableValues = new ChartValues&lt;LiveCharts.Defaults.ObservableValue>
   .Y((value, index) => value) //use the value as Y</pre>
 
 <p>
+    Here are some examples with multiple mappers, it is really intuitive according to your case.
+</p>
+
+<pre class="prettyprint">//X and Y
+For&lt;ObservablePoint>(Mappers.Xy&lt;ObservablePoint>() //in this case value is of type &lt;ObservablePoint>
+    .X(value => value.X) //use the X property as X
+    .Y(value => value.Y)); //use the Y property as Y
+//X, Y and Weight
+For&lt;BubblePoint>(Mappers.Bubble&lt;BubblePoint>()
+                .X(value => value.X)
+                .Y(value => value.Y)
+                .Weight(value => value.Weight));
+//Angle and Radius
+For&lt;PolarPoint>(Mappers.Polar&lt;PolarPoint>()
+    .Radius(value => value.Radius) //use the radius property as radius for the plotting
+    .Angle(value => value.Angle)); //use the angle property as angle for the plotting
+
+//Open, High, Low and Close
+For&lt;OhlcPoint>(Mappers.Financial&lt;OhlcPoint>()
+                .X((value, index) => index)
+                .Open(value => value.Open)
+                .High(value => value.High)
+                .Low(value => value.Low)
+                .Close(value => value.Close), SeriesOrientation.Horizontal);</pre>
+
+<p>
     You can set mappers in several ways
 </p>
 

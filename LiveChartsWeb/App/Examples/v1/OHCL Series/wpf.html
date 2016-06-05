@@ -1,0 +1,87 @@
+﻿<h3 class="doc-title">Open High Low Close Series</h3>
+
+<p>
+    Notice the <i class="text-muted">OhlcPoint</i> is already defined in the library, the class already implements <i class="text-muted">IObservableChartPoint</i>,
+    every time you change a property in any point, you will see how every point animates to it's new position,
+    you can alwas use <a href="/App/examples/v1/wpf/Types%20and%20Configuration">any type you need</a>.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/OHCL Series/Images/ohcl.jpg"/>
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Windows;
+using System.Windows.Media;
+using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
+
+namespace Wpf.CartesianChart
+{
+    public partial class FinancialExample : UserControl
+    {
+        
+        public FinancialExample()
+        {
+            InitializeComponent();
+
+            SeriesCollection = new SeriesCollection
+            {
+                new OhlcSeries
+                {
+                    Values = new ChartValues&lt;OhlcPoint>
+                    {
+                                    // O,  H,  L,  C
+                        new OhlcPoint(32, 35, 30, 32),
+                        new OhlcPoint(33, 38, 31, 37),
+                        new OhlcPoint(35, 42, 30, 40),
+                        new OhlcPoint(37, 40, 35, 38),
+                        new OhlcPoint(35, 38, 32, 33)
+                    }
+                },
+                // you can easily mix a financial series with any other cartesian series.
+                new LineSeries
+                {
+                    Values = new ChartValues&lt;double> {30, 32, 35, 30, 28},
+                    Fill = Brushes.Transparent
+                }
+            };
+
+            //based on https://github.com/beto-rodriguez/Live-Charts/issues/166 
+            //The Ohcl point X property is zero based indexed.
+            //this means the first point is 0, second 1, third 2.... and so on
+            //then you can use the Axis.Labels properties to map the chart X with a label in the array.
+            //for more info see (mapped labels section) 
+            //http://lvcharts.net/#/examples/v1/labels-wpf?path=WPF-Components-Labels
+            
+            Labels = new []
+            {
+                DateTime.Now.ToString("dd MMM"),
+                DateTime.Now.AddDays(1).ToString("dd MMM"),
+                DateTime.Now.AddDays(2).ToString("dd MMM"),
+                DateTime.Now.AddDays(3).ToString("dd MMM"),
+                DateTime.Now.AddDays(4).ToString("dd MMM"),
+            };
+
+            DataContext = this;
+        }
+
+        public SeriesCollection SeriesCollection { get; set; }
+        public string[] Labels { get; set; }
+
+    }
+}</pre>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
+  &lt;lvc:CartesianChart.AxisX>
+    &lt;lvc:Axis Labels="{Binding Labels}"/>
+  &lt;/lvc:CartesianChart.AxisX>
+&lt;/lvc:CartesianChart></pre>

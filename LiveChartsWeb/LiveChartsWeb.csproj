@@ -172,6 +172,9 @@
     <Content Include="App\Examples\v1\Basic Column\Images\basiccolumn.jpg" />
     <Content Include="App\Examples\v1\Basic Row\Images\basic row.jpg" />
     <Content Include="App\Examples\v1\Basic Stacked\Images\basic-stackedbar.jpg" />
+    <Content Include="App\Examples\v1\Bubble Chart\Images\bubbles.jpg" />
+    <Content Include="App\Examples\v1\Bubble Chart\wf.html" />
+    <Content Include="App\Examples\v1\Bubble Chart\wpf.html" />
     <Content Include="App\Examples\v1\Doughnut Chart\Images\doughnut.jpg" />
     <Content Include="App\Examples\v1\Doughnut Chart\wf.html" />
     <Content Include="App\Examples\v1\Doughnut Chart\wpf.html" />
@@ -183,11 +186,16 @@
     <Content Include="App\Examples\v1\MenuImages\basic column.jpg" />
     <Content Include="App\Examples\v1\MenuImages\basic row.jpg" />
     <Content Include="App\Examples\v1\MenuImages\Basic Stacked.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\bubble chart.jpg" />
     <Content Include="App\Examples\v1\MenuImages\doughnut chart.jpg" />
     <Content Include="App\Examples\v1\MenuImages\negative stacked.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\ohcl series.jpg" />
     <Content Include="App\Examples\v1\MenuImages\percentage stacked.jpg" />
     <Content Include="App\Examples\v1\MenuImages\pie chart.jpg" />
     <Content Include="App\Examples\v1\Negative Stacked\Images\negativestack.jpg" />
+    <Content Include="App\Examples\v1\OHCL Series\Images\ohcl.jpg" />
+    <Content Include="App\Examples\v1\OHCL Series\wf.html" />
+    <Content Include="App\Examples\v1\OHCL Series\wpf.html" />
     <Content Include="App\Examples\v1\Percentage Stacked\Images\stackedrow.jpg" />
     <Content Include="App\Examples\v1\Percentage Stacked\wf.html" />
     <Content Include="App\Examples\v1\Percentage Stacked\wpf.html" />
