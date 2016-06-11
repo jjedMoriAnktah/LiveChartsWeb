@@ -151,7 +151,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AppController.cs" />
-    <Compile Include="Controllers\BannerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,6 +175,9 @@
     <Content Include="App\Examples\v1\Bubble Chart\Images\bubbles.jpg" />
     <Content Include="App\Examples\v1\Bubble Chart\wf.html" />
     <Content Include="App\Examples\v1\Bubble Chart\wpf.html" />
+    <Content Include="App\Examples\v1\Constant Changes\Images\constant.gif" />
+    <Content Include="App\Examples\v1\Constant Changes\wf.html" />
+    <Content Include="App\Examples\v1\Constant Changes\wpf.html" />
     <Content Include="App\Examples\v1\Doughnut Chart\Images\doughnut.jpg" />
     <Content Include="App\Examples\v1\Doughnut Chart\wf.html" />
     <Content Include="App\Examples\v1\Doughnut Chart\wpf.html" />
@@ -188,6 +191,7 @@
     <Content Include="App\Examples\v1\MenuImages\Basic Stacked.jpg" />
     <Content Include="App\Examples\v1\MenuImages\bubble chart.jpg" />
     <Content Include="App\Examples\v1\MenuImages\doughnut chart.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\constant.gif" />
     <Content Include="App\Examples\v1\MenuImages\negative stacked.jpg" />
     <Content Include="App\Examples\v1\MenuImages\ohcl series.jpg" />
     <Content Include="App\Examples\v1\MenuImages\percentage stacked.jpg" />
@@ -358,7 +362,8 @@
     <Content Include="Scripts\prettify.js" />
     <None Include="Properties\PublishProfiles\lvcharts.net - Web Deploy.pubxml" />
     <Content Include="Scripts\skrollr.js" />
-    <Content Include="Views\Banner\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\PrivacyPolicy.cshtml" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
@@ -369,7 +374,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\App\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

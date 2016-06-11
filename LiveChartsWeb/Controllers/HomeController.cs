@@ -6,10 +6,15 @@ using System.Web.Mvc;
 
 namespace LiveChartsWeb.Controllers
 {
-    public class BannerController : Controller
+    public class HomeController : Controller
     {
         // GET: Banner
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult PrivacyPolicy()
         {
             return View();
         }

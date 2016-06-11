@@ -28,6 +28,7 @@ app.factory('examplesV1Service', [
                 //Lines
                 new article('Basic Line Chart', 'line basic chart'),
                 new article('Irregular Intervals', 'irregular line'),
+                new article('Constant Changes', 'line date time', 'constant.gif'),
                 new article('Missing Points', 'missing nan line'),
                 new article('Zooming and panning', 'line', 'zooming and panning.gif'),
                 new article('Multiple Axes', 'axis'),
