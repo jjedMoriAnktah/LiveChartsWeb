@@ -1,6 +1,10 @@
 ﻿<h3 class="doc-title">Constant Changes</h3>
 
 <p>
+    From your tool box, drag a new CartesianChart control
+</p>
+
+<p>
     In this example we are simulating a constant data read every 500ms, and using a custom type with a
     <i class="text-muted">DateTime</i> and a <i class="text-muted">double</i> properties, in this case
     we are disabling animations in the <i>X</i> axis to get a better visual effect.
@@ -40,9 +44,9 @@ namespace Winforms.Cartesian.ConstantChanges
             //DateTime and Value
             //We need to configure LiveCharts to handle MeasureModel class
             //The next code configures MEasureModel  globally, this means
-            //that livecharts learns to plot MeasureModel and will use this config every time
+            //that live charts learns to plot MeasureModel and will use this config every time
             //a ChartValues instance uses this type.
-            //this code ideally should only run once, when application starts is reccomended.
+            //this code ideally should only run once, when application starts is recommended.
             //you can configure series in many ways, learn more at http://lvcharts.net/App/examples/v1/wpf/Types%20and%20Configuration
 
             var mapper = Mappers.Xy&lt;MeasureModel>()

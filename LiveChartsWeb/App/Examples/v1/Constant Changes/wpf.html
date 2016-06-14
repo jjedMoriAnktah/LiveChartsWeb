@@ -51,9 +51,9 @@ namespace Wpf.CartesianChart.ConstantChanges
             //DateTime and Value
             //We need to configure LiveCharts to handle MeasureModel class
             //The next code configures MEasureModel  globally, this means
-            //that livecharts learns to plot MeasureModel and will use this config every time
+            //that live charts learns to plot MeasureModel and will use this config every time
             //a ChartValues instance uses this type.
-            //this code ideally should only run once, when application starts is reccomended.
+            //this code ideally should only run once, when application starts is recommended.
             //you can configure series in many ways, learn more at http://lvcharts.net/App/examples/v1/wpf/Types%20and%20Configuration
 
             var mapper = Mappers.Xy&lt;MeasureModel>()
@@ -123,7 +123,7 @@ namespace Wpf.CartesianChart.ConstantChanges
 
             SetAxisLimits(now); //lets update the last 9 seconds
 
-            //lets remove unecessary data...
+            //lets remove unnecessary data...
             if (Values.Count > 30) Values.RemoveAt(0);
         }
 

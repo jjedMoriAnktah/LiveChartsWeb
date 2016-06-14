@@ -4,7 +4,7 @@
     All the charts by default update and animate when you add/remove series or values, but what happens when you
     need to update the chart every time a value changes? in this case you must implement the
     <i class="text-muted">IObservableChartPoint</i>, this enables a value to notify the chart
-    to update everytime it changes.
+    to update every time it changes.
 </p>
 
 <p>
@@ -33,7 +33,7 @@
 <p>
     The previous code shows the important parts in the already configured
     <i class="text-muted">ObservableValue</i> class, this class is able to notify the chart to
-    update everytime the <i class="text-muted">Value</i> property changes.
+    update every time the <i class="text-muted">Value</i> property changes.
 </p>
 
 <p>
@@ -99,7 +99,7 @@ namespace Winforms.Cartesian.FullyResponsive
                 Values.Insert(2, new ObservableValue(r.Next(-20, 20)));
         }
 
-        //Removing Poiints
+        //Removing Points
         private void button3_Click(object sender, EventArgs e)
         {
             Values.RemoveAt(0);

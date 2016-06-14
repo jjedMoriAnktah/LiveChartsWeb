@@ -2,7 +2,7 @@
 
 <p>
     LiveCharts can plot any type, even user-defined types, without losing the beauty of a strongly typed language,
-    the concept is simple, you pass collection of generic values, then LiveCharts needs a function to pull X and Y (if it is a cartesian chart),
+    the concept is simple, you pass collection of generic values, then LiveCharts needs a function to pull X and Y (if it is a Cartesian chart),
     you don't really need to define each type to plot it,
     the library already knows how to plot, <i class="text-muted">double, int, decimal, short, float, long</i> and also
     some classes specially designed:
@@ -28,7 +28,7 @@
                     </a>
                 </td>
                 <td>
-                    2 properties, the <i>X</i> and <i>Y</i>, the class notifies the chart to update when a property changes, normally used in a cartesian chart when you need to specify both, X and Y values.
+                    2 properties, the <i>X</i> and <i>Y</i>, the class notifies the chart to update when a property changes, normally used in a Cartesian chart when you need to specify both, X and Y values.
                 </td>
             </tr>
             <tr>
@@ -77,7 +77,7 @@ var observableValues = new ChartValues&lt;LiveCharts.Defaults.ObservableValue>
 };</pre>
 
 <p>
-    Notice the chart <b>always</b> uses X and Y coordinates (if cartesian chart), but then
+    Notice the chart <b>always</b> uses X and Y coordinates (if Cartesian chart), but then
     how is it possible that the library is able to plot only <i>double</i> or <i>int</i> or <i>long</i> values?
 </p>
 
@@ -172,7 +172,7 @@ var observableValues = new ChartValues&lt;LiveCharts.Defaults.ObservableValue>
   .Y((value, index) => index) //use the index as Y</pre>
 
 <p>
-    X and Y is only necessary for cartesian charts, but how about if you need to configure a polar chart (radius and angle) or a financial series,
+    X and Y is only necessary for Cartesian charts, but how about if you need to configure a polar chart (radius and angle) or a financial series,
     because my memory is really bad I created a reminder, the <i>Mappers</i> class, this class returns a new instance of the correct mapper,
     it has many options, <i>Xy, Financial, Bubble and Polar</i>, the mappers above can be replaced with:
 </p>
@@ -221,7 +221,7 @@ For&lt;OhlcPoint>(Mappers.Financial&lt;OhlcPoint>()
 <pre class="prettyprint">
 LiveCharts.Charting.For&lt;int&gt;(Mappers.Xy&lt;int&gt;()
   .X((value, index) =&gt; index) 
-  .Y(value =&gt; value), SeriesOrientation.Horizontal); //when horizonal
+  .Y(value =&gt; value), SeriesOrientation.Horizontal); //when horizontal
 LiveCharts.Charting.For&lt;int&gt;(Mappers.Xy&lt;int&gt;()
   .X(value =&gt; value) //use the value (int) as X
   .Y((value, index) =&gt; index), SeriesOrientation.Vertical); //when vertical
@@ -229,7 +229,7 @@ LiveCharts.Charting.For&lt;int&gt;(Mappers.Xy&lt;int&gt;()
 
 <p>
     Another example with a custom class, the <i>ObservablePoint</i> class that only contains 2 properties, <i>X</i> and <i>Y</i>,
-    also notice this time I am using the same configuration for both, Horizontal and Vetical, without passing the second argument (Orientation).
+    also notice this time I am using the same configuration for both, Horizontal and Vertical, without passing the second argument (Orientation).
 </p>
 
 <pre class="prettyprint">
@@ -239,13 +239,13 @@ For&lt;ObservablePoint&gt;(Mappers.Xy&lt;ObservablePoint&gt;()
 </pre>
 
 <p>
-    If this is not clear enough you find a more detailed explaination at <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Charting.cs#L43">source code</a>
+    If this is not clear enough you find a more detailed explanation at <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Charting.cs#L43">source code</a>
 </p>
 
 <h4>2. At Series Collection Level</h4>
 
 <p>
-    When you define a Series collection instance you can also pass a default confguration, this configuration overrides the global configuration
+    When you define a Series collection instance you can also pass a default configuration, this configuration overrides the global configuration
     and will be set only if Series configuration is null.
 </p>
 
