@@ -188,9 +188,9 @@
     <Content Include="App\Examples\v1\180 Gauge\Images\gauge.jpg" />
     <Content Include="App\Examples\v1\180 Gauge\wf.html" />
     <Content Include="App\Examples\v1\180 Gauge\wpf.html" />
-    <Content Include="App\Examples\v1\DynamicVisibility\Images\dynmic.gif" />
-    <Content Include="App\Examples\v1\DynamicVisibility\wf.html" />
-    <Content Include="App\Examples\v1\DynamicVisibility\wpf.html" />
+    <Content Include="App\Examples\v1\Dynamic Visibility\Images\dynmic.gif" />
+    <Content Include="App\Examples\v1\Dynamic Visibility\wf.html" />
+    <Content Include="App\Examples\v1\Dynamic Visibility\wpf.html" />
     <Content Include="App\Examples\v1\Heat Series\Images\heatFull.jpg" />
     <Content Include="App\Examples\v1\Heat Series\Images\heatgay.jpg" />
     <Content Include="App\Examples\v1\Heat Series\wf.html" />

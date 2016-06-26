@@ -1,42 +1,45 @@
 ﻿<h3 class="doc-title">Dynamic Visibility</h3>
 
-<div class="article-message">
-    <b>Note</b> This example only works with 0.7.4, an unpublished version
-</div>
-
 <p>
-    Changing any series visibility will update the chart automatically, this example illustrates it with
-    column series, but it works the same with all series, notice invisible series are not evaluated at all,
-    this means that making a series invisible should result in a lower computing time.
-</p>
-
-<p>
-    From your tool box, drag a new CartesianChart control, and three check boxes, to toggle every series visibility.
+    Use the <i class="text-muted">Visibility</i> property to hide/show any series, notice invisible
+    series are not evaluated, so hiding them will reduce computing time.
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/v1/Dynamic Visibility/Images/dynamic.gif" />
+    <img src="/App/Examples/v1/Dynamic Visibility/Images/dynmic.gif" />
 </div>
+
+<p>
+    From your tool box, drag a new Cartesian control and 3 check boxes
+</p>
 
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.Windows;
+<pre class="prettyprint">using System.Windows;
 using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.Wpf;
 
 namespace Winforms.Cartesian.DynamicVisibility
 {
-    public partial class DynamicVisiblityExample : Form
+    public partial class DynamicVisibiltyExample : Form
     {
-        public DynamicVisiblityExample()
+        public DynamicVisibiltyExample()
         {
             InitializeComponent();
 
-            MariaSeries = new ColumnSeries {Title = "Maria", Values = new ChartValues&lt;double> {2, 4, 1, 6}};
-            CharlesSeries = new ColumnSeries {Title = "Charles", Values = new ChartValues&lt;double> {5, 3, 7, 8}};
-            JohnSeries = new ColumnSeries {Title = "John", Values = new ChartValues&lt;double> {8, 3, 1, 7}};
+            MariaSeries = new LineSeries
+            {
+                Values = new ChartValues&lt;double> {4, 6, 2, 7, 6}
+            };
+            CharlesSeries = new LineSeries
+            {
+                Values = new ChartValues&lt;double> {6, 2, 8, 3, 5}
+            };
+            JohnSeries = new LineSeries
+            {
+                Values = new ChartValues&lt;double> {8, 2, 4, 7, 2}
+            };
 
             cartesianChart1.Series = new SeriesCollection
             {
@@ -46,28 +49,29 @@ namespace Winforms.Cartesian.DynamicVisibility
             };
         }
 
-        public ColumnSeries MariaSeries { get; set; }
-        public ColumnSeries CharlesSeries { get; set; }
-        public ColumnSeries JohnSeries { get; set; }
+        public LineSeries MariaSeries { get; set; }
+        public LineSeries CharlesSeries { get; set; }
+        public LineSeries JohnSeries { get; set; }
 
-        private void MariaCheckedChanged(object sender, EventArgs e)
+        //When Check Changes...
+        private void ToggleMariaSeries(object sender, System.EventArgs e)
         {
             MariaSeries.Visibility = MariaSeries.Visibility == Visibility.Visible
-                ? Visibility.Collapsed
+                ? Visibility.Hidden
                 : Visibility.Visible;
         }
 
-        private void JohnCheckedChanged(object sender, EventArgs e)
-        {
-            JohnSeries.Visibility = JohnSeries.Visibility == Visibility.Visible
-                ? Visibility.Collapsed
-                : Visibility.Visible;
-        }
-
-        private void CharlesCheckedChanged(object sender, EventArgs e)
+        private void ToggleCharlesSeries(object sender, System.EventArgs e)
         {
             CharlesSeries.Visibility = CharlesSeries.Visibility == Visibility.Visible
-                ? Visibility.Collapsed
+                ? Visibility.Hidden
+                : Visibility.Visible;
+        }
+
+        private void ToggleJohnSeries(object sender, System.EventArgs e)
+        {
+            JohnSeries.Visibility = JohnSeries.Visibility == Visibility.Visible
+                ? Visibility.Hidden
                 : Visibility.Visible;
         }
     }
