@@ -3,7 +3,7 @@
 A Label is any string representation of any value in the chart, they are normally placed over the axis length and in tool tips.
 
 <div class="text-center">
-    <img src="/App/Examples/v1/About Labels/Images/labels.png"/>
+    <img src="/App/Examples/v1/About Labels/Images/labels.jpg"/>
 </div>
 
 <h4>Code Behind</h4>
@@ -60,19 +60,19 @@ namespace Wpf.CartesianChart.Labels
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" >
-  &lt;lvc:CartesianChart.AxisX>
-    &lt;lvc:Axis LabelsRotateTransform="{Binding RotateTransform}" Labels="{Binding Labels}">
-      &lt;lvc:Axis.Separator >
-        &lt;lvc:Separator IsEnabled="False" Step="1">&gt;/lvc:Separator>
-      &lt;/lvc:Axis.Separator>
-    &lt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisX>
-  &lt;lvc:CartesianChart.AxisY>
-    &lt;lvc:Axis Title="Sold Items" LabelFormatter="{Binding Formatter}">&gt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisY>
-&lt;/lvc:CartesianChart>
-</pre>
+<pre class="prettyprint">&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" 
+            DataClick="Chart_OnDataClick">
+    &lt;lvc:CartesianChart.AxisX>
+        &lt;lvc:Axis LabelsRotation="20" Labels="{Binding Labels}">
+            &lt;lvc:Axis.Separator >
+                &lt;lvc:Separator Step="1">&lt;/lvc:Separator>
+            &lt;/lvc:Axis.Separator>
+        &lt;/lvc:Axis>
+    &lt;/lvc:CartesianChart.AxisX>
+        &lt;lvc:CartesianChart.AxisY>
+            &lt;lvc:Axis Title="Sold Items" LabelFormatter="{Binding Formatter}" Position="RightTop">&lt;/lvc:Axis>
+        &lt;/lvc:CartesianChart.AxisY>
+    &lt;/lvc:CartesianChart></pre>
 
 <p>
     There are 2 types of labels in LiveCharts, Formatted and Mapped labels.
@@ -138,16 +138,14 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
 <h4>Rotating labels</h4>
 
 <p>
-    Some times your labels are long, and you need to optimize the space, in this case you can rotate any axis labels
+    Some times your labels are long, and you need to optimize the space, in this case you can rotate any axis labels.
+    You can use any angle, even negatives.
 </p>
 
-<pre class="prettyprint">//Code Behind
-RotateTransform = new RotateTransform(13); //13 degrees, or any value you need
-
-//XAML
+<pre class="prettyprint">
 &lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}"&gt;
   &lt;lvc:CartesianChart.AxisX&gt;
-    &lt;lvc:Axis LabelsRotateTransform="{Binding RotateTransform}" Labels="{Binding Labels}"&gt;
+    &lt;lvc:Axis LabelsRotation="13" Labels="{Binding Labels}"&gt;
       &lt;lvc:Axis.Separator&gt;
         &lt;lvc:Separator IsEnabled="False" Step="1"&gt;
           &lt;/lvc:Separator&gt;
@@ -157,7 +155,3 @@ RotateTransform = new RotateTransform(13); //13 degrees, or any value you need
   &lt;lvc:CartesianChart.AxisY&gt;
 &lt;/lvc:CartesianChart&gt;
 </pre>
-
-<p>
-    Find this full example <a href="https://github.com/beto-rodriguez/Live-Charts/tree/master/Examples/Wpf/CartesianChart/Bar">here</a>
-</p>

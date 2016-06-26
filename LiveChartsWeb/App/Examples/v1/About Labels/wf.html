@@ -3,7 +3,7 @@
 A Label is any string representation of any value in the chart, they are normally placed over the axis length and in tool tips.
 
 <div class="text-center">
-    <img src="/App/Examples/v1/About Labels/Images/labels.png" />
+    <img src="/App/Examples/v1/About Labels/Images/labels.jpg" />
 </div>
 
 <h4>Code Behind</h4>
@@ -41,19 +41,19 @@ namespace Winforms.Cartesian.Labels
                     "Anibal Brothers",
                     "Anderson Dillman"
                 },
-                Separator = new Separator // force the separator step to 1, so it alwasy display all labels
+                Separator = new Separator // force the separator step to 1, so it always display all labels
                 {
                     Step = 1,
                     IsEnabled = false //disable it to make it invisible.
                 },
-                //ToDo Add the rotate tranform...
-                //LabelsRotateTransform = new System.Windows.Media.RotateTransform(13)
+                LabelsRotation = 20
             });
 
             cartesianChart1.AxisY.Add(new Axis
             {
                 LabelFormatter = value => value + ".00K items",
-                Separator = new Separator()
+                Separator = new Separator(),
+                Position = AxisPosition.RightTop
             });
         }
     }
@@ -132,7 +132,8 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
 <h4>Rotating labels</h4>
 
 <p>
-    Some times your labels are long, and you need to optimize the space, in this case you can rotate any axis labels
+    Some times your labels are long, and you need to optimize the space, in this case you can rotate any axis labels.
+    You can use any angle, even negatives.
 </p>
 
 <pre class="prettyprint">cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
@@ -147,11 +148,10 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
       "Anibal Brothers",
       "Anderson Dillman"
    },
-   //13 or any angle you need in deegres.
-   LabelsRotateTransform = new System.Windows.Media.RotateTransform(13),
-   Separator = new Separator // force the separator step to 1, so it alwasy display all labels
+   LabelsRotation = 13,
+   Separator = new Separator // force the separator step to 1, so it always display all labels
    {
-     Step = 1, // if you dont force the separator, it will be calculated automatically, and could skip some labels
+     Step = 1, // if you don't force the separator, it will be calculated automatically, and could skip some labels
      IsEnabled = false //disable it to make it invisible.
    }
 });</pre>

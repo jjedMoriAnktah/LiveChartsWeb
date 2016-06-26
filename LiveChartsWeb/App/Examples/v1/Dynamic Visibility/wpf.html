@@ -1,0 +1,119 @@
+﻿<h3 class="doc-title">Dynamic Visibility</h3>
+
+<div class="article-message">
+    <b>Note</b> This example only works with 0.7.4, an unpublished version
+</div>
+
+<p>
+    Changing any series visibility will update the chart automatically, this example illustrates it with
+    column series, but it works the same with all series, notice invisible series are not evaluated at all,
+    this means that making a series invisible should result in a lower computing time.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Dynamic Visibility/Images/dynamic.gif"/>
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">using System.ComponentModel;
+using System.Windows.Controls;
+using Wpf.Annotations;
+
+namespace Wpf.CartesianChart.DynamicVisibility
+{
+
+    public partial class DynamicVisibilityExample : UserControl, INotifyPropertyChanged
+    {
+        private bool _mariaSeriesVisibility;
+        private bool _charlesSeriesVisibility;
+        private bool _johnSeriesVisibility;
+
+        public DynamicVisibilityExample()
+        {
+            InitializeComponent();
+
+            MariaSeriesVisibility = true;
+            CharlesSeriesVisibility = true;
+            JohnSeriesVisibility = true;
+
+            DataContext = this;
+        }
+
+        public bool MariaSeriesVisibility
+        {
+            get { return _mariaSeriesVisibility; }
+            set
+            {
+                _mariaSeriesVisibility = value;
+                OnPropertyChanged("MariaSeriesVisibility");
+            }
+        }
+
+        public bool CharlesSeriesVisibility
+        {
+            get { return _charlesSeriesVisibility; }
+            set
+            {
+                _charlesSeriesVisibility = value;
+                OnPropertyChanged("CharlesSeriesVisibility");
+            }
+        }
+
+        public bool JohnSeriesVisibility
+        {
+            get { return _johnSeriesVisibility; }
+            set
+            {
+                _johnSeriesVisibility = value;
+                OnPropertyChanged("JohnSeriesVisibility");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged(string propertyName = null)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+}</pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint">&lt;Grid>
+  &lt;Grid.RowDefinitions>
+    &lt;RowDefinition Height="Auto">&lt;/RowDefinition>
+    &lt;RowDefinition Height="*">&lt;/RowDefinition>
+  &lt;/Grid.RowDefinitions>
+  &lt;StackPanel Orientation="Horizontal">
+    &lt;CheckBox IsChecked="{Binding MariaSeriesVisibility}">
+      Maria Series
+    &lt;/CheckBox>
+    &lt;CheckBox IsChecked="{Binding CharlesSeriesVisibility}">
+      Charles Series
+    &lt;/CheckBox>
+    &lt;CheckBox IsChecked="{Binding JohnSeriesVisibility}">
+      John Series
+    &lt;/CheckBox>
+  &lt;/StackPanel>
+  &lt;lvc:CartesianChart Grid.Row="1" Hoverable="False">
+    &lt;lvc:CartesianChart.Series>
+      &lt;lvc:ColumnSeries Title="Maria" Values="4,7,2,9,3" 
+                           Visibility="{Binding MariaSeriesVisibility, Converter={StaticResource bvc}}" 
+                           MaxWidth="1000" ColumnPadding="0"/>
+      &lt;lvc:ColumnSeries Title="Charles" Values="6,2,6,3,8" 
+                           Visibility="{Binding CharlesSeriesVisibility, Converter={StaticResource bvc}}" 
+                           MaxWidth="1000" ColumnPadding="0"/>
+      &lt;lvc:ColumnSeries Title="John" Values="7,2,8,3,9" Visibility="{Binding JohnSeriesVisibility, Converter={StaticResource bvc}}" MaxWidth="1000" ColumnPadding="0"/>
+    &lt;/lvc:CartesianChart.Series>
+  &lt;lvc:CartesianChart.AxisX>
+      &lt;lvc:Axis Labels="January, February, March, April, May">
+        &lt;lvc:Axis.Separator>
+          &lt;lvc:Separator Step="1">&lt;/lvc:Separator>
+        &lt;/lvc:Axis.Separator>
+      &lt;/lvc:Axis>
+    &lt;/lvc:CartesianChart.AxisX>
+  &lt;/lvc:CartesianChart>
+&lt;/Grid></pre>

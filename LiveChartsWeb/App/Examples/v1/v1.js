@@ -30,8 +30,9 @@ app.factory('examplesV1Service', [
                 new article('Irregular Intervals', 'irregular line'),
                 new article('Constant Changes', 'line date time', 'constant.gif'),
                 new article('Missing Points', 'missing nan line'),
-                new article('Zooming and panning', 'line', 'zooming and panning.gif'),
+                new article('Zooming and panning', 'line zoom pan', 'zooming and panning.gif'),
                 new article('Multiple Axes', 'axis'),
+                new article('Data Pagination', 'line zooming panning zoom pan', 'customzp.gif'),
 
                 //Stacked Areas
                 new article('Stacked Area', 'stacked'),
@@ -43,6 +44,9 @@ app.factory('examplesV1Service', [
                 new article('Basic Row', 'basic chart bar stacked row'),
                 new article('Negative Stacked', 'basic chart bar stacked row'),
                 new article('Percentage Stacked', 'basic chart bar stacked row'),
+                new article('Dynamic Visibility', 'bar column', 'dynvis.gif'),
+
+                new article('Heat Series','heat calendar date'),
 
                 //Pies
                 new article('Pie Chart', 'pie chart doughnut stacked'),

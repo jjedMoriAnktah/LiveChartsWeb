@@ -33,7 +33,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="templateController">
     <div id="menu" class="container" ng-class="{ 'is-closed': !isVisible }">
         <div class="navbar-header">
-            <a class="navbar-brand" href="@Url.Action("Index","Home")" style="padding-top: 8px">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")" style="padding-top: 8px">
                 <img alt="Controli" src="~/Content/Images/Logos/LiveChartsLogo30.png"/>
             </a>
             <button type="button" class="navbar-toggle collapsed" ng-click="toggleMenu()">
@@ -52,18 +52,15 @@
     </div>
 </nav>
 
+<a href="https://github.com/beto-rodriguez/Live-Charts" class="hidden-xs">
+    <img style="position: fixed; top: 0; right: 0; border: 0; z-index: 10000" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
+</a>
+
 <div ng-view class="view">
 
 </div>
 
 <div class="container-fluid">
-    <div class="row" style="margin-top: 100px;">
-        <div class="col-sm-offset-5 col-sm-2 text-center">
-            <a href="https://github.com/beto-rodriguez/Live-Charts">
-                <img style="max-width: 150px; -ms-opacity: .65; opacity: .65;" src="~/Content/Images/GitHub-Logo.png"/>
-            </a>
-        </div>
-    </div>
     <div class="row" style="margin-top: 25px;">
         <div class="col-xs-12 text-center">
             <p class="text-muted">

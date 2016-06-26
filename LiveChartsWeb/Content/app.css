@@ -111,6 +111,12 @@
     margin-top: 10px;
 }
 
+.doc-alert {
+    padding: 20px;
+    margin: -16px 10px;
+    background-color: #2196f3;
+}
+
 a.active i.text-muted {
     color: white;
 }
