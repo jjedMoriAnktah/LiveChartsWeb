@@ -1,0 +1,24 @@
+{
+  "Name": "AxisOrientation",
+  "FullName": "LiveCharts.AxisOrientation",
+  "Summary": "Cartesian Axis orientation",
+  "Inheritance": [],
+  "Constructors": [],
+  "Properties": [],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": [
+    {
+      "Name": "None",
+      "Summary": "Unknown orientation"
+    },
+    {
+      "Name": "X",
+      "Summary": "Horizontal (X)"
+    },
+    {
+      "Name": "Y",
+      "Summary": "Vertical (Y)"
+    }
+  ]
+}

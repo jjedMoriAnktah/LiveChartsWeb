@@ -1,0 +1,70 @@
+{
+  "Name": "HeatPoint",
+  "FullName": "LiveCharts.Defaults.HeatPoint",
+  "Summary": "An already configured weighted chart point, this class notifies the chart to update every time a property changes",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    },
+    {
+      "Name": "BubblePoint",
+      "Type": {
+        "Name": "LiveCharts.Defaults.BubblePoint",
+        "Alias": "LiveCharts.Defaults.BubblePoint",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [
+    {
+      "Summary": "Initializes a new instance of HeatPoint class",
+      "Parameters": []
+    },
+    {
+      "Summary": "_initializes a new instance of HeatPoint class, giving x, y and weight",
+      "Parameters": [
+        {
+          "Name": "x",
+          "Summary": "",
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "y",
+          "Summary": "",
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "weight",
+          "Summary": "",
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ]
+    }
+  ],
+  "Properties": [],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}

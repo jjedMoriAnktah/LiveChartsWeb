@@ -1,0 +1,32 @@
+{
+  "Name": "LegendLocation",
+  "FullName": "LiveCharts.LegendLocation",
+  "Summary": "Charts legend locations",
+  "Inheritance": [],
+  "Constructors": [],
+  "Properties": [],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": [
+    {
+      "Name": "None",
+      "Summary": "Disables legend"
+    },
+    {
+      "Name": "Top",
+      "Summary": "PLaces legend at top"
+    },
+    {
+      "Name": "Bottom",
+      "Summary": "Places legend at bottom"
+    },
+    {
+      "Name": "Left",
+      "Summary": "Places legend at left"
+    },
+    {
+      "Name": "Right",
+      "Summary": "Places legend at right"
+    }
+  ]
+}

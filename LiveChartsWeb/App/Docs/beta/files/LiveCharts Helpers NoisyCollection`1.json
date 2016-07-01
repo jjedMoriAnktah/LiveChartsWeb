@@ -1,0 +1,320 @@
+{
+  "Name": "NoisyCollection`1",
+  "FullName": "LiveCharts.Helpers.NoisyCollection`1",
+  "Summary": "A collection that notifies every time a value is added or removed",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [
+    {
+      "Summary": "Initializes a new instance of NoisyCollection class",
+      "Parameters": []
+    },
+    {
+      "Summary": "Initializes a new instance of NoisiCollection class with a given capacity",
+      "Parameters": [
+        {
+          "Name": "capacity",
+          "Summary": "given capacity",
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ]
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "Count",
+      "Summary": "Gets the number of items in the array",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "IsSynchronized",
+      "Summary": "Gets whether the collection is synchronized",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "SyncRoot",
+      "Summary": "Gets the collections's sync root",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "IsFixedSize",
+      "Summary": "Gets whether the collection is fixed",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "TypeParams": [
+    {
+      "Name": "T",
+      "Summary": ""
+    }
+  ],
+  "Methods": [
+    {
+      "Name": "GetEnumerator",
+      "Summary": "Enumerates the collection",
+      "Parameters": [],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "collection enumeration",
+        "Type": {
+          "Name": "System.Collections.Generic.IEnumerator`1",
+          "Alias": "System.Collections.Generic.IEnumerator`1",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "Add",
+      "Summary": "Adds an object to the collection, and notifies the change",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Adds an object to the collection, and notifies the change",
+          "Type": {
+            "Name": "System.Object",
+            "Alias": "Object",
+            "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "number of items in the collection",
+        "Type": {
+          "Name": "System.Int32",
+          "Alias": "System.Int32",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "Insert",
+      "Summary": "Insert an item in a specific index, then notifies the change",
+      "Parameters": [
+        {
+          "Name": "index",
+          "Summary": "Insert an item in a specific index, then notifies the change",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "value",
+          "Summary": "Insert an item in a specific index, then notifies the change",
+          "Type": {
+            "Name": "System.Object",
+            "Alias": "Object",
+            "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "Remove",
+      "Summary": "Removes an item from a collection, then notifies the change",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Removes an item from a collection, then notifies the change",
+          "Type": {
+            "Name": "System.Object",
+            "Alias": "Object",
+            "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "RemoveAt",
+      "Summary": "Removes an item at a specific index, then notifies the change",
+      "Parameters": [
+        {
+          "Name": "index",
+          "Summary": "Removes an item at a specific index, then notifies the change",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "Clear",
+      "Summary": "Removes all the items from the collection, then notifies the change",
+      "Parameters": [],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "Contains",
+      "Summary": "Evaluates whether an item is in this collection",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Evaluates whether an item is in this collection",
+          "Type": {
+            "Name": "System.Object",
+            "Alias": "Object",
+            "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "evaluation",
+        "Type": {
+          "Name": "System.Boolean",
+          "Alias": "System.Boolean",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "CopyTo",
+      "Summary": "Copies the collection to another array",
+      "Parameters": [
+        {
+          "Name": "array",
+          "Summary": "Copies the collection to another array",
+          "Type": {
+            "Name": "System.Array",
+            "Alias": "System.Array",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "index",
+          "Summary": "Copies the collection to another array",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "IndexOf",
+      "Summary": "Returns the index of an item in the collection",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Returns the index of an item in the collection",
+          "Type": {
+            "Name": "System.Object",
+            "Alias": "Object",
+            "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Int32",
+          "Alias": "System.Int32",
+          "Href": null,
+          "Source": null
+        }
+      }
+    }
+  ],
+  "Enumerates": []
+}

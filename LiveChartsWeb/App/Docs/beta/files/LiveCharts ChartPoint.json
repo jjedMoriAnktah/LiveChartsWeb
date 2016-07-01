@@ -1,0 +1,212 @@
+{
+  "Name": "ChartPoint",
+  "FullName": "LiveCharts.ChartPoint",
+  "Summary": "Defines a point in the chart",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [],
+  "Properties": [
+    {
+      "Name": "X",
+      "Summary": "Gets the X point value",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Y",
+      "Summary": "Gets the Y point value",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Weight",
+      "Summary": "Gets the Weight of the point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "From",
+      "Summary": "Gets where the stacked value started from",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "To",
+      "Summary": "Gets where the stacked value finishes",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Sum",
+      "Summary": "Get the total sum of the stacked elements",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Participation",
+      "Summary": "Get the participation of the point in the stacked elements",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "StackedParticipation",
+      "Summary": "gets the stacked participation of a point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Open",
+      "Summary": "Gets the Open value of the point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "High",
+      "Summary": "Gets the High value of the point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Low",
+      "Summary": "Gets the Low value of the point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Close",
+      "Summary": "Gets the Close value of the point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Radius",
+      "Summary": "Gets the Radius of a point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Angle",
+      "Summary": "Gets the angle of a point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "ChartLocation",
+      "Summary": "Gets the coordinate where the value is placed at chart",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Key",
+      "Summary": "Gets the index of this point in the chart",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Instance",
+      "Summary": "Gets the object where the chart pulled the point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "View",
+      "Summary": "Gets or sets the view of this chart point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "SeriesView",
+      "Summary": "Gets the series where the point belongs to",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}

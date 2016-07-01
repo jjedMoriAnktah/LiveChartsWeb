@@ -1,0 +1,72 @@
+{
+  "Name": "PolarPoint",
+  "FullName": "LiveCharts.Defaults.PolarPoint",
+  "Summary": "An already configured chart point, this class notifies the chart to update every time a property changes",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [
+    {
+      "Summary": "Initializes a new instance of PolarPoint class",
+      "Parameters": []
+    },
+    {
+      "Summary": "Initializes a new instance of PolarPoint class, giving angle and radius",
+      "Parameters": [
+        {
+          "Name": "radius",
+          "Summary": "",
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "angle",
+          "Summary": "",
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ]
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "Radius",
+      "Summary": "The radius of the point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Angle",
+      "Summary": "The angle of the point",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}

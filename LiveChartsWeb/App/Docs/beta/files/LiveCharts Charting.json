@@ -1,0 +1,21 @@
+{
+  "Name": "Charting",
+  "FullName": "LiveCharts.Charting",
+  "Summary": "Global LiveCharts configuration",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [],
+  "Properties": [],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}

@@ -1,0 +1,552 @@
+{
+  "Name": "ChartFunctions",
+  "FullName": "LiveCharts.ChartFunctions",
+  "Summary": "Contains useful methods to apply to a chart",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [],
+  "Properties": [],
+  "TypeParams": [],
+  "Methods": [
+    {
+      "Name": "ToPlotArea",
+      "Summary": "Converts from chart values to chart control size.",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Converts from chart values to chart control size.",
+          "Type": {
+            "Name": "System.Double",
+            "Alias": "System.Double",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "source",
+          "Summary": "Converts from chart values to chart control size.",
+          "Type": {
+            "Name": "LiveCharts.AxisOrientation",
+            "Alias": "LiveCharts.AxisOrientation",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Converts from chart values to chart control size.",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axis",
+          "Summary": "Converts from chart values to chart control size.",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Double",
+          "Alias": "System.Double",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "ToPlotArea",
+      "Summary": "Converts from chart values to chart control size.",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Converts from chart values to chart control size.",
+          "Type": {
+            "Name": "System.Double",
+            "Alias": "System.Double",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "source",
+          "Summary": "Converts from chart values to chart control size.",
+          "Type": {
+            "Name": "LiveCharts.AxisOrientation",
+            "Alias": "LiveCharts.AxisOrientation",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Converts from chart values to chart control size.",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axis",
+          "Summary": "Converts from chart values to chart control size.",
+          "Type": {
+            "Name": "LiveCharts.AxisCore",
+            "Alias": "LiveCharts.AxisCore",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Double",
+          "Alias": "System.Double",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "FromPlotArea",
+      "Summary": "Converts from chart control size to chart values.",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Converts from chart control size to chart values.",
+          "Type": {
+            "Name": "System.Double",
+            "Alias": "System.Double",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "source",
+          "Summary": "Converts from chart control size to chart values.",
+          "Type": {
+            "Name": "LiveCharts.AxisOrientation",
+            "Alias": "LiveCharts.AxisOrientation",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Converts from chart control size to chart values.",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axis",
+          "Summary": "Converts from chart control size to chart values.",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Double",
+          "Alias": "System.Double",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "ToDrawMargin",
+      "Summary": "Converts from chart values to chart draw margin size.",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "System.Double",
+            "Alias": "System.Double",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "source",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "LiveCharts.AxisOrientation",
+            "Alias": "LiveCharts.AxisOrientation",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axis",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Double",
+          "Alias": "System.Double",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "ToDrawMargin",
+      "Summary": "Converts from chart values to chart draw margin size.",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "System.Double",
+            "Alias": "System.Double",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "source",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "LiveCharts.AxisOrientation",
+            "Alias": "LiveCharts.AxisOrientation",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axis",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "LiveCharts.AxisCore",
+            "Alias": "LiveCharts.AxisCore",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Double",
+          "Alias": "System.Double",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "ToDrawMargin",
+      "Summary": "Converts from chart values to chart draw margin size.",
+      "Parameters": [
+        {
+          "Name": "point",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "LiveCharts.ChartPoint",
+            "Alias": "LiveCharts.ChartPoint",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axisXIndex",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axisYIndex",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Converts from chart values to chart draw margin size.",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "LiveCharts.Dtos.CorePoint",
+          "Alias": "LiveCharts.Dtos.CorePoint",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "FromDrawMargin",
+      "Summary": "Converts from draw margin size to chart values.",
+      "Parameters": [
+        {
+          "Name": "value",
+          "Summary": "Converts from draw margin size to chart values.",
+          "Type": {
+            "Name": "System.Double",
+            "Alias": "System.Double",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "source",
+          "Summary": "Converts from draw margin size to chart values.",
+          "Type": {
+            "Name": "LiveCharts.AxisOrientation",
+            "Alias": "LiveCharts.AxisOrientation",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Converts from draw margin size to chart values.",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axis",
+          "Summary": "Converts from draw margin size to chart values.",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Double",
+          "Alias": "System.Double",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "GetUnitWidth",
+      "Summary": "Gets the width of a unit in the chart",
+      "Parameters": [
+        {
+          "Name": "source",
+          "Summary": "Gets the width of a unit in the chart",
+          "Type": {
+            "Name": "LiveCharts.AxisOrientation",
+            "Alias": "LiveCharts.AxisOrientation",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Gets the width of a unit in the chart",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axis",
+          "Summary": "Gets the width of a unit in the chart",
+          "Type": {
+            "Name": "System.Int32",
+            "Alias": "System.Int32",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Double",
+          "Alias": "System.Double",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "GetUnitWidth",
+      "Summary": "Gets the width of a unit in the chart",
+      "Parameters": [
+        {
+          "Name": "source",
+          "Summary": "Gets the width of a unit in the chart",
+          "Type": {
+            "Name": "LiveCharts.AxisOrientation",
+            "Alias": "LiveCharts.AxisOrientation",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Gets the width of a unit in the chart",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "axis",
+          "Summary": "Gets the width of a unit in the chart",
+          "Type": {
+            "Name": "LiveCharts.AxisCore",
+            "Alias": "LiveCharts.AxisCore",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "System.Double",
+          "Alias": "System.Double",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "GetTooltipData",
+      "Summary": "Returns data in the chart according to:",
+      "Parameters": [
+        {
+          "Name": "senderPoint",
+          "Summary": "Returns data in the chart according to:",
+          "Type": {
+            "Name": "LiveCharts.ChartPoint",
+            "Alias": "LiveCharts.ChartPoint",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "chart",
+          "Summary": "Returns data in the chart according to:",
+          "Type": {
+            "Name": "LiveCharts.Charts.ChartCore",
+            "Alias": "LiveCharts.Charts.ChartCore",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "selectionMode",
+          "Summary": "Returns data in the chart according to:",
+          "Type": {
+            "Name": "LiveCharts.TooltipSelectionMode",
+            "Alias": "LiveCharts.TooltipSelectionMode",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": "",
+        "Type": {
+          "Name": "LiveCharts.Dtos.TooltipDataViewModel",
+          "Alias": "LiveCharts.Dtos.TooltipDataViewModel",
+          "Href": null,
+          "Source": null
+        }
+      }
+    }
+  ],
+  "Enumerates": []
+}

@@ -1,0 +1,126 @@
+{
+  "Name": "StackedColumnSeries",
+  "FullName": "LiveCharts.Wpf.StackedColumnSeries",
+  "Summary": "The stacked column series compares the proportion of every series in a point",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    },
+    {
+      "Name": "DispatcherObject",
+      "Type": {
+        "Name": "System.Windows.Threading.DispatcherObject",
+        "Alias": "System.Windows.Threading.DispatcherObject",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "DependencyObject",
+      "Type": {
+        "Name": "System.Windows.DependencyObject",
+        "Alias": "System.Windows.DependencyObject",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Visual",
+      "Type": {
+        "Name": "System.Windows.Media.Visual",
+        "Alias": "System.Windows.Media.Visual",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "UIElement",
+      "Type": {
+        "Name": "System.Windows.UIElement",
+        "Alias": "System.Windows.UIElement",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FrameworkElement",
+      "Type": {
+        "Name": "System.Windows.FrameworkElement",
+        "Alias": "System.Windows.FrameworkElement",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Series",
+      "Type": {
+        "Name": "LiveCharts.Wpf.Series.Series",
+        "Alias": "LiveCharts.Wpf.Series.Series",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [
+    {
+      "Summary": "Initializes a new instance of StackedColumnSeries class",
+      "Parameters": []
+    },
+    {
+      "Summary": "Initializes a new instance of StackedColumnSeries class, with a given mapper",
+      "Parameters": [
+        {
+          "Name": "configuration",
+          "Summary": null,
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ]
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "MaxColumnWidth",
+      "Summary": "Gets or sets the maximum width of a column, any column will be capped at this value",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "ColumnPadding",
+      "Summary": "Gets or sets the padding between every column in this series",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "StackMode",
+      "Summary": "Gets or sets stacked mode, values or percentage",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}

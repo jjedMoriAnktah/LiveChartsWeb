@@ -107,6 +107,11 @@
     color: rgb(13, 71, 160)
 }
 
+.card-title {
+    margin-top: 0;
+    color: rgb(13, 71, 159);
+}
+
 .doc-properties-wrapper {
     margin-top: 10px;
 }
@@ -116,6 +121,43 @@
     margin: -16px 10px;
     background-color: #2196f3;
 }
+
+ul {
+    list-style-type: none; 
+}
+
+.side-menu {
+    background-color: rgb(3, 153, 227);
+    color: white;
+    position: fixed;
+    overflow-y: auto;
+    height: 100%;
+    font-size: 16px;
+}
+
+    .side-menu input.form-control {
+        color: white;
+        background: #ffffff;
+        background: rgba(255, 255, 255, .4);
+        height: 55px;
+        margin: 25px -9px 0 0;
+        font-size: 18px;
+    }
+
+    .side-menu ul {
+        list-style-type: none;
+        padding: 20px 15px;
+        margin-bottom: 50px;
+    }
+
+        .side-menu ul li {
+            margin: 6px 0;
+            cursor: pointer;
+        }
+
+        .side-menu ul li a {
+            color: white;
+        }
 
 a.active i.text-muted {
     color: white;

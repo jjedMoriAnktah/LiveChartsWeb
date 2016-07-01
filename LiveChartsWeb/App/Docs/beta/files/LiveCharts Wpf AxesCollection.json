@@ -1,0 +1,35 @@
+{
+  "Name": "AxesCollection",
+  "FullName": "LiveCharts.Wpf.AxesCollection",
+  "Summary": "Stores a collection of axis.",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    },
+    {
+      "Name": "NoisyCollection`1",
+      "Type": {
+        "Name": "LiveCharts.Helpers.NoisyCollection`1",
+        "Alias": "NoisyCollection<T>",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [
+    {
+      "Summary": "Initializes a new instance of AxisCollection class",
+      "Parameters": []
+    }
+  ],
+  "Properties": [],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}

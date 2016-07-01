@@ -1,0 +1,137 @@
+{
+  "Name": "VisualElement",
+  "FullName": "LiveCharts.Wpf.VisualElement",
+  "Summary": "Defines a visual element, a visual element is a UI element that is placed and scaled in the chart.",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    },
+    {
+      "Name": "DispatcherObject",
+      "Type": {
+        "Name": "System.Windows.Threading.DispatcherObject",
+        "Alias": "System.Windows.Threading.DispatcherObject",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "DependencyObject",
+      "Type": {
+        "Name": "System.Windows.DependencyObject",
+        "Alias": "System.Windows.DependencyObject",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Visual",
+      "Type": {
+        "Name": "System.Windows.Media.Visual",
+        "Alias": "System.Windows.Media.Visual",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "UIElement",
+      "Type": {
+        "Name": "System.Windows.UIElement",
+        "Alias": "System.Windows.UIElement",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FrameworkElement",
+      "Type": {
+        "Name": "System.Windows.FrameworkElement",
+        "Alias": "System.Windows.FrameworkElement",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [],
+  "Properties": [
+    {
+      "Name": "UIElement",
+      "Summary": "Gets or sets the user interface element.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Chart",
+      "Summary": "Gets the chart that owns the visual element",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "RequiresAdd",
+      "Summary": "Gets if the elements requires to be added to the chart, this property should normally only be used internally by LiveCharts",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "AxisX",
+      "Summary": "Gets or sets the index of the axis in X that owns the element, the axis position must exist.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "AxisY",
+      "Summary": "Gets or sets the index of the axis in Y that owns the element, the axis position must exist.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "X",
+      "Summary": "Gets or sets the X value of the UiElement",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Y",
+      "Summary": "Gets or sets the Y value of the UiElement",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}

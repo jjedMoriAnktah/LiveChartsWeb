@@ -1,0 +1,109 @@
+{
+  "Name": "test",
+  "FullName": "LiveCharts.Wpf.Charts.test",
+  "Summary": "test",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    },
+    {
+      "Name": "DispatcherObject",
+      "Type": {
+        "Name": "System.Windows.Threading.DispatcherObject",
+        "Alias": "System.Windows.Threading.DispatcherObject",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "DependencyObject",
+      "Type": {
+        "Name": "System.Windows.DependencyObject",
+        "Alias": "System.Windows.DependencyObject",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Visual",
+      "Type": {
+        "Name": "System.Windows.Media.Visual",
+        "Alias": "System.Windows.Media.Visual",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "UIElement",
+      "Type": {
+        "Name": "System.Windows.UIElement",
+        "Alias": "System.Windows.UIElement",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FrameworkElement",
+      "Type": {
+        "Name": "System.Windows.FrameworkElement",
+        "Alias": "System.Windows.FrameworkElement",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Control",
+      "Type": {
+        "Name": "System.Windows.Controls.Control",
+        "Alias": "System.Windows.Controls.Control",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "ContentControl",
+      "Type": {
+        "Name": "System.Windows.Controls.ContentControl",
+        "Alias": "System.Windows.Controls.ContentControl",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "UserControl",
+      "Type": {
+        "Name": "System.Windows.Controls.UserControl",
+        "Alias": "System.Windows.Controls.UserControl",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [],
+  "Properties": [],
+  "TypeParams": [],
+  "Methods": [
+    {
+      "Name": "InitializeComponent",
+      "Summary": "InitializeComponent",
+      "Parameters": [],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    }
+  ],
+  "Enumerates": []
+}

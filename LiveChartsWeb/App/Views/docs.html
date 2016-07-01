@@ -1,95 +1,148 @@
-﻿<div class="container-fluid bg-primary" style="padding: 25px 0;">
+﻿<div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 text-center">
-            Watch out!, this section has not being updated since 0.6
-        </div>
-    </div>
-</div>
-
-<div class="container app-view">
-    <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-3 side-menu">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="list-group card-shadow">
-                        <a href="#" class="list-group-item"
-                           ng-repeat="section in sections"
-                           ng-href="/App/documentation/{{version}}/{{section.route}}#title"
-                           ng-class="{active: section.route==current.route}">
-                            <i class="fa text-muted" ng-class="section.icon"></i>
-                            <span style="margin-left: 5px;">{{section.name}}</span>
-                        </a>
-                    </div>
+                <div class="col-xs-12">
+                    <input type="text" class="form-control" ng-model="sectionsFilter" />
+                    <ul>
+                        <li ng-repeat="section in sections | filter:{Name: sectionsFilter}">
+                            <a ng-href="/App/documentation/{{version}}/{{section.File}}">
+                                {{section.Name}}
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
-            <div class="row">
+        <div class="col-sm-offset-3 col-sm-9" ng-show="type">
+            <div class="row" style="margin-top: 25px;">
                 <div class="col-xs-12">
-                    <div ng-show="properties == null">
-                        <h2 class="doc-title">Live Charts Docs</h2>
+                    <div class="col-xs-12" ng-if="!type.Enumerates[0]">
+                        <h2 class="doc-title">{{type.Name}} <small class="text-muted">(Class)</small></h2>
+
+                        <ul>
+                            <li ng-repeat="typeParam in type.TypeParams">
+                                <i class="text-muted">{{typeParam.Name}}</i>:
+                                {{typeParam.Summary}}
+                            </li>
+                        </ul>
+
                         <p>
-                            Welcome to Live Charts documentation click on any link to your left to navigate
-                            trough related documentation. If you find a bug in this web site, something is wrong or
-                            misspelled, you can report the issue on
-                            <a href="https://github.com/beto-rodriguez/LiveChartsWeb" target="_blank">
-                                <i class="fa fa-lg fa-github"></i> Github
-                            </a>
+                            {{type.Summary}}
                         </p>
 
-                        <p>Every card you see is a property or a method, they have a short description and a simple example, click on any type to see more information, click on Go to source code to go deeper.</p>
-                        <img src="../../Content/Images/Docs/docs sample.png" style="opacity: .4"/>
-                    </div>
-                    <div ng-show="properties != null">
+                        <h3>Inheritance Hierarchy</h3>
+
+                        <ul>
+                            <li ng-repeat="p in type.Inheritance">
+                                {{p.Type.Name}}
+                            </li>
+                            <li>{{type.FullName}}</li>
+                        </ul>
+
+                        <h3>Constructors</h3>
+
+                        <p>
+                            <i class="text-muted" ng-show="!type.Constructors[0]">none</i>
+                        </p>
+
                         <div class="row">
-                            <div class="col-xs-12">
-                                <h2 id="title" class="doc-title">
-                                    {{current.name}}
-                                    <a class="btn btn-default pull-right card-shadow" ng-href="{{current.source}}">
-                                        <i class="fa fa-lg fa-github"></i> Go to source code
-                                    </a>
-                                </h2>
-                                <p ng-bind-html="current.text"></p>
-                                <div class="row" style="margin-bottom: 10px;">
-                                    <div class="col-md-7">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search" ng-model="criteria"/>
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-search"></i>
-                                            </span>
-                                        </div>
+                            <div class="col-xs-12" ng-repeat="ctor in type.Constructors">
+                                <div class="panel card-shadow">
+                                    <div class="panel-body">
+                                        <h4 class="card-title">
+                                            Ctor
+                                            (
+                                            <i class="text-muted" ng-repeat="p in ctor.Parameters">
+                                                {{p.Name}}
+                                                <span ng-show="$index != p.Parameters.length-1">, </span>
+                                            </i>
+                                            )
+                                        </h4>
+                                        <p>{{ctor.Summary}}</p>
+                                        <h5>Parameters:</h5>
+                                        <ul>
+                                            <li ng-repeat="param in ctor.Parameters">
+                                                {{param.Name}}: <i class="text-muted">{{param.Summary}}</i>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel card-shadow" ng-repeat="prop in properties | filter: criteria">
-                            <div class="panel-body">
-                                <h4 style="margin-top: 0;" ng-bind-html="prop.name"></h4>
-                                <p ng-bind-html="prop.text"></p>
-                                <p>
-                                    <span ng-show="prop.type">
-                                        Type <a ng-href="{{prop.type.ref}}"><span class="label label-primary ">{{prop.type.name}}</span></a>
-                                        Default <span class="label label-primary">{{prop.def}}</span>
-                                    </span>
-                                    <span ng-show="prop.returns">
-                                        Returns <a ng-href="{{prop.returns.ref}}"><span class="label label-primary ">{{prop.returns.name}}</span></a>
-                                        Params: <span ng-repeat="param in prop.params">
-                                            {{$index+1}}. <span ng-bind-html="param.text"></span>,
-                                            Type
-                                            <a ng-href="{{param.type.ref}}">
-                                                <span class="label label-primary ">{{param.type.name}}</span>
-                                            </a>
-                                        </span>
-                                    </span>
-                                    <span ng-show="prop.behavesAs.length > 0">
-                                        Also is
-                                        <span class="label label-primary " ng-repeat="descriptor in prop.behavesAs">
-                                            {{descriptor}}
-                                        </span>
-                                    </span>
-                                </p>
 
-                                <pre class="prettyprint linenums" code="prop.example" style="margin: 0"></pre>
+                        <h3>Properties</h3>
+
+                        <p>
+                            <i class="text-muted" ng-show="!type.Properties[0]">none</i>
+                        </p>
+
+                        <div class="row">
+                            <div class="col-xs-12" ng-repeat="p in type.Properties">
+                                <div class="panel card-shadow">
+                                    <div class="panel-body">
+                                        <h4 class="card-title">{{p.Name}}</h4>
+                                        <p>{{p.Summary}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Methods</h3>
+
+                        <p>
+                            <i class="text-muted" ng-show="!type.Methods[0]">none</i>
+                        </p>
+
+                        <div class="row">
+                            <div class="col-xs-12" ng-repeat="m in type.Methods">
+                                <div class="panel card-shadow">
+                                    <div class="panel-body">
+                                        <h4 class="card-title">{{m.Name}}
+                                            (
+                                            <i class="text-muted" ng-repeat="p in m.Parameters">{{p.Name}}
+                                                <span ng-show="$index != m.Parameters.length-1">, </span>
+                                            </i>
+                                            )
+                                        </h4>
+                                        <p>{{m.Summary}}</p>
+                                        <h5>Parameters:</h5>
+                                        <i class="text-muted" ng-show="!m.Parameters[0]">none</i>
+                                        <ul>
+                                            <li ng-repeat="param in m.Parameters">
+                                                {{param.Name}}: <i class="text-muted">{{param.Summary}}</i>
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            Returns: {{m.Returns.Summary}}, type: {{m.Returns.Type.FullName}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12" ng-if="type.Enumerates[0]">
+                        <h2 class="doc-title">{{type.Name}} <small class="text-muted">(Enum)</small></h2>
+
+                        <p>
+                            {{type.Summary}}
+                        </p>
+
+                        <ul>
+                            <li>{{type.FullName}}</li>
+                        </ul>
+
+                        <div class="row">
+                            <div class="col-xs-12" ng-repeat="e in type.Enumerates">
+                                <div class="panel card-shadow">
+                                    <div class="panel-body">
+                                        <h4 class="card-title">{{e.Name}}</h4>
+                                        <p>
+                                            {{e.Summary}}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

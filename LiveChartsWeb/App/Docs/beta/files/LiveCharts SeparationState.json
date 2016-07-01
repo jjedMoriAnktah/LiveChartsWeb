@@ -1,0 +1,24 @@
+{
+  "Name": "SeparationState",
+  "FullName": "LiveCharts.SeparationState",
+  "Summary": "Separator current state",
+  "Inheritance": [],
+  "Constructors": [],
+  "Properties": [],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": [
+    {
+      "Name": "Remove",
+      "Summary": "Remove the separator from the chart"
+    },
+    {
+      "Name": "Keep",
+      "Summary": "Kepp the separator in the chart"
+    },
+    {
+      "Name": "InitialAdd",
+      "Summary": "no animated add"
+    }
+  ]
+}

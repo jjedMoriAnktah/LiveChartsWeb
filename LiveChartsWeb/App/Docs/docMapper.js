@@ -1,21 +1,22 @@
 ﻿'use strict';
 
 app.factory('docsService', [
-    'docsBeta', function (docsBeta) {
-        return function(version) {
-            var latest = { version: 'beta', content: docsBeta };
+    '$http', function($http) {
+        return function (version) {
 
-            var mapper = {
-                'beta': { version: 'beta', content: docsBeta }
-                //here add future versions...
-                //0.7: { version: '1.0', content: beta }
+            //    :version / files / index
+
+            var latest = 'beta/files/index.json';
+
+            var availableDocumentation = {
+                'beta': 'beta/files/index.json'
             };
-            
-            var docsRequested = mapper[version];
 
-            if (!version || !docsRequested) return latest;
+            var docs = availableDocumentation[version];
 
-            return docsRequested;
+            if (!version || !docs) docs = latest;
+
+            return $http.get('Docs/' + docs);
         };
     }
 ]);

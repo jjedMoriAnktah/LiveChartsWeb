@@ -1,0 +1,72 @@
+{
+  "Name": "ObservablePoint",
+  "FullName": "LiveCharts.Defaults.ObservablePoint",
+  "Summary": "An already configured chart point, this class notifies a chart to update every time a property changes",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [
+    {
+      "Summary": "Initializes a new instance of ObservablePoint class",
+      "Parameters": []
+    },
+    {
+      "Summary": "Initializes a new instance of ObservablePoint class giving the x and y coordinates",
+      "Parameters": [
+        {
+          "Name": "x",
+          "Summary": "",
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        },
+        {
+          "Name": "y",
+          "Summary": "",
+          "Type": {
+            "Name": "System.Reflection.RuntimeParameterInfo",
+            "Alias": "System.Reflection.RuntimeParameterInfo",
+            "Href": null,
+            "Source": null
+          }
+        }
+      ]
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "X",
+      "Summary": "X coordinate",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Y",
+      "Summary": "Y coordinate",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}

@@ -1,0 +1,137 @@
+{
+  "Name": "ChartValues`1",
+  "FullName": "LiveCharts.ChartValues`1",
+  "Summary": "Creates a collection of chart values",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    },
+    {
+      "Name": "NoisyCollection`1",
+      "Type": {
+        "Name": "LiveCharts.Helpers.NoisyCollection`1",
+        "Alias": "NoisyCollection<T>",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [
+    {
+      "Summary": "Initializes a new instance of chart values",
+      "Parameters": []
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "Points",
+      "Summary": "Gets the current points in the chart values instance",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Limit1",
+      "Summary": "Get the max and min values of the values 1 (X, Radius)",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Limit2",
+      "Summary": "Gets the max and min values of the values 2 (Y, Angle)",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Limit3",
+      "Summary": "Gets the man and min values of the values 3 (weight)",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Series",
+      "Summary": "Gets the series that is firing the ChartValus",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "TypeParams": [
+    {
+      "Name": "T",
+      "Summary": ""
+    }
+  ],
+  "Methods": [
+    {
+      "Name": "GetLimits",
+      "Summary": "Evaluates the limits in the chart values",
+      "Parameters": [],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "InitializeGarbageCollector",
+      "Summary": "Initializes the garbage collector",
+      "Parameters": [],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    },
+    {
+      "Name": "CollectGarbage",
+      "Summary": "Collects the unnecessary values",
+      "Parameters": [],
+      "TypeParams": [],
+      "Returns": {
+        "Summary": null,
+        "Type": {
+          "Name": "System.Void",
+          "Alias": "System.Void",
+          "Href": null,
+          "Source": null
+        }
+      }
+    }
+  ],
+  "Enumerates": []
+}

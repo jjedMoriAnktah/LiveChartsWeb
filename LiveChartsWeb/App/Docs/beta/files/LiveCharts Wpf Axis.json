@@ -1,0 +1,282 @@
+{
+  "Name": "Axis",
+  "FullName": "LiveCharts.Wpf.Axis",
+  "Summary": "An Axis of a chart",
+  "Inheritance": [
+    {
+      "Name": "Object",
+      "Type": {
+        "Name": "System.Object",
+        "Alias": "Object",
+        "Href": "https://msdn.microsoft.com/en-us/library/9kkx3h3c.aspx",
+        "Source": null
+      }
+    },
+    {
+      "Name": "DispatcherObject",
+      "Type": {
+        "Name": "System.Windows.Threading.DispatcherObject",
+        "Alias": "System.Windows.Threading.DispatcherObject",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "DependencyObject",
+      "Type": {
+        "Name": "System.Windows.DependencyObject",
+        "Alias": "System.Windows.DependencyObject",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Visual",
+      "Type": {
+        "Name": "System.Windows.Media.Visual",
+        "Alias": "System.Windows.Media.Visual",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "UIElement",
+      "Type": {
+        "Name": "System.Windows.UIElement",
+        "Alias": "System.Windows.UIElement",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FrameworkElement",
+      "Type": {
+        "Name": "System.Windows.FrameworkElement",
+        "Alias": "System.Windows.FrameworkElement",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "Constructors": [
+    {
+      "Summary": "Initializes a new instance of Axis class",
+      "Parameters": []
+    }
+  ],
+  "Properties": [
+    {
+      "Name": "Model",
+      "Summary": "Gets the Model of the axis, the model is used a DTO to communicate with the core of the library.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Labels",
+      "Summary": "Gets or sets axis labels, labels property stores the array to map for each index and value, for example if axis value is 0 then label will be labels[0], when value 1 then labels[1], value 2 then labels[2], ..., value n labels[n], use this property instead of a formatter when there is no conversion between value and label for example names, if you are plotting sales vs salesman name.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Sections",
+      "Summary": "Gets or sets the axis sectionsCollection, a section is useful to highlight ranges or values in a chart.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "LabelFormatter",
+      "Summary": "Gets or sets the function to convert a value to label, for example when you need to display your chart as currency ($1.00) or as degrees (10°), if Labels property is not null then formatter is ignored, and label will be pulled from Labels prop.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Separator",
+      "Summary": "Get or sets configuration for parallel lines to axis.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Stroke",
+      "Summary": "Gets or sets axis color, axis means only the zero value, if you need to highlight where zero is. to change separators color, see Axis.Separator",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "StrokeThickness",
+      "Summary": "Gets or sets axis thickness.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "ShowLabels",
+      "Summary": "Gets or sets if labels are shown in the axis.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "MaxValue",
+      "Summary": "Gets or sets axis max value, set it to null to make this property Auto, default value is null",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "MinValue",
+      "Summary": "Gets or sets axis min value, set it to null to make this property Auto, default value is null",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Title",
+      "Summary": "Gets or sets axis title, the title will be displayed only if this property is not null, default is null.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Position",
+      "Summary": "Gets or sets the axis position, default is Axis.Position.LeftBottom, when the axis is at Y and Position is LeftBottom, then axis will be placed at left, RightTop position will place it at Right, when the axis is at X and position LeftBottom, the axis will be placed at bottom, if position is RightTop then it will be placed at top.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "IsMerged",
+      "Summary": "Gets or sets if the axis labels should me placed inside the chart, this is useful to save some space.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "DisableAnimations",
+      "Summary": "Gets or sets if the axis is animated.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FontFamily",
+      "Summary": "Gets or sets labels font family, font to use for any label in this axis",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FontSize",
+      "Summary": "Gets or sets labels font size",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FontWeight",
+      "Summary": "Gets or sets labels font weight",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FontStyle",
+      "Summary": "Gets or sets labels font style",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "FontStretch",
+      "Summary": "Gets or sets labels font stretch",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "Foreground",
+      "Summary": "Gets or sets labels text color.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    },
+    {
+      "Name": "LabelsRotation",
+      "Summary": "Gets or sets the labels rotation in the axis, the angle starts as a horizontal line, you can use any angle in degrees, even negatives.",
+      "Type": {
+        "Name": "System.Reflection.RuntimePropertyInfo",
+        "Alias": "System.Reflection.RuntimePropertyInfo",
+        "Href": null,
+        "Source": null
+      }
+    }
+  ],
+  "TypeParams": [],
+  "Methods": [],
+  "Enumerates": []
+}
