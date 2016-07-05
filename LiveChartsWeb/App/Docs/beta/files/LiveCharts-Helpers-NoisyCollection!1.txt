@@ -351,5 +351,6 @@
       }
     }
   ],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

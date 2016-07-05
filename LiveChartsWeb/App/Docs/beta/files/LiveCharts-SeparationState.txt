@@ -27,5 +27,6 @@
       "name": "InitialAdd",
       "summary": "no animated add"
     }
-  ]
+  ],
+  "type": 2
 }

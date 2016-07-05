@@ -31,5 +31,6 @@
       "name": "Xy",
       "summary": "Both, X and Y axes"
     }
-  ]
+  ],
+  "type": 2
 }

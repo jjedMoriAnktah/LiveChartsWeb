@@ -40,5 +40,6 @@
   "properties": [],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

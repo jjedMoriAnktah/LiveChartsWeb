@@ -44,9 +44,9 @@
       "typeInfo": {
         "name": "System.Collections.Generic.IEnumerable`1",
         "alias": "IEnumerable`1",
-        "href": "https://msdn.microsoft.com/en-us/library/System.Collections.Generic.IEnumerable`1(v=vs.110).aspx",
-        "source": "https://msdn.microsoft.com/en-us/library/System.Collections.Generic.IEnumerable`1(v=vs.110).aspx",
-        "raw": ""
+        "href": "https://msdn.microsoft.com/es-es/library/9eekhta0(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/es-es/library/9eekhta0(v=vs.110).aspx",
+        "raw": null
       },
       "genericArguments": [
         {
@@ -163,5 +163,6 @@
       }
     }
   ],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

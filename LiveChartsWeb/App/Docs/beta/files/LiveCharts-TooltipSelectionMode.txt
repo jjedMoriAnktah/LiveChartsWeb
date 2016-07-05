@@ -35,5 +35,6 @@
       "name": "SharedYInSeries",
       "summary": "Gets all the points that shares the value Y in the hovered series"
     }
-  ]
+  ],
+  "type": 2
 }

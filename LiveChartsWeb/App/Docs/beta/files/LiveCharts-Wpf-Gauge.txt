@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.Gauge",
     "alias": "Gauge",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.Gauge",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Gauge.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Gauge.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-Gauge",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Gauge.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Gauge.cs"
   },
   "inheritance": [
     {
@@ -305,5 +305,6 @@
   ],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

@@ -24,6 +24,96 @@
   "constructors": [],
   "properties": [],
   "typeParams": [],
-  "methods": [],
-  "enumerates": []
+  "methods": [
+    {
+      "name": "Xy",
+      "summary": "Gets a mapper to configure X, Y points",
+      "parameters": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "summary": "Type to map",
+          "typeInfo": null
+        }
+      ],
+      "returns": {
+        "summary": "A new cartesian mapper instance",
+        "typeInfo": {
+          "name": "LiveCharts.Configurations.CartesianMapper`1",
+          "alias": "CartesianMapper`1",
+          "href": "/App/documentation/beta/LiveCharts-Configurations-CartesianMapper!1",
+          "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/CartesianMapper.cs",
+          "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/CartesianMapper.cs"
+        }
+      }
+    },
+    {
+      "name": "Financial",
+      "summary": "Gets a mapper to configure financial points",
+      "parameters": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "summary": "type to map",
+          "typeInfo": null
+        }
+      ],
+      "returns": {
+        "summary": "a new financial mapper instance",
+        "typeInfo": {
+          "name": "LiveCharts.Configurations.FinancialMapper`1",
+          "alias": "FinancialMapper`1",
+          "href": "/App/documentation/beta/LiveCharts-Configurations-FinancialMapper!1",
+          "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/FinancialMapper.cs",
+          "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/FinancialMapper.cs"
+        }
+      }
+    },
+    {
+      "name": "Weighted",
+      "summary": "Gets a mapper to configure X, Y and Weight points",
+      "parameters": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "summary": "type to map",
+          "typeInfo": null
+        }
+      ],
+      "returns": {
+        "summary": "a new weighted mapper instance",
+        "typeInfo": {
+          "name": "LiveCharts.Configurations.WeightedMapper`1",
+          "alias": "WeightedMapper`1",
+          "href": "/App/documentation/beta/LiveCharts-Configurations-WeightedMapper!1",
+          "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/WeightedMapper.cs",
+          "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/WeightedMapper.cs"
+        }
+      }
+    },
+    {
+      "name": "Polar",
+      "summary": "Gets a mapper to configure Radius and Angle",
+      "parameters": [],
+      "typeParams": [
+        {
+          "name": "T",
+          "summary": "type to amp",
+          "typeInfo": null
+        }
+      ],
+      "returns": {
+        "summary": "a new polar mapper insance",
+        "typeInfo": {
+          "name": "LiveCharts.Configurations.PolarMapper`1",
+          "alias": "PolarMapper`1",
+          "href": "/App/documentation/beta/LiveCharts-Configurations-PolarMapper!1",
+          "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/PolarMapper.cs",
+          "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/PolarMapper.cs"
+        }
+      }
+    }
+  ],
+  "enumerates": [],
+  "type": 0
 }

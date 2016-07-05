@@ -27,5 +27,6 @@
       "name": "Y",
       "summary": "Vertical (Y)"
     }
-  ]
+  ],
+  "type": 2
 }

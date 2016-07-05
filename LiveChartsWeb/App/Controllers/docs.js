@@ -38,7 +38,7 @@ app.controller('docsController', [
             $scope.openModal = function (uri) {
                 $http.get(uri).success(function (raw) {
                     $scope.isModalOpen = true;
-                    $scope.currentRaw = raw;
+                    $scope.currentRaw = raw.split('<').join('&lt;');
                     $timeout(function () {
                         var modal = document.getElementById('docs-modal');
                         modal.focus();
@@ -58,7 +58,8 @@ app.controller('docsController', [
                         scrollTo(modal, 0, 500);
                     }, 300);
                 }).error(function() {
-                    alert('the request was not completed correctly.');
+                    alert('The request was not completed correctly.');
+                    console.log(uri);
                 });
             }
 

@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.AxisSection",
     "alias": "AxisSection",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.AxisSection",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxisSection.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxisSection.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-AxisSection",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/AxisSection.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/AxisSection.cs"
   },
   "inheritance": [
     {
@@ -165,5 +165,6 @@
   ],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

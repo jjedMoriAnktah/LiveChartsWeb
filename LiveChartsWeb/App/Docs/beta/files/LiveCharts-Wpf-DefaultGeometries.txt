@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.DefaultGeometries",
     "alias": "DefaultGeometries",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultGeometries",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultGeometries.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultGeometries.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-DefaultGeometries",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/DefaultGeometries.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/DefaultGeometries.cs"
   },
   "inheritance": [
     {
@@ -86,5 +86,6 @@
   ],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

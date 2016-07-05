@@ -1,13 +1,13 @@
 {
-  "name": "BubblePoint",
-  "fullName": "LiveCharts.Defaults.BubblePoint",
-  "summary": "An already configured weighted chart point, this class notifies the chart to update every time a property changes",
+  "name": "CoreColor",
+  "fullName": "LiveCharts.Dtos.CoreColor",
+  "summary": "Defines a portable color",
   "typeInfo": {
-    "name": "LiveCharts.Defaults.BubblePoint",
-    "alias": "BubblePoint",
-    "href": "/App/documentation/beta/LiveCharts-Defaults-BubblePoint",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/BubblePoint.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/BubblePoint.cs"
+    "name": "LiveCharts.Dtos.CoreColor",
+    "alias": "CoreColor",
+    "href": "/App/documentation/beta/LiveCharts-Dtos-CoreColor",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CoreColor.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CoreColor.cs"
   },
   "inheritance": [
     {
@@ -19,19 +19,25 @@
         "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
         "raw": ""
       }
+    },
+    {
+      "name": "ValueType",
+      "typeInfo": {
+        "name": "System.ValueType",
+        "alias": "ValueType",
+        "href": "https://msdn.microsoft.com/en-us/library/System.ValueType(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.ValueType(v=vs.110).aspx",
+        "raw": ""
+      }
     }
   ],
   "constructors": [
     {
-      "summary": "Creates a new instance of BubblePoint class",
-      "parameters": []
-    },
-    {
-      "summary": "Create a new instance of BubblePoint class, giving x and y coordinates",
+      "summary": "Initializes a new instance of CoreColor",
       "parameters": [
         {
-          "name": "x",
-          "summary": "",
+          "name": "a",
+          "summary": "alpha component",
           "typeInfo": {
             "name": "System.Reflection.RuntimeParameterInfo",
             "alias": "RuntimeParameterInfo",
@@ -41,24 +47,8 @@
           }
         },
         {
-          "name": "y",
-          "summary": "",
-          "typeInfo": {
-            "name": "System.Reflection.RuntimeParameterInfo",
-            "alias": "RuntimeParameterInfo",
-            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
-            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
-            "raw": ""
-          }
-        }
-      ]
-    },
-    {
-      "summary": "Creates a new instance of BubblePoint class, giving x, y and weight",
-      "parameters": [
-        {
-          "name": "x",
-          "summary": "",
+          "name": "r",
+          "summary": "red component",
           "typeInfo": {
             "name": "System.Reflection.RuntimeParameterInfo",
             "alias": "RuntimeParameterInfo",
@@ -68,8 +58,8 @@
           }
         },
         {
-          "name": "y",
-          "summary": "",
+          "name": "g",
+          "summary": "green component",
           "typeInfo": {
             "name": "System.Reflection.RuntimeParameterInfo",
             "alias": "RuntimeParameterInfo",
@@ -79,8 +69,8 @@
           }
         },
         {
-          "name": "weight",
-          "summary": "",
+          "name": "b",
+          "summary": "blue component",
           "typeInfo": {
             "name": "System.Reflection.RuntimeParameterInfo",
             "alias": "RuntimeParameterInfo",
@@ -94,37 +84,49 @@
   ],
   "properties": [
     {
-      "name": "X",
-      "summary": "X coordinate in the chart",
+      "name": "A",
+      "summary": "Alpha component",
       "typeInfo": {
-        "name": "System.Double",
-        "alias": "Double",
-        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
-        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "name": "System.Byte",
+        "alias": "Byte",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Byte(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Byte(v=vs.110).aspx",
         "raw": ""
       },
       "genericArguments": []
     },
     {
-      "name": "Y",
-      "summary": "Y coordinate in the chart",
+      "name": "R",
+      "summary": "Red component",
       "typeInfo": {
-        "name": "System.Double",
-        "alias": "Double",
-        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
-        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "name": "System.Byte",
+        "alias": "Byte",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Byte(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Byte(v=vs.110).aspx",
         "raw": ""
       },
       "genericArguments": []
     },
     {
-      "name": "Weight",
-      "summary": "Point's weight",
+      "name": "G",
+      "summary": "Green component",
       "typeInfo": {
-        "name": "System.Double",
-        "alias": "Double",
-        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
-        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "name": "System.Byte",
+        "alias": "Byte",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Byte(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Byte(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "B",
+      "summary": "Red component",
+      "typeInfo": {
+        "name": "System.Byte",
+        "alias": "Byte",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Byte(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Byte(v=vs.110).aspx",
         "raw": ""
       },
       "genericArguments": []
@@ -133,5 +135,5 @@
   "typeParams": [],
   "methods": [],
   "enumerates": [],
-  "type": 0
+  "type": 1
 }

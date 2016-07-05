@@ -6,8 +6,8 @@ app.directive('prettyprint', function() {
         scope: {
             code: '='
         },
-        link: function (scope, element, attrs) {
-            scope.$watch('code', function () {
+        link: function(scope, element, attrs) {
+            scope.$watch('code', function() {
                 element.html(prettyPrintOne(scope.code));
             });
             if (!scope.code) {
@@ -24,7 +24,7 @@ app.directive('prettyprint', function() {
             restrict: 'A',
             replace: true,
             link: function(scope, ele, attrs) {
-                scope.$watch(attrs.dynamic, function (html) {
+                scope.$watch(attrs.dynamic, function(html) {
 
                     ele.removeClass('ng-enter');
 
@@ -57,4 +57,10 @@ app.directive('prettyprint', function() {
             }
         };
     }
-]);
+]).filter('removeGenerics', function() {
+    return function(input) {
+        var i = input.indexOf('`');
+        if (i !== -1) input = input.substring(0, i);
+        return input;
+    };
+});

@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.HeatSeries",
     "alias": "HeatSeries",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.HeatSeries",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/HeatSeries.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/HeatSeries.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-HeatSeries",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/HeatSeries.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/HeatSeries.cs"
   },
   "inheritance": [
     {
@@ -75,9 +75,9 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.Series.Series",
         "alias": "Series",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.Series.Series",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Series/Series.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Series/Series.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-Series-Series",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Series/Series.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Series/Series.cs"
       }
     }
   ],
@@ -151,5 +151,6 @@
   ],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

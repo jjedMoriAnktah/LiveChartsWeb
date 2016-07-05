@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.AxesCollection",
     "alias": "AxesCollection",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.AxesCollection",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxesCollection.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxesCollection.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-AxesCollection",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/AxesCollection.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/AxesCollection.cs"
   },
   "inheritance": [
     {
@@ -40,5 +40,6 @@
   "properties": [],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

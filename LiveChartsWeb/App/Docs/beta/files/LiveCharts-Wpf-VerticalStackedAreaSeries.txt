@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.VerticalStackedAreaSeries",
     "alias": "VerticalStackedAreaSeries",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.VerticalStackedAreaSeries",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/VerticalStackedAreaSeries.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/VerticalStackedAreaSeries.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-VerticalStackedAreaSeries",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/VerticalStackedAreaSeries.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/VerticalStackedAreaSeries.cs"
   },
   "inheritance": [
     {
@@ -75,9 +75,9 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.Series.Series",
         "alias": "Series",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.Series.Series",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Series/Series.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Series/Series.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-Series-Series",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Series/Series.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Series/Series.cs"
       }
     },
     {
@@ -85,9 +85,9 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.LineSeries",
         "alias": "LineSeries",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.LineSeries",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/LineSeries.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/LineSeries.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-LineSeries",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LineSeries.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/LineSeries.cs"
       }
     },
     {
@@ -95,9 +95,9 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.VerticalLineSeries",
         "alias": "VerticalLineSeries",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.VerticalLineSeries",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/VerticalLineSeries.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/VerticalLineSeries.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-VerticalLineSeries",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/VerticalLineSeries.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/VerticalLineSeries.cs"
       }
     }
   ],
@@ -139,5 +139,6 @@
   ],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

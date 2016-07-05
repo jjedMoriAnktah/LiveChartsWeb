@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.CartesianChart",
     "alias": "CartesianChart",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.CartesianChart",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/CartesianChart.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/CartesianChart.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-CartesianChart",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/CartesianChart.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/CartesianChart.cs"
   },
   "inheritance": [
     {
@@ -105,9 +105,9 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.Charts.Base.Chart",
         "alias": "Chart",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.Charts.Base.Chart",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Charts/Base/Chart.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Charts/Base/Chart.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-Charts-Base-Chart",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Charts/Base/Chart.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Charts/Base/Chart.cs"
       }
     }
   ],
@@ -133,5 +133,6 @@
   ],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

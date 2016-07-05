@@ -35,5 +35,6 @@
       "name": "Right",
       "summary": "Places legend at right"
     }
-  ]
+  ],
+  "type": 2
 }

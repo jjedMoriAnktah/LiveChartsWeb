@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.DefaultTooltip",
     "alias": "DefaultTooltip",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultTooltip",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultTooltip.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultTooltip.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-DefaultTooltip",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/DefaultTooltip.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/DefaultTooltip.cs"
   },
   "inheritance": [
     {
@@ -172,5 +172,6 @@
       }
     }
   ],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

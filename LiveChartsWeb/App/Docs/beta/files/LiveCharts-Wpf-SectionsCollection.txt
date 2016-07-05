@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.SectionsCollection",
     "alias": "SectionsCollection",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.SectionsCollection",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/SectionsCollection.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/SectionsCollection.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-SectionsCollection",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/SectionsCollection.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/SectionsCollection.cs"
   },
   "inheritance": [
     {
@@ -40,5 +40,6 @@
   "properties": [],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

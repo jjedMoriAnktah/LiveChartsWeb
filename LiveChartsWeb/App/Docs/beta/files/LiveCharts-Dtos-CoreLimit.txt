@@ -1,13 +1,13 @@
 {
-  "name": "ObservablePoint",
-  "fullName": "LiveCharts.Defaults.ObservablePoint",
-  "summary": "An already configured chart point, this class notifies a chart to update every time a property changes",
+  "name": "CoreLimit",
+  "fullName": "LiveCharts.Dtos.CoreLimit",
+  "summary": "Defines a portable limit",
   "typeInfo": {
-    "name": "LiveCharts.Defaults.ObservablePoint",
-    "alias": "ObservablePoint",
-    "href": "/App/documentation/beta/LiveCharts-Defaults-ObservablePoint",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/ObservablePoint.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/ObservablePoint.cs"
+    "name": "LiveCharts.Dtos.CoreLimit",
+    "alias": "CoreLimit",
+    "href": "/App/documentation/beta/LiveCharts-Dtos-CoreLimit",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CoreLimit.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CoreLimit.cs"
   },
   "inheritance": [
     {
@@ -19,19 +19,25 @@
         "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
         "raw": ""
       }
+    },
+    {
+      "name": "ValueType",
+      "typeInfo": {
+        "name": "System.ValueType",
+        "alias": "ValueType",
+        "href": "https://msdn.microsoft.com/en-us/library/System.ValueType(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.ValueType(v=vs.110).aspx",
+        "raw": ""
+      }
     }
   ],
   "constructors": [
     {
-      "summary": "Initializes a new instance of ObservablePoint class",
-      "parameters": []
-    },
-    {
-      "summary": "Initializes a new instance of ObservablePoint class giving the x and y coordinates",
+      "summary": "Initializes a new instance of CoreLimit",
       "parameters": [
         {
-          "name": "x",
-          "summary": "",
+          "name": "min",
+          "summary": "minimum value",
           "typeInfo": {
             "name": "System.Reflection.RuntimeParameterInfo",
             "alias": "RuntimeParameterInfo",
@@ -41,8 +47,8 @@
           }
         },
         {
-          "name": "y",
-          "summary": "",
+          "name": "max",
+          "summary": "maximum value",
           "typeInfo": {
             "name": "System.Reflection.RuntimeParameterInfo",
             "alias": "RuntimeParameterInfo",
@@ -56,8 +62,8 @@
   ],
   "properties": [
     {
-      "name": "X",
-      "summary": "X coordinate",
+      "name": "Max",
+      "summary": "Gets or sets the maximum value",
       "typeInfo": {
         "name": "System.Double",
         "alias": "Double",
@@ -68,8 +74,20 @@
       "genericArguments": []
     },
     {
-      "name": "Y",
-      "summary": "Y coordinate",
+      "name": "Min",
+      "summary": "Gets or sets the minimum value",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Range",
+      "summary": "Gets the range between max and min values",
       "typeInfo": {
         "name": "System.Double",
         "alias": "Double",
@@ -83,5 +101,5 @@
   "typeParams": [],
   "methods": [],
   "enumerates": [],
-  "type": 0
+  "type": 1
 }

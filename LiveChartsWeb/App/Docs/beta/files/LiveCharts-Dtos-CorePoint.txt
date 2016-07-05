@@ -1,0 +1,188 @@
+{
+  "name": "CorePoint",
+  "fullName": "LiveCharts.Dtos.CorePoint",
+  "summary": "",
+  "typeInfo": {
+    "name": "LiveCharts.Dtos.CorePoint",
+    "alias": "CorePoint",
+    "href": "/App/documentation/beta/LiveCharts-Dtos-CorePoint",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CorePoint.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CorePoint.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "ValueType",
+      "typeInfo": {
+        "name": "System.ValueType",
+        "alias": "ValueType",
+        "href": "https://msdn.microsoft.com/en-us/library/System.ValueType(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.ValueType(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [
+    {
+      "summary": "Initializes a new instance of CorePoint",
+      "parameters": [
+        {
+          "name": "x",
+          "summary": "x coordinate",
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        },
+        {
+          "name": "y",
+          "summary": "y coordinate",
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ]
+    },
+    {
+      "summary": "Initializes a new instance of CorePoint",
+      "parameters": [
+        {
+          "name": "point",
+          "summary": "source pont",
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "X",
+      "summary": "X coordinate",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Y",
+      "summary": "Y coordinate",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [
+    {
+      "name": "op_Addition",
+      "summary": "Sums every property between 2 given points",
+      "parameters": [
+        {
+          "name": "p1",
+          "summary": "Sums every property between 2 given points",
+          "typeInfo": {
+            "name": "LiveCharts.Dtos.CorePoint",
+            "alias": "CorePoint",
+            "href": "/App/documentation/beta/LiveCharts-Dtos-CorePoint",
+            "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CorePoint.cs",
+            "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CorePoint.cs"
+          }
+        },
+        {
+          "name": "p2",
+          "summary": "Sums every property between 2 given points",
+          "typeInfo": {
+            "name": "LiveCharts.Dtos.CorePoint",
+            "alias": "CorePoint",
+            "href": "/App/documentation/beta/LiveCharts-Dtos-CorePoint",
+            "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CorePoint.cs",
+            "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CorePoint.cs"
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": "",
+        "typeInfo": {
+          "name": "LiveCharts.Dtos.CorePoint",
+          "alias": "CorePoint",
+          "href": "/App/documentation/beta/LiveCharts-Dtos-CorePoint",
+          "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CorePoint.cs",
+          "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CorePoint.cs"
+        }
+      }
+    },
+    {
+      "name": "op_Subtraction",
+      "summary": "Subtracts every property between 2 given points",
+      "parameters": [
+        {
+          "name": "p1",
+          "summary": "Subtracts every property between 2 given points",
+          "typeInfo": {
+            "name": "LiveCharts.Dtos.CorePoint",
+            "alias": "CorePoint",
+            "href": "/App/documentation/beta/LiveCharts-Dtos-CorePoint",
+            "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CorePoint.cs",
+            "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CorePoint.cs"
+          }
+        },
+        {
+          "name": "p2",
+          "summary": "Subtracts every property between 2 given points",
+          "typeInfo": {
+            "name": "LiveCharts.Dtos.CorePoint",
+            "alias": "CorePoint",
+            "href": "/App/documentation/beta/LiveCharts-Dtos-CorePoint",
+            "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CorePoint.cs",
+            "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CorePoint.cs"
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": "",
+        "typeInfo": {
+          "name": "LiveCharts.Dtos.CorePoint",
+          "alias": "CorePoint",
+          "href": "/App/documentation/beta/LiveCharts-Dtos-CorePoint",
+          "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CorePoint.cs",
+          "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CorePoint.cs"
+        }
+      }
+    }
+  ],
+  "enumerates": [],
+  "type": 1
+}

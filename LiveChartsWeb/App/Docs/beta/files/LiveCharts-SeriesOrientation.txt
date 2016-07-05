@@ -27,5 +27,6 @@
       "name": "Vertical",
       "summary": "Vertical orientation"
     }
-  ]
+  ],
+  "type": 2
 }

@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.Separator",
     "alias": "Separator",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.Separator",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Separator.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Separator.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-Separator",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Separator.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Separator.cs"
   },
   "inheritance": [
     {
@@ -149,5 +149,6 @@
   ],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }

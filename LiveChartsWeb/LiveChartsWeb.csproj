@@ -181,6 +181,11 @@
     <Content Include="App\Docs\beta\files\LiveCharts-Defaults-ObservableValue.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Defaults-OhlcPoint.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Defaults-PolarPoint.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Dtos-CoreColor.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Dtos-CoreGradientStop.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Dtos-CoreLimit.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Dtos-CoreMargin.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Dtos-CorePoint.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Helpers-Extentions.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Helpers-NoisyCollection!1.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-LegendLocation.txt" />

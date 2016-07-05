@@ -5,9 +5,9 @@
   "typeInfo": {
     "name": "LiveCharts.Wpf.DefaultAxes",
     "alias": "DefaultAxes",
-    "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultAxes",
-    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultAxes.cs",
-    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultAxes.cs"
+    "href": "/App/documentation/beta/LiveCharts-Wpf-DefaultAxes",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/DefaultAxes.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/DefaultAxes.cs"
   },
   "inheritance": [
     {
@@ -29,9 +29,9 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.AxesCollection",
         "alias": "AxesCollection",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.AxesCollection",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxesCollection.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxesCollection.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-AxesCollection",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/AxesCollection.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/AxesCollection.cs"
       },
       "genericArguments": []
     },
@@ -41,9 +41,9 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.AxesCollection",
         "alias": "AxesCollection",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.AxesCollection",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxesCollection.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxesCollection.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-AxesCollection",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/AxesCollection.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/AxesCollection.cs"
       },
       "genericArguments": []
     },
@@ -53,9 +53,9 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.AxesCollection",
         "alias": "AxesCollection",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.AxesCollection",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxesCollection.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxesCollection.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-AxesCollection",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/AxesCollection.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/AxesCollection.cs"
       },
       "genericArguments": []
     },
@@ -65,14 +65,15 @@
       "typeInfo": {
         "name": "LiveCharts.Wpf.AxesCollection",
         "alias": "AxesCollection",
-        "href": "/App/documentation/beta/LiveCharts.Wpf.AxesCollection",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxesCollection.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxesCollection.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-AxesCollection",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/AxesCollection.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/AxesCollection.cs"
       },
       "genericArguments": []
     }
   ],
   "typeParams": [],
   "methods": [],
-  "enumerates": []
+  "enumerates": [],
+  "type": 0
 }
