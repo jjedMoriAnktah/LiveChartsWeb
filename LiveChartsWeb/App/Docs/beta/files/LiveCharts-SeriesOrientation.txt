@@ -1,0 +1,31 @@
+{
+  "name": "SeriesOrientation",
+  "fullName": "LiveCharts.SeriesOrientation",
+  "summary": "The series orientation",
+  "typeInfo": {
+    "name": "LiveCharts.SeriesOrientation",
+    "alias": "SeriesOrientation",
+    "href": "/App/documentation/beta/LiveCharts-SeriesOrientation",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/SeriesOrientation.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/SeriesOrientation.cs"
+  },
+  "inheritance": [],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [
+    {
+      "name": "All",
+      "summary": "Both, horizontal and vertical orientation"
+    },
+    {
+      "name": "Horizontal",
+      "summary": "Horizontal orientation"
+    },
+    {
+      "name": "Vertical",
+      "summary": "Vertical orientation"
+    }
+  ]
+}

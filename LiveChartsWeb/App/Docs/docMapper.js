@@ -6,10 +6,10 @@ app.factory('docsService', [
 
             //    :version / files / index
 
-            var latest = 'beta/files/index.json';
+            var latest = 'beta/files/index.txt';
 
             var availableDocumentation = {
-                'beta': 'beta/files/index.json'
+                'beta': 'beta/files/index.txt'
             };
 
             var docs = availableDocumentation[version];

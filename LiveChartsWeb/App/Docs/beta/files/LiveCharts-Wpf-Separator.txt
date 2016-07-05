@@ -1,0 +1,153 @@
+{
+  "name": "Separator",
+  "fullName": "LiveCharts.Wpf.Separator",
+  "summary": "Defines an Axis.Separator, this class customizes the separator of an axis.",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.Separator",
+    "alias": "Separator",
+    "href": "/App/documentation/beta/LiveCharts.Wpf.Separator",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Separator.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Separator.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DispatcherObject",
+      "typeInfo": {
+        "name": "System.Windows.Threading.DispatcherObject",
+        "alias": "DispatcherObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DependencyObject",
+      "typeInfo": {
+        "name": "System.Windows.DependencyObject",
+        "alias": "DependencyObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Visual",
+      "typeInfo": {
+        "name": "System.Windows.Media.Visual",
+        "alias": "Visual",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UIElement",
+      "typeInfo": {
+        "name": "System.Windows.UIElement",
+        "alias": "UIElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "FrameworkElement",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [
+    {
+      "summary": "Initializes a new instance of Separator class",
+      "parameters": []
+    }
+  ],
+  "properties": [
+    {
+      "name": "Chart",
+      "summary": "Gets the chart the own the separator",
+      "typeInfo": {
+        "name": "LiveCharts.Charts.ChartCore",
+        "alias": "ChartCore",
+        "href": "/App/documentation/beta/LiveCharts-Charts-ChartCore",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Charts/ChartCore.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Charts/ChartCore.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Stroke",
+      "summary": "Gets or sets separators color",
+      "typeInfo": {
+        "name": "System.Windows.Media.Brush",
+        "alias": "Brush",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "StrokeThickness",
+      "summary": "Gets or sets separators thickness",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "StrokeDashArray",
+      "summary": "Gets or sets the stroke dash array for the current separator.",
+      "typeInfo": {
+        "name": "System.Windows.Media.DoubleCollection",
+        "alias": "DoubleCollection",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.DoubleCollection(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.DoubleCollection(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Step",
+      "summary": "Gets or sets separators step, this means the value between each line, default is null, when null this value is calculated automatically.",
+      "typeInfo": {
+        "name": "System.Nullable`1",
+        "alias": "Nullable`1",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Nullable`1(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Nullable`1(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": [
+        {
+          "name": "System.Double",
+          "alias": "Double",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+          "raw": ""
+        }
+      ]
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

@@ -1,0 +1,86 @@
+{
+  "name": "PolarPoint",
+  "fullName": "LiveCharts.Defaults.PolarPoint",
+  "summary": "An already configured chart point, this class notifies the chart to update every time a property changes",
+  "typeInfo": {
+    "name": "LiveCharts.Defaults.PolarPoint",
+    "alias": "PolarPoint",
+    "href": "/App/documentation/beta/LiveCharts-Defaults-PolarPoint",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/PolarPoint.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/PolarPoint.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [
+    {
+      "summary": "Initializes a new instance of PolarPoint class",
+      "parameters": []
+    },
+    {
+      "summary": "Initializes a new instance of PolarPoint class, giving angle and radius",
+      "parameters": [
+        {
+          "name": "radius",
+          "summary": "",
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        },
+        {
+          "name": "angle",
+          "summary": "",
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "Radius",
+      "summary": "The radius of the point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Angle",
+      "summary": "The angle of the point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

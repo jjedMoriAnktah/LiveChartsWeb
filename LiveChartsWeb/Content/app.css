@@ -107,6 +107,31 @@
     color: rgb(13, 71, 160)
 }
 
+.section-title {
+    margin: 25px 0;
+}
+
+.doc-end {
+    margin-bottom: 0;
+}
+
+.angular-modal {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+    background-color: #373737;
+    background-color: rgba(55,55,55,.3);
+    overflow-y: auto;
+}
+
+    .angular-modal .container-fluid {
+        margin-top: 120px;
+    }
+
+
 .card-title {
     margin-top: 0;
     color: rgb(13, 71, 159);
@@ -124,6 +149,25 @@
 
 ul {
     list-style-type: none; 
+    padding: 0 15px;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
 }
 
 .side-menu {

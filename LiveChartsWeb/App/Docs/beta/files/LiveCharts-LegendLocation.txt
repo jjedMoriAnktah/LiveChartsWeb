@@ -1,0 +1,39 @@
+{
+  "name": "LegendLocation",
+  "fullName": "LiveCharts.LegendLocation",
+  "summary": "Charts legend locations",
+  "typeInfo": {
+    "name": "LiveCharts.LegendLocation",
+    "alias": "LegendLocation",
+    "href": "/App/documentation/beta/LiveCharts-LegendLocation",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/LegendLocation.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LegendLocation.cs"
+  },
+  "inheritance": [],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [
+    {
+      "name": "None",
+      "summary": "Disables legend"
+    },
+    {
+      "name": "Top",
+      "summary": "PLaces legend at top"
+    },
+    {
+      "name": "Bottom",
+      "summary": "Places legend at bottom"
+    },
+    {
+      "name": "Left",
+      "summary": "Places legend at left"
+    },
+    {
+      "name": "Right",
+      "summary": "Places legend at right"
+    }
+  ]
+}

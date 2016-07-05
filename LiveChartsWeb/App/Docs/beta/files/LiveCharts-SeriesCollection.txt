@@ -1,0 +1,85 @@
+{
+  "name": "SeriesCollection",
+  "fullName": "LiveCharts.SeriesCollection",
+  "summary": "Stores a collection of series to plot, this collection notifies the changes every time you add/remove any series.",
+  "typeInfo": {
+    "name": "LiveCharts.SeriesCollection",
+    "alias": "SeriesCollection",
+    "href": "/App/documentation/beta/LiveCharts-SeriesCollection",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/SeriesCollection.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/SeriesCollection.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "NoisyCollection`1",
+      "typeInfo": {
+        "name": "LiveCharts.Helpers.NoisyCollection`1",
+        "alias": "NoisyCollection`1",
+        "href": "/App/documentation/beta/LiveCharts-Helpers-NoisyCollection!1",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Helpers/NoisyCollection.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Helpers/NoisyCollection.cs"
+      }
+    }
+  ],
+  "constructors": [
+    {
+      "summary": "Initializes a new instance of the SeriesCollection class",
+      "parameters": []
+    },
+    {
+      "summary": "Initializes a new instance of the SeriesCollection class, with a given mapper",
+      "parameters": [
+        {
+          "name": "configuration",
+          "summary": null,
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "Chart",
+      "summary": "Gets the chart that owns the collection",
+      "typeInfo": {
+        "name": "LiveCharts.Charts.ChartCore",
+        "alias": "ChartCore",
+        "href": "/App/documentation/beta/LiveCharts-Charts-ChartCore",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Charts/ChartCore.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Charts/ChartCore.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Configuration",
+      "summary": "Gets or sets then mapper in the collection, this mapper will be used in any series inside the collection, if null then LiveCharts will try to get the value from the global configuration.",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

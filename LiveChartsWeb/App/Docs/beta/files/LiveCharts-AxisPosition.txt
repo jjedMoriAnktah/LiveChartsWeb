@@ -1,0 +1,27 @@
+{
+  "name": "AxisPosition",
+  "fullName": "LiveCharts.AxisPosition",
+  "summary": "Axis position",
+  "typeInfo": {
+    "name": "LiveCharts.AxisPosition",
+    "alias": "AxisPosition",
+    "href": "/App/documentation/beta/LiveCharts-AxisPosition",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/AxisPosition.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/AxisPosition.cs"
+  },
+  "inheritance": [],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [
+    {
+      "name": "LeftBottom",
+      "summary": "Left for Y axis, Bottom for X axis"
+    },
+    {
+      "name": "RightTop",
+      "summary": "Right for Y axis, Top for X axis"
+    }
+  ]
+}

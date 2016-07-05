@@ -1,0 +1,143 @@
+{
+  "name": "VerticalStackedAreaSeries",
+  "fullName": "LiveCharts.Wpf.VerticalStackedAreaSeries",
+  "summary": "Compares trend and proportion, this series must be added in a cartesian chart.",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.VerticalStackedAreaSeries",
+    "alias": "VerticalStackedAreaSeries",
+    "href": "/App/documentation/beta/LiveCharts.Wpf.VerticalStackedAreaSeries",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/VerticalStackedAreaSeries.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/VerticalStackedAreaSeries.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DispatcherObject",
+      "typeInfo": {
+        "name": "System.Windows.Threading.DispatcherObject",
+        "alias": "DispatcherObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DependencyObject",
+      "typeInfo": {
+        "name": "System.Windows.DependencyObject",
+        "alias": "DependencyObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Visual",
+      "typeInfo": {
+        "name": "System.Windows.Media.Visual",
+        "alias": "Visual",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UIElement",
+      "typeInfo": {
+        "name": "System.Windows.UIElement",
+        "alias": "UIElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "FrameworkElement",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Series",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.Series.Series",
+        "alias": "Series",
+        "href": "/App/documentation/beta/LiveCharts.Wpf.Series.Series",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Series/Series.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Series/Series.cs"
+      }
+    },
+    {
+      "name": "LineSeries",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.LineSeries",
+        "alias": "LineSeries",
+        "href": "/App/documentation/beta/LiveCharts.Wpf.LineSeries",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/LineSeries.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/LineSeries.cs"
+      }
+    },
+    {
+      "name": "VerticalLineSeries",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.VerticalLineSeries",
+        "alias": "VerticalLineSeries",
+        "href": "/App/documentation/beta/LiveCharts.Wpf.VerticalLineSeries",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/VerticalLineSeries.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/VerticalLineSeries.cs"
+      }
+    }
+  ],
+  "constructors": [
+    {
+      "summary": "Initializes a new instance of VerticalStackedAreaSeries class",
+      "parameters": []
+    },
+    {
+      "summary": "Initializes a new instance of VerticalStackedAreaSeries class, with a given mapper",
+      "parameters": [
+        {
+          "name": "configuration",
+          "summary": null,
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "StackMode",
+      "summary": "Gets or sets the series stack mode, values or percentage",
+      "typeInfo": {
+        "name": "LiveCharts.StackMode",
+        "alias": "StackMode",
+        "href": "/App/documentation/beta/LiveCharts-StackMode",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/StackMode.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/StackMode.cs"
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

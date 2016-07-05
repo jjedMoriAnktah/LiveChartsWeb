@@ -1,0 +1,164 @@
+{
+  "name": "VisualElement",
+  "fullName": "LiveCharts.Wpf.VisualElement",
+  "summary": "Defines a visual element, a visual element is a UI element that is placed and scaled in the chart.",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.VisualElement",
+    "alias": "VisualElement",
+    "href": "/App/documentation/beta/LiveCharts.Wpf.VisualElement",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/VisualElement.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/VisualElement.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DispatcherObject",
+      "typeInfo": {
+        "name": "System.Windows.Threading.DispatcherObject",
+        "alias": "DispatcherObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DependencyObject",
+      "typeInfo": {
+        "name": "System.Windows.DependencyObject",
+        "alias": "DependencyObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Visual",
+      "typeInfo": {
+        "name": "System.Windows.Media.Visual",
+        "alias": "Visual",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UIElement",
+      "typeInfo": {
+        "name": "System.Windows.UIElement",
+        "alias": "UIElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "FrameworkElement",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [
+    {
+      "name": "UIElement",
+      "summary": "Gets or sets the user interface element.",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Chart",
+      "summary": "Gets the chart that owns the visual element",
+      "typeInfo": {
+        "name": "LiveCharts.Definitions.Charts.IChartView",
+        "alias": "IChartView",
+        "href": "/App/documentation/beta/LiveCharts-Definitions-Charts-IChartView",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Definitions/Charts/IChartView.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Definitions/Charts/IChartView.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "RequiresAdd",
+      "summary": "Gets if the elements requires to be added to the chart, this property should normally only be used internally by LiveCharts",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "AxisX",
+      "summary": "Gets or sets the index of the axis in X that owns the element, the axis position must exist.",
+      "typeInfo": {
+        "name": "System.Int32",
+        "alias": "Int32",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "AxisY",
+      "summary": "Gets or sets the index of the axis in Y that owns the element, the axis position must exist.",
+      "typeInfo": {
+        "name": "System.Int32",
+        "alias": "Int32",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "X",
+      "summary": "Gets or sets the X value of the UiElement",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Y",
+      "summary": "Gets or sets the Y value of the UiElement",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

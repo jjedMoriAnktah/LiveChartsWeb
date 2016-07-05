@@ -1,0 +1,35 @@
+{
+  "name": "ZoomingOptions",
+  "fullName": "LiveCharts.ZoomingOptions",
+  "summary": "Chart zooming options",
+  "typeInfo": {
+    "name": "LiveCharts.ZoomingOptions",
+    "alias": "ZoomingOptions",
+    "href": "/App/documentation/beta/LiveCharts-ZoomingOptions",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ZoomingOptions.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ZoomingOptions.cs"
+  },
+  "inheritance": [],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [
+    {
+      "name": "None",
+      "summary": "Disables zoom"
+    },
+    {
+      "name": "X",
+      "summary": "Only X axis"
+    },
+    {
+      "name": "Y",
+      "summary": "Only Y axis"
+    },
+    {
+      "name": "Xy",
+      "summary": "Both, X and Y axes"
+    }
+  ]
+}

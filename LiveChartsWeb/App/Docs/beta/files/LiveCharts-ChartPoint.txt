@@ -1,0 +1,258 @@
+{
+  "name": "ChartPoint",
+  "fullName": "LiveCharts.ChartPoint",
+  "summary": "Defines a point in the chart",
+  "typeInfo": {
+    "name": "LiveCharts.ChartPoint",
+    "alias": "ChartPoint",
+    "href": "/App/documentation/beta/LiveCharts-ChartPoint",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ChartPoint.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ChartPoint.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [
+    {
+      "name": "X",
+      "summary": "Gets the X point value",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Y",
+      "summary": "Gets the Y point value",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Weight",
+      "summary": "Gets the Weight of the point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "From",
+      "summary": "Gets where the stacked value started from",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "To",
+      "summary": "Gets where the stacked value finishes",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Sum",
+      "summary": "Get the total sum of the stacked elements",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Participation",
+      "summary": "Get the participation of the point in the stacked elements",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "StackedParticipation",
+      "summary": "gets the stacked participation of a point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Open",
+      "summary": "Gets the Open value of the point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "High",
+      "summary": "Gets the High value of the point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Low",
+      "summary": "Gets the Low value of the point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Close",
+      "summary": "Gets the Close value of the point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Radius",
+      "summary": "Gets the Radius of a point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Angle",
+      "summary": "Gets the angle of a point",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "ChartLocation",
+      "summary": "Gets the coordinate where the value is placed at chart",
+      "typeInfo": {
+        "name": "LiveCharts.Dtos.CorePoint",
+        "alias": "CorePoint",
+        "href": "/App/documentation/beta/LiveCharts-Dtos-CorePoint",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Dtos/CorePoint.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Dtos/CorePoint.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Key",
+      "summary": "Gets the index of this point in the chart",
+      "typeInfo": {
+        "name": "System.Int32",
+        "alias": "Int32",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Instance",
+      "summary": "Gets the object where the chart pulled the point",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "View",
+      "summary": "Gets or sets the view of this chart point",
+      "typeInfo": {
+        "name": "LiveCharts.Definitions.Points.IChartPointView",
+        "alias": "IChartPointView",
+        "href": "/App/documentation/beta/LiveCharts-Definitions-Points-IChartPointView",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Definitions/Points/IChartPointView.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Definitions/Points/IChartPointView.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "SeriesView",
+      "summary": "Gets the series where the point belongs to",
+      "typeInfo": {
+        "name": "LiveCharts.Definitions.Series.ISeriesView",
+        "alias": "ISeriesView",
+        "href": "/App/documentation/beta/LiveCharts-Definitions-Series-ISeriesView",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Definitions/Series/ISeriesView.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Definitions/Series/ISeriesView.cs"
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

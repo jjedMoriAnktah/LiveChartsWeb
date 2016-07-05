@@ -1,0 +1,29 @@
+{
+  "name": "Charting",
+  "fullName": "LiveCharts.Charting",
+  "summary": "Global LiveCharts configuration",
+  "typeInfo": {
+    "name": "LiveCharts.Charting",
+    "alias": "Charting",
+    "href": "/App/documentation/beta/LiveCharts-Charting",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Charting.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Charting.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

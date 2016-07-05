@@ -1,0 +1,34 @@
+{
+  "name": "CartesianMapper<T>",
+  "fullName": "LiveCharts.Configurations.CartesianMapper`1",
+  "summary": "Mapper to configure X and Y points",
+  "typeInfo": {
+    "name": "LiveCharts.Configurations.CartesianMapper`1",
+    "alias": "CartesianMapper`1",
+    "href": "/App/documentation/beta/LiveCharts-Configurations-CartesianMapper!1",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/CartesianMapper.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/CartesianMapper.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [
+    {
+      "name": "T",
+      "summary": "Type to configure"
+    }
+  ],
+  "methods": [],
+  "enumerates": []
+}

@@ -1,0 +1,309 @@
+{
+  "name": "Gauge",
+  "fullName": "LiveCharts.Wpf.Gauge",
+  "summary": "The gauge chart is useful to display progress or completion.",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.Gauge",
+    "alias": "Gauge",
+    "href": "/App/documentation/beta/LiveCharts.Wpf.Gauge",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Gauge.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Gauge.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DispatcherObject",
+      "typeInfo": {
+        "name": "System.Windows.Threading.DispatcherObject",
+        "alias": "DispatcherObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DependencyObject",
+      "typeInfo": {
+        "name": "System.Windows.DependencyObject",
+        "alias": "DependencyObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Visual",
+      "typeInfo": {
+        "name": "System.Windows.Media.Visual",
+        "alias": "Visual",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UIElement",
+      "typeInfo": {
+        "name": "System.Windows.UIElement",
+        "alias": "UIElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "FrameworkElement",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Control",
+      "typeInfo": {
+        "name": "System.Windows.Controls.Control",
+        "alias": "Control",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.Control(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.Control(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "ContentControl",
+      "typeInfo": {
+        "name": "System.Windows.Controls.ContentControl",
+        "alias": "ContentControl",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.ContentControl(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.ContentControl(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UserControl",
+      "typeInfo": {
+        "name": "System.Windows.Controls.UserControl",
+        "alias": "UserControl",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.UserControl(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.UserControl(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [
+    {
+      "name": "Uses360Mode",
+      "summary": "Gets or sets whether the gauge uses 360 mode, 360 mode will plot a full circle instead of a semi circle",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "From",
+      "summary": "Gets or sets the value where the gauge starts",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "To",
+      "summary": "Gets or sets the value where the gauge ends",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Value",
+      "summary": "Gets or sets the current value of the gauge",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Title",
+      "summary": "Gets or sets the gauge title",
+      "typeInfo": {
+        "name": "System.String",
+        "alias": "String",
+        "href": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "InnerRadius",
+      "summary": "Gets o sets inner radius",
+      "typeInfo": {
+        "name": "System.Nullable`1",
+        "alias": "Nullable`1",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Nullable`1(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Nullable`1(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": [
+        {
+          "name": "System.Double",
+          "alias": "Double",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+          "raw": ""
+        }
+      ]
+    },
+    {
+      "name": "Stroke",
+      "summary": "Gets or sets stroke, the stroke is the brush used to draw the gauge border.",
+      "typeInfo": {
+        "name": "System.Windows.Media.Brush",
+        "alias": "Brush",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "StrokeThickness",
+      "summary": "Gets or sets stroke brush thickness",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "ToColor",
+      "summary": "Gets or sets the color when the current value equals to min value, any value between min and max will use an interpolated color.",
+      "typeInfo": {
+        "name": "System.Windows.Media.Color",
+        "alias": "Color",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Color(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Color(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "FromColor",
+      "summary": "Gets or sets the color when the current value equals to max value, any value between min and max will use an interpolated color.",
+      "typeInfo": {
+        "name": "System.Windows.Media.Color",
+        "alias": "Color",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Color(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Color(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "GaugeBackground",
+      "summary": "Gets or sets the gauge background",
+      "typeInfo": {
+        "name": "System.Windows.Media.Brush",
+        "alias": "Brush",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "AnimationsSpeed",
+      "summary": "G3ts or sets the gauge animations speed",
+      "typeInfo": {
+        "name": "System.TimeSpan",
+        "alias": "TimeSpan",
+        "href": "https://msdn.microsoft.com/en-us/library/System.TimeSpan(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.TimeSpan(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "LabelFormatter",
+      "summary": "Gets or sets the label formatter, a label formatter takes a double value, and return a string, e.g. val => val.ToString(\"C\");",
+      "typeInfo": {
+        "name": "System.Func`2",
+        "alias": "Func`2",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Func`2(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Func`2(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": [
+        {
+          "name": "System.Double",
+          "alias": "Double",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+          "raw": ""
+        },
+        {
+          "name": "System.String",
+          "alias": "String",
+          "href": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+          "raw": ""
+        }
+      ]
+    },
+    {
+      "name": "HighFontSize",
+      "summary": "Gets o sets the label size, if this value is null then it will be automatically calculated, default is null.",
+      "typeInfo": {
+        "name": "System.Nullable`1",
+        "alias": "Nullable`1",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Nullable`1(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Nullable`1(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": [
+        {
+          "name": "System.Double",
+          "alias": "Double",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+          "raw": ""
+        }
+      ]
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

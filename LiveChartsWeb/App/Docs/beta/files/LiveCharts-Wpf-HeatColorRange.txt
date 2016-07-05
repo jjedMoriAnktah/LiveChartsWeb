@@ -1,0 +1,126 @@
+{
+  "name": "HeatColorRange",
+  "fullName": "LiveCharts.Wpf.HeatColorRange",
+  "summary": "HeatColorRange",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.HeatColorRange",
+    "alias": "HeatColorRange",
+    "href": "/App/documentation/beta/LiveCharts.Wpf.HeatColorRange",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/HeatColorRange.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/HeatColorRange.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DispatcherObject",
+      "typeInfo": {
+        "name": "System.Windows.Threading.DispatcherObject",
+        "alias": "DispatcherObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DependencyObject",
+      "typeInfo": {
+        "name": "System.Windows.DependencyObject",
+        "alias": "DependencyObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Visual",
+      "typeInfo": {
+        "name": "System.Windows.Media.Visual",
+        "alias": "Visual",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UIElement",
+      "typeInfo": {
+        "name": "System.Windows.UIElement",
+        "alias": "UIElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "FrameworkElement",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Control",
+      "typeInfo": {
+        "name": "System.Windows.Controls.Control",
+        "alias": "Control",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.Control(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.Control(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "ContentControl",
+      "typeInfo": {
+        "name": "System.Windows.Controls.ContentControl",
+        "alias": "ContentControl",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.ContentControl(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.ContentControl(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UserControl",
+      "typeInfo": {
+        "name": "System.Windows.Controls.UserControl",
+        "alias": "UserControl",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.UserControl(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.UserControl(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [
+    {
+      "name": "InitializeComponent",
+      "summary": "InitializeComponent",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    }
+  ],
+  "enumerates": []
+}

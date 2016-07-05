@@ -1,0 +1,39 @@
+{
+  "name": "TooltipSelectionMode",
+  "fullName": "LiveCharts.TooltipSelectionMode",
+  "summary": "Tooltip selection modes",
+  "typeInfo": {
+    "name": "LiveCharts.TooltipSelectionMode",
+    "alias": "TooltipSelectionMode",
+    "href": "/App/documentation/beta/LiveCharts-TooltipSelectionMode",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/TooltipSelectionMode.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/TooltipSelectionMode.cs"
+  },
+  "inheritance": [],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [
+    {
+      "name": "OnlySender",
+      "summary": "Gets only the hovered point"
+    },
+    {
+      "name": "SharedXValues",
+      "summary": "Gets all the points that shares the value X in the chart"
+    },
+    {
+      "name": "SharedYValues",
+      "summary": "Gets all the points that shares the value Y in the chart"
+    },
+    {
+      "name": "SharedXInSeries",
+      "summary": "Gets all the points that shares the value X in the hovered series"
+    },
+    {
+      "name": "SharedYInSeries",
+      "summary": "Gets all the points that shares the value Y in the hovered series"
+    }
+  ]
+}

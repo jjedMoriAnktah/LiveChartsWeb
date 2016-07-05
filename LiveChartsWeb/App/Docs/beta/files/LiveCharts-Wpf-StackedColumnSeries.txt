@@ -1,0 +1,147 @@
+{
+  "name": "StackedColumnSeries",
+  "fullName": "LiveCharts.Wpf.StackedColumnSeries",
+  "summary": "The stacked column series compares the proportion of every series in a point",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.StackedColumnSeries",
+    "alias": "StackedColumnSeries",
+    "href": "/App/documentation/beta/LiveCharts.Wpf.StackedColumnSeries",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/StackedColumnSeries.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/StackedColumnSeries.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DispatcherObject",
+      "typeInfo": {
+        "name": "System.Windows.Threading.DispatcherObject",
+        "alias": "DispatcherObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DependencyObject",
+      "typeInfo": {
+        "name": "System.Windows.DependencyObject",
+        "alias": "DependencyObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Visual",
+      "typeInfo": {
+        "name": "System.Windows.Media.Visual",
+        "alias": "Visual",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UIElement",
+      "typeInfo": {
+        "name": "System.Windows.UIElement",
+        "alias": "UIElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "FrameworkElement",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Series",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.Series.Series",
+        "alias": "Series",
+        "href": "/App/documentation/beta/LiveCharts.Wpf.Series.Series",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Series/Series.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Series/Series.cs"
+      }
+    }
+  ],
+  "constructors": [
+    {
+      "summary": "Initializes a new instance of StackedColumnSeries class",
+      "parameters": []
+    },
+    {
+      "summary": "Initializes a new instance of StackedColumnSeries class, with a given mapper",
+      "parameters": [
+        {
+          "name": "configuration",
+          "summary": null,
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "MaxColumnWidth",
+      "summary": "Gets or sets the maximum width of a column, any column will be capped at this value",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "ColumnPadding",
+      "summary": "Gets or sets the padding between every column in this series",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "StackMode",
+      "summary": "Gets or sets stacked mode, values or percentage",
+      "typeInfo": {
+        "name": "LiveCharts.StackMode",
+        "alias": "StackMode",
+        "href": "/App/documentation/beta/LiveCharts-StackMode",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/StackMode.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/StackMode.cs"
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": []
+}

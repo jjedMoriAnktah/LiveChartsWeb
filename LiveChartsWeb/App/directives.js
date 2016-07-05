@@ -6,8 +6,12 @@ app.directive('prettyprint', function() {
         scope: {
             code: '='
         },
-        link: function(scope, element, attrs) {
+        link: function (scope, element, attrs) {
+            scope.$watch('code', function () {
+                element.html(prettyPrintOne(scope.code));
+            });
             if (!scope.code) {
+                scope.code = '';
                 element.html(prettyPrintOne(element.html()));
                 return;
             }

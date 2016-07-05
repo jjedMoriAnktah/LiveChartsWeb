@@ -1,0 +1,629 @@
+[
+  {
+    "name": "ChartValues<T>",
+    "file": "LiveCharts-ChartValues!1",
+    "typeInfo": {
+      "name": "LiveCharts.ChartValues`1",
+      "alias": "ChartValues`1",
+      "href": "/App/documentation/beta/LiveCharts-ChartValues!1",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ChartValues.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ChartValues.cs"
+    }
+  },
+  {
+    "name": "Charting",
+    "file": "LiveCharts-Charting",
+    "typeInfo": {
+      "name": "LiveCharts.Charting",
+      "alias": "Charting",
+      "href": "/App/documentation/beta/LiveCharts-Charting",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Charting.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Charting.cs"
+    }
+  },
+  {
+    "name": "TooltipSelectionMode",
+    "file": "LiveCharts-TooltipSelectionMode",
+    "typeInfo": {
+      "name": "LiveCharts.TooltipSelectionMode",
+      "alias": "TooltipSelectionMode",
+      "href": "/App/documentation/beta/LiveCharts-TooltipSelectionMode",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/TooltipSelectionMode.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/TooltipSelectionMode.cs"
+    }
+  },
+  {
+    "name": "SeriesOrientation",
+    "file": "LiveCharts-SeriesOrientation",
+    "typeInfo": {
+      "name": "LiveCharts.SeriesOrientation",
+      "alias": "SeriesOrientation",
+      "href": "/App/documentation/beta/LiveCharts-SeriesOrientation",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/SeriesOrientation.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/SeriesOrientation.cs"
+    }
+  },
+  {
+    "name": "AxisPosition",
+    "file": "LiveCharts-AxisPosition",
+    "typeInfo": {
+      "name": "LiveCharts.AxisPosition",
+      "alias": "AxisPosition",
+      "href": "/App/documentation/beta/LiveCharts-AxisPosition",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/AxisPosition.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/AxisPosition.cs"
+    }
+  },
+  {
+    "name": "SeparationState",
+    "file": "LiveCharts-SeparationState",
+    "typeInfo": {
+      "name": "LiveCharts.SeparationState",
+      "alias": "SeparationState",
+      "href": "/App/documentation/beta/LiveCharts-SeparationState",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/SeparationState.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/SeparationState.cs"
+    }
+  },
+  {
+    "name": "ZoomingOptions",
+    "file": "LiveCharts-ZoomingOptions",
+    "typeInfo": {
+      "name": "LiveCharts.ZoomingOptions",
+      "alias": "ZoomingOptions",
+      "href": "/App/documentation/beta/LiveCharts-ZoomingOptions",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ZoomingOptions.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ZoomingOptions.cs"
+    }
+  },
+  {
+    "name": "LegendLocation",
+    "file": "LiveCharts-LegendLocation",
+    "typeInfo": {
+      "name": "LiveCharts.LegendLocation",
+      "alias": "LegendLocation",
+      "href": "/App/documentation/beta/LiveCharts-LegendLocation",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/LegendLocation.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LegendLocation.cs"
+    }
+  },
+  {
+    "name": "StackMode",
+    "file": "LiveCharts-StackMode",
+    "typeInfo": {
+      "name": "LiveCharts.StackMode",
+      "alias": "StackMode",
+      "href": "/App/documentation/beta/LiveCharts-StackMode",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/StackMode.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/StackMode.cs"
+    }
+  },
+  {
+    "name": "AxisOrientation",
+    "file": "LiveCharts-AxisOrientation",
+    "typeInfo": {
+      "name": "LiveCharts.AxisOrientation",
+      "alias": "AxisOrientation",
+      "href": "/App/documentation/beta/LiveCharts-AxisOrientation",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/AxisOrientation.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/AxisOrientation.cs"
+    }
+  },
+  {
+    "name": "ChartFunctions",
+    "file": "LiveCharts-ChartFunctions",
+    "typeInfo": {
+      "name": "LiveCharts.ChartFunctions",
+      "alias": "ChartFunctions",
+      "href": "/App/documentation/beta/LiveCharts-ChartFunctions",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ChartFunctions.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ChartFunctions.cs"
+    }
+  },
+  {
+    "name": "ChartPoint",
+    "file": "LiveCharts-ChartPoint",
+    "typeInfo": {
+      "name": "LiveCharts.ChartPoint",
+      "alias": "ChartPoint",
+      "href": "/App/documentation/beta/LiveCharts-ChartPoint",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ChartPoint.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ChartPoint.cs"
+    }
+  },
+  {
+    "name": "SeriesCollection",
+    "file": "LiveCharts-SeriesCollection",
+    "typeInfo": {
+      "name": "LiveCharts.SeriesCollection",
+      "alias": "SeriesCollection",
+      "href": "/App/documentation/beta/LiveCharts-SeriesCollection",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/SeriesCollection.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/SeriesCollection.cs"
+    }
+  },
+  {
+    "name": "VisualElementsCollection",
+    "file": "LiveCharts-VisualElementsCollection",
+    "typeInfo": {
+      "name": "LiveCharts.VisualElementsCollection",
+      "alias": "VisualElementsCollection",
+      "href": "/App/documentation/beta/LiveCharts-VisualElementsCollection",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/VisualElementsCollection.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/VisualElementsCollection.cs"
+    }
+  },
+  {
+    "name": "Extentions",
+    "file": "LiveCharts-Helpers-Extentions",
+    "typeInfo": {
+      "name": "LiveCharts.Helpers.Extentions",
+      "alias": "Extentions",
+      "href": "/App/documentation/beta/LiveCharts-Helpers-Extentions",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Helpers/Extentions.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Helpers/Extentions.cs"
+    }
+  },
+  {
+    "name": "NoisyCollection<T>",
+    "file": "LiveCharts-Helpers-NoisyCollection!1",
+    "typeInfo": {
+      "name": "LiveCharts.Helpers.NoisyCollection`1",
+      "alias": "NoisyCollection`1",
+      "href": "/App/documentation/beta/LiveCharts-Helpers-NoisyCollection!1",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Helpers/NoisyCollection.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Helpers/NoisyCollection.cs"
+    }
+  },
+  {
+    "name": "DateTimePoint",
+    "file": "LiveCharts-Defaults-DateTimePoint",
+    "typeInfo": {
+      "name": "LiveCharts.Defaults.DateTimePoint",
+      "alias": "DateTimePoint",
+      "href": "/App/documentation/beta/LiveCharts-Defaults-DateTimePoint",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/DateTimePoint.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/DateTimePoint.cs"
+    }
+  },
+  {
+    "name": "PolarPoint",
+    "file": "LiveCharts-Defaults-PolarPoint",
+    "typeInfo": {
+      "name": "LiveCharts.Defaults.PolarPoint",
+      "alias": "PolarPoint",
+      "href": "/App/documentation/beta/LiveCharts-Defaults-PolarPoint",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/PolarPoint.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/PolarPoint.cs"
+    }
+  },
+  {
+    "name": "ObservablePoint",
+    "file": "LiveCharts-Defaults-ObservablePoint",
+    "typeInfo": {
+      "name": "LiveCharts.Defaults.ObservablePoint",
+      "alias": "ObservablePoint",
+      "href": "/App/documentation/beta/LiveCharts-Defaults-ObservablePoint",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/ObservablePoint.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/ObservablePoint.cs"
+    }
+  },
+  {
+    "name": "ObservableValue",
+    "file": "LiveCharts-Defaults-ObservableValue",
+    "typeInfo": {
+      "name": "LiveCharts.Defaults.ObservableValue",
+      "alias": "ObservableValue",
+      "href": "/App/documentation/beta/LiveCharts-Defaults-ObservableValue",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/ObservableValue.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/ObservableValue.cs"
+    }
+  },
+  {
+    "name": "OhlcPoint",
+    "file": "LiveCharts-Defaults-OhlcPoint",
+    "typeInfo": {
+      "name": "LiveCharts.Defaults.OhlcPoint",
+      "alias": "OhlcPoint",
+      "href": "/App/documentation/beta/LiveCharts-Defaults-OhlcPoint",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/OhlcPoint.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/OhlcPoint.cs"
+    }
+  },
+  {
+    "name": "BubblePoint",
+    "file": "LiveCharts-Defaults-BubblePoint",
+    "typeInfo": {
+      "name": "LiveCharts.Defaults.BubblePoint",
+      "alias": "BubblePoint",
+      "href": "/App/documentation/beta/LiveCharts-Defaults-BubblePoint",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/BubblePoint.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/BubblePoint.cs"
+    }
+  },
+  {
+    "name": "HeatPoint",
+    "file": "LiveCharts-Defaults-HeatPoint",
+    "typeInfo": {
+      "name": "LiveCharts.Defaults.HeatPoint",
+      "alias": "HeatPoint",
+      "href": "/App/documentation/beta/LiveCharts-Defaults-HeatPoint",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Defaults/HeatPoint.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Defaults/HeatPoint.cs"
+    }
+  },
+  {
+    "name": "WeightedMapper<T>",
+    "file": "LiveCharts-Configurations-WeightedMapper!1",
+    "typeInfo": {
+      "name": "LiveCharts.Configurations.WeightedMapper`1",
+      "alias": "WeightedMapper`1",
+      "href": "/App/documentation/beta/LiveCharts-Configurations-WeightedMapper!1",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/WeightedMapper.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/WeightedMapper.cs"
+    }
+  },
+  {
+    "name": "PolarMapper<T>",
+    "file": "LiveCharts-Configurations-PolarMapper!1",
+    "typeInfo": {
+      "name": "LiveCharts.Configurations.PolarMapper`1",
+      "alias": "PolarMapper`1",
+      "href": "/App/documentation/beta/LiveCharts-Configurations-PolarMapper!1",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/PolarMapper.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/PolarMapper.cs"
+    }
+  },
+  {
+    "name": "CartesianMapper<T>",
+    "file": "LiveCharts-Configurations-CartesianMapper!1",
+    "typeInfo": {
+      "name": "LiveCharts.Configurations.CartesianMapper`1",
+      "alias": "CartesianMapper`1",
+      "href": "/App/documentation/beta/LiveCharts-Configurations-CartesianMapper!1",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/CartesianMapper.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/CartesianMapper.cs"
+    }
+  },
+  {
+    "name": "FinancialMapper<T>",
+    "file": "LiveCharts-Configurations-FinancialMapper!1",
+    "typeInfo": {
+      "name": "LiveCharts.Configurations.FinancialMapper`1",
+      "alias": "FinancialMapper`1",
+      "href": "/App/documentation/beta/LiveCharts-Configurations-FinancialMapper!1",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/FinancialMapper.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/FinancialMapper.cs"
+    }
+  },
+  {
+    "name": "Mappers",
+    "file": "LiveCharts-Configurations-Mappers",
+    "typeInfo": {
+      "name": "LiveCharts.Configurations.Mappers",
+      "alias": "Mappers",
+      "href": "/App/documentation/beta/LiveCharts-Configurations-Mappers",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Configurations/Mappers.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Configurations/Mappers.cs"
+    }
+  },
+  {
+    "name": "DefaultGeometries",
+    "file": "LiveCharts-Wpf-DefaultGeometries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.DefaultGeometries",
+      "alias": "DefaultGeometries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultGeometries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultGeometries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultGeometries.cs"
+    }
+  },
+  {
+    "name": "HeatColorRange",
+    "file": "LiveCharts-Wpf-HeatColorRange",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.HeatColorRange",
+      "alias": "HeatColorRange",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.HeatColorRange",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/HeatColorRange.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/HeatColorRange.cs"
+    }
+  },
+  {
+    "name": "SectionsCollection",
+    "file": "LiveCharts-Wpf-SectionsCollection",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.SectionsCollection",
+      "alias": "SectionsCollection",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.SectionsCollection",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/SectionsCollection.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/SectionsCollection.cs"
+    }
+  },
+  {
+    "name": "AxesCollection",
+    "file": "LiveCharts-Wpf-AxesCollection",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.AxesCollection",
+      "alias": "AxesCollection",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.AxesCollection",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxesCollection.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxesCollection.cs"
+    }
+  },
+  {
+    "name": "Axis",
+    "file": "LiveCharts-Wpf-Axis",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.Axis",
+      "alias": "Axis",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.Axis",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Axis.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Axis.cs"
+    }
+  },
+  {
+    "name": "AxisSection",
+    "file": "LiveCharts-Wpf-AxisSection",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.AxisSection",
+      "alias": "AxisSection",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.AxisSection",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxisSection.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxisSection.cs"
+    }
+  },
+  {
+    "name": "Gauge",
+    "file": "LiveCharts-Wpf-Gauge",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.Gauge",
+      "alias": "Gauge",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.Gauge",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Gauge.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Gauge.cs"
+    }
+  },
+  {
+    "name": "PieChart",
+    "file": "LiveCharts-Wpf-PieChart",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.PieChart",
+      "alias": "PieChart",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.PieChart",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/PieChart.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/PieChart.cs"
+    }
+  },
+  {
+    "name": "DefaultLegend",
+    "file": "LiveCharts-Wpf-DefaultLegend",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.DefaultLegend",
+      "alias": "DefaultLegend",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultLegend",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultLegend.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultLegend.cs"
+    }
+  },
+  {
+    "name": "DefaultTooltip",
+    "file": "LiveCharts-Wpf-DefaultTooltip",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.DefaultTooltip",
+      "alias": "DefaultTooltip",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultTooltip",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultTooltip.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultTooltip.cs"
+    }
+  },
+  {
+    "name": "HeatSeries",
+    "file": "LiveCharts-Wpf-HeatSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.HeatSeries",
+      "alias": "HeatSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.HeatSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/HeatSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/HeatSeries.cs"
+    }
+  },
+  {
+    "name": "PieSeries",
+    "file": "LiveCharts-Wpf-PieSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.PieSeries",
+      "alias": "PieSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.PieSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/PieSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/PieSeries.cs"
+    }
+  },
+  {
+    "name": "OhlcSeries",
+    "file": "LiveCharts-Wpf-OhlcSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.OhlcSeries",
+      "alias": "OhlcSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.OhlcSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/OhlcSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/OhlcSeries.cs"
+    }
+  },
+  {
+    "name": "StackedAreaSeries",
+    "file": "LiveCharts-Wpf-StackedAreaSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.StackedAreaSeries",
+      "alias": "StackedAreaSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.StackedAreaSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/StackedAreaSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/StackedAreaSeries.cs"
+    }
+  },
+  {
+    "name": "StackedRowSeries",
+    "file": "LiveCharts-Wpf-StackedRowSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.StackedRowSeries",
+      "alias": "StackedRowSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.StackedRowSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/StackedRowSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/StackedRowSeries.cs"
+    }
+  },
+  {
+    "name": "StackedColumnSeries",
+    "file": "LiveCharts-Wpf-StackedColumnSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.StackedColumnSeries",
+      "alias": "StackedColumnSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.StackedColumnSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/StackedColumnSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/StackedColumnSeries.cs"
+    }
+  },
+  {
+    "name": "RowSeries",
+    "file": "LiveCharts-Wpf-RowSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.RowSeries",
+      "alias": "RowSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.RowSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/RowSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/RowSeries.cs"
+    }
+  },
+  {
+    "name": "ColumnSeries",
+    "file": "LiveCharts-Wpf-ColumnSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.ColumnSeries",
+      "alias": "ColumnSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.ColumnSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/ColumnSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/ColumnSeries.cs"
+    }
+  },
+  {
+    "name": "BubbleSeries",
+    "file": "LiveCharts-Wpf-BubbleSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.BubbleSeries",
+      "alias": "BubbleSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.BubbleSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/BubbleSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/BubbleSeries.cs"
+    }
+  },
+  {
+    "name": "VerticalStackedAreaSeries",
+    "file": "LiveCharts-Wpf-VerticalStackedAreaSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.VerticalStackedAreaSeries",
+      "alias": "VerticalStackedAreaSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.VerticalStackedAreaSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/VerticalStackedAreaSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/VerticalStackedAreaSeries.cs"
+    }
+  },
+  {
+    "name": "VerticalLineSeries",
+    "file": "LiveCharts-Wpf-VerticalLineSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.VerticalLineSeries",
+      "alias": "VerticalLineSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.VerticalLineSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/VerticalLineSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/VerticalLineSeries.cs"
+    }
+  },
+  {
+    "name": "DefaultAxes",
+    "file": "LiveCharts-Wpf-DefaultAxes",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.DefaultAxes",
+      "alias": "DefaultAxes",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultAxes",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultAxes.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultAxes.cs"
+    }
+  },
+  {
+    "name": "CartesianChart",
+    "file": "LiveCharts-Wpf-CartesianChart",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.CartesianChart",
+      "alias": "CartesianChart",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.CartesianChart",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/CartesianChart.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/CartesianChart.cs"
+    }
+  },
+  {
+    "name": "LineSeries",
+    "file": "LiveCharts-Wpf-LineSeries",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.LineSeries",
+      "alias": "LineSeries",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.LineSeries",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/LineSeries.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/LineSeries.cs"
+    }
+  },
+  {
+    "name": "Separator",
+    "file": "LiveCharts-Wpf-Separator",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.Separator",
+      "alias": "Separator",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.Separator",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Separator.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Separator.cs"
+    }
+  },
+  {
+    "name": "VisualElement",
+    "file": "LiveCharts-Wpf-VisualElement",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.VisualElement",
+      "alias": "VisualElement",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.VisualElement",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/VisualElement.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/VisualElement.cs"
+    }
+  },
+  {
+    "name": "Resources",
+    "file": "LiveCharts-Wpf-Properties-Resources",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.Properties.Resources",
+      "alias": "Resources",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.Properties.Resources",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Properties/Resources.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Properties/Resources.cs"
+    }
+  },
+  {
+    "name": "test",
+    "file": "LiveCharts-Wpf-Charts-test",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.Charts.test",
+      "alias": "test",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.Charts.test",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Charts/test.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Charts/test.cs"
+    }
+  },
+  {
+    "name": "Chart",
+    "file": "LiveCharts-Wpf-Charts-Base-Chart",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.Charts.Base.Chart",
+      "alias": "Chart",
+      "href": "/App/documentation/beta/LiveCharts.Wpf.Charts.Base.Chart",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Charts/Base/Chart.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Charts/Base/Chart.cs"
+    }
+  }
+]

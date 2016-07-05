@@ -1,0 +1,355 @@
+{
+  "name": "NoisyCollection<T>",
+  "fullName": "LiveCharts.Helpers.NoisyCollection`1",
+  "summary": "A collection that notifies every time a value is added or removed",
+  "typeInfo": {
+    "name": "LiveCharts.Helpers.NoisyCollection`1",
+    "alias": "NoisyCollection`1",
+    "href": "/App/documentation/beta/LiveCharts-Helpers-NoisyCollection!1",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Helpers/NoisyCollection.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Helpers/NoisyCollection.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [
+    {
+      "summary": "Initializes a new instance of NoisyCollection class",
+      "parameters": []
+    },
+    {
+      "summary": "Initializes a new instance of NoisiCollection class with a given capacity",
+      "parameters": [
+        {
+          "name": "capacity",
+          "summary": "given capacity",
+          "typeInfo": {
+            "name": "System.Reflection.RuntimeParameterInfo",
+            "alias": "RuntimeParameterInfo",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Reflection.RuntimeParameterInfo(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "Count",
+      "summary": "Gets the number of items in the array",
+      "typeInfo": {
+        "name": "System.Int32",
+        "alias": "Int32",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "IsSynchronized",
+      "summary": "Gets whether the collection is synchronized",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "SyncRoot",
+      "summary": "Gets the collections's sync root",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "IsFixedSize",
+      "summary": "Gets whether the collection is fixed",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [
+    {
+      "name": "T",
+      "summary": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "GetEnumerator",
+      "summary": "Enumerates the collection",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": "collection enumeration",
+        "typeInfo": {
+          "name": "System.Collections.Generic.IEnumerator`1",
+          "alias": "IEnumerator`1",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Collections.Generic.IEnumerator`1(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Collections.Generic.IEnumerator`1(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "Add",
+      "summary": "Adds an object to the collection, and notifies the change",
+      "parameters": [
+        {
+          "name": "value",
+          "summary": "Adds an object to the collection, and notifies the change",
+          "typeInfo": {
+            "name": "System.Object",
+            "alias": "Object",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": "number of items in the collection",
+        "typeInfo": {
+          "name": "System.Int32",
+          "alias": "Int32",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "Insert",
+      "summary": "Insert an item in a specific index, then notifies the change",
+      "parameters": [
+        {
+          "name": "index",
+          "summary": "Insert an item in a specific index, then notifies the change",
+          "typeInfo": {
+            "name": "System.Int32",
+            "alias": "Int32",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+            "raw": ""
+          }
+        },
+        {
+          "name": "value",
+          "summary": "Insert an item in a specific index, then notifies the change",
+          "typeInfo": {
+            "name": "System.Object",
+            "alias": "Object",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "Remove",
+      "summary": "Removes an item from a collection, then notifies the change",
+      "parameters": [
+        {
+          "name": "value",
+          "summary": "Removes an item from a collection, then notifies the change",
+          "typeInfo": {
+            "name": "System.Object",
+            "alias": "Object",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "RemoveAt",
+      "summary": "Removes an item at a specific index, then notifies the change",
+      "parameters": [
+        {
+          "name": "index",
+          "summary": "Removes an item at a specific index, then notifies the change",
+          "typeInfo": {
+            "name": "System.Int32",
+            "alias": "Int32",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "Clear",
+      "summary": "Removes all the items from the collection, then notifies the change",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "Contains",
+      "summary": "Evaluates whether an item is in this collection",
+      "parameters": [
+        {
+          "name": "value",
+          "summary": "Evaluates whether an item is in this collection",
+          "typeInfo": {
+            "name": "System.Object",
+            "alias": "Object",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": "evaluation",
+        "typeInfo": {
+          "name": "System.Boolean",
+          "alias": "Boolean",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "CopyTo",
+      "summary": "Copies the collection to another array",
+      "parameters": [
+        {
+          "name": "array",
+          "summary": "Copies the collection to another array",
+          "typeInfo": {
+            "name": "System.Array",
+            "alias": "Array",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Array(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Array(v=vs.110).aspx",
+            "raw": ""
+          }
+        },
+        {
+          "name": "index",
+          "summary": "Copies the collection to another array",
+          "typeInfo": {
+            "name": "System.Int32",
+            "alias": "Int32",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "IndexOf",
+      "summary": "Returns the index of an item in the collection",
+      "parameters": [
+        {
+          "name": "value",
+          "summary": "Returns the index of an item in the collection",
+          "typeInfo": {
+            "name": "System.Object",
+            "alias": "Object",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": "",
+        "typeInfo": {
+          "name": "System.Int32",
+          "alias": "Int32",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    }
+  ],
+  "enumerates": []
+}

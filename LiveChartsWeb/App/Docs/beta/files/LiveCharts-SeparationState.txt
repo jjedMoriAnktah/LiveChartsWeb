@@ -1,0 +1,31 @@
+{
+  "name": "SeparationState",
+  "fullName": "LiveCharts.SeparationState",
+  "summary": "Separator current state",
+  "typeInfo": {
+    "name": "LiveCharts.SeparationState",
+    "alias": "SeparationState",
+    "href": "/App/documentation/beta/LiveCharts-SeparationState",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/SeparationState.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/SeparationState.cs"
+  },
+  "inheritance": [],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [
+    {
+      "name": "Remove",
+      "summary": "Remove the separator from the chart"
+    },
+    {
+      "name": "Keep",
+      "summary": "Kepp the separator in the chart"
+    },
+    {
+      "name": "InitialAdd",
+      "summary": "no animated add"
+    }
+  ]
+}

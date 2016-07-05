@@ -1,0 +1,374 @@
+{
+  "name": "Chart",
+  "fullName": "LiveCharts.Wpf.Charts.Base.Chart",
+  "summary": "Base chart class",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.Charts.Base.Chart",
+    "alias": "Chart",
+    "href": "/App/documentation/beta/LiveCharts.Wpf.Charts.Base.Chart",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/Charts/Base/Chart.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/Charts/Base/Chart.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DispatcherObject",
+      "typeInfo": {
+        "name": "System.Windows.Threading.DispatcherObject",
+        "alias": "DispatcherObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DependencyObject",
+      "typeInfo": {
+        "name": "System.Windows.DependencyObject",
+        "alias": "DependencyObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Visual",
+      "typeInfo": {
+        "name": "System.Windows.Media.Visual",
+        "alias": "Visual",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UIElement",
+      "typeInfo": {
+        "name": "System.Windows.UIElement",
+        "alias": "UIElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "FrameworkElement",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Control",
+      "typeInfo": {
+        "name": "System.Windows.Controls.Control",
+        "alias": "Control",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.Control(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.Control(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "ContentControl",
+      "typeInfo": {
+        "name": "System.Windows.Controls.ContentControl",
+        "alias": "ContentControl",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.ContentControl(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.ContentControl(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UserControl",
+      "typeInfo": {
+        "name": "System.Windows.Controls.UserControl",
+        "alias": "UserControl",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.UserControl(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Controls.UserControl(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [
+    {
+      "name": "RandomizeStartingColor",
+      "summary": "Gets or sets whether charts must randomize the starting default series color.",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Colors",
+      "summary": "Gets or sets the default series color set.",
+      "typeInfo": {
+        "name": "System.Collections.Generic.List`1",
+        "alias": "List`1",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Collections.Generic.List`1(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Collections.Generic.List`1(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": [
+        {
+          "name": "System.Windows.Media.Color",
+          "alias": "Color",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Color(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Color(v=vs.110).aspx",
+          "raw": ""
+        }
+      ]
+    },
+    {
+      "name": "AxisY",
+      "summary": "Gets or sets vertical axis",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.AxesCollection",
+        "alias": "AxesCollection",
+        "href": "/App/documentation/beta/LiveCharts.Wpf.AxesCollection",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxesCollection.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxesCollection.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "AxisX",
+      "summary": "Gets or sets horizontal axis",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.AxesCollection",
+        "alias": "AxesCollection",
+        "href": "/App/documentation/beta/LiveCharts.Wpf.AxesCollection",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/AxesCollection.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/AxesCollection.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "ChartLegend",
+      "summary": "Gets or sets the control to use as chart legend for this chart.",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.DefaultLegend",
+        "alias": "DefaultLegend",
+        "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultLegend",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultLegend.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultLegend.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Zoom",
+      "summary": "Gets or sets chart zoom behavior",
+      "typeInfo": {
+        "name": "LiveCharts.ZoomingOptions",
+        "alias": "ZoomingOptions",
+        "href": "/App/documentation/beta/LiveCharts-ZoomingOptions",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ZoomingOptions.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ZoomingOptions.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "LegendLocation",
+      "summary": "Gets or sets where legend is located",
+      "typeInfo": {
+        "name": "LiveCharts.LegendLocation",
+        "alias": "LegendLocation",
+        "href": "/App/documentation/beta/LiveCharts-LegendLocation",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/LegendLocation.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LegendLocation.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Series",
+      "summary": "Gets or sets chart series collection to plot.",
+      "typeInfo": {
+        "name": "LiveCharts.SeriesCollection",
+        "alias": "SeriesCollection",
+        "href": "/App/documentation/beta/LiveCharts-SeriesCollection",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/SeriesCollection.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/SeriesCollection.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "AnimationsSpeed",
+      "summary": "Gets or sets the default animation speed for this chart, you can override this speed for each element (series and axes)",
+      "typeInfo": {
+        "name": "System.TimeSpan",
+        "alias": "TimeSpan",
+        "href": "https://msdn.microsoft.com/en-us/library/System.TimeSpan(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.TimeSpan(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "DisableAnimations",
+      "summary": "Gets or sets if the chart is animated or not.",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "DataTooltip",
+      "summary": "Gets or sets the chart data tooltip.",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.DefaultTooltip",
+        "alias": "DefaultTooltip",
+        "href": "/App/documentation/beta/LiveCharts.Wpf.DefaultTooltip",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/LiveCharts/Wpf/DefaultTooltip.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/LiveCharts/Wpf/DefaultTooltip.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Hoverable",
+      "summary": "gets or sets whether chart should react when a user moves the mouse over a data point.",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Model",
+      "summary": "Gets the chart model, the model is who calculates everything, is the engine of the chart",
+      "typeInfo": {
+        "name": "LiveCharts.Charts.ChartCore",
+        "alias": "ChartCore",
+        "href": "/App/documentation/beta/LiveCharts-Charts-ChartCore",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Charts/ChartCore.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Charts/ChartCore.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "HasTooltip",
+      "summary": "Gets whether the chart has an active tooltip.",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "HasDataClickEventAttached",
+      "summary": "Gets whether the chart has a DataClick event attacked.",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "IsControlLoaded",
+      "summary": "Gets whether the chart is already loaded in the view.",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "IsMocked",
+      "summary": "This property need to be true when unit testing",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "TooltipTimeout",
+      "summary": "Gets or sets the time a tooltip takes to hide when the user leaves the data point.",
+      "typeInfo": {
+        "name": "System.TimeSpan",
+        "alias": "TimeSpan",
+        "href": "https://msdn.microsoft.com/en-us/library/System.TimeSpan(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.TimeSpan(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [
+    {
+      "name": "Update",
+      "summary": "Forces the chart to update",
+      "parameters": [
+        {
+          "name": "restartView",
+          "summary": "Forces the chart to update",
+          "typeInfo": {
+            "name": "System.Boolean",
+            "alias": "Boolean",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+            "raw": ""
+          }
+        },
+        {
+          "name": "force",
+          "summary": "Forces the chart to update",
+          "typeInfo": {
+            "name": "System.Boolean",
+            "alias": "Boolean",
+            "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    }
+  ],
+  "enumerates": []
+}

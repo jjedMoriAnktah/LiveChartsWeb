@@ -1,0 +1,31 @@
+{
+  "name": "AxisOrientation",
+  "fullName": "LiveCharts.AxisOrientation",
+  "summary": "Cartesian Axis orientation",
+  "typeInfo": {
+    "name": "LiveCharts.AxisOrientation",
+    "alias": "AxisOrientation",
+    "href": "/App/documentation/beta/LiveCharts-AxisOrientation",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/AxisOrientation.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/AxisOrientation.cs"
+  },
+  "inheritance": [],
+  "constructors": [],
+  "properties": [],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [
+    {
+      "name": "None",
+      "summary": "Unknown orientation"
+    },
+    {
+      "name": "X",
+      "summary": "Horizontal (X)"
+    },
+    {
+      "name": "Y",
+      "summary": "Vertical (Y)"
+    }
+  ]
+}
