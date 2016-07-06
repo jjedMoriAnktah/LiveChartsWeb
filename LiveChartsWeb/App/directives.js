@@ -8,14 +8,9 @@ app.directive('prettyprint', function() {
         },
         link: function(scope, element, attrs) {
             scope.$watch('code', function() {
-                element.html(prettyPrintOne(scope.code));
+                element.html(prettyPrintOne(scope.code || element.html()));
             });
-            if (!scope.code) {
-                scope.code = '';
-                element.html(prettyPrintOne(element.html()));
-                return;
-            }
-            element.html(prettyPrintOne(scope.code));
+            element.html(prettyPrintOne(scope.code || element.html()));
         }
     };
 }).directive('dynamic', [
