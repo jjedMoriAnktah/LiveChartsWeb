@@ -122,7 +122,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Adds an object to the collection, and notifies the change",
+          "summary": "item to add",
           "typeInfo": {
             "name": "System.Object",
             "alias": "Object",
@@ -150,7 +150,7 @@
       "parameters": [
         {
           "name": "index",
-          "summary": "Insert an item in a specific index, then notifies the change",
+          "summary": "index to insert at",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -161,7 +161,7 @@
         },
         {
           "name": "value",
-          "summary": "Insert an item in a specific index, then notifies the change",
+          "summary": "item to insert",
           "typeInfo": {
             "name": "System.Object",
             "alias": "Object",
@@ -189,7 +189,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Removes an item from a collection, then notifies the change",
+          "summary": "item to remove",
           "typeInfo": {
             "name": "System.Object",
             "alias": "Object",
@@ -217,7 +217,7 @@
       "parameters": [
         {
           "name": "index",
-          "summary": "Removes an item at a specific index, then notifies the change",
+          "summary": "index to remove at",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -261,7 +261,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Evaluates whether an item is in this collection",
+          "summary": "object to look for",
           "typeInfo": {
             "name": "System.Object",
             "alias": "Object",
@@ -289,7 +289,7 @@
       "parameters": [
         {
           "name": "array",
-          "summary": "Copies the collection to another array",
+          "summary": "backup array",
           "typeInfo": {
             "name": "System.Array",
             "alias": "Array",
@@ -300,7 +300,7 @@
         },
         {
           "name": "index",
-          "summary": "Copies the collection to another array",
+          "summary": "array index",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -328,7 +328,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Returns the index of an item in the collection",
+          "summary": "item to look for",
           "typeInfo": {
             "name": "System.Object",
             "alias": "Object",

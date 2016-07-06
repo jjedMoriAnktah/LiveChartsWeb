@@ -336,7 +336,7 @@
       "parameters": [
         {
           "name": "restartView",
-          "summary": "Forces the chart to update",
+          "summary": "Indicates whether the update should restart the view, animations will run again if true.",
           "typeInfo": {
             "name": "System.Boolean",
             "alias": "Boolean",
@@ -347,7 +347,7 @@
         },
         {
           "name": "force",
-          "summary": "Forces the chart to update",
+          "summary": "Force the updater to run when called, without waiting for the next updater step.",
           "typeInfo": {
             "name": "System.Boolean",
             "alias": "Boolean",

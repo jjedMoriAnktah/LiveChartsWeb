@@ -1,0 +1,495 @@
+{
+  "name": "Series",
+  "fullName": "LiveCharts.Wpf.Series",
+  "summary": "Base WPF and WinForms series, this class is abstract",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.Series",
+    "alias": "Series",
+    "href": "/App/documentation/beta/LiveCharts-Wpf-Series",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Series.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Series.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DispatcherObject",
+      "typeInfo": {
+        "name": "System.Windows.Threading.DispatcherObject",
+        "alias": "DispatcherObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Threading.DispatcherObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "DependencyObject",
+      "typeInfo": {
+        "name": "System.Windows.DependencyObject",
+        "alias": "DependencyObject",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.DependencyObject(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "Visual",
+      "typeInfo": {
+        "name": "System.Windows.Media.Visual",
+        "alias": "Visual",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Visual(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "UIElement",
+      "typeInfo": {
+        "name": "System.Windows.UIElement",
+        "alias": "UIElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.UIElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    },
+    {
+      "name": "FrameworkElement",
+      "typeInfo": {
+        "name": "System.Windows.FrameworkElement",
+        "alias": "FrameworkElement",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FrameworkElement(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [
+    {
+      "name": "Model",
+      "summary": "THe Model is set by every series type, it is the motor of the series, it is the communication with the core of the library",
+      "typeInfo": {
+        "name": "LiveCharts.SeriesAlgorithm",
+        "alias": "SeriesAlgorithm",
+        "href": "/App/documentation/beta/LiveCharts-SeriesAlgorithm",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/SeriesAlgorithm.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/SeriesAlgorithm.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "ActualValues",
+      "summary": "Gets the Actual values in the series, active or visible series only",
+      "typeInfo": {
+        "name": "LiveCharts.IChartValues",
+        "alias": "IChartValues",
+        "href": "/App/documentation/beta/LiveCharts-IChartValues",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/IChartValues.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/IChartValues.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "IsSeriesVisible",
+      "summary": "Gets whether the series is visible",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Values",
+      "summary": "Gets or sets chart values.",
+      "typeInfo": {
+        "name": "LiveCharts.IChartValues",
+        "alias": "IChartValues",
+        "href": "/App/documentation/beta/LiveCharts-IChartValues",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/IChartValues.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/IChartValues.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Title",
+      "summary": "Gets or sets series title",
+      "typeInfo": {
+        "name": "System.String",
+        "alias": "String",
+        "href": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Stroke",
+      "summary": "Gets or sets series stroke, if this property is null then a SolidColorBrush will be assigned according to series position in collection and Chart.Colors property",
+      "typeInfo": {
+        "name": "System.Windows.Media.Brush",
+        "alias": "Brush",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "StrokeThickness",
+      "summary": "Gets or sets the series stroke thickness.",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Fill",
+      "summary": "Gets or sets series fill color, if this property is null then a SolidColorBrush will be assigned according to series position in collection and Chart.Colors property, also Fill property has a default opacity according to chart type.",
+      "typeInfo": {
+        "name": "System.Windows.Media.Brush",
+        "alias": "Brush",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "DataLabels",
+      "summary": "Gets or sets if series should include a label over each data point.",
+      "typeInfo": {
+        "name": "System.Boolean",
+        "alias": "Boolean",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Boolean(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "FontFamily",
+      "summary": "Gets or sets labels font family",
+      "typeInfo": {
+        "name": "System.Windows.Media.FontFamily",
+        "alias": "FontFamily",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.FontFamily(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.FontFamily(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "FontSize",
+      "summary": "Gets or sets labels font size",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "FontWeight",
+      "summary": "Gets or sets labels font weight",
+      "typeInfo": {
+        "name": "System.Windows.FontWeight",
+        "alias": "FontWeight",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FontWeight(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FontWeight(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "FontStyle",
+      "summary": "Gets or sets labels font style",
+      "typeInfo": {
+        "name": "System.Windows.FontStyle",
+        "alias": "FontStyle",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FontStyle(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FontStyle(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "FontStretch",
+      "summary": "Gets or sets labels font stretch",
+      "typeInfo": {
+        "name": "System.Windows.FontStretch",
+        "alias": "FontStretch",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.FontStretch(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.FontStretch(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Foreground",
+      "summary": "Gets or sets labels text color.",
+      "typeInfo": {
+        "name": "System.Windows.Media.Brush",
+        "alias": "Brush",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "StrokeDashArray",
+      "summary": "Gets or sets the stroke dash array of a series, sue this property to draw dashed strokes",
+      "typeInfo": {
+        "name": "System.Windows.Media.DoubleCollection",
+        "alias": "DoubleCollection",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.DoubleCollection(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.DoubleCollection(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "PointGeometry",
+      "summary": "Gets or sets the point geometry, this shape will be drawn in the Tooltip, Legend, and if line series in every point also.",
+      "typeInfo": {
+        "name": "System.Windows.Media.Geometry",
+        "alias": "Geometry",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Geometry(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Geometry(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "ScalesXAt",
+      "summary": "Gets or sets the axis where series is scaled at, the axis must exist in the collection",
+      "typeInfo": {
+        "name": "System.Int32",
+        "alias": "Int32",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "ScalesYAt",
+      "summary": "Gets or sets the axis where series is scaled at, the axis must exist in the collection",
+      "typeInfo": {
+        "name": "System.Int32",
+        "alias": "Int32",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Int32(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "LabelPoint",
+      "summary": "Gets or sets the label formatter for the data label and tooltip, this property is set by default according to the series",
+      "typeInfo": {
+        "name": "System.Func`2",
+        "alias": "Func`2",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Func`2(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Func`2(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": [
+        {
+          "name": "LiveCharts.ChartPoint",
+          "alias": "ChartPoint",
+          "href": "/App/documentation/beta/LiveCharts-ChartPoint",
+          "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ChartPoint.cs",
+          "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ChartPoint.cs"
+        },
+        {
+          "name": "System.String",
+          "alias": "String",
+          "href": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+          "raw": ""
+        }
+      ]
+    },
+    {
+      "name": "Configuration",
+      "summary": "Gets or sets series mapper, if this property is set then the library will ignore the SeriesCollection mapper and global mappers.",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [
+    {
+      "name": "GetPointView",
+      "summary": "Gets the view of a given point",
+      "parameters": [
+        {
+          "name": "view",
+          "summary": "",
+          "typeInfo": {
+            "name": "LiveCharts.Definitions.Points.IChartPointView",
+            "alias": "IChartPointView",
+            "href": "/App/documentation/beta/LiveCharts-Definitions-Points-IChartPointView",
+            "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Definitions/Points/IChartPointView.cs",
+            "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Definitions/Points/IChartPointView.cs"
+          }
+        },
+        {
+          "name": "point",
+          "summary": "",
+          "typeInfo": {
+            "name": "LiveCharts.ChartPoint",
+            "alias": "ChartPoint",
+            "href": "/App/documentation/beta/LiveCharts-ChartPoint",
+            "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ChartPoint.cs",
+            "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ChartPoint.cs"
+          }
+        },
+        {
+          "name": "label",
+          "summary": "",
+          "typeInfo": {
+            "name": "System.String",
+            "alias": "String",
+            "href": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+            "source": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+            "raw": ""
+          }
+        }
+      ],
+      "typeParams": [],
+      "returns": {
+        "summary": "",
+        "typeInfo": {
+          "name": "LiveCharts.Definitions.Points.IChartPointView",
+          "alias": "IChartPointView",
+          "href": "/App/documentation/beta/LiveCharts-Definitions-Points-IChartPointView",
+          "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Definitions/Points/IChartPointView.cs",
+          "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/Definitions/Points/IChartPointView.cs"
+        }
+      }
+    },
+    {
+      "name": "OnSeriesUpdateStart",
+      "summary": "This method runs when the update starts",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "Erase",
+      "summary": "Erases series",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "OnSeriesUpdatedFinish",
+      "summary": "This method runs when the update finishes",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "InitializeColors",
+      "summary": "Initializes the series colors if they are not set",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "DrawSpecializedElements",
+      "summary": "Defines special elements to draw according to the series type",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    },
+    {
+      "name": "PlaceSpecializedElements",
+      "summary": "Places specializes items",
+      "parameters": [],
+      "typeParams": [],
+      "returns": {
+        "summary": null,
+        "typeInfo": {
+          "name": "System.Void",
+          "alias": "Void",
+          "href": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "source": "https://msdn.microsoft.com/en-us/library/System.Void(v=vs.110).aspx",
+          "raw": ""
+        }
+      }
+    }
+  ],
+  "enumerates": [],
+  "type": 0
+}

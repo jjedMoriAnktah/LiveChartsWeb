@@ -110,7 +110,7 @@
       "parameters": [
         {
           "name": "p1",
-          "summary": "Sums every property between 2 given points",
+          "summary": "point 1",
           "typeInfo": {
             "name": "LiveCharts.Dtos.CorePoint",
             "alias": "CorePoint",
@@ -121,7 +121,7 @@
         },
         {
           "name": "p2",
-          "summary": "Sums every property between 2 given points",
+          "summary": "point 2",
           "typeInfo": {
             "name": "LiveCharts.Dtos.CorePoint",
             "alias": "CorePoint",
@@ -149,7 +149,7 @@
       "parameters": [
         {
           "name": "p1",
-          "summary": "Subtracts every property between 2 given points",
+          "summary": "point 1",
           "typeInfo": {
             "name": "LiveCharts.Dtos.CorePoint",
             "alias": "CorePoint",
@@ -160,7 +160,7 @@
         },
         {
           "name": "p2",
-          "summary": "Subtracts every property between 2 given points",
+          "summary": "point 2",
           "typeInfo": {
             "name": "LiveCharts.Dtos.CorePoint",
             "alias": "CorePoint",

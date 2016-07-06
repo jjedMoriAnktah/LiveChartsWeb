@@ -218,6 +218,7 @@
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-RowSeries.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-SectionsCollection.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-Separator.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Wpf-Series.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-StackedAreaSeries.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-StackedColumnSeries.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-StackedRowSeries.txt" />

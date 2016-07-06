@@ -528,6 +528,17 @@
     }
   },
   {
+    "name": "Series",
+    "file": "LiveCharts-Wpf-Series",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.Series",
+      "alias": "Series",
+      "href": "/App/documentation/beta/LiveCharts-Wpf-Series",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Series.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Series.cs"
+    }
+  },
+  {
     "name": "SeriesCollection",
     "file": "LiveCharts-SeriesCollection",
     "typeInfo": {

@@ -31,7 +31,7 @@
       "parameters": [
         {
           "name": "axis",
-          "summary": "Return the inverse axis orientation",
+          "summary": "current orientation",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",

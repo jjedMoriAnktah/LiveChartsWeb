@@ -31,7 +31,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Converts from chart values to chart control size.",
+          "summary": "value to scale",
           "typeInfo": {
             "name": "System.Double",
             "alias": "Double",
@@ -42,7 +42,7 @@
         },
         {
           "name": "source",
-          "summary": "Converts from chart values to chart control size.",
+          "summary": "axis orientation to scale value at",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",
@@ -53,7 +53,7 @@
         },
         {
           "name": "chart",
-          "summary": "Converts from chart values to chart control size.",
+          "summary": "chart model to scale value at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -64,7 +64,7 @@
         },
         {
           "name": "axis",
-          "summary": "Converts from chart values to chart control size.",
+          "summary": "axis index in collection of chart.axis",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -92,7 +92,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Converts from chart values to chart control size.",
+          "summary": "value to scale",
           "typeInfo": {
             "name": "System.Double",
             "alias": "Double",
@@ -103,7 +103,7 @@
         },
         {
           "name": "source",
-          "summary": "Converts from chart values to chart control size.",
+          "summary": "axis orientation to scale value at",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",
@@ -114,7 +114,7 @@
         },
         {
           "name": "chart",
-          "summary": "Converts from chart values to chart control size.",
+          "summary": "chart model to scale value at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -125,7 +125,7 @@
         },
         {
           "name": "axis",
-          "summary": "Converts from chart values to chart control size.",
+          "summary": "axis model instance",
           "typeInfo": {
             "name": "LiveCharts.AxisCore",
             "alias": "AxisCore",
@@ -153,7 +153,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Converts from chart control size to chart values.",
+          "summary": "value to scale",
           "typeInfo": {
             "name": "System.Double",
             "alias": "Double",
@@ -164,7 +164,7 @@
         },
         {
           "name": "source",
-          "summary": "Converts from chart control size to chart values.",
+          "summary": "axis orientation to scale value at",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",
@@ -175,7 +175,7 @@
         },
         {
           "name": "chart",
-          "summary": "Converts from chart control size to chart values.",
+          "summary": "chart model to scale value at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -186,7 +186,7 @@
         },
         {
           "name": "axis",
-          "summary": "Converts from chart control size to chart values.",
+          "summary": "axis index in collection of chart.axis",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -214,7 +214,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "value to scale",
           "typeInfo": {
             "name": "System.Double",
             "alias": "Double",
@@ -225,7 +225,7 @@
         },
         {
           "name": "source",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "axis orientation",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",
@@ -236,7 +236,7 @@
         },
         {
           "name": "chart",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "chart model to scale the value at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -247,7 +247,7 @@
         },
         {
           "name": "axis",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "axis instance to scale the value at",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -275,7 +275,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "value to scale",
           "typeInfo": {
             "name": "System.Double",
             "alias": "Double",
@@ -286,7 +286,7 @@
         },
         {
           "name": "source",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "axis orientation",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",
@@ -297,7 +297,7 @@
         },
         {
           "name": "chart",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "chart model to scale the value at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -308,7 +308,7 @@
         },
         {
           "name": "axis",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "axis instance to scale the value at",
           "typeInfo": {
             "name": "LiveCharts.AxisCore",
             "alias": "AxisCore",
@@ -336,7 +336,7 @@
       "parameters": [
         {
           "name": "point",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "point to scale",
           "typeInfo": {
             "name": "LiveCharts.ChartPoint",
             "alias": "ChartPoint",
@@ -347,7 +347,7 @@
         },
         {
           "name": "axisXIndex",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "axis orientation",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -358,7 +358,7 @@
         },
         {
           "name": "axisYIndex",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "axis instance to scale the value at",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -369,7 +369,7 @@
         },
         {
           "name": "chart",
-          "summary": "Converts from chart values to chart draw margin size.",
+          "summary": "chart model to scale the value at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -397,7 +397,7 @@
       "parameters": [
         {
           "name": "value",
-          "summary": "Converts from draw margin size to chart values.",
+          "summary": "value to scale",
           "typeInfo": {
             "name": "System.Double",
             "alias": "Double",
@@ -408,7 +408,7 @@
         },
         {
           "name": "source",
-          "summary": "Converts from draw margin size to chart values.",
+          "summary": "axis orientation",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",
@@ -419,7 +419,7 @@
         },
         {
           "name": "chart",
-          "summary": "Converts from draw margin size to chart values.",
+          "summary": "chart model to scale the value at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -430,7 +430,7 @@
         },
         {
           "name": "axis",
-          "summary": "Converts from draw margin size to chart values.",
+          "summary": "axis index in the axes collection",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -458,7 +458,7 @@
       "parameters": [
         {
           "name": "source",
-          "summary": "Gets the width of a unit in the chart",
+          "summary": "axis orientation",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",
@@ -469,7 +469,7 @@
         },
         {
           "name": "chart",
-          "summary": "Gets the width of a unit in the chart",
+          "summary": "chart model to get the scale at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -480,7 +480,7 @@
         },
         {
           "name": "axis",
-          "summary": "Gets the width of a unit in the chart",
+          "summary": "axis index in the axes collection",
           "typeInfo": {
             "name": "System.Int32",
             "alias": "Int32",
@@ -508,7 +508,7 @@
       "parameters": [
         {
           "name": "source",
-          "summary": "Gets the width of a unit in the chart",
+          "summary": "axis orientation",
           "typeInfo": {
             "name": "LiveCharts.AxisOrientation",
             "alias": "AxisOrientation",
@@ -519,7 +519,7 @@
         },
         {
           "name": "chart",
-          "summary": "Gets the width of a unit in the chart",
+          "summary": "chart model to get the scale at",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -530,7 +530,7 @@
         },
         {
           "name": "axis",
-          "summary": "Gets the width of a unit in the chart",
+          "summary": "axis instance",
           "typeInfo": {
             "name": "LiveCharts.AxisCore",
             "alias": "AxisCore",
@@ -558,7 +558,7 @@
       "parameters": [
         {
           "name": "senderPoint",
-          "summary": "Returns data in the chart according to:",
+          "summary": "point that was hovered",
           "typeInfo": {
             "name": "LiveCharts.ChartPoint",
             "alias": "ChartPoint",
@@ -569,7 +569,7 @@
         },
         {
           "name": "chart",
-          "summary": "Returns data in the chart according to:",
+          "summary": "chart model to get the data from",
           "typeInfo": {
             "name": "LiveCharts.Charts.ChartCore",
             "alias": "ChartCore",
@@ -580,7 +580,7 @@
         },
         {
           "name": "selectionMode",
-          "summary": "Returns data in the chart according to:",
+          "summary": "selection mode",
           "typeInfo": {
             "name": "LiveCharts.TooltipSelectionMode",
             "alias": "TooltipSelectionMode",

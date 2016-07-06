@@ -73,11 +73,11 @@
     {
       "name": "Series",
       "typeInfo": {
-        "name": "LiveCharts.Wpf.Series.Series",
+        "name": "LiveCharts.Wpf.Series",
         "alias": "Series",
-        "href": "/App/documentation/beta/LiveCharts-Wpf-Series-Series",
-        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Series/Series.cs",
-        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Series/Series.cs"
+        "href": "/App/documentation/beta/LiveCharts-Wpf-Series",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/Series.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/Series.cs"
       }
     }
   ],

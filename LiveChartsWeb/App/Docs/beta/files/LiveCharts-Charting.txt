@@ -31,7 +31,7 @@
       "parameters": [
         {
           "name": "config",
-          "summary": "Saves a type mapper globally.",
+          "summary": "mapper",
           "typeInfo": {
             "name": "System.Object",
             "alias": "Object",
@@ -42,7 +42,7 @@
         },
         {
           "name": "orientation",
-          "summary": "Saves a type mapper globally.",
+          "summary": "mapper orientation",
           "typeInfo": {
             "name": "LiveCharts.SeriesOrientation",
             "alias": "SeriesOrientation",
@@ -76,7 +76,7 @@
       "parameters": [
         {
           "name": "orientation",
-          "summary": "Gets the configuration of a given type and orientation",
+          "summary": "orientation to look for",
           "typeInfo": {
             "name": "LiveCharts.SeriesOrientation",
             "alias": "SeriesOrientation",
