@@ -28,13 +28,12 @@ namespace Wpf.CartesianChart.Labels
             {
                 new ColumnSeries
                 {
-                    Values = new ChartValues&gt;double> { 4, 2, 8, 2, 3, 0, 1 },
+                    Values = new ChartValues&lt;double> { 4, 2, 8, 2, 3, 0, 1 },
                     DataLabels = true,
                     LabelPoint = point => point.X + "K ," + point.Y
                 }
             };
 
-            RotateTransform = new RotateTransform(13);
             Labels = new[]
             {
                 "Shea Ferriera",
@@ -51,16 +50,15 @@ namespace Wpf.CartesianChart.Labels
         }
 
         public SeriesCollection SeriesCollection { get; set; }
-        public RotateTransform RotateTransform { get; set; }
         public string[] Labels { get; set; }
-        public Func&gt;double, string> Formatter { get; set; }
+        public Func&lt;double, string> Formatter { get; set; }
 
     }
 }</pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" 
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" 
             DataClick="Chart_OnDataClick">
     &lt;lvc:CartesianChart.AxisX>
         &lt;lvc:Axis LabelsRotation="20" Labels="{Binding Labels}">
@@ -130,7 +128,7 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
 
 <pre class="prettyprint">new ColumnSeries
 {
-   Values = new ChartValues&gt;double> { 4, 2, 8, 2, 3, 0, 1 },
+   Values = new ChartValues&lt;double> { 4, 2, 8, 2, 3, 0, 1 },
    DataLabels = true,
    LabelPoint = point => point.Y + "K"
 }</pre>

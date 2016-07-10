@@ -10,30 +10,4 @@
 
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows;
-using Wpf.Annotations;
-
-namespace Wpf.Gauges
-{
-    public partial class Gauge360
-    {
-        public Gauge360()
-        {
-            InitializeComponent();
-
-            Value = .85;
-            Formatter = x => x.ToString("P");
-
-            DataContext = this;
-        }
-        public double Value { get; set; } 
-        public Func&lt;double, string> Formatter { get; set; } 
-    }
-}</pre>
-
-<h4>XAML</h4>
-
-<pre class="prettyprint">&lt;lvc:Gauge Uses360Mode="True" From="0" To="1" Value="{Binding Value}" LabelFormatter="{Binding Formatter}" /></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Gauge/360/Gauge360Example.cs"></pre>

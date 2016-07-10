@@ -10,111 +10,17 @@
     <img src="/App/Examples/v1/Data Pagination/Images/customzoomingandpanning.gif"/>
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.ComponentModel;
-using System.Windows;
-using System.Windows.Controls;
-using LiveCharts;
-using Wpf.Annotations;
-
-namespace Wpf.CartesianChart.ManualZAndP
-{
-    public partial class ManualZAndPExample : UserControl, INotifyPropertyChanged
-    {
-        private double _to;
-        private double _from;
-
-        public ManualZAndPExample()
-        {
-            InitializeComponent();
-
-            Values = new ChartValues&lt;double>();
-            var r = new Random();
-
-            for (var i = 0; i < 100; i++)
-            {
-                Values.Add(r.Next(0, 10));
-            }
-
-            //In this case we are paginating the data only showing the first 25 records
-            //clicking the buttons previous and next changes the page
-            From = 0;
-            To = 25;
-
-            DataContext = this;
-        }
-
-        public ChartValues&lt;double> Values { get; set; }
-
-        public double From
-        {
-            get { return _from; }
-            set
-            {
-                _from = value;
-                OnPropertyChanged("From");
-            }
-        }
-
-        public double To
-        {
-            get { return _to; }
-            set
-            {
-                _to = value;
-                OnPropertyChanged("To");
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        
-        protected virtual void OnPropertyChanged(string propertyName = null)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        private void NextOnClick(object sender, RoutedEventArgs e)
-        {
-            From += 25;
-            To += 25;
-        }
-        private void PrevOnClick(object sender, RoutedEventArgs e)
-        {
-            From -= 25;
-            To -= 25;
-        }
-        private void ManualZoom(object sender, RoutedEventArgs e)
-        {
-            //you only need to change the axis limits to zoom in/out any axis.
-            From = 5;
-            To = 10;
-        }
-    }
-}</pre>
+<pre class="prettyprint" ur="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/ManualZAndP/ManualZAndPExample.xaml.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;Grid>
-    &lt;Grid.RowDefinitions>
-        &lt;RowDefinition Height="Auto">&lt;/RowDefinition>
-        &lt;RowDefinition Height="Auto">&lt;/RowDefinition>
-        &lt;RowDefinition Height="*">&lt;/RowDefinition>
-    &lt;/Grid.RowDefinitions>
-    &lt;StackPanel Grid.Row="0" Orientation="Horizontal">
-        &lt;Button Click="PrevOnClick">Prev&lt;/Button>
-        &lt;Button Click="NextOnClick">Next&lt;/Button>
-    &lt;/StackPanel>
-    &lt;Button Grid.Row="1" Click="ManualZoom" HorizontalAlignment="Left">Zoom to 5 &gt; x &lt; 10&lt;/Button>
-    &lt;lvc:CartesianChart Grid.Row="2">
-        &lt;lvc:CartesianChart.Series>
-            &lt;lvc:LineSeries Values="{Binding Values}">&lt;/lvc:LineSeries>
-        &lt;/lvc:CartesianChart.Series>
-        &lt;lvc:CartesianChart.AxisX>
-            &lt;lvc:Axis MinValue="{Binding From}" MaxValue="{Binding To}" 
-                         Separator="{x:Static lvc:DefaultAxes.CleanSeparator}">
-            &lt;/lvc:Axis>
-        &lt;/lvc:CartesianChart.AxisX>
-    &lt;/lvc:CartesianChart>
-&lt;/Grid></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/ManualZAndP/ManualZAndPExample.xaml"></pre>

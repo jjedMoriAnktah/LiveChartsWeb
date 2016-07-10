@@ -1,0 +1,55 @@
+{
+  "name": "DataPointViewModel",
+  "fullName": "LiveCharts.Wpf.DataPointViewModel",
+  "summary": "Point Data",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.DataPointViewModel",
+    "alias": "DataPointViewModel",
+    "href": "/App/documentation/beta/LiveCharts-Wpf-DataPointViewModel",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/DataPointViewModel.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/DataPointViewModel.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [
+    {
+      "name": "Series",
+      "summary": "Gets info about the series that owns the point, like stroke and stroke thickness",
+      "typeInfo": {
+        "name": "LiveCharts.Wpf.SeriesViewModel",
+        "alias": "SeriesViewModel",
+        "href": "/App/documentation/beta/LiveCharts-Wpf-SeriesViewModel",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/SeriesViewModel.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/SeriesViewModel.cs"
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "ChartPoint",
+      "summary": "Gets the ChartPoint instance",
+      "typeInfo": {
+        "name": "LiveCharts.ChartPoint",
+        "alias": "ChartPoint",
+        "href": "/App/documentation/beta/LiveCharts-ChartPoint",
+        "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/ChartPoint.cs",
+        "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/ChartPoint.cs"
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [],
+  "type": 0
+}

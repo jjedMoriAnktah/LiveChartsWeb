@@ -45,8 +45,8 @@ app.factory('examplesV1Service', [
                 new article('Negative Stacked', 'basic chart bar stacked row'),
                 new article('Percentage Stacked', 'basic chart bar stacked row'),
                 new article('Dynamic Visibility', 'bar column', 'dynvis.gif'),
-
-                new article('Heat Series','heat calendar date'),
+                new article('Heat Series', 'heat calendar date'),
+                new article('Customizing Tooltips', 'column bar, tooltip legend custom'),
 
                 //Pies
                 new article('Pie Chart', 'pie chart doughnut stacked'),

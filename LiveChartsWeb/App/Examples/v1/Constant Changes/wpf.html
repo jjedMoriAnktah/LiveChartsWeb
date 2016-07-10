@@ -19,144 +19,17 @@
     <img src="/App/Examples/v1/Constant Changes/Images/constant.gif"/>
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.ComponentModel;
-using System.Windows;
-using System.Windows.Threading;
-using LiveCharts;
-using LiveCharts.Configurations;
-
-namespace Wpf.CartesianChart.ConstantChanges
-{
-
-    public class MeasureModel
-    {
-        public DateTime DateTime { get; set; }
-        public double Value { get; set; }
-    }
-
-    public partial class ConstantChangesChart : INotifyPropertyChanged
-    {
-        private double _axisMax;
-        private double _axisMin;
-
-        public ConstantChangesChart()
-        {
-            InitializeComponent();
-
-            //To handle live data easily, in this case we built a specialized type
-            //the MeasureModel class, it only contains 2 properties
-            //DateTime and Value
-            //We need to configure LiveCharts to handle MeasureModel class
-            //The next code configures MEasureModel  globally, this means
-            //that live charts learns to plot MeasureModel and will use this config every time
-            //a ChartValues instance uses this type.
-            //this code ideally should only run once, when application starts is recommended.
-            //you can configure series in many ways, learn more at http://lvcharts.net/App/examples/v1/wpf/Types%20and%20Configuration
-
-            var mapper = Mappers.Xy&lt;MeasureModel>()
-                .X(model => model.DateTime.Ticks)   //use DateTime.Ticks as X
-                .Y(model => model.Value);           //use the value property as Y
-
-            //lets save the mapper globally.
-            Charting.For&lt;MeasureModel>(mapper);
-
-
-            //the values property will store our values array
-            Values = new ChartValues&lt;MeasureModel>();
-
-
-            //lets set how to display the X Labels
-            DateTimeFormatter = value => new DateTime((long) value).ToString("mm:ss");
-
-
-            AxisStep = TimeSpan.FromSeconds(1).Ticks; // lets force the separator to 1 second.
-            SetAxisLimits(DateTime.Now);
-
-            //The next code simulates data changes every 300 ms
-            Timer = new DispatcherTimer
-            {
-                Interval = TimeSpan.FromMilliseconds(300)
-            };
-            Timer.Tick += TimerOnTick;
-            R = new Random();
-            Timer.Start();
-
-            DataContext = this;
-        }
-
-        public ChartValues&lt;MeasureModel> Values { get; set; }
-        public Func&lt;double, string> DateTimeFormatter { get; set; }
-        public double AxisStep { get; set; }
-        public double AxisMax
-        {
-            get { return _axisMax; }
-            set
-            {
-                _axisMax = value;
-                OnPropertyChanged("AxisMax");
-            }
-        }
-        public double AxisMin
-        {
-            get { return _axisMin; }
-            set
-            {
-                _axisMin = value;
-                OnPropertyChanged("AxisMin");
-            }
-        }
-
-        public DispatcherTimer Timer { get; set; }
-        public Random R { get; set; }
-
-        private void TimerOnTick(object sender, EventArgs eventArgs)
-        {
-            var now = DateTime.Now;
-            Values.Add(new MeasureModel
-            {
-                DateTime = now,
-                Value = R.Next(0, 10)
-            });
-
-            SetAxisLimits(now); //lets update the last 9 seconds
-
-            //lets remove unnecessary data...
-            if (Values.Count > 30) Values.RemoveAt(0);
-        }
-
-        private void SetAxisLimits(DateTime now)
-        {
-            AxisMax = now.Ticks + TimeSpan.FromSeconds(1).Ticks; // lets force the axis to be 1 second ahead
-            AxisMin = now.Ticks - TimeSpan.FromSeconds(8).Ticks; // and 8 seconds behind DateTime.Now
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName = null)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/ConstantChanges/ConstantChangesChart.xaml.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart>
-  &lt;lvc:CartesianChart.Series>
-    &lt;lvc:LineSeries Values="{Binding Values}" PointDiameter="18" StrokeThickness="4" />
-  &lt;/lvc:CartesianChart.Series>
-  &lt;lvc:CartesianChart.AxisX>
-    &lt;lvc:Axis LabelFormatter="{Binding DateTimeFormatter}" 
-                 MaxValue="{Binding AxisMax}" 
-                 MinValue="{Binding AxisMin}"
-                 DisableAnimations="True">
-      &lt;lvc:Axis.Separator>
-        &lt;lvc:Separator Step="{Binding AxisStep}">&lt;/lvc:Separator>
-      &lt;/lvc:Axis.Separator>
-    &lt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisX>
-&lt;/lvc:CartesianChart></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/ConstantChanges/ConstantChangesChart.xaml"></pre>

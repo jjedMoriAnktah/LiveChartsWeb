@@ -48,71 +48,13 @@ System.Windows.Controls.Panel.SetZIndex(mySeries, 2);</pre>
 <h4>Specialized properties</h4>
 
 <p>
-    There are some properties that do only exist at certain series
+    There are some properties that do only exist at certain series, to find more info about how to customize
+    every series, please see the related documentation, for example see <a href="/App/documentation/beta/LiveCharts-Wpf-LineSeries">/App/documentation/beta/LiveCharts-Wpf-LineSeries</a>
+    to get more info about LineSeries, use the textbox in the documentation section to filter the all objects and get the desired article.
 </p>
 
-<div class="table-responsive">
-    <table class="table table-striped">
-        <tbody>
-            <tr>
-                <td>
-                    Line Series
-                </td>
-                <td>
-                    <b><i>Point Diameter:</i></b> Gets or sets every point diameter in the series,
-                    <b><i>Point Foreground:</i></b> Gets or sets every point fill brush in the series,
-                    <b><i>LineSmoothness:</i></b> Gets or sets the drawn line smoothness, default is 0.8 and the value goes from 0 to 1.
-                </td>
-            </tr>
-        <tr>
-            <td>
-                Column and Row Series
-            </td>
-            <td>
-                <b><i>MaxColumnWidth, or MaxRowHeight:</i></b> Increase these properties to have bigger bars when possible.
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Pie Series
-            </td>
-            <td>
-                <b><i>PushOut:</i></b> Gets or sets the pie slice PushOut propety, use it to highlight a specific series.
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Any Stacked Series
-            </td>
-            <td>
-                <b><i>Stack Mode:</i></b> Gets or sets the series stacked mode: Values or percentage.
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Ohcl Series
-            </td>
-            <td>
-                <b><i>MaxColunWidth:</i></b> Increase this property have bigger bars when the space allows it,
-                <b><i>IncreaseBrush:</i></b> Gets or sets the brush of the point when Close > Open,
-                <b><i>Decrease:</i></b> Gets or sets the brush of the point when Close < Open
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Bubble Series
-            </td>
-            <td>
-                <b><i>MaxBubbleDiameter:</i></b> Gets or sets the maximum bubble diameter size,
-                <b><i>MinBubbleDiameter:</i></b> Gets or sets the minimum bubble diameter size
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
 <p>
-    Here is an exmaple:
+    Here is an example:
 </p>
 
 <div class="text-center">
@@ -142,7 +84,7 @@ namespace Winforms.Cartesian.Customized_Series
                 Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(107, 185, 69)),
                 Fill = System.Windows.Media.Brushes.Transparent,
                 LineSmoothness = 0,
-                PointDiameter = 0
+                PointGeometry = null
             });
             cartesianChart1.Series.Add(new LineSeries
             {
@@ -151,7 +93,7 @@ namespace Winforms.Cartesian.Customized_Series
                 Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(28, 142, 196)),
                 Fill = System.Windows.Media.Brushes.Transparent,
                 LineSmoothness = 1,
-                PointDiameter = 15,
+                PointGeometrySize = 15,
                 PointForeround =
                     new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(34, 46, 49))
             });

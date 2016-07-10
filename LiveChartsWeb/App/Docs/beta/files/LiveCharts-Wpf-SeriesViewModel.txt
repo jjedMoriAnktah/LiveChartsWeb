@@ -1,0 +1,91 @@
+{
+  "name": "SeriesViewModel",
+  "fullName": "LiveCharts.Wpf.SeriesViewModel",
+  "summary": "Series Data",
+  "typeInfo": {
+    "name": "LiveCharts.Wpf.SeriesViewModel",
+    "alias": "SeriesViewModel",
+    "href": "/App/documentation/beta/LiveCharts-Wpf-SeriesViewModel",
+    "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/SeriesViewModel.cs",
+    "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/SeriesViewModel.cs"
+  },
+  "inheritance": [
+    {
+      "name": "Object",
+      "typeInfo": {
+        "name": "System.Object",
+        "alias": "Object",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Object(v=vs.110).aspx",
+        "raw": ""
+      }
+    }
+  ],
+  "constructors": [],
+  "properties": [
+    {
+      "name": "Title",
+      "summary": "Series Title",
+      "typeInfo": {
+        "name": "System.String",
+        "alias": "String",
+        "href": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.String(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Stroke",
+      "summary": "Series stroke",
+      "typeInfo": {
+        "name": "System.Windows.Media.Brush",
+        "alias": "Brush",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "StrokeThickness",
+      "summary": "Series Stroke thickness",
+      "typeInfo": {
+        "name": "System.Double",
+        "alias": "Double",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Double(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "Fill",
+      "summary": "Series Fill",
+      "typeInfo": {
+        "name": "System.Windows.Media.Brush",
+        "alias": "Brush",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Brush(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    },
+    {
+      "name": "PointGeometry",
+      "summary": "Series point Geometry",
+      "typeInfo": {
+        "name": "System.Windows.Media.Geometry",
+        "alias": "Geometry",
+        "href": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Geometry(v=vs.110).aspx",
+        "source": "https://msdn.microsoft.com/en-us/library/System.Windows.Media.Geometry(v=vs.110).aspx",
+        "raw": ""
+      },
+      "genericArguments": []
+    }
+  ],
+  "typeParams": [],
+  "methods": [],
+  "enumerates": [],
+  "type": 0
+}

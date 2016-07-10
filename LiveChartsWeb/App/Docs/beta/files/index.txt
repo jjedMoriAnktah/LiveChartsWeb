@@ -220,6 +220,17 @@
     }
   },
   {
+    "name": "DataPointViewModel",
+    "file": "LiveCharts-Wpf-DataPointViewModel",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.DataPointViewModel",
+      "alias": "DataPointViewModel",
+      "href": "/App/documentation/beta/LiveCharts-Wpf-DataPointViewModel",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/DataPointViewModel.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/DataPointViewModel.cs"
+    }
+  },
+  {
     "name": "DateTimePoint",
     "file": "LiveCharts-Defaults-DateTimePoint",
     "typeInfo": {
@@ -561,6 +572,17 @@
     }
   },
   {
+    "name": "SeriesViewModel",
+    "file": "LiveCharts-Wpf-SeriesViewModel",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.SeriesViewModel",
+      "alias": "SeriesViewModel",
+      "href": "/App/documentation/beta/LiveCharts-Wpf-SeriesViewModel",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/SeriesViewModel.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/SeriesViewModel.cs"
+    }
+  },
+  {
     "name": "StackedAreaSeries",
     "file": "LiveCharts-Wpf-StackedAreaSeries",
     "typeInfo": {
@@ -602,6 +624,17 @@
       "href": "/App/documentation/beta/LiveCharts-StackMode",
       "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/StackMode.cs",
       "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/StackMode.cs"
+    }
+  },
+  {
+    "name": "TooltipData",
+    "file": "LiveCharts-Wpf-TooltipData",
+    "typeInfo": {
+      "name": "LiveCharts.Wpf.TooltipData",
+      "alias": "TooltipData",
+      "href": "/App/documentation/beta/LiveCharts-Wpf-TooltipData",
+      "source": "https://github.com/beto-rodriguez/Live-Charts/blob/master/WpfView/TooltipData.cs",
+      "raw": "https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/WpfView/TooltipData.cs"
     }
   },
   {

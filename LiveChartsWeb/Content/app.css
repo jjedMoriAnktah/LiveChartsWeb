@@ -143,8 +143,9 @@
 
 .doc-alert {
     padding: 20px;
-    margin: -16px 10px;
+    margin: 20px -16px;
     background-color: #2196f3;
+    color: white;
 }
 
 ul {

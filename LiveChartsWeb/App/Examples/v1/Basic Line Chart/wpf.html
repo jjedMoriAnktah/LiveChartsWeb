@@ -4,77 +4,17 @@
     <img src="/App/Examples/v1/Basic Line Chart/Images/basicline.jpg"/>
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint linenums">using System;
-using System.Windows.Controls;
-using System.Windows.Media;
-using LiveCharts;
-using LiveCharts.Wpf;
-
-namespace Wpf.CartesianChart.PointShapeLine
-{
-    public partial class PointShapeLineExample : UserControl
-    {
-        public PointShapeLineExample()
-        {
-            InitializeComponent();
-
-            SeriesCollection = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Title = "Series 1",
-                    Values = new ChartValues&lt;double> { 4, 6, 5, 2 ,4 }
-                },
-                new LineSeries
-                {
-                    Title = "Series 2",
-                    Values = new ChartValues&lt;double> { 6, 7, 3, 4 ,6 },
-                    PointGeometry = null
-                },
-                new LineSeries
-                {
-                    Title = "Series 3",
-                    Values = new ChartValues&lt;double> { 4,2,7,2,7 },
-                    PointGeometry = DefaultGeometries.Square,
-                    PointGeometrySize = 15
-                }
-            };
-
-            Labels = new[] {"Jan", "Feb", "Mar", "Apr", "May"};
-            YFormatter = value => value.ToString("C");
-
-            //modifying the series collection will animate and update the chart
-            SeriesCollection.Add(new LineSeries
-            {
-                Title = "Series 4",
-                Values = new ChartValues&lt;double> {5, 3, 2, 4},
-                LineSmoothness = 0, //0: rect lines, 1: really smooth lines
-                PointGeometry = Geometry.Parse("m 25 70.36218 20 -28 -20 22 -8 -6 z"),
-                PointGeometrySize = 50,
-                PointForeround = Brushes.Gray
-            });
-
-            //modifying any series values will also animate and update the chart
-            SeriesCollection[3].Values.Add(5d);
-            DataContext = this;
-        }
-
-        public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
-        public Func&lt;double, string> YFormatter { get; set; }
-    }
-}
-</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/PointShapeLine/PointShapeLineExample.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" >
-  &lt;lvc:CartesianChart.AxisY>
-    &lt;lvc:Axis Title="Sales" LabelFormatter="{Binding YFormatter}">&lt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisY>
-  &lt;lvc:CartesianChart.AxisX>
-    &lt;lvc:Axis Title="Month" Labels="{Binding Labels}">&lt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisX>
-&lt;/lvc:CartesianChart></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/PointShapeLine/PointShapeLineExample.xaml"></pre>

@@ -203,6 +203,7 @@
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-Charts-Base-Chart.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-Charts-test.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-ColumnSeries.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Wpf-DataPointViewModel.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-DefaultAxes.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-DefaultGeometries.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-DefaultLegend.txt" />
@@ -219,9 +220,11 @@
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-SectionsCollection.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-Separator.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-Series.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Wpf-SeriesViewModel.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-StackedAreaSeries.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-StackedColumnSeries.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-StackedRowSeries.txt" />
+    <Content Include="App\Docs\beta\files\LiveCharts-Wpf-TooltipData.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-VerticalLineSeries.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-VerticalStackedAreaSeries.txt" />
     <Content Include="App\Docs\beta\files\LiveCharts-Wpf-VisualElement.txt" />
@@ -241,6 +244,8 @@
     <Content Include="App\Examples\v1\Constant Changes\Images\constant.gif" />
     <Content Include="App\Examples\v1\Constant Changes\wf.html" />
     <Content Include="App\Examples\v1\Constant Changes\wpf.html" />
+    <Content Include="App\Examples\v1\Customizing Tooltips\wf.html" />
+    <Content Include="App\Examples\v1\Customizing Tooltips\wpf.html" />
     <Content Include="App\Examples\v1\Data Pagination\Images\customzoomingandpanning.gif" />
     <Content Include="App\Examples\v1\Data Pagination\wf.html" />
     <Content Include="App\Examples\v1\Data Pagination\wpf.html" />
@@ -264,6 +269,8 @@
     <Content Include="App\Examples\v1\MenuImages\basic row.jpg" />
     <Content Include="App\Examples\v1\MenuImages\Basic Stacked.jpg" />
     <Content Include="App\Examples\v1\MenuImages\bubble chart.jpg" />
+    <Content Include="App\Examples\v1\Customizing Tooltips\Images\Customizing Tooltips.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\Custom Tooltip.jpg" />
     <Content Include="App\Examples\v1\MenuImages\customzp.gif" />
     <Content Include="App\Examples\v1\MenuImages\doughnut chart.jpg" />
     <Content Include="App\Examples\v1\MenuImages\constant.gif" />

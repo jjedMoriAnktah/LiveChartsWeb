@@ -1,19 +1,28 @@
 ﻿'use strict';
 
-app.directive('prettyprint', function() {
+app.directive('prettyprint', ['$http', function ($http) {
     return {
         restrict: 'C',
         scope: {
-            code: '='
+            code: '=',
+            url: '@'
         },
-        link: function(scope, element, attrs) {
-            scope.$watch('code', function() {
+        link: function (scope, element, attrs) {
+            scope.$watch('code', function () {
                 element.html(prettyPrintOne(scope.code || element.html()));
             });
             element.html(prettyPrintOne(scope.code || element.html()));
+            if (scope.url) {
+                $http.get(scope.url).success(function (response) {
+                    element.html(prettyPrintOne(response.split('<').join('&lt;')));
+                }).error(function() {
+                    scope.code = '// An error occurred while requesting this content, please try reloading the page \n' +
+                        '// if the error persists please report the issue at https://gitter.im/beto-rodriguez/Live-Charts';
+                });
+            }
         }
     };
-}).directive('dynamic', [
+}]).directive('dynamic', [
     '$compile', function($compile) {
         return {
             restrict: 'A',

@@ -4,33 +4,17 @@
     <img src="/App/Examples/v1/180 Gauge/Images/gauge.jpg"/>
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows;
-
-namespace Wpf.Gauges
-{
-    public partial class Gauge180 : UserControl
-    {
-        public Gauge180()
-        {
-            InitializeComponent();
-
-            Value = 65;
-            Formatter = x => x + " Km/Hr";
-
-            DataContext = this;
-        }
-
-        public double Value { get; set; }
-        public Func&lt;double, string> Formatter { get; set; } 
-
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/Gauges/Gauge180.xaml.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:Gauge From="0" To="100" Value="{Binding Value}" LabelFormatter="{Binding Formatter}" /></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/Gauges/Gauge180.xaml"></pre>

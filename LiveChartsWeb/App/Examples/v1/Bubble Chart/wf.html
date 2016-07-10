@@ -16,47 +16,4 @@
 
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System.Windows.Forms;
-using LiveCharts;
-using LiveCharts.Defaults;
-using LiveCharts.Wpf;
-
-namespace Winforms.Cartesian.Financial
-{
-    public partial class FinancialExample : Form
-    {
-        public FinancialExample()
-        {
-            InitializeComponent();
-
-            cartesianChart1.Series = new SeriesCollection
-            {
-                new BubbleSeries
-                {
-                    Values = new ChartValues&lt;BubblePoint>
-                    {
-                                      //X  Y   W
-                        new BubblePoint(5, 5, 20),
-                        new BubblePoint(3, 4, 80),
-                        new BubblePoint(7, 2, 20),
-                        new BubblePoint(2, 6, 60),
-                        new BubblePoint(8, 2, 70)
-                    }
-                },
-                new BubbleSeries
-                {
-                    Values = new ChartValues&lt;BubblePoint>
-                    {
-                        new BubblePoint(7, 5, 1),
-                        new BubblePoint(2, 2, 1),
-                        new BubblePoint(1, 1, 1),
-                        new BubblePoint(6, 3, 1),
-                        new BubblePoint(8, 8, 1)
-                    }
-                }
-            };
-
-            cartesianChart1.DataTolltip.SelectionMode = TooltipSelectionMode.OnlySender;
-        }
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/BasicBubbles/BasicBubblesExample.cs"></pre>

@@ -8,18 +8,18 @@
     find more info about it here: <a href="/App/documentation/beta/LiveCharts-Wpf-DefaultLegend">legend</a>, <a href="/App/documentation/beta/LiveCharts-Wpf-DefaultTooltip">tooltip</a>
 </p>
 
-<pre class="prettyprint">cartesianChart1.Datatooltip.Bulletize = 20;
-cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
+<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
+    &lt;lvc:CartesianChart.ChartLegend>
+        &lt;lvc:DefaultLegend BulletSize="20" Background="Red"/>
+    &lt;/lvc:CartesianChart.ChartLegend>
+    &lt;lvc:CartesianChart.DataTooltip>
+        &lt;lvc:DefaultTooltip BulletSize="20" Background="Gray"/>
+    &lt;/lvc:CartesianChart.DataTooltip>
+&lt;/lvc:CartesianChart></pre>
 
 <p>
     This works when you need to customize the appearance of your chart components, but how about
     modifying the way the data is displayed in the tooltip, or showing extra properties in your tooltips?
-</p>
-
-<p>
-    Sadly there is not a native way to do this in WinForms, since LiveCharts.Winforms actually is a wrapper
-    for LieCharts.Wpf you must define Wpf UserControls to make this work, it is really easy and you don't
-    really need to know too much about WPF to make this work.
 </p>
 
 <p>
@@ -35,11 +35,11 @@ cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/v1/Customizing Tooltips/Images/Customizing Tooltips.jpg" />
+    <img src="/App/Examples/v1/Customizing Tooltips/Images/Customizing Tooltips.jpg"/>
 </div>
 
 <p>
-    Right click in your solution explorer, Add -> New Item -> Browse for Class, name the file CustomerVm.cs
+    Right click in your solution explorer, Add -> New Item -> Browse for Class, name the file CustomerVm.cs 
     and replace the generated file content with:
 </p>
 
@@ -92,5 +92,17 @@ cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
     Finally lets set this customs controls to our chart.
 </p>
 
-<pre class="prettyprint">cartesianChart1.ChartLegend = new CustomersLegend();
-cartesianChart1.DataTooltip = new CustomersTooltip();</pre>
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml"></pre>
+
+<p>
+    And the code behind
+</p>
+
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml.cs"></pre>
