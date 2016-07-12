@@ -10,78 +10,17 @@
     <img src="/App/Examples/v1/OHCL Series/Images/ohcl.jpg"/>
 </div>
 
-<h4>Code Behind</h4>
-
-<pre class="prettyprint">using System;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Windows;
-using System.Windows.Media;
-using LiveCharts;
-using LiveCharts.Defaults;
-using LiveCharts.Wpf;
-
-namespace Wpf.CartesianChart
-{
-    public partial class FinancialExample : UserControl
-    {
-        
-        public FinancialExample()
-        {
-            InitializeComponent();
-
-            SeriesCollection = new SeriesCollection
-            {
-                new OhlcSeries
-                {
-                    Values = new ChartValues&lt;OhlcPoint>
-                    {
-                                    // O,  H,  L,  C
-                        new OhlcPoint(32, 35, 30, 32),
-                        new OhlcPoint(33, 38, 31, 37),
-                        new OhlcPoint(35, 42, 30, 40),
-                        new OhlcPoint(37, 40, 35, 38),
-                        new OhlcPoint(35, 38, 32, 33)
-                    }
-                },
-                // you can easily mix a financial series with any other Cartesian series.
-                new LineSeries
-                {
-                    Values = new ChartValues&lt;double> {30, 32, 35, 30, 28},
-                    Fill = Brushes.Transparent
-                }
-            };
-
-            //based on https://github.com/beto-rodriguez/Live-Charts/issues/166 
-            //The Ohcl point X property is zero based indexed.
-            //this means the first point is 0, second 1, third 2.... and so on
-            //then you can use the Axis.Labels properties to map the chart X with a label in the array.
-            //for more info see (mapped labels section) 
-            //http://lvcharts.net/#/examples/v1/labels-wpf?path=WPF-Components-Labels
-            
-            Labels = new []
-            {
-                DateTime.Now.ToString("dd MMM"),
-                DateTime.Now.AddDays(1).ToString("dd MMM"),
-                DateTime.Now.AddDays(2).ToString("dd MMM"),
-                DateTime.Now.AddDays(3).ToString("dd MMM"),
-                DateTime.Now.AddDays(4).ToString("dd MMM"),
-            };
-
-            DataContext = this;
-        }
-
-        public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
-
-    }
-}</pre>
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
 
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
-  &lt;lvc:CartesianChart.AxisX>
-    &lt;lvc:Axis Labels="{Binding Labels}"/>
-  &lt;/lvc:CartesianChart.AxisX>
-&lt;/lvc:CartesianChart></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Financial/FinancialExample.xaml.cs"></pre>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Financial/FinancialExample.xaml"></pre>

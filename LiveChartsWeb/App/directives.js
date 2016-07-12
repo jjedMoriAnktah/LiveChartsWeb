@@ -13,11 +13,20 @@ app.directive('prettyprint', ['$http', function ($http) {
             });
             element.html(prettyPrintOne(scope.code || element.html()));
             if (scope.url) {
+                element.html('<div class="text-center text-muted" style="height: 45px;"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></div>');
                 $http.get(scope.url).success(function (response) {
                     element.html(prettyPrintOne(response.split('<').join('&lt;')));
-                }).error(function() {
-                    scope.code = '// An error occurred while requesting this content, please try reloading the page \n' +
-                        '// if the error persists please report the issue at https://gitter.im/beto-rodriguez/Live-Charts';
+                }).error(function () {
+                    var s = 'An error occurred while requesting this content, \r\n' +
+                        'please try reloading the page. \r\n' +
+                        'If the error persists please report the issue at \r\n' +
+                        'https://gitter.im/beto-rodriguez/Live-Charts or \r\n' +
+                        'https://github.com/beto-rodriguez/LiveChartsWeb/issues';
+                    element.html('<div class="row text-center text-muted">' +
+                        '<div class="col-xs-12">' +
+                        '<i class="fa fa-fw fa-2x fa-exclamation-circle text-warning"></i>\r\n' + s + '' +
+                        '</div>' +
+                        '</div>');
                 });
             }
         }

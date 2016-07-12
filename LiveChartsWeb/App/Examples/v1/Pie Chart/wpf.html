@@ -4,60 +4,17 @@
     <img src="/App/Examples/v1/Pie Chart/Images/piechart.jpg"/>
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.Linq;
-using System.Windows;
-using LiveCharts;
-using LiveCharts.Defaults;
-using LiveCharts.Wpf;
-
-namespace Wpf.PieChart
-{
-    public partial class PieExample
-    {
-        public PieExample()
-        {
-            InitializeComponent();
-
-            SeriesCollection = new SeriesCollection
-            {
-                new PieSeries
-                {
-                    Title = "Chrome",
-                    Values = new ChartValues&lt;double> { 8 },
-                    PushOut = 15
-                },
-                new PieSeries
-                {
-                    Title = "Mozilla",
-                    Values = new ChartValues&lt;double> { 6 }
-                },
-                new PieSeries
-                {
-                    Title = "Opera",
-                    Values = new ChartValues&lt;double> { 10 }
-                },
-                new PieSeries
-                {
-                    Title = "Explorer",
-                    Values = new ChartValues&lt;double> { 4 }
-                }
-            };
-
-            //adding values or series will update and animate the chart automatically
-            //SeriesCollection.Add(new PieSeries());
-            //SeriesCollection[0].Values.Add(5);
-
-            DataContext = this;
-        }
-
-        public SeriesCollection SeriesCollection { get; set; }
-        
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/PieChart/PieChartExample.xaml.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:PieChart Series="{Binding SeriesCollection}" LegendLocation="Right" /></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/PieChart/PieChartExample.xaml"></pre>

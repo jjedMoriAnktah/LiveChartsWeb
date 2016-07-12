@@ -15,37 +15,4 @@
 
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System.Windows.Forms;
-using LiveCharts;
-using LiveCharts.Wpf;
-
-namespace Winforms.Cartesian.MissingPoints
-{
-    public partial class MissingPoint : Form
-    {
-        public MissingPoint()
-        {
-            InitializeComponent();
-
-            cartesianChart1.Series.Add(new LineSeries
-            {
-                Values = new ChartValues&lt;double>
-                {
-                    4,
-                    5,
-                    7,
-                    8,
-                    double.NaN,
-                    5,
-                    2,
-                    8,
-                    double.NaN,
-                    6,
-                    2
-                }
-            });
-
-        }
-    }
-}
-</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/MissingPoints/MissingPoint.cs"></pre>

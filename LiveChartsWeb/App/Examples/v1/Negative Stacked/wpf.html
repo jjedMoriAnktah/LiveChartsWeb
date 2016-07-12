@@ -4,58 +4,17 @@
     <img src="/App/Examples/v1/Negative Stacked/Images/negativestack.jpg"/>
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.Windows.Controls;
-using LiveCharts;
-using LiveCharts.Wpf;
-
-namespace Wpf.CartesianChart.NegativeStackedRow
-{
-    public partial class NegativeStackedRowExample : UserControl
-    {
-        public NegativeStackedRowExample()
-        {
-            InitializeComponent();
-
-            SeriesCollection = new SeriesCollection
-            {
-                new StackedRowSeries
-                {
-                    Title = "Male",
-                    Values = new ChartValues&lt;double> {.5, .7, .8, .8, .6, .2, .6}
-                },
-                new StackedRowSeries
-                {
-                    Title = "Female",
-                    Values = new ChartValues&lt;double> {-.5, -.7, -.8, -.8, -.6, -.2, -.6}
-                }
-            };
-
-            Labels = new[] {"0-20", "20-35", "35-45", "45-55", "55-65", "65-70", ">70"};
-            Formatter = value => Math.Abs(value).ToString("P");
-            
-            DataContext = this;
-        }
-
-        public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
-        public Func&lt;double, string> Formatter { get; set; }
-
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/NegativeStackedRow/NEgativeStackedRowExample.xaml.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
-  &lt;lvc:CartesianChart.AxisX>
-    &lt;lvc:Axis LabelFormatter="{Binding Formatter}">&lt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisX>
-  &lt;lvc:CartesianChart.AxisY>
-    &lt;lvc:Axis Title="Age Range" Labels="{Binding Labels}">&lt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisY>
-  &lt;lvc:CartesianChart.DataTooltip>
-    &lt;lvc:DefaultTooltip SelectionMode="SharedYValues">&lt;/lvc:DefaultTooltip>
-  &lt;/lvc:CartesianChart.DataTooltip>
-&lt;/lvc:CartesianChart></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/NegativeStackedRow/NEgativeStackedRowExample.xaml"></pre>

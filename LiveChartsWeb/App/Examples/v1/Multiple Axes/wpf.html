@@ -11,19 +11,14 @@
     <img src="/App/Examples/v1/Multiple Axes/Images/multiax.jpg"/>
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Grid.Row="2">
-  &lt;lvc:CartesianChart.AxisY>
-    &lt;lvc:Axis Foreground="DodgerBlue" Title="Blue Axis"/>
-    &lt;lvc:Axis Foreground="IndianRed" Title="Red Axis" Position="RightTop" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}"/>
-    &lt;lvc:Axis Foreground="DarkOliveGreen" Title="Green Axis" Position="RightTop" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}"/>
-  &lt;/lc:CartesianChart.AxisY>
-  &lt;lvc:CartesianChart.Series>
-    &lt;lvc:LineSeries Values="1,5,3,5,3" ScalesYAt="0"/> &lt;!--Scales at blue axis, Axis[0]-->
-    &lt;lvc:LineSeries Values="20,30,70,20,10"  ScalesYAt="1"/> &lt;!--Scales at blue axis, Axis[1]-->
-    &lt;lvc:LineSeries Values="600,300,200,600,800"  ScalesYAt="2"/> &lt;!--Scales at blue axis, Axis[2]-->
-  &lt;/lvc:CartesianChart.Series>
-&lt;/lvc:CartesianChart>
-</pre>
+<pre class="prettyprint" url="/master/Examples/Wpf/CartesianChart/MultiAxes/MultiAxesChart.xaml"></pre>
 

@@ -49,126 +49,18 @@
     <img src="/App/Examples/v1/IObservableChartPoint/Images/fullyresponsive.gif" />
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.Linq;
-using System.Windows;
-using System.Windows.Media;
-using LiveCharts;
-using LiveCharts.Defaults;
-using LiveCharts.Wpf;
-
-namespace Wpf.CartesianChart
-{
-    public partial class FullyResponsive
-    {
-        public FullyResponsive()
-        {
-
-            InitializeComponent();
-
-            MyValues = new ChartValues&lt;ObservableValue&gt;
-            {
-                new ObservableValue(5),
-                new ObservableValue(7),
-                new ObservableValue(8),
-                new ObservableValue(3)
-            };
-
-            var lineSeries = new LineSeries
-            {
-                Values = MyValues,
-                StrokeThickness = 4,
-                Fill = Brushes.Transparent,
-                PointDiameter = 0
-            };
-
-            SeriesCollection = new SeriesCollection {lineSeries};
-
-            DataContext = this;
-        }
-
-        public ChartValues&lt;ObservableValue&gt; MyValues { get; set; }
-        public SeriesCollection SeriesCollection { get; set; }
-
-        //Adding points
-        private void AddPointOnClick(object sender, RoutedEventArgs e)
-        {
-            var r = new Random();
-            MyValues.Add(new ObservableValue(r.Next(-20, 20)));
-        }
-
-        //Inserting middle points    
-        private void InsertPointOnClick(object sender, RoutedEventArgs e)
-        {
-            var r = new Random();
-            if (MyValues.Count > 3)
-                MyValues.Insert(2, new ObservableValue(r.Next(-20, 20)));
-        }
-
-        //Removing points
-        private void RemovePointOnClick(object sender, RoutedEventArgs e)
-        {
-            MyValues.RemoveAt(0);
-        }
-
-        //Adding more series
-        private void AddSeriesOnClick(object sender, RoutedEventArgs e)
-        {
-            var r = new Random();
-            var c = SeriesCollection[0].Values.Count;
-            var val = new ChartValues&lt;ObservableValue&gt;();
-            for (int i = 0; i < c; i++)
-            {
-                val.Add(new ObservableValue(r.Next(-20, 20)));
-            }
-            SeriesCollection.Add(new LineSeries
-            {
-                Values = val,
-                StrokeThickness = 4,
-                Fill = Brushes.Transparent,
-                PointDiameter = 0
-            });
-        }
-
-        //Removing Series
-        private void RemoveSeriesOnClick(object sender, RoutedEventArgs e)
-        {
-            var s = SeriesCollection.Where(x => x.Values != MyValues).ToList();
-            if (s.Count > 0) SeriesCollection.RemoveAt(1);
-        }
-
-        //When any value changes
-        private void MoveAllOnClick(object sender, RoutedEventArgs e)
-        {
-            var r = new Random();
-            foreach (var observable in MyValues)
-            {
-                observable.Value = r.Next(-20, 20);
-            }
-        }
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/FullyResponsive/FullyResponsive.xaml.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;Grid&gt;
-&lt;Grid.RowDefinitions&gt;
-  &lt;RowDefinition Height="Auto"&gt;&lt;/RowDefinition&gt;
-  &lt;RowDefinition Height="Auto"&gt;&lt;/RowDefinition&gt;
-  &lt;RowDefinition Height="*"&gt;&lt;/RowDefinition&gt;
-&lt;/Grid.RowDefinitions&gt;
-&lt;TextBlock TextWrapping="Wrap"&gt;Fully Responsive&lt;/TextBlock&gt;
-&lt;StackPanel Grid.Row="1" Orientation="Horizontal"&gt;
-  &lt;TextBlock VerticalAlignment="Center" Margin="0 0 10 0"&gt;Points&lt;/TextBlock&gt;
-  &lt;Button Click="AddPointOnClick"&gt;+&lt;/Button&gt;
-  &lt;Button Click="InsertPointOnClick"&gt;/&lt;/Button&gt;
-  &lt;Button Click="RemovePointOnClick"&gt;-&lt;/Button&gt;
-  &lt;Button Click="MoveAllOnClick"&gt;MoveAll&lt;/Button&gt;
-  &lt;TextBlock Margin="0 0 10 0" VerticalAlignment="Center"&gt;Series&lt;/TextBlock&gt;
-  &lt;Button Click="AddSeriesOnClick"&gt;+&lt;/Button&gt;
-  &lt;Button Click="RemoveSeriesOnClick"&gt;-&lt;/Button&gt;
-&lt;/StackPanel&gt;
-&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" LegendLocation="Right"&gt;&lt;/lvc:CartesianChart&gt;
-&lt;/Grid&gt;</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/FullyResponsive/FullyResponsive.xaml"></pre>
+

@@ -18,63 +18,7 @@
 
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.Windows.Forms;
-using LiveCharts;
-using LiveCharts.Configurations;
-using LiveCharts.Wpf;
-using Brushes = System.Windows.Media.Brushes;
-
-namespace Winforms.Cartesian.DateTime
-{
-    public class DateModel
-    {
-        public System.DateTime DateTime { get; set; }
-        public double Value { get; set; }
-    }
-
-    public partial class DateTimeExample : Form
-    {
-        public DateTimeExample()
-        {
-            InitializeComponent();
-
-            var dayConfig = Mappers.Xy&lt;DateModel&gt;()
-                .X(dayModel => (double) dayModel.DateTime.Ticks)
-                .Y(dayModel => dayModel.Value);
-
-            //Notice you can also configure this type globally, so you don't need to configure every
-            //SeriesCollection instance using the type.
-            //more info at http://lvcharts.net/App/Index#/examples/v1/wpf/Types%20and%20Configuration
-
-            cartesianChart1.Series = new SeriesCollection(dayConfig)
-            {
-                new LineSeries
-                {
-                    Values = new ChartValues&lt;DateModel&gt;
-                    {
-                        new DateModel
-                        {
-                            DateTime = System.DateTime.Now,
-                            Value = 5
-                        },
-                        new DateModel
-                        {
-                            DateTime = System.DateTime.Now.AddHours(2),
-                            Value = 9
-                        }
-                    },
-                    Fill = Brushes.Transparent
-                }
-            };
-            cartesianChart1.AxisX.Add(new Axis
-            {
-                LabelFormatter = value => new System.DateTime((long) (value)).ToString("t")
-            });
-        }
-    }
-}
-</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/DateTime/DateTimeExample.cs"></pre>
 
 <h4>The Bars Problem</h4>
 

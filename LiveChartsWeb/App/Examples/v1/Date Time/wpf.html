@@ -22,66 +22,24 @@
 
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.Windows.Controls;
-using System.Windows.Media;
-using LiveCharts;
-using LiveCharts.Configurations;
-using LiveCharts.Wpf;
-using Wpf.CartesianChart.Using_DateTime.Manual;
+<p>
+    In this case we are going to plot a custom type defined in the next code snippet
+</p>
 
-namespace Wpf.CartesianChart.Using_DateTime
-{
-    public class DateModel
-    {
-        public DateTime DateTime { get; set; }
-        public double Value { get; set; }
-    }
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Using%20DateTime/DateModel.cs"></pre>
 
-    public partial class ManualDate : UserControl
-    {
-        public ManualDate()
-        {
-            InitializeComponent();
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
 
-            var dateConfig = Mappers.Xy&lt;DateModel&gt;()
-                .X(dateModel => dateModel.DateTime.Ticks)
-                .Y(dateModel => dateModel.Value);
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Using%20DateTime/DateTime.xaml.cs"></pre>
 
-            //Notice you can also configure this type globally, so you don't need to configure every
-            //SeriesCollection instance using the type.
-            //more info at http://lvcharts.net/App/Index#/examples/v1/wpf/Types%20and%20Configuration
+<h4>XAML</h4>
 
-            Series = new SeriesCollection(dateConfig)
-            {
-                new LineSeries
-                {
-                    Values = new ChartValues&lt;DateModel&gt;
-                    {
-                        new DateModel
-                        {
-                            DateTime = DateTime.Now,
-                            Value = 5
-                        },
-                        new DateModel
-                        {
-                            DateTime = DateTime.Now.AddHours(1),
-                            Value = 9
-                        }
-                    },
-                    Fill = Brushes.Transparent
-                }
-            };
-
-            Formatter = value => new DateTime((long) (value)).ToString("t");
-            DataContext = this;
-        }
-
-        public Func&lt;double, string&gt; Formatter { get; set; }
-        public SeriesCollection Series { get; set; }
-
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Using%20DateTime/DateTime.xaml"></pre>
 
 <h4>The Bars Problem</h4>
 

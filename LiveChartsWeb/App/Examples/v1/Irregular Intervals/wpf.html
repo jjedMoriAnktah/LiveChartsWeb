@@ -10,69 +10,17 @@
     <img src="/App/Examples/v1/Irregular Intervals/Images/irregular.jpg"/>
 </div>
 
+<div class="doc-alert">
+    <b>Note</b> to keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses <i>UserControl</i> class to wrap every example, but you do
+    not need to wrap you chart with a <i>UserControl</i>, you can add it directly in any
+    <i>Window</i> or any other Wpf Element
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System.Windows.Controls;
-using LiveCharts;
-using LiveCharts.Defaults;
-using LiveCharts.Wpf;
-
-namespace Wpf.CartesianChart.Irregular_Intervals
-{
-    public partial class IrregularIntervalsExample : UserControl
-    {
-        public IrregularIntervalsExample()
-        {
-            InitializeComponent();
-
-            SeriesCollection = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Values = new ChartValues&lt;ObservablePoint>
-                    {
-                        new ObservablePoint(0, 10),
-                        new ObservablePoint(4, 7),
-                        new ObservablePoint(5, 3),
-                        new ObservablePoint(7, 6),
-                        new ObservablePoint(10, 8)
-                    },
-                    PointDiameter = 15
-                },
-                new LineSeries
-                {
-                    Values = new ChartValues&lt;ObservablePoint>
-                    {
-                        new ObservablePoint(0, 2),
-                        new ObservablePoint(2, 5),
-                        new ObservablePoint(3, 6),
-                        new ObservablePoint(6, 8),
-                        new ObservablePoint(10, 5)
-                    },
-                    PointDiameter = 15
-                },
-                new LineSeries
-                {
-                    Values = new ChartValues&lt;ObservablePoint>
-                    {
-                        new ObservablePoint(0, 4),
-                        new ObservablePoint(5, 5),
-                        new ObservablePoint(7, 7),
-                        new ObservablePoint(9, 10),
-                        new ObservablePoint(10, 9)
-                    },
-                    PointDiameter = 15
-                }
-            };
-
-            DataContext = this;
-        }
-
-        public SeriesCollection SeriesCollection { get; set; }
-
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Irregular%20Intervals/IrregularIntervalsExample.xaml.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" /></pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Irregular%20Intervals/IrregularIntervalsExample.xaml"></pre>
