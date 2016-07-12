@@ -14,14 +14,17 @@ app.controller('examplesController', [
         $scope.start = $routeParams.article === "start";
 
         // /App/Examples/:version/:article-:platform.html
-        if (!$scope.start)
-            $http.get('/App/Examples/' + examples.version + '/' +
-                    $routeParams.article + '/' + $routeParams.platform + '.html').
-                success(function(data) {
+        if (!$scope.start) {
+            var url = '/App/Examples/' + examples.version + '/' + $routeParams.article + '/' + $routeParams.platform + '.html';
+            $scope.isLoading = true;
+            $http.get(url)
+                .success(function (data) {
+                    $scope.isLoading = false;
                     $scope.article = data;
-                }).error(function() {
+                }).error(function () {
                     $location.path('/articlenotfound').replace();
                 });
+        }
 
         $anchorScroll.yOffset = 60;
         $anchorScroll();
