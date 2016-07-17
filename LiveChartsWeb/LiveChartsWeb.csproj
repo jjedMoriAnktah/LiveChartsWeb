@@ -280,6 +280,7 @@
     <Content Include="App\Examples\v1\MenuImages\ohcl series.jpg" />
     <Content Include="App\Examples\v1\MenuImages\percentage stacked.jpg" />
     <Content Include="App\Examples\v1\MenuImages\pie chart.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\using linqq.gif" />
     <Content Include="App\Examples\v1\Negative Stacked\Images\negativestack.jpg" />
     <Content Include="App\Examples\v1\OHCL Series\Images\ohcl.jpg" />
     <Content Include="App\Examples\v1\OHCL Series\wf.html" />
@@ -384,6 +385,9 @@
     <Content Include="App\Examples\v1\Install\Images\winformsdll.png" />
     <Content Include="App\Examples\v1\Basics\wpf.html" />
     <Content Include="App\Examples\v1\Install\wf.html" />
+    <Content Include="App\Examples\v1\Using Linq\Images\linq.gif" />
+    <Content Include="App\Examples\v1\Using Linq\wf.html" />
+    <Content Include="App\Examples\v1\Using Linq\wpf.html" />
     <Content Include="App\Examples\v1\v1.js" />
     <Content Include="App\Examples\v1\Install\wpf.html" />
     <Content Include="App\Examples\v1\Zooming and panning\Images\zandp.gif" />
