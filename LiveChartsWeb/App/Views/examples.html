@@ -25,12 +25,14 @@
             </ul>
         </div>
 
-        <hr class="visible-xs visible-sm"/>
-
         <div class="col-md-offset-3 col-md-9 menu-view" ng-class="{'maximized': menu.isSmall}">
             <div class="row">
                 <div class="col-xs-12 text-primary text-center" ng-show="isLoading" style="margin: 25px">
                     <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                </div>
+
+                <div class="col-xs-12">
+                    
                 </div>
 
                 <div id="article-view" dynamic="article">
@@ -44,7 +46,7 @@
 
 <div class="container-fluid bg-primary" style="padding: 60px 0;">
     <div class="row">
-        <div class="col-xs-12 text-center">
+        <div class="col-md-offset-3 col-md-9 menu-view" ng-class="{'maximized': menu.isSmall}">
             Found a typo error? want to improve docs?
             Fork the repo,
             <a style="color: white" href="https://github.com/beto-rodriguez/LiveChartsWeb/tree/master/LiveChartsWeb/App/Examples/v1"><b>edit the html files</b></a>,
@@ -53,7 +55,9 @@
     </div>
 </div>
 
-<div id="docs-modal" class="angular-modal" ng-class="{hidden: !isModalOpen}" tabindex="1000" ng-keydown="closeModalWKB($event)">
+<div id="docs-modal" class="angular-modal" ng-class="{hidden: !isModalOpen}" tabindex="1000" 
+     ng-keydown="closeModalWKB($event)"
+     ng-click="closeModal()">
     <div class="container-fluid">
         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
             <div class="row">
