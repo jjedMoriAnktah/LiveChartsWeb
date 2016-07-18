@@ -3,6 +3,19 @@
     background: white;
 }
 
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(2, 114, 170);
+}
+
+::-webkit-scrollbar-track {
+  background: #cbeeff;
+}
+
 #banner {
     margin-bottom: 200px;
 }

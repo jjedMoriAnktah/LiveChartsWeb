@@ -1,8 +1,9 @@
 ﻿'use strict';
 
 app.controller('docsController', [
-    '$scope', '$routeParams', '$location', '$anchorScroll', 'docsService', '$http', '$timeout',
-    function ($scope, $routeParams, $location, $anchorScroll, docsService, $http, $timeout) {
+    '$scope', '$routeParams', '$location', '$anchorScroll', 'docsService', '$http', 
+    '$timeout', 'menuService',
+    function ($scope, $routeParams, $location, $anchorScroll, docsService, $http, $timeout, menuService) {
 
         $scope.isLoading = true;
         $scope.hasError = false;
@@ -26,7 +27,6 @@ app.controller('docsController', [
                 $anchorScroll.yOffset = 60;
                 $anchorScroll();
 
-
                 if ($routeParams.section !== "introduction") {
                     $http.get('/App/Docs/' + latest + '/files/' + $routeParams.section + '.txt')
                         .success(function(type) {
@@ -34,6 +34,8 @@ app.controller('docsController', [
                         }).error(function() {
                             $location.path('/docnotfound').replace();
                         });
+                } else {
+                    $scope.menu.isSmall = false;
                 }
 
                 var url = 'https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Core/AxisCore.cs';
@@ -82,5 +84,17 @@ app.controller('docsController', [
                 $scope.isLoading = false;
                 $scope.hasError = true;
             });
+
+        menuService.RestoreState();
+        $scope.menu = menuService.model;
+
+        $scope.toSmallMenu = function() {
+            menuService.model.isSmall = true;
+            menuService.SaveState();
+        };
+        $scope.toNormalMenu = function() {
+            menuService.model.isSmall = false;
+            menuService.SaveState();
+        }
     }
 ]);

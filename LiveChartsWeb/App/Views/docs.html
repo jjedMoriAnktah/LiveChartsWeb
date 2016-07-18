@@ -1,236 +1,247 @@
 ﻿<div class="container-fluid" style="min-height: 750px;">
+<div class="row">
+<div class="col-md-3 col-xs-12 side-menu width-changing" ng-class="{'minimized': menu.isSmall}">
     <div class="row">
-        <div class="col-md-3 col-xs-12 side-menu">
-            <div class="row">
-                <div class="col-xs-12">
-                    <input type="text" class="form-control" ng-model="sectionsFilter"/>
-                    <ul>
-                        <li ng-repeat="section in sections | filter:{name: sectionsFilter}">
-                            <a ng-href="/App/documentation/{{version}}/{{section.file}}">
-                                {{section.name}}
-                            </a>
-                        </li>
-                    </ul>
+        <div class="col-xs-12">
+            <div class="menu-options">
+                <div class="input-group" style="width: 100%;">
+                    <i class="input-group-addon fa fa-fw fa-bars fa-lg menu-item"
+                       ng-click="toNormalMenu()"
+                       ng-show="menu.isSmall"></i>
+                    <i class="input-group-addon fa fa-fw fa-arrow-left fa-lg menu-item"
+                       ng-click="toSmallMenu()"
+                       ng-show="!menu.isSmall"></i>
+                    <input type="text" class="form-control" ng-model="sectionsFilter" placeholder="Search"/>
                 </div>
             </div>
-        </div>
-    <div class="col-md-offset-3 col-md-9" ng-show="type">
-    <div class="row" style="margin-top: 25px;">
-    <div class="col-xs-12 text-primary text-center" ng-show="isLoading">
-        <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
-    </div>
-    <div class="col-xs-12 text-muted text-center" ng-show="hasError">
-        <p>
-            <i class="text-warning fa fa-3x fa-exclamation-circle"></i>
-            <br/>
-            An Error has occurred while requesting this content, please try reloading the page
-            if the error persist please report it
-        </p>
-    </div>
-    <div class="col-xs-12">
-        <div class="col-xs-12" ng-if="!type.enumerates[0]">
-            <h2 class="doc-title">
-                {{type.name}} <small class="text-muted">{{type.type === 1 ? 'Struct' : 'Class'}}</small>
-            </h2>
-
-            <ul>
-                <li ng-repeat="typeParam in type.typeParams">
-                    <i class="text-primary">{{typeParam.name}}</i>:
-                    {{typeParam.summary}}
-                </li>
-            </ul>
-
-            <hr/>
-
-            <p><b>Inheritance Hierarchy</b>
-            </p>
-
-            <ul>
-                <li ng-repeat="p in type.inheritance">
-                    <a ng-href="{{p.typeInfo.href}}">
-                        {{p.typeInfo.name}}
+            <ul ng-show="!menu.isSmall">
+                <li ng-repeat="section in sections | filter:{name: sectionsFilter}">
+                    <a ng-href="/App/documentation/{{version}}/{{section.file}}">
+                        {{section.name}}
                     </a>
                 </li>
-                <li>{{type.fullName}}</li>
             </ul>
+        </div>
+    </div>
+</div>
+<div class="col-md-offset-3 col-md-9 menu-view" ng-show="type" 
+     ng-class="{'maximized': menu.isSmall}">
+<div class="row" style="margin-top: 25px;">
+<div class="col-xs-12 text-primary text-center" ng-show="isLoading">
+    <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+</div>
+<div class="col-xs-12 text-muted text-center" ng-show="hasError">
+    <p>
+        <i class="text-warning fa fa-3x fa-exclamation-circle"></i>
+        <br/>
+        An Error has occurred while requesting this content, please try reloading the page
+        if the error persist please report it
+    </p>
+</div>
+<div class="col-xs-12">
+    <div class="col-xs-12" ng-if="!type.enumerates[0]">
+        <h2 class="doc-title">
+            {{type.name}} <small class="text-muted">{{type.type === 1 ? 'Struct' : 'Class'}}</small>
+        </h2>
 
-            <p>
-                {{type.summary}}
-            </p>
+        <ul>
+            <li ng-repeat="typeParam in type.typeParams">
+                <i class="text-primary">{{typeParam.name}}</i>:
+                {{typeParam.summary}}
+            </li>
+        </ul>
 
-            <p>
-                <a href="javascript:;" style="line-height: 22px;"
-                   ng-click="openModal(type.typeInfo.raw)">
-                    <i class="fa fa-fw fa-lg fa-file-code-o"></i> Source Code
+        <hr/>
+
+        <p><b>Inheritance Hierarchy</b>
+        </p>
+
+        <ul>
+            <li ng-repeat="p in type.inheritance">
+                <a ng-href="{{p.typeInfo.href}}">
+                    {{p.typeInfo.name}}
                 </a>
-            </p>
+            </li>
+            <li>{{type.fullName}}</li>
+        </ul>
 
-            <hr/>
+        <p>
+            {{type.summary}}
+        </p>
 
-            <h3 class="section-title">Constructors</h3>
+        <p>
+            <a href="javascript:;" style="line-height: 22px;"
+               ng-click="openModal(type.typeInfo.raw)">
+                <i class="fa fa-fw fa-lg fa-file-code-o"></i> Source Code
+            </a>
+        </p>
 
-            <p>
-                <i class="text-muted" ng-show="!type.constructors[0]">none</i>
-            </p>
+        <hr/>
 
-            <div class="row">
-                <div class="col-xs-12" ng-repeat="ctor in type.constructors">
-                    <div class="panel card-shadow">
-                        <div class="panel-body">
-                            <h4 class="card-title">
-                                Ctor
-                                (
-                                <i class="text-muted" ng-repeat="p in ctor.parameters">
-                                    {{p.name}}
-                                    <span ng-show="$index != p.parameters.length-1">, </span>
-                                </i>
-                                )
-                            </h4>
-                            <p>{{ctor.summary}}</p>
-                            <h5>Parameters:</h5>
-                            <ul>
-                                <li ng-repeat="param in ctor.parameters">
-                                    {{param.name}}: <i class="text-muted">{{param.summary}}</i>
-                                </li>
-                            </ul>
-                            <p class="text-muted doc-end" ng-show="!ctor.parameters[0]">none</p>
-                        </div>
+        <h3 class="section-title">Constructors</h3>
+
+        <p>
+            <i class="text-muted" ng-show="!type.constructors[0]">none</i>
+        </p>
+
+        <div class="row">
+            <div class="col-xs-12" ng-repeat="ctor in type.constructors">
+                <div class="panel card-shadow">
+                    <div class="panel-body">
+                        <h4 class="card-title">
+                            Ctor
+                            (
+                            <i class="text-muted" ng-repeat="p in ctor.parameters">
+                                {{p.name}}
+                                <span ng-show="$index != p.parameters.length-1">, </span>
+                            </i>
+                            )
+                        </h4>
+                        <p>{{ctor.summary}}</p>
+                        <h5>Parameters:</h5>
+                        <ul>
+                            <li ng-repeat="param in ctor.parameters">
+                                {{param.name}}: <i class="text-muted">{{param.summary}}</i>
+                            </li>
+                        </ul>
+                        <p class="text-muted doc-end" ng-show="!ctor.parameters[0]">none</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <hr/>
+        <hr/>
 
-            <div class="row section-title">
-                <div class="col-md-4 col-sm-12">
-                    <h3 style="margin: 0">
-                        Properties
-                        <small class="fa fa-search text-muted pull-right"></small>
-                    </h3>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <input class="form-control" type="text" ng-model="propertiesFilter" placeholder="Search"/>
-                </div>
+        <div class="row section-title">
+            <div class="col-md-4 col-sm-12">
+                <h3 style="margin: 0">
+                    Properties
+                    <small class="fa fa-search text-muted pull-right"></small>
+                </h3>
             </div>
+            <div class="col-md-4 col-sm-12">
+                <input class="form-control" type="text" ng-model="propertiesFilter" placeholder="Search"/>
+            </div>
+        </div>
 
-            <p>
-                <i class="text-muted" ng-show="!type.properties[0]">none</i>
-            </p>
+        <p>
+            <i class="text-muted" ng-show="!type.properties[0]">none</i>
+        </p>
 
-            <div class="row">
-                <div class="col-xs-12" ng-repeat="p in type.properties | filter:propertiesFilter">
-                    <div class="panel card-shadow">
-                        <div class="panel-body">
-                            <h4 class="card-title">{{p.name}}</h4>
-                            <p>
-                                <i class="text-muted">Type:</i>
-                                <a ng-href="{{p.typeInfo.href}}">
-                                    {{p.typeInfo.alias | removeGenerics}}
-                                </a>
-                                <span ng-if="p.genericArguments[0]">
+        <div class="row">
+            <div class="col-xs-12" ng-repeat="p in type.properties | filter:propertiesFilter">
+                <div class="panel card-shadow">
+                    <div class="panel-body">
+                        <h4 class="card-title">{{p.name}}</h4>
+                        <p>
+                            <i class="text-muted">Type:</i>
+                            <a ng-href="{{p.typeInfo.href}}">
+                                {{p.typeInfo.alias | removeGenerics}}
+                            </a>
+                            <span ng-if="p.genericArguments[0]">
                                                 &lt;<a ng-repeat="g in p.genericArguments" 
                                                    ng-href="{{g.href}}">
                                                     {{g.alias}}<span ng-show="$index !== g.genericArguments.length-1">,</span>
                                                 </a>>
                                             </span>
-                            </p>
-                            <p class="doc-end">{{p.summary}}</p>
-                        </div>
+                        </p>
+                        <p class="doc-end">{{p.summary}}</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <hr/>
+        <hr/>
 
-            <div class="row section-title">
-                <div class="col-md-4 col-sm-12">
-                    <h3 style="margin: 0">
-                        Methods
-                        <small class="fa fa-search text-muted pull-right"></small>
-                    </h3>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <input class="form-control" type="text" ng-model="methodsFilter" placeholder="Search"/>
-                </div>
+        <div class="row section-title">
+            <div class="col-md-4 col-sm-12">
+                <h3 style="margin: 0">
+                    Methods
+                    <small class="fa fa-search text-muted pull-right"></small>
+                </h3>
             </div>
+            <div class="col-md-4 col-sm-12">
+                <input class="form-control" type="text" ng-model="methodsFilter" placeholder="Search"/>
+            </div>
+        </div>
 
-            <p>
-                <i class="text-muted" ng-show="!type.methods[0]">none</i>
-            </p>
+        <p>
+            <i class="text-muted" ng-show="!type.methods[0]">none</i>
+        </p>
 
-            <div class="row">
-                <div class="col-xs-12" ng-repeat="m in type.methods | filter:methodsFilter">
-                    <div class="panel card-shadow">
-                        <div class="panel-body">
-                            <h4 class="card-title">
-                                {{m.name}}
-                                <span ng-if="m.typeParams[0]">
+        <div class="row">
+            <div class="col-xs-12" ng-repeat="m in type.methods | filter:methodsFilter">
+                <div class="panel card-shadow">
+                    <div class="panel-body">
+                        <h4 class="card-title">
+                            {{m.name}}
+                            <span ng-if="m.typeParams[0]">
                                                 &lt;<span ng-repeat="g in m.typeParams">
                                                     {{g.name}}<span ng-show="$index !== m.typeParams.length-1">,</span>
                                                 </span>>
                                             </span>
-                                (
-                                <i class="text-muted" ng-repeat="p in m.parameters">{{p.name}}
-                                    <span ng-show="$index != m.parameters.length-1">, </span>
-                                </i>
-                                )
-                            </h4>
-                            <p>{{m.summary}}</p>
-                            <h5>Parameters:</h5>
-                            <i class="text-muted" ng-show="!m.parameters[0] && !m.typeParams[0]">none</i>
-                            <ul>
-                                <li ng-repeat="typeParam in m.typeParams">
-                                    {{typeParam.name}}: <i class="text-muted">{{typeParam.summary}}</i>
-                                </li>
-                                <li ng-repeat="param in m.parameters">
-                                    {{param.name}}: <i class="text-muted">{{param.summary}}</i>
-                                </li>
-                            </ul>
-                            <p class="doc-end">
-                                Returns: {{m.returns.summary}}, type: <a ng-href="{{m.returns.typeInfo.href}}">{{m.returns.typeInfo.alias}}</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="col-xs-12" ng-if="type.enumerates[0]">
-            <h2 class="doc-title">{{type.name}} <small class="text-muted">Enum</small>
-            </h2>
-
-            <p class="text-muted">{{type.fullName}}</p>
-
-            <p>
-                {{type.summary}}
-            </p>
-
-            <p>
-                <a href="javascript:;" style="line-height: 22px;"
-                   ng-click="openModal(type.typeInfo.raw)">
-                    <i class="fa fa-fw fa-lg fa-file-code-o"></i> Source Code
-                </a>
-            </p>
-
-            <hr/>
-
-            <div class="row">
-                <div class="col-xs-12" ng-repeat="e in type.enumerates">
-                    <div class="panel card-shadow">
-                        <div class="panel-body">
-                            <h4 class="card-title">{{e.name}}</h4>
-                            <p class="doc-end">
-                                {{e.summary}}
-                            </p>
-                        </div>
+                            (
+                            <i class="text-muted" ng-repeat="p in m.parameters">{{p.name}}
+                                <span ng-show="$index != m.parameters.length-1">, </span>
+                            </i>
+                            )
+                        </h4>
+                        <p>{{m.summary}}</p>
+                        <h5>Parameters:</h5>
+                        <i class="text-muted" ng-show="!m.parameters[0] && !m.typeParams[0]">none</i>
+                        <ul>
+                            <li ng-repeat="typeParam in m.typeParams">
+                                {{typeParam.name}}: <i class="text-muted">{{typeParam.summary}}</i>
+                            </li>
+                            <li ng-repeat="param in m.parameters">
+                                {{param.name}}: <i class="text-muted">{{param.summary}}</i>
+                            </li>
+                        </ul>
+                        <p class="doc-end">
+                            Returns: {{m.returns.summary}}, type: <a ng-href="{{m.returns.typeInfo.href}}">{{m.returns.typeInfo.alias}}</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
+    <div class="col-xs-12" ng-if="type.enumerates[0]">
+        <h2 class="doc-title">{{type.name}} <small class="text-muted">Enum</small>
+        </h2>
+
+        <p class="text-muted">{{type.fullName}}</p>
+
+        <p>
+            {{type.summary}}
+        </p>
+
+        <p>
+            <a href="javascript:;" style="line-height: 22px;"
+               ng-click="openModal(type.typeInfo.raw)">
+                <i class="fa fa-fw fa-lg fa-file-code-o"></i> Source Code
+            </a>
+        </p>
+
+        <hr/>
+
+        <div class="row">
+            <div class="col-xs-12" ng-repeat="e in type.enumerates">
+                <div class="panel card-shadow">
+                    <div class="panel-body">
+                        <h4 class="card-title">{{e.name}}</h4>
+                        <p class="doc-end">
+                            {{e.summary}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="docs-modal" class="angular-modal" ng-class="{hidden: !isModalOpen}" tabindex="1000" ng-keydown="closeModalWKB($event)">
