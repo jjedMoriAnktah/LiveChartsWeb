@@ -261,6 +261,9 @@
     <Content Include="App\Examples\v1\Dynamic Visibility\Images\dynmic.gif" />
     <Content Include="App\Examples\v1\Dynamic Visibility\wf.html" />
     <Content Include="App\Examples\v1\Dynamic Visibility\wpf.html" />
+    <Content Include="App\Examples\v1\Events and Ui Elements\Images\uielems.gif" />
+    <Content Include="App\Examples\v1\Events and Ui Elements\wf.html" />
+    <Content Include="App\Examples\v1\Events and Ui Elements\wpf.html" />
     <Content Include="App\Examples\v1\GeoHeatMap\Images\geomap.png" />
     <Content Include="App\Examples\v1\GeoHeatMap\wf.html" />
     <Content Include="App\Examples\v1\GeoHeatMap\wpf.html" />
@@ -290,6 +293,8 @@
     <Content Include="App\Examples\v1\MenuImages\percentage stacked.jpg" />
     <Content Include="App\Examples\v1\MenuImages\pie chart.jpg" />
     <Content Include="App\Examples\v1\MenuImages\scatter.gif" />
+    <Content Include="App\Examples\v1\MenuImages\step line.jpg" />
+    <Content Include="App\Examples\v1\MenuImages\uiels.gif" />
     <Content Include="App\Examples\v1\MenuImages\using linqq.gif" />
     <Content Include="App\Examples\v1\Negative Stacked\Images\negativestack.jpg" />
     <Content Include="App\Examples\v1\OHCL Series\Images\ohcl.jpg" />
@@ -375,6 +380,9 @@
     <Content Include="App\Examples\v1\Stacked Area\Images\stacked-areas.jpg" />
     <Content Include="App\Examples\v1\Stacked Area\wf.html" />
     <Content Include="App\Examples\v1\Stacked Area\wpf.html" />
+    <Content Include="App\Examples\v1\Step Line\Images\stepline.jpg" />
+    <Content Include="App\Examples\v1\Step Line\wf.html" />
+    <Content Include="App\Examples\v1\Step Line\wpf.html" />
     <Content Include="App\Examples\v1\The Cartesian Chart\Images\buubleseries.jpg" />
     <Content Include="App\Examples\v1\The Cartesian Chart\Images\columnseries.jpg" />
     <Content Include="App\Examples\v1\The Cartesian Chart\Images\Heat Series.jpg" />

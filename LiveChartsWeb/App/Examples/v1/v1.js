@@ -30,6 +30,7 @@ app.factory('examplesV1Service', [
                 new article('Irregular Intervals', 'irregular line'),
                 new article('Constant Changes', 'line date time', 'constant.gif'),
                 new article('Missing Points', 'missing nan line'),
+                new article('Step Line'),
                 new article('Zooming and panning', 'line zoom pan', 'zooming and panning.gif'),
                 new article('Multiple Axes', 'axis'),
                 new article('Data Pagination', 'line zooming panning zoom pan', 'customzp.gif'),
@@ -69,6 +70,7 @@ app.factory('examplesV1Service', [
                 new article('Bubble Chart', 'scatter'),
 
                 //Advanced
+                new article('Events and Ui Elements', '', 'uiels.gif'),
                 new article('Log and Custom Scales', 'scale custom logarithm log'),
                 new article('Date Time', 'date time datetime'),
                 new article('IObservableChartPoint', 'observable update', 'fully responsive.gif')
