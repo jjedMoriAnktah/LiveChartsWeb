@@ -50,6 +50,7 @@ app.factory('examplesV1Service', [
 
                 //Heat
                 new article('Heat Series', 'heat calendar date'),
+                new article('GeoHeatMap', 'heat geographic maps'),
 
                 //Pies
                 new article('Pie Chart', 'pie chart doughnut stacked'),
@@ -58,13 +59,14 @@ app.factory('examplesV1Service', [
                 //Gauges
                 new article('180 Gauge', 'gauges'),
                 new article('360 Gauge', 'gauges'),
+                new article('Angular Gauge', 'gauges'),
 
                 //Financial
                 new article('OHCL Series', 'financial candle stick chart open high low close'),
 
-                ////Scatter
-                //new article('Scatter Chart'),
-                new article('Bubble Chart'),
+                //Scatter
+                new article('Scatter Plot', 'scatter', 'scatter.gif'),
+                new article('Bubble Chart', 'scatter'),
 
                 //Advanced
                 new article('Log and Custom Scales', 'scale custom logarithm log'),
